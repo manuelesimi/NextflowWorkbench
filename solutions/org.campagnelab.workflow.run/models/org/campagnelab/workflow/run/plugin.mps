@@ -244,7 +244,6 @@
       <concept id="1079359253375" name="jetbrains.mps.baseLanguage.structure.ParenthesizedExpression" flags="nn" index="1eOMI4">
         <child id="1079359253376" name="expression" index="1eOMHV" />
       </concept>
-      <concept id="1081506773034" name="jetbrains.mps.baseLanguage.structure.LessThanExpression" flags="nn" index="3eOVzh" />
       <concept id="1081516740877" name="jetbrains.mps.baseLanguage.structure.NotExpression" flags="nn" index="3fqX7Q">
         <child id="1081516765348" name="expression" index="3fr31v" />
       </concept>
@@ -512,13 +511,6 @@
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
       <concept id="4222318806802425298" name="jetbrains.mps.lang.core.structure.SuppressErrorsAnnotation" flags="ng" index="15s5l7" />
-      <concept id="709746936026466394" name="jetbrains.mps.lang.core.structure.ChildAttribute" flags="ng" index="3VBwX9">
-        <property id="709746936026609031" name="linkId" index="3V$3ak" />
-        <property id="709746936026609029" name="linkRole" index="3V$3am" />
-      </concept>
-      <concept id="4452961908202556907" name="jetbrains.mps.lang.core.structure.BaseCommentAttribute" flags="ng" index="1X3_iC">
-        <child id="3078666699043039389" name="commentedNode" index="8Wnug" />
-      </concept>
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
       <concept id="1204796164442" name="jetbrains.mps.baseLanguage.collections.structure.InternalSequenceOperation" flags="nn" index="23sCx2">
@@ -5949,51 +5941,30 @@
         <ref role="3uigEE" to="wyt6:~String" resolve="String" />
       </node>
     </node>
-    <node concept="1X3_iC" id="3UUIqqBffsK" role="lGtFl">
-      <property role="3V$3am" value="member" />
-      <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1107461130800/5375687026011219971" />
-      <node concept="Wx3nA" id="3UUIqqBei8C" role="8Wnug">
-        <property role="2dlcS1" value="false" />
-        <property role="2dld4O" value="false" />
-        <property role="TrG5h" value="patternString" />
-        <property role="3TUv4t" value="false" />
-        <node concept="3Tm6S6" id="3UUIqqBehlb" role="1B3o_S" />
-        <node concept="3uibUv" id="3UUIqqBei7C" role="1tU5fm">
-          <ref role="3uigEE" to="wyt6:~String" resolve="String" />
-        </node>
-        <node concept="Xl_RD" id="3UUIqqBeiJT" role="33vP2m">
-          <property role="Xl_RC" value=".*\\[exec\\] \\[\\d\\d\\/[\\d*\\w*]*\\].*" />
-        </node>
+    <node concept="Wx3nA" id="3UUIqqBei8C" role="jymVt">
+      <property role="2dlcS1" value="false" />
+      <property role="2dld4O" value="false" />
+      <property role="TrG5h" value="patternString" />
+      <property role="3TUv4t" value="false" />
+      <node concept="3Tm6S6" id="3UUIqqBehlb" role="1B3o_S" />
+      <node concept="3uibUv" id="3UUIqqBei7C" role="1tU5fm">
+        <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+      </node>
+      <node concept="Xl_RD" id="3UUIqqBi6JC" role="33vP2m">
+        <property role="Xl_RC" value=".*\\[exec\\] \\[[\\d?\\w?]{2}\\/[\\d*\\w*]{6}\\].*" />
       </node>
     </node>
-    <node concept="1X3_iC" id="3UUIqqBffsL" role="lGtFl">
-      <property role="3V$3am" value="member" />
-      <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1107461130800/5375687026011219971" />
-      <node concept="Wx3nA" id="3UUIqqBejDj" role="8Wnug">
-        <property role="2dlcS1" value="false" />
-        <property role="2dld4O" value="false" />
-        <property role="TrG5h" value="matcher" />
-        <property role="3TUv4t" value="false" />
-        <node concept="3Tm6S6" id="3UUIqqBeiYc" role="1B3o_S" />
-        <node concept="3uibUv" id="3UUIqqBekFx" role="1tU5fm">
-          <ref role="3uigEE" to="ni5j:~Matcher" resolve="Matcher" />
-        </node>
+    <node concept="Wx3nA" id="3UUIqqBenpt" role="jymVt">
+      <property role="2dlcS1" value="false" />
+      <property role="2dld4O" value="false" />
+      <property role="TrG5h" value="pattern" />
+      <property role="3TUv4t" value="false" />
+      <node concept="3Tm6S6" id="3UUIqqBemGz" role="1B3o_S" />
+      <node concept="3uibUv" id="3UUIqqBenhZ" role="1tU5fm">
+        <ref role="3uigEE" to="ni5j:~Pattern" resolve="Pattern" />
       </node>
     </node>
-    <node concept="1X3_iC" id="3UUIqqBffsM" role="lGtFl">
-      <property role="3V$3am" value="member" />
-      <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1107461130800/5375687026011219971" />
-      <node concept="Wx3nA" id="3UUIqqBenpt" role="8Wnug">
-        <property role="2dlcS1" value="false" />
-        <property role="2dld4O" value="false" />
-        <property role="TrG5h" value="pattern" />
-        <property role="3TUv4t" value="false" />
-        <node concept="3Tm6S6" id="3UUIqqBemGz" role="1B3o_S" />
-        <node concept="3uibUv" id="3UUIqqBenhZ" role="1tU5fm">
-          <ref role="3uigEE" to="ni5j:~Pattern" resolve="Pattern" />
-        </node>
-      </node>
-    </node>
+    <node concept="2tJIrI" id="3UUIqqBjc1x" role="jymVt" />
     <node concept="3clFbW" id="3UUIqqACQ$k" role="jymVt">
       <node concept="3cqZAl" id="3UUIqqACQ$l" role="3clF45" />
       <node concept="3clFbS" id="3UUIqqACQ$n" role="3clF47">
@@ -6010,23 +5981,19 @@
             </node>
           </node>
         </node>
-        <node concept="1X3_iC" id="3UUIqqBfgJf" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="3UUIqqBeobJ" role="8Wnug">
-            <node concept="37vLTI" id="3UUIqqBeoJX" role="3clFbG">
-              <node concept="2YIFZM" id="3UUIqqBep5Q" role="37vLTx">
-                <ref role="37wK5l" to="ni5j:~Pattern.compile(java.lang.String):java.util.regex.Pattern" resolve="compile" />
-                <ref role="1Pybhc" to="ni5j:~Pattern" resolve="Pattern" />
-                <node concept="10M0yZ" id="3UUIqqBfgI8" role="37wK5m">
-                  <ref role="1PxDUh" node="3UUIqqACKp2" resolve="WorkflowExecutionFilter" />
-                  <ref role="3cqZAo" node="3UUIqqBei8C" resolve="patternString" />
-                </node>
-              </node>
-              <node concept="10M0yZ" id="3UUIqqBfgI3" role="37vLTJ">
+        <node concept="3clFbF" id="3UUIqqBeobJ" role="3cqZAp">
+          <node concept="37vLTI" id="3UUIqqBeoJX" role="3clFbG">
+            <node concept="2YIFZM" id="3UUIqqBep5Q" role="37vLTx">
+              <ref role="37wK5l" to="ni5j:~Pattern.compile(java.lang.String):java.util.regex.Pattern" resolve="compile" />
+              <ref role="1Pybhc" to="ni5j:~Pattern" resolve="Pattern" />
+              <node concept="10M0yZ" id="3UUIqqBfgI8" role="37wK5m">
                 <ref role="1PxDUh" node="3UUIqqACKp2" resolve="WorkflowExecutionFilter" />
-                <ref role="3cqZAo" node="3UUIqqBenpt" resolve="pattern" />
+                <ref role="3cqZAo" node="3UUIqqBei8C" resolve="patternString" />
               </node>
+            </node>
+            <node concept="10M0yZ" id="3UUIqqBfgI3" role="37vLTJ">
+              <ref role="1PxDUh" node="3UUIqqACKp2" resolve="WorkflowExecutionFilter" />
+              <ref role="3cqZAo" node="3UUIqqBenpt" resolve="pattern" />
             </node>
           </node>
         </node>
@@ -6094,64 +6061,53 @@
       <property role="DiZV1" value="false" />
       <property role="2aFKle" value="false" />
       <node concept="3clFbS" id="3UUIqqACYCy" role="3clF47">
-        <node concept="1X3_iC" id="3UUIqqBfgRq" role="lGtFl">
-          <property role="3V$3am" value="statement" />
-          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-          <node concept="3clFbF" id="3UUIqqBetzi" role="8Wnug">
-            <node concept="37vLTI" id="3UUIqqBetFn" role="3clFbG">
-              <node concept="2OqwBi" id="3UUIqqBeu71" role="37vLTx">
-                <node concept="10M0yZ" id="3UUIqqBfgIa" role="2Oq$k0">
-                  <ref role="1PxDUh" node="3UUIqqACKp2" resolve="WorkflowExecutionFilter" />
-                  <ref role="3cqZAo" node="3UUIqqBenpt" resolve="pattern" />
-                </node>
-                <node concept="liA8E" id="3UUIqqBeua4" role="2OqNvi">
-                  <ref role="37wK5l" to="ni5j:~Pattern.matcher(java.lang.CharSequence):java.util.regex.Matcher" resolve="matcher" />
-                  <node concept="37vLTw" id="3UUIqqBeulc" role="37wK5m">
-                    <ref role="3cqZAo" node="3UUIqqACZ0C" resolve="line" />
-                  </node>
-                </node>
+        <node concept="3clFbF" id="3UUIqqBhJ6U" role="3cqZAp">
+          <node concept="37vLTI" id="3UUIqqBhJp4" role="3clFbG">
+            <node concept="2OqwBi" id="3UUIqqBhJRO" role="37vLTx">
+              <node concept="37vLTw" id="3UUIqqBhJFh" role="2Oq$k0">
+                <ref role="3cqZAo" node="3UUIqqACZ0C" resolve="line" />
               </node>
-              <node concept="10M0yZ" id="3UUIqqBfgI5" role="37vLTJ">
-                <ref role="1PxDUh" node="3UUIqqACKp2" resolve="WorkflowExecutionFilter" />
-                <ref role="3cqZAo" node="3UUIqqBejDj" resolve="matcher" />
+              <node concept="liA8E" id="3UUIqqBhKob" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.trim():java.lang.String" resolve="trim" />
+              </node>
+            </node>
+            <node concept="37vLTw" id="3UUIqqBhJ6S" role="37vLTJ">
+              <ref role="3cqZAo" node="3UUIqqACZ0C" resolve="line" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="3UUIqqBheod" role="3cqZAp">
+          <node concept="3cpWsn" id="3UUIqqBheoe" role="3cpWs9">
+            <property role="TrG5h" value="matcher" />
+            <node concept="3uibUv" id="3UUIqqBheof" role="1tU5fm">
+              <ref role="3uigEE" to="ni5j:~Matcher" resolve="Matcher" />
+            </node>
+            <node concept="2OqwBi" id="3UUIqqBhePr" role="33vP2m">
+              <node concept="37vLTw" id="3UUIqqBheNH" role="2Oq$k0">
+                <ref role="3cqZAo" node="3UUIqqBenpt" resolve="pattern" />
+              </node>
+              <node concept="liA8E" id="3UUIqqBhf08" role="2OqNvi">
+                <ref role="37wK5l" to="ni5j:~Pattern.matcher(java.lang.CharSequence):java.util.regex.Matcher" resolve="matcher" />
+                <node concept="37vLTw" id="3UUIqqBhfbr" role="37wK5m">
+                  <ref role="3cqZAo" node="3UUIqqACZ0C" resolve="line" />
+                </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="3clFbJ" id="3UUIqqBeuNx" role="3cqZAp">
-          <node concept="3clFbS" id="3UUIqqBeuNz" role="3clFbx">
-            <node concept="3cpWs6" id="3UUIqqBevQU" role="3cqZAp">
-              <node concept="10Nm6u" id="3UUIqqBew11" role="3cqZAk" />
+        <node concept="3clFbJ" id="3UUIqqBgKnA" role="3cqZAp">
+          <node concept="3clFbS" id="3UUIqqBgKnC" role="3clFbx">
+            <node concept="3cpWs6" id="3UUIqqBgLEK" role="3cqZAp">
+              <node concept="10Nm6u" id="3UUIqqBgLYX" role="3cqZAk" />
             </node>
           </node>
-          <node concept="1X3_iC" id="3UUIqqBfhzJ" role="lGtFl">
-            <property role="3V$3am" value="condition" />
-            <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159/1068580123160" />
-            <node concept="3fqX7Q" id="3UUIqqBev2k" role="8Wnug">
-              <node concept="2OqwBi" id="3UUIqqBevsJ" role="3fr31v">
-                <node concept="liA8E" id="3UUIqqBevvP" role="2OqNvi">
-                  <ref role="37wK5l" to="ni5j:~Matcher.matches():boolean" resolve="matches" />
-                </node>
-                <node concept="10M0yZ" id="3UUIqqBfgIc" role="2Oq$k0">
-                  <ref role="1PxDUh" node="3UUIqqACKp2" resolve="WorkflowExecutionFilter" />
-                  <ref role="3cqZAo" node="3UUIqqBejDj" resolve="matcher" />
-                </node>
+          <node concept="3fqX7Q" id="3UUIqqBgKHk" role="3clFbw">
+            <node concept="2OqwBi" id="3UUIqqBgL9w" role="3fr31v">
+              <node concept="37vLTw" id="3UUIqqBgKRo" role="2Oq$k0">
+                <ref role="3cqZAo" node="3UUIqqBheoe" resolve="matcher" />
               </node>
-            </node>
-          </node>
-          <node concept="3eOVzh" id="3UUIqqBfjWZ" role="3clFbw">
-            <node concept="3cmrfG" id="3UUIqqBfkcY" role="3uHU7w">
-              <property role="3cmrfH" value="0" />
-            </node>
-            <node concept="2OqwBi" id="3UUIqqBfi0K" role="3uHU7B">
-              <node concept="37vLTw" id="3UUIqqBfhJb" role="2Oq$k0">
-                <ref role="3cqZAo" node="3UUIqqACZ0C" resolve="line" />
-              </node>
-              <node concept="liA8E" id="3UUIqqBfiou" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.indexOf(java.lang.String):int" resolve="indexOf" />
-                <node concept="37vLTw" id="3UUIqqBfi$k" role="37wK5m">
-                  <ref role="3cqZAo" node="3UUIqqAFl1q" resolve="EXEC_BRACKET" />
-                </node>
+              <node concept="liA8E" id="3UUIqqBgLiX" role="2OqNvi">
+                <ref role="37wK5l" to="ni5j:~Matcher.matches():boolean" resolve="matches" />
               </node>
             </node>
           </node>
@@ -6187,8 +6143,8 @@
                   </node>
                 </node>
               </node>
-              <node concept="3cmrfG" id="3UUIqqBbWJD" role="3uHU7w">
-                <property role="3cmrfH" value="7" />
+              <node concept="3cmrfG" id="3UUIqqBiuqq" role="3uHU7w">
+                <property role="3cmrfH" value="6" />
               </node>
             </node>
           </node>
