@@ -4,6 +4,8 @@
 */*/source_gen.caches/**/*
 */*/classes_gen/**/*.class
 */*/classes_gen/**/trace.info
+*/*/classes_gen/
+*/*/source_gen/
 *.nf
 trace.info
 *.class
