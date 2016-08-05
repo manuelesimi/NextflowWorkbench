@@ -6965,7 +6965,23 @@
                                 </node>
                               </node>
                             </node>
-                            <node concept="3clFbH" id="7zis7bMAnA$" role="3cqZAp" />
+                            <node concept="3cpWs8" id="7zis7bMTiPF" role="3cqZAp">
+                              <node concept="3cpWsn" id="7zis7bMTiPD" role="3cpWs9">
+                                <property role="3TUv4t" value="true" />
+                                <property role="TrG5h" value="part2" />
+                                <node concept="3uibUv" id="7zis7bMTjLw" role="1tU5fm">
+                                  <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+                                </node>
+                                <node concept="AH0OO" id="7zis7bMTmcT" role="33vP2m">
+                                  <node concept="3cmrfG" id="7zis7bMTmw5" role="AHEQo">
+                                    <property role="3cmrfH" value="1" />
+                                  </node>
+                                  <node concept="37vLTw" id="7zis7bMTl$b" role="AHHXb">
+                                    <ref role="3cqZAo" node="7zis7bM$HCs" resolve="subdirs" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
                             <node concept="3cpWs8" id="7zis7bMA8Fu" role="3cqZAp">
                               <node concept="3cpWsn" id="7zis7bMA8Fv" role="3cpWs9">
                                 <property role="TrG5h" value="file" />
@@ -7139,26 +7155,36 @@
                                 <node concept="3uibUv" id="7zis7bMAk4U" role="1tU5fm">
                                   <ref role="3uigEE" to="wyt6:~String" resolve="String" />
                                 </node>
-                                <node concept="3cpWs3" id="7zis7bMP8JN" role="33vP2m">
-                                  <node concept="Xl_RD" id="7zis7bMP95P" role="3uHU7w">
-                                    <property role="Xl_RC" value="; /bin/bash -i" />
+                                <node concept="3cpWs3" id="7zis7bMTnvX" role="33vP2m">
+                                  <node concept="Xl_RD" id="7zis7bMTnPi" role="3uHU7w">
+                                    <property role="Xl_RC" value="*\')\&quot;; pwd; /bin/bash -i" />
                                   </node>
-                                  <node concept="3cpWs3" id="7zis7bMAmuq" role="3uHU7B">
-                                    <node concept="3cpWs3" id="7zis7bMAlHJ" role="3uHU7B">
-                                      <node concept="3cpWs3" id="7zis7bMAkB7" role="3uHU7B">
-                                        <node concept="Xl_RD" id="7zis7bMAky1" role="3uHU7B">
-                                          <property role="Xl_RC" value="cd " />
+                                  <node concept="3cpWs3" id="7zis7bMThAH" role="3uHU7B">
+                                    <node concept="3cpWs3" id="7zis7bMP8JN" role="3uHU7B">
+                                      <node concept="3cpWs3" id="7zis7bMAmuq" role="3uHU7B">
+                                        <node concept="3cpWs3" id="7zis7bMAlHJ" role="3uHU7B">
+                                          <node concept="3cpWs3" id="7zis7bMAkB7" role="3uHU7B">
+                                            <node concept="Xl_RD" id="7zis7bMAky1" role="3uHU7B">
+                                              <property role="Xl_RC" value="cd \&quot;$(find " />
+                                            </node>
+                                            <node concept="37vLTw" id="7zis7bMPJH7" role="3uHU7w">
+                                              <ref role="3cqZAo" node="7zis7bMPHnc" resolve="directory" />
+                                            </node>
+                                          </node>
+                                          <node concept="Xl_RD" id="7zis7bMAmlL" role="3uHU7w">
+                                            <property role="Xl_RC" value="/" />
+                                          </node>
                                         </node>
-                                        <node concept="37vLTw" id="7zis7bMPJH7" role="3uHU7w">
-                                          <ref role="3cqZAo" node="7zis7bMPHnc" resolve="directory" />
+                                        <node concept="37vLTw" id="7zis7bMAn8f" role="3uHU7w">
+                                          <ref role="3cqZAo" node="7zis7bM$HC$" resolve="part1" />
                                         </node>
                                       </node>
-                                      <node concept="Xl_RD" id="7zis7bMAmlL" role="3uHU7w">
-                                        <property role="Xl_RC" value="/" />
+                                      <node concept="Xl_RD" id="7zis7bMP95P" role="3uHU7w">
+                                        <property role="Xl_RC" value=" -type d -name \'" />
                                       </node>
                                     </node>
-                                    <node concept="37vLTw" id="7zis7bMAn8f" role="3uHU7w">
-                                      <ref role="3cqZAo" node="7zis7bM$HC$" resolve="part1" />
+                                    <node concept="37vLTw" id="7zis7bMTmQd" role="3uHU7w">
+                                      <ref role="3cqZAo" node="7zis7bMTiPD" resolve="part2" />
                                     </node>
                                   </node>
                                 </node>
