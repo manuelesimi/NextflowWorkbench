@@ -3224,6 +3224,9 @@
                       <node concept="37vLTw" id="7zis7bMuCPj" role="37wK5m">
                         <ref role="3cqZAo" node="7zis7bMubH5" resolve="hostname" />
                       </node>
+                      <node concept="37vLTw" id="2nc8ebz3FC1" role="37wK5m">
+                        <ref role="3cqZAo" node="28S3GatEby6" resolve="classesGenPath" />
+                      </node>
                     </node>
                   </node>
                 </node>
@@ -3568,6 +3571,9 @@
                           <node concept="liA8E" id="7zis7bM9pog" role="2OqNvi">
                             <ref role="37wK5l" to="guwi:~File.getPath():java.lang.String" resolve="getPath" />
                           </node>
+                        </node>
+                        <node concept="37vLTw" id="2nc8ebz3Gar" role="37wK5m">
+                          <ref role="3cqZAo" node="28S3GatEby6" resolve="classesGenPath" />
                         </node>
                       </node>
                     </node>
@@ -6233,6 +6239,14 @@
       <node concept="3Tm6S6" id="7zis7bM6f0G" role="1B3o_S" />
       <node concept="17QB3L" id="7zis7bM6fJ9" role="1tU5fm" />
     </node>
+    <node concept="312cEg" id="2nc8ebz3_e_" role="jymVt">
+      <property role="34CwA1" value="false" />
+      <property role="eg7rD" value="false" />
+      <property role="TrG5h" value="scriptDir" />
+      <property role="3TUv4t" value="true" />
+      <node concept="3Tm6S6" id="2nc8ebz3zSV" role="1B3o_S" />
+      <node concept="17QB3L" id="2nc8ebz3_ev" role="1tU5fm" />
+    </node>
     <node concept="312cEg" id="7zis7bMuIte" role="jymVt">
       <property role="34CwA1" value="false" />
       <property role="eg7rD" value="false" />
@@ -6289,6 +6303,19 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="2nc8ebz3BLv" role="3cqZAp">
+          <node concept="37vLTI" id="2nc8ebz3C0X" role="3clFbG">
+            <node concept="37vLTw" id="2nc8ebz3ClD" role="37vLTx">
+              <ref role="3cqZAo" node="2nc8ebz3sog" resolve="scriptDir" />
+            </node>
+            <node concept="2OqwBi" id="2nc8ebz3BOd" role="37vLTJ">
+              <node concept="Xjq3P" id="2nc8ebz3BLt" role="2Oq$k0" />
+              <node concept="2OwXpG" id="2nc8ebz3BYd" role="2OqNvi">
+                <ref role="2Oxat5" node="2nc8ebz3_e_" resolve="scriptDir" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="7zis7bMxGRL" role="3cqZAp">
           <node concept="37vLTI" id="7zis7bMxGVh" role="3clFbG">
             <node concept="37vLTw" id="7zis7bMxGRJ" role="37vLTJ">
@@ -6314,6 +6341,10 @@
       <node concept="37vLTG" id="7zis7bM5DrN" role="3clF46">
         <property role="TrG5h" value="workDir" />
         <node concept="17QB3L" id="7zis7bM5DN9" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="2nc8ebz3sog" role="3clF46">
+        <property role="TrG5h" value="scriptDir" />
+        <node concept="17QB3L" id="2nc8ebz3sI_" role="1tU5fm" />
       </node>
       <node concept="P$JXv" id="7zis7bMu8wD" role="lGtFl">
         <node concept="TZ5HA" id="7zis7bMu8wE" role="TZ5H$">
@@ -6392,6 +6423,19 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="2nc8ebz3AMy" role="3cqZAp">
+          <node concept="37vLTI" id="2nc8ebz3B3w" role="3clFbG">
+            <node concept="37vLTw" id="2nc8ebz3BoH" role="37vLTx">
+              <ref role="3cqZAo" node="2nc8ebz3t02" resolve="scriptDir" />
+            </node>
+            <node concept="2OqwBi" id="2nc8ebz3APQ" role="37vLTJ">
+              <node concept="Xjq3P" id="2nc8ebz3AMw" role="2Oq$k0" />
+              <node concept="2OwXpG" id="2nc8ebz3AUL" role="2OqNvi">
+                <ref role="2Oxat5" node="2nc8ebz3_e_" resolve="scriptDir" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbF" id="7zis7bMxHC9" role="3cqZAp">
           <node concept="37vLTI" id="7zis7bMxHIl" role="3clFbG">
             <node concept="37vLTw" id="7zis7bMxHC7" role="37vLTJ">
@@ -6425,6 +6469,10 @@
       <node concept="37vLTG" id="7zis7bMu8f8" role="3clF46">
         <property role="TrG5h" value="hostname" />
         <node concept="17QB3L" id="7zis7bMu8m$" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="2nc8ebz3t02" role="3clF46">
+        <property role="TrG5h" value="scriptDir" />
+        <node concept="17QB3L" id="2nc8ebz3tp8" role="1tU5fm" />
       </node>
       <node concept="P$JXv" id="7zis7bMu9M_" role="lGtFl">
         <node concept="TZ5HA" id="7zis7bMu9MA" role="TZ5H$">
@@ -7002,16 +7050,16 @@
                                   <node concept="1pGfFk" id="7zis7bMAbcd" role="2ShVmc">
                                     <ref role="37wK5l" to="guwi:~File.&lt;init&gt;(java.lang.String)" resolve="File" />
                                     <node concept="3cpWs3" id="7zis7bMBO5b" role="37wK5m">
-                                      <node concept="2OqwBi" id="7zis7bMBPbl" role="3uHU7B">
-                                        <node concept="Xjq3P" id="7zis7bMBP5n" role="2Oq$k0">
+                                      <node concept="Xl_RD" id="7zis7bMAbvg" role="3uHU7w">
+                                        <property role="Xl_RC" value="/NextflowWorkbenchTerminalScript" />
+                                      </node>
+                                      <node concept="2OqwBi" id="2nc8ebz3HtW" role="3uHU7B">
+                                        <node concept="Xjq3P" id="2nc8ebz3Hnm" role="2Oq$k0">
                                           <ref role="1HBi2w" node="3UUIqqACKp2" resolve="WorkflowExecutionFilter" />
                                         </node>
-                                        <node concept="2OwXpG" id="7zis7bMBPme" role="2OqNvi">
-                                          <ref role="2Oxat5" node="7zis7bM6fJP" resolve="workDir" />
+                                        <node concept="2OwXpG" id="2nc8ebz3HBg" role="2OqNvi">
+                                          <ref role="2Oxat5" node="2nc8ebz3_e_" resolve="scriptDir" />
                                         </node>
-                                      </node>
-                                      <node concept="Xl_RD" id="7zis7bMAbvg" role="3uHU7w">
-                                        <property role="Xl_RC" value="/nextflowWorkbenchTerminalScript" />
                                       </node>
                                     </node>
                                   </node>
