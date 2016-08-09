@@ -26,7 +26,6 @@
     <dependency reexport="false">c6c823fb-a9da-46e7-9850-129b0f7a7aa5(org.campagnelab.workflow)</dependency>
     <dependency reexport="false">f9b7dda6-7ab5-4936-ad1b-2d45c57833dc(org.campagnelab.workflow.configuration)</dependency>
     <dependency reexport="true">a16c15b3-e423-4aad-81e7-18bb74e1f395(org.campagnelab.util.execution.ant)</dependency>
-    <dependency reexport="false">2cd6da35-9171-4bb6-b128-f369f4c02f48(org.campagnelab.runR)</dependency>
     <dependency reexport="false">847a3235-09f9-403c-b6a9-1c294a212e92(Ant)</dependency>
     <dependency reexport="false">b0f8641f-bd77-4421-8425-30d9088a82f7(org.apache.commons)</dependency>
   </dependencies>
@@ -79,7 +78,6 @@
     <module reference="36c11d2d-1875-4a95-8bdb-70ea1ac63222(jetbrains.mps.execution.api)" version="0" />
     <module reference="933a68f9-aab6-401b-b5c5-5ca7783dce5f(jetbrains.mps.execution.configurations.pluginSolution)" version="0" />
     <module reference="04b376d5-fc16-403b-a344-c68b30193c6a(jetbrains.mps.execution.library)" version="0" />
-    <module reference="8d29d73f-ed99-4652-ae0a-083cdfe53c34(jetbrains.mps.ide.platform)" version="0" />
     <module reference="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" version="0" />
     <module reference="aee9cad2-acd4-4608-aef2-0004f6a1cdbd(jetbrains.mps.lang.actions)" version="0" />
     <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
@@ -90,11 +88,8 @@
     <module reference="c72da2b9-7cce-4447-8389-f407dc1158b7(jetbrains.mps.lang.structure)" version="0" />
     <module reference="9ded098b-ad6a-4657-bfd9-48636cfe8bc3(jetbrains.mps.lang.traceable)" version="0" />
     <module reference="a1250a4d-c090-42c3-ad7c-d298a3357dd4(jetbrains.mps.make.runtime)" version="0" />
-    <module reference="8fe4c62a-2020-4ff4-8eda-f322a55bdc9f(jetbrains.mps.refactoring.runtime)" version="0" />
-    <module reference="e6368d5c-b931-4d4d-9941-07b7da7d2e2d(jetbrains.mps.tool.builder)" version="0" />
     <module reference="b0f8641f-bd77-4421-8425-30d9088a82f7(org.apache.commons)" version="0" />
     <module reference="43809d33-d5e3-4390-917e-3944cb211ee3(org.campagnelab.icons)" version="0" />
-    <module reference="2cd6da35-9171-4bb6-b128-f369f4c02f48(org.campagnelab.runR)" version="0" />
     <module reference="a16c15b3-e423-4aad-81e7-18bb74e1f395(org.campagnelab.util.execution.ant)" version="0" />
     <module reference="d4767029-894b-41e1-b76e-850baa598e5b(org.campagnelab.util.files)" version="0" />
     <module reference="c6c823fb-a9da-46e7-9850-129b0f7a7aa5(org.campagnelab.workflow)" version="0" />
