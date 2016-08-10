@@ -47,6 +47,7 @@
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
+      <concept id="1070534644030" name="jetbrains.mps.baseLanguage.structure.BooleanType" flags="in" index="10P_77" />
       <concept id="1092119917967" name="jetbrains.mps.baseLanguage.structure.MulExpression" flags="nn" index="17qRlL" />
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
@@ -127,7 +128,22 @@
       </concept>
     </language>
     <language id="f9b7dda6-7ab5-4936-ad1b-2d45c57833dc" name="org.campagnelab.workflow.configuration">
+      <concept id="6643674794994257454" name="org.campagnelab.workflow.configuration.structure.Hostname" flags="ng" index="3yU_OC" />
+      <concept id="6643674794994257455" name="org.campagnelab.workflow.configuration.structure.JobArea" flags="ng" index="3yU_OD" />
+      <concept id="6643674794994257459" name="org.campagnelab.workflow.configuration.structure.RemoteSubmissionConfig" flags="ng" index="3yU_OP">
+        <property id="2800180507600185766" name="disabled" index="38DPjN" />
+        <child id="6643674794994257462" name="username" index="3yU_OK" />
+        <child id="6643674794994257463" name="jobArea" index="3yU_OL" />
+        <child id="6643674794994257461" name="hostname" index="3yU_ON" />
+        <child id="6643674794994257464" name="keyfile" index="3yU_OY" />
+      </concept>
+      <concept id="6643674794994257456" name="org.campagnelab.workflow.configuration.structure.KeyFile" flags="ng" index="3yU_OQ" />
+      <concept id="6643674794994257469" name="org.campagnelab.workflow.configuration.structure.Username" flags="ng" index="3yU_OV" />
+      <concept id="6643674794994257466" name="org.campagnelab.workflow.configuration.structure.SubmissionOption" flags="ng" index="3yU_OW">
+        <property id="6643674794994257467" name="value" index="3yU_OX" />
+      </concept>
       <concept id="6643674795001677795" name="org.campagnelab.workflow.configuration.structure.WorkflowConfig" flags="ng" index="3zupj_">
+        <child id="6643674795001677798" name="remoteSubmission" index="3zupjw" />
         <child id="6643674795001677796" name="executor" index="3zupjy" />
       </concept>
       <concept id="6643674795001609832" name="org.campagnelab.workflow.configuration.structure.Local" flags="ng" index="3zuAPI" />
@@ -414,6 +430,22 @@
   <node concept="3zupj_" id="2hwCr1Mk2mf">
     <property role="TrG5h" value="workflow.config" />
     <node concept="3zuAPI" id="2hwCr1Mk2mg" role="3zupjy" />
+    <node concept="3yU_OP" id="6FYdgze66FD" role="3zupjw">
+      <property role="TrG5h" value="remote.config" />
+      <property role="38DPjN" value="false" />
+      <node concept="3yU_OC" id="6FYdgze66FE" role="3yU_ON">
+        <property role="3yU_OX" value="spanky.med.cornell.edu" />
+      </node>
+      <node concept="3yU_OV" id="6FYdgze66FF" role="3yU_OK">
+        <property role="3yU_OX" value="gobyweb" />
+      </node>
+      <node concept="3yU_OD" id="6FYdgze66FG" role="3yU_OL">
+        <property role="3yU_OX" value="/home/gobyweb/JOBS-2" />
+      </node>
+      <node concept="3yU_OQ" id="6FYdgze66FH" role="3yU_OY">
+        <property role="3yU_OX" value="${user.home}/.ssh/id_rsa" />
+      </node>
+    </node>
   </node>
   <node concept="2ulcR8" id="6BD$$Fz2N0X">
     <property role="TrG5h" value="testString" />
@@ -942,10 +974,33 @@
     <node concept="2$rEH5" id="5jV0u9kN2if" role="2$rEHq">
       <ref role="2$rEH4" node="5jV0u9kMQ9G" resolve="crossTupleTest" />
       <node concept="1uYdA0" id="5jV0u9kN2p2" role="1uLvPH">
-        <ref role="1uK_4X" node="5jV0u9kMZst" resolve="indices" />
+        <ref role="1uK_4X" node="7S1vmGha0JP" resolve="flags" />
         <node concept="2r9bx" id="2d7vcpD_MNI" role="1ylr64">
-          <node concept="2rfA1" id="2d7vcpD_N1w" role="2rfdc">
-            <ref role="2rfdL" node="5jV0u9kN0XQ" resolve="indicesCopy" />
+          <node concept="2rfA1" id="6FYdgzeg5aT" role="2rfdc">
+            <ref role="2rfdL" node="5l6FUy8NkBH" resolve="namesNoNumbersCopy" />
+          </node>
+          <node concept="1ecmHP" id="6FYdgzeg2jB" role="1Xju2$">
+            <node concept="1bVj0M" id="6FYdgzeg2jC" role="303AOo">
+              <node concept="3clFbS" id="6FYdgzeg2jD" role="1bW5cS">
+                <node concept="3clFbF" id="6FYdgzeg3aD" role="3cqZAp">
+                  <node concept="1LFfDK" id="6FYdgzeg4BH" role="3clFbG">
+                    <node concept="3cmrfG" id="6FYdgzeg4S_" role="1LF_Uc">
+                      <property role="3cmrfH" value="0" />
+                    </node>
+                    <node concept="37vLTw" id="6FYdgzeg3aC" role="1LFl5Q">
+                      <ref role="3cqZAo" node="6FYdgzeg2jE" resolve="it" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="37vLTG" id="6FYdgzeg2jE" role="1bW2Oz">
+                <property role="TrG5h" value="it" />
+                <node concept="1h3xP" id="6FYdgzeg2kN" role="1tU5fm">
+                  <node concept="10Oyi0" id="6FYdgzeg2kO" role="1nAwDi" />
+                  <node concept="10P_77" id="6FYdgzeg2kP" role="1nAwDi" />
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>
@@ -970,10 +1025,10 @@
     <node concept="2$rEH5" id="5YlVPAW1csv" role="2$rEHq">
       <ref role="2$rEH4" node="5YlVPAW1c4b" resolve="crossTupleIntTest" />
       <node concept="1uYdA0" id="5YlVPAW1cCs" role="1uLvPH">
-        <ref role="1uK_4X" node="5l6FUy8NkBH" resolve="namesNoNumbersCopy" />
+        <ref role="1uK_4X" node="5YlVPAW0Ezg" resolve="namesNoNumbers" />
         <node concept="2r9bx" id="5YlVPAW1cPW" role="1ylr64">
-          <node concept="2rfA1" id="5l6FUy8Npr$" role="2rfdc">
-            <ref role="2rfdL" node="5l6FUy8NnKv" resolve="indicesCopy3" />
+          <node concept="2rfA1" id="6FYdgzeeFqq" role="2rfdc">
+            <ref role="2rfdL" node="5jV0u9kN0XQ" resolve="indicesCopy" />
           </node>
         </node>
       </node>

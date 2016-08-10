@@ -5335,21 +5335,6 @@
             </node>
           </node>
           <node concept="la8eA" id="2UMxsfkKhkj" role="lcghm">
-            <property role="lacIc" value=").flatten().collate(" />
-          </node>
-          <node concept="l9hG8" id="2UMxsfkKhlc" role="lcghm">
-            <node concept="2YIFZM" id="2UMxsfkKhMT" role="lb14g">
-              <ref role="37wK5l" to="wyt6:~Integer.toString(int):java.lang.String" resolve="toString" />
-              <ref role="1Pybhc" to="wyt6:~Integer" resolve="Integer" />
-              <node concept="2OqwBi" id="2UMxsfkKhRl" role="37wK5m">
-                <node concept="117lpO" id="2UMxsfkKhNQ" role="2Oq$k0" />
-                <node concept="2qgKlT" id="2UMxsfkKi4R" role="2OqNvi">
-                  <ref role="37wK5l" to="mqvz:2UMxsfkJkMZ" resolve="combinedTupleSize" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="la8eA" id="2UMxsfkKi8u" role="lcghm">
             <property role="lacIc" value=")" />
           </node>
         </node>
