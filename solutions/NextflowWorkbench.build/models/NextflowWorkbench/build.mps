@@ -1496,6 +1496,12 @@
             <ref role="3bR37D" node="6DdhZ$aRzWF" resolve="org.campagnelab.util.execution.ant" />
           </node>
         </node>
+        <node concept="1SiIV0" id="GHH7QcFfRX" role="3bR37C">
+          <node concept="3bR9La" id="GHH7QcFfRY" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1jjYQYSj2TY" resolve="Ant" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="6DdhZ$aRzWF" role="2G$12L">
         <property role="BnDLt" value="true" />
