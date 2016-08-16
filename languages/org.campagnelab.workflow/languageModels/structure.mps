@@ -1063,7 +1063,7 @@
     <node concept="1TJgyj" id="1qs9CHFOsoJ" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="closure" />
-      <ref role="20lvS9" node="5DC$1WkmvHE" resolve="ClosureLiteralWorkFlow" />
+      <ref role="20lvS9" node="7CUbWgsa4HW" resolve="ClosureWorkflow" />
     </node>
     <node concept="PrWs8" id="1tMFr$HOyvs" role="PzmwI">
       <ref role="PrY4T" node="1tMFr$HNUs9" resolve="HasClosure" />
@@ -1896,6 +1896,9 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="10nk9FBT4zy" resolve="ParameterContainer" />
     </node>
+    <node concept="PrWs8" id="7CUbWgsa4I1" role="PzmwI">
+      <ref role="PrY4T" node="7CUbWgsa4HW" resolve="ClosureWorkflow" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7VH0NfrpABL">
     <property role="3GE5qa" value="channelFunctions.CollectFile" />
@@ -2175,6 +2178,36 @@
     <property role="TrG5h" value="NameMustBeAJavaValidIdentifier" />
     <node concept="PrWs8" id="7lol28i6h3s" role="PrDN$">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="7CUbWgsa4HW">
+    <property role="1pbfSe" value="1771930816" />
+    <property role="3GE5qa" value="channelFunctions.closureFunctions" />
+    <property role="TrG5h" value="ClosureWorkflow" />
+  </node>
+  <node concept="1TIwiD" id="7CUbWgsac4M">
+    <property role="1pbfSe" value="1771900682" />
+    <property role="3GE5qa" value="channelFunctions.closureFunctions" />
+    <property role="TrG5h" value="ClosureWithCodeWorkflow" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="7CUbWgsaciD" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="lines" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="7CUbWgsac52" resolve="ClosureLine" />
+    </node>
+    <node concept="PrWs8" id="7CUbWgsac4R" role="PzmwI">
+      <ref role="PrY4T" node="7CUbWgsa4HW" resolve="ClosureWorkflow" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7CUbWgsac52">
+    <property role="1pbfSe" value="1771900666" />
+    <property role="3GE5qa" value="channelFunctions.closureFunctions" />
+    <property role="TrG5h" value="ClosureLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="7CUbWgsac57" role="1TKVEl">
+      <property role="TrG5h" value="line" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
 </model>

@@ -40,6 +40,7 @@
       <concept id="3459162043708467089" name="jetbrains.mps.lang.editor.structure.CellActionMap_CanExecuteFunction" flags="in" index="jK8Ss" />
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
       <concept id="1237307900041" name="jetbrains.mps.lang.editor.structure.IndentLayoutIndentStyleClassItem" flags="ln" index="lj46D" />
+      <concept id="1237308012275" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineStyleClassItem" flags="ln" index="ljvvj" />
       <concept id="1237375020029" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineChildrenStyleClassItem" flags="ln" index="pj6Ft" />
       <concept id="1142886221719" name="jetbrains.mps.lang.editor.structure.QueryFunction_NodeCondition" flags="in" index="pkWqt" />
       <concept id="1142886811589" name="jetbrains.mps.lang.editor.structure.ConceptFunctionParameter_node" flags="nn" index="pncrf" />
@@ -3839,6 +3840,45 @@
     <node concept="3F0ifn" id="5MXxGMDLXYg" role="2wV5jI">
       <property role="3F0ifm" value="constantRepeat()" />
       <ref role="1k5W1q" node="5yyd2HFt1$c" resolve="Function" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7CUbWgsaciQ">
+    <property role="3GE5qa" value="channelFunctions.closureFunctions" />
+    <ref role="1XX52x" to="iowz:7CUbWgsac4M" resolve="ClosureWithCodeWorkflow" />
+    <node concept="3EZMnI" id="7CUbWgsiucQ" role="2wV5jI">
+      <node concept="3F0ifn" id="7CUbWgsiudf" role="3EZMnx">
+        <property role="3F0ifm" value="{" />
+      </node>
+      <node concept="3EZMnI" id="7CUbWgsiudB" role="3EZMnx">
+        <node concept="VPM3Z" id="7CUbWgsiudD" role="3F10Kt">
+          <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F2HdR" id="7CUbWgsiueh" role="3EZMnx">
+          <ref role="1NtTu8" to="iowz:7CUbWgsaciD" />
+          <node concept="pj6Ft" id="7CUbWgsiuhS" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="ljvvj" id="7CUbWgsiujS" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="2iRkQZ" id="7CUbWgsiuej" role="2czzBx" />
+        </node>
+        <node concept="2iRkQZ" id="7CUbWgsiudG" role="2iSdaV" />
+      </node>
+      <node concept="3F0ifn" id="7CUbWgsiufl" role="3EZMnx">
+        <property role="3F0ifm" value="}" />
+      </node>
+      <node concept="2iRfu4" id="7CUbWgsiucT" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7CUbWgsgTLG">
+    <property role="3GE5qa" value="channelFunctions.closureFunctions" />
+    <ref role="1XX52x" to="iowz:7CUbWgsac52" resolve="ClosureLine" />
+    <node concept="3F0A7n" id="7CUbWgsgTLM" role="2wV5jI">
+      <ref role="1NtTu8" to="iowz:7CUbWgsac57" resolve="line" />
+      <node concept="VechU" id="7CUbWgsgTNz" role="3F10Kt">
+        <property role="Vb096" value="DARK_GREEN" />
+      </node>
     </node>
   </node>
 </model>
