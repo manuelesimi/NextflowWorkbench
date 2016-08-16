@@ -181,6 +181,7 @@
       <concept id="1185788614172" name="jetbrains.mps.lang.typesystem.structure.NormalTypeClause" flags="ng" index="mw_s8">
         <child id="1185788644032" name="normalType" index="mwGJk" />
       </concept>
+      <concept id="7391008184910224767" name="jetbrains.mps.lang.typesystem.structure.IsApplicableConceptFunction" flags="ig" index="2n1zYR" />
       <concept id="1185805035213" name="jetbrains.mps.lang.typesystem.structure.WhenConcreteStatement" flags="nn" index="nvevp">
         <child id="1185805047793" name="body" index="nvhr_" />
         <child id="1185805056450" name="argument" index="nvjzm" />
@@ -261,7 +262,9 @@
       <concept id="1174642900584" name="jetbrains.mps.lang.typesystem.structure.PatternCondition" flags="ig" index="1Yb3XT">
         <child id="1174642936809" name="pattern" index="1YbcFS" />
       </concept>
-      <concept id="1174643105530" name="jetbrains.mps.lang.typesystem.structure.InferenceRule" flags="ig" index="1YbPZF" />
+      <concept id="1174643105530" name="jetbrains.mps.lang.typesystem.structure.InferenceRule" flags="ig" index="1YbPZF">
+        <child id="7391008184910266275" name="applicableFun" index="2n1DPF" />
+      </concept>
       <concept id="1174648085619" name="jetbrains.mps.lang.typesystem.structure.AbstractRule" flags="ng" index="1YuPPy">
         <child id="1174648101952" name="applicableNode" index="1YuTPh" />
       </concept>
@@ -6368,41 +6371,31 @@
           <node concept="2jxLKc" id="7CUbWgsshCU" role="1tU5fm" />
         </node>
       </node>
-      <node concept="Jncv_" id="7CUbWgstQOR" role="3cqZAp">
-        <ref role="JncvD" to="iowz:7CUbWgsac4M" resolve="ClosureWithCodeWorkflow" />
-        <node concept="2OqwBi" id="7CUbWgstR0L" role="JncvB">
-          <node concept="1YBJjd" id="7CUbWgstQXD" role="2Oq$k0">
-            <ref role="1YBMHb" node="2_d934X_Vw$" resolve="mapFunction" />
-          </node>
-          <node concept="3TrEf2" id="7CUbWgstRo4" role="2OqNvi">
-            <ref role="3Tt5mk" to="iowz:1qs9CHFOsoJ" />
-          </node>
-        </node>
-        <node concept="3clFbS" id="7CUbWgstQOV" role="Jncv$">
-          <node concept="1Z5TYs" id="7CUbWgstRvx" role="3cqZAp">
-            <node concept="mw_s8" id="7CUbWgstRvy" role="1ZfhKB">
-              <node concept="2c44tf" id="7CUbWgstRvz" role="mwGJk">
-                <node concept="3cqZAl" id="7CUbWgstRv$" role="2c44tc" />
-              </node>
-            </node>
-            <node concept="mw_s8" id="7CUbWgstRv_" role="1ZfhK$">
-              <node concept="1Z2H0r" id="7CUbWgstRvA" role="mwGJk">
-                <node concept="1YBJjd" id="7CUbWgstRvB" role="1Z2MuG">
-                  <ref role="1YBMHb" node="2_d934X_Vw$" resolve="mapFunction" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="JncvC" id="7CUbWgstQOX" role="JncvA">
-          <property role="TrG5h" value="closure" />
-          <node concept="2jxLKc" id="7CUbWgstQOY" role="1tU5fm" />
-        </node>
-      </node>
     </node>
     <node concept="1YaCAy" id="2_d934X_Vw$" role="1YuTPh">
       <property role="TrG5h" value="mapFunction" />
       <ref role="1YaFvo" to="iowz:XaRILisPoE" resolve="MapFunction" />
+    </node>
+    <node concept="2n1zYR" id="7CUbWgsvCqg" role="2n1DPF">
+      <node concept="3clFbS" id="7CUbWgsvCqh" role="2VODD2">
+        <node concept="3cpWs6" id="7CUbWgsvDeK" role="3cqZAp">
+          <node concept="2OqwBi" id="7CUbWgsvDeL" role="3cqZAk">
+            <node concept="2OqwBi" id="7CUbWgsvDeM" role="2Oq$k0">
+              <node concept="1YBJjd" id="7CUbWgsvDeN" role="2Oq$k0">
+                <ref role="1YBMHb" node="2_d934X_Vw$" resolve="mapFunction" />
+              </node>
+              <node concept="3TrEf2" id="7CUbWgsvDeO" role="2OqNvi">
+                <ref role="3Tt5mk" to="iowz:1qs9CHFOsoJ" />
+              </node>
+            </node>
+            <node concept="1mIQ4w" id="7CUbWgsvDeP" role="2OqNvi">
+              <node concept="chp4Y" id="7CUbWgsvDeQ" role="cj9EA">
+                <ref role="cht4Q" to="iowz:5DC$1WkmvHE" resolve="ClosureLiteralWorkFlow" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
   <node concept="1YbPZF" id="2_d934XTXA8">
@@ -7411,6 +7404,52 @@
     <node concept="1YaCAy" id="5MXxGMDQMd_" role="1YuTPh">
       <property role="TrG5h" value="constantRepeat" />
       <ref role="1YaFvo" to="iowz:1dL8OevCtOz" resolve="ConstantRepeat" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="7CUbWgsvRbm">
+    <property role="TrG5h" value="typeof_MapFunctionWithCode" />
+    <property role="3GE5qa" value="channelFunctions.closureFunctions" />
+    <property role="18ip37" value="true" />
+    <node concept="3clFbS" id="7CUbWgsvRbn" role="18ibNy">
+      <node concept="1Z5TYs" id="7CUbWgsvRcb" role="3cqZAp">
+        <node concept="mw_s8" id="7CUbWgsvRcc" role="1ZfhKB">
+          <node concept="2c44tf" id="7CUbWgsvRcd" role="mwGJk">
+            <node concept="3cqZAl" id="7CUbWgsvRce" role="2c44tc" />
+          </node>
+        </node>
+        <node concept="mw_s8" id="7CUbWgsvRcf" role="1ZfhK$">
+          <node concept="1Z2H0r" id="7CUbWgsvRcg" role="mwGJk">
+            <node concept="1YBJjd" id="7CUbWgsvRch" role="1Z2MuG">
+              <ref role="1YBMHb" node="7CUbWgsvRck" resolve="mapFunction" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="7CUbWgsvRck" role="1YuTPh">
+      <property role="TrG5h" value="mapFunction" />
+      <ref role="1YaFvo" to="iowz:XaRILisPoE" resolve="MapFunction" />
+    </node>
+    <node concept="2n1zYR" id="7CUbWgsvRcl" role="2n1DPF">
+      <node concept="3clFbS" id="7CUbWgsvRcm" role="2VODD2">
+        <node concept="3cpWs6" id="7CUbWgsvRcn" role="3cqZAp">
+          <node concept="2OqwBi" id="7CUbWgsvRco" role="3cqZAk">
+            <node concept="2OqwBi" id="7CUbWgsvRcp" role="2Oq$k0">
+              <node concept="1YBJjd" id="7CUbWgsvRcq" role="2Oq$k0">
+                <ref role="1YBMHb" node="7CUbWgsvRck" resolve="mapFunction" />
+              </node>
+              <node concept="3TrEf2" id="7CUbWgsvRcr" role="2OqNvi">
+                <ref role="3Tt5mk" to="iowz:1qs9CHFOsoJ" />
+              </node>
+            </node>
+            <node concept="1mIQ4w" id="7CUbWgsvRcs" role="2OqNvi">
+              <node concept="chp4Y" id="7CUbWgsvRkU" role="cj9EA">
+                <ref role="cht4Q" to="iowz:7CUbWgsac4M" resolve="ClosureWithCodeWorkflow" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>
