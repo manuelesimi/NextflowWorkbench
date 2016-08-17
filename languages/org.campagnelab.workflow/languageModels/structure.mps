@@ -1883,6 +1883,7 @@
     <property role="TrG5h" value="ClosureLiteralWorkFlow" />
     <property role="3GE5qa" value="channelFunctions.closureFunctions" />
     <property role="1pbfSe" value="1858243465" />
+    <property role="R4oN_" value="A closure with formal parameters and statements." />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="6rO6MaAYBoU" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
@@ -2189,6 +2190,7 @@
     <property role="1pbfSe" value="1771900682" />
     <property role="3GE5qa" value="channelFunctions.closureFunctions" />
     <property role="TrG5h" value="ClosureWithCodeWorkflow" />
+    <property role="R4oN_" value="A closure with plain text-based code." />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="7CUbWgsaciD" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
