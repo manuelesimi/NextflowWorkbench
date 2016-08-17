@@ -6279,9 +6279,6 @@
           <node concept="la8eA" id="5MXxGMDMpBK" role="lcghm">
             <property role="lacIc" value="first()" />
           </node>
-          <node concept="la8eA" id="5MXxGMDMc8b" role="lcghm">
-            <property role="lacIc" value="{ }" />
-          </node>
         </node>
       </node>
     </node>
