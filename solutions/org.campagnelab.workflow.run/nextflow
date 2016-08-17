@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 #
 #  Copyright (c) 2013-2016, Centre for Genomic Regulation (CRG).
 #  Copyright (c) 2013-2016, Paolo Di Tommaso and the respective authors.
@@ -140,7 +140,7 @@ fi
 
 # >>> Campagne Lab: force to use the script's folder as NXF_HOME instead of $HOME/.nextflow
 NXF_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-NXF_VER=${NXF_VER:-'0.20.1'}
+NXF_VER=${NXF_VER:-'0.21.2'}
 NXF_ORG=${NXF_ORG:-'nextflow-io'}
 NXF_ASSETS=${NXF_ASSETS:-$NXF_HOME/assets}
 NXF_CLI="$0 $@"
@@ -344,12 +344,18 @@ else
     # otherwise run the capsule and get the result classpath in the 'launcher' and save it to a file
     launcher=($("$JAVA_CMD" $JAVA_OPTS -jar "$NXF_BIN"))
     [[ $? -ne 0 ]] && echo 'Unable to initialize nextflow environment' && exit $?
-    mkdir -p ${NXF_LAUNCHER}
-    STR=''
-    for x in "${launcher[@]}"; do
-    [[ "$x" != "\"-Duser.dir=$PWD\"" ]] && STR+="$x "
-    done
-    printf "$STR">"$LAUNCH_FILE"
+
+    # Don't spit errors if can't create the LAUNCH_FILE
+    if mkdir -p ${NXF_LAUNCHER} 2>/dev/null; then
+        STR=''
+        for x in "${launcher[@]}"; do
+        [[ "$x" != "\"-Duser.dir=$PWD\"" ]] && STR+="$x "
+        done
+        printf "$STR">"$LAUNCH_FILE"
+    else
+        echo_yellow "Warning: Couldn't create cached classpath folder: $NXF_LAUNCHER -- Maybe NXF_HOME is not writable?"
+    fi
+
 fi
 
 # finally run it
