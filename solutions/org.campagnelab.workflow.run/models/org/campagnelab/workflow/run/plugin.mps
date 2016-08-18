@@ -7213,7 +7213,7 @@
                                 </node>
                                 <node concept="3cpWs3" id="7zis7bMTnvX" role="33vP2m">
                                   <node concept="Xl_RD" id="7zis7bMTnPi" role="3uHU7w">
-                                    <property role="Xl_RC" value="*\')\&quot;; ls -a; /bin/bash -i" />
+                                    <property role="Xl_RC" value="*; /bin/bash -i" />
                                   </node>
                                   <node concept="3cpWs3" id="7zis7bMThAH" role="3uHU7B">
                                     <node concept="3cpWs3" id="7zis7bMP8JN" role="3uHU7B">
@@ -7221,22 +7221,24 @@
                                         <node concept="3cpWs3" id="7zis7bMAlHJ" role="3uHU7B">
                                           <node concept="3cpWs3" id="7zis7bMAkB7" role="3uHU7B">
                                             <node concept="Xl_RD" id="7zis7bMAky1" role="3uHU7B">
-                                              <property role="Xl_RC" value="cd \&quot;$(find " />
+                                              <property role="Xl_RC" value="cd " />
                                             </node>
                                             <node concept="37vLTw" id="7zis7bMPJH7" role="3uHU7w">
                                               <ref role="3cqZAo" node="7zis7bMPHnc" resolve="directory" />
                                             </node>
                                           </node>
-                                          <node concept="Xl_RD" id="7zis7bMAmlL" role="3uHU7w">
-                                            <property role="Xl_RC" value="/" />
+                                          <node concept="10M0yZ" id="6Vhl8QZLkIe" role="3uHU7w">
+                                            <ref role="1PxDUh" to="guwi:~File" resolve="File" />
+                                            <ref role="3cqZAo" to="guwi:~File.separator" resolve="separator" />
                                           </node>
                                         </node>
                                         <node concept="37vLTw" id="7zis7bMAn8f" role="3uHU7w">
                                           <ref role="3cqZAo" node="7zis7bM$HC$" resolve="part1" />
                                         </node>
                                       </node>
-                                      <node concept="Xl_RD" id="7zis7bMP95P" role="3uHU7w">
-                                        <property role="Xl_RC" value=" -type d -name \'" />
+                                      <node concept="10M0yZ" id="6Vhl8QZLklv" role="3uHU7w">
+                                        <ref role="1PxDUh" to="guwi:~File" resolve="File" />
+                                        <ref role="3cqZAo" to="guwi:~File.separator" resolve="separator" />
                                       </node>
                                     </node>
                                     <node concept="37vLTw" id="7zis7bMTmQd" role="3uHU7w">
@@ -7787,26 +7789,10 @@
       <node concept="10P_77" id="7uLL3Mf2K5a" role="3clF45" />
       <node concept="3Tm6S6" id="7uLL3Mf2LSI" role="1B3o_S" />
       <node concept="3clFbS" id="7uLL3Mf2K59" role="3clF47">
-        <node concept="3clFbF" id="7uLL3Mf2Y3Y" role="3cqZAp">
-          <node concept="2OqwBi" id="6bZ9fUD2tnY" role="3clFbG">
-            <node concept="2OqwBi" id="7uLL3Mf2Y4s" role="2Oq$k0">
-              <node concept="2YIFZM" id="7uLL3Mf2Y4a" role="2Oq$k0">
-                <ref role="37wK5l" to="wyt6:~System.getProperty(java.lang.String):java.lang.String" resolve="getProperty" />
-                <ref role="1Pybhc" to="wyt6:~System" resolve="System" />
-                <node concept="Xl_RD" id="7uLL3Mf2Y4b" role="37wK5m">
-                  <property role="Xl_RC" value="os.name" />
-                </node>
-              </node>
-              <node concept="liA8E" id="6bZ9fUD2tnD" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.toLowerCase():java.lang.String" resolve="toLowerCase" />
-              </node>
-            </node>
-            <node concept="liA8E" id="7uLL3Mf2Y4L" role="2OqNvi">
-              <ref role="37wK5l" to="wyt6:~String.contains(java.lang.CharSequence):boolean" resolve="contains" />
-              <node concept="Xl_RD" id="7uLL3Mf2Y4M" role="37wK5m">
-                <property role="Xl_RC" value="win" />
-              </node>
-            </node>
+        <node concept="3clFbF" id="6Vhl8QZLdEF" role="3cqZAp">
+          <node concept="10M0yZ" id="6Vhl8QZLdEE" role="3clFbG">
+            <ref role="1PxDUh" to="zn9m:~SystemInfo" resolve="SystemInfo" />
+            <ref role="3cqZAo" to="zn9m:~SystemInfo.isWindows" resolve="isWindows" />
           </node>
         </node>
       </node>
@@ -7816,21 +7802,10 @@
       <node concept="10P_77" id="7uLL3Mf2Y4_" role="3clF45" />
       <node concept="3Tm6S6" id="7uLL3Mf2Y4A" role="1B3o_S" />
       <node concept="3clFbS" id="7uLL3Mf2Y4B" role="3clF47">
-        <node concept="3clFbF" id="7uLL3Mf2Y4C" role="3cqZAp">
-          <node concept="2OqwBi" id="7uLL3Mf2Y4D" role="3clFbG">
-            <node concept="2YIFZM" id="7uLL3Mf2Y4E" role="2Oq$k0">
-              <ref role="37wK5l" to="wyt6:~System.getProperty(java.lang.String):java.lang.String" resolve="getProperty" />
-              <ref role="1Pybhc" to="wyt6:~System" resolve="System" />
-              <node concept="Xl_RD" id="7uLL3Mf2Y4F" role="37wK5m">
-                <property role="Xl_RC" value="os.name" />
-              </node>
-            </node>
-            <node concept="liA8E" id="7uLL3Mf2Y4G" role="2OqNvi">
-              <ref role="37wK5l" to="wyt6:~String.equals(java.lang.Object):boolean" resolve="equals" />
-              <node concept="Xl_RD" id="7uLL3Mf2Y4H" role="37wK5m">
-                <property role="Xl_RC" value="Mac OS X" />
-              </node>
-            </node>
+        <node concept="3clFbF" id="6Vhl8QZLe8l" role="3cqZAp">
+          <node concept="10M0yZ" id="6Vhl8QZLe8k" role="3clFbG">
+            <ref role="1PxDUh" to="zn9m:~SystemInfo" resolve="SystemInfo" />
+            <ref role="3cqZAo" to="zn9m:~SystemInfo.isMac" resolve="isMac" />
           </node>
         </node>
       </node>
@@ -7840,61 +7815,10 @@
       <node concept="10P_77" id="7EQZzuztulv" role="3clF45" />
       <node concept="3Tm6S6" id="7EQZzuztulw" role="1B3o_S" />
       <node concept="3clFbS" id="7EQZzuztulx" role="3clF47">
-        <node concept="3cpWs8" id="4p1DAc3uDua" role="3cqZAp">
-          <node concept="3cpWsn" id="4p1DAc3uDud" role="3cpWs9">
-            <property role="TrG5h" value="sysName" />
-            <node concept="17QB3L" id="4p1DAc3uDu8" role="1tU5fm" />
-            <node concept="2OqwBi" id="4p1DAc3uDeg" role="33vP2m">
-              <node concept="2YIFZM" id="4p1DAc3uDeh" role="2Oq$k0">
-                <ref role="37wK5l" to="wyt6:~System.getProperty(java.lang.String):java.lang.String" resolve="getProperty" />
-                <ref role="1Pybhc" to="wyt6:~System" resolve="System" />
-                <node concept="Xl_RD" id="4p1DAc3uDei" role="37wK5m">
-                  <property role="Xl_RC" value="os.name" />
-                </node>
-              </node>
-              <node concept="liA8E" id="4p1DAc3uDej" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.toLowerCase():java.lang.String" resolve="toLowerCase" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3cpWs6" id="4p1DAc3uDYi" role="3cqZAp">
-          <node concept="22lmx$" id="4p1DAc3Dfdg" role="3cqZAk">
-            <node concept="2OqwBi" id="4p1DAc3DfIb" role="3uHU7w">
-              <node concept="37vLTw" id="4p1DAc3Dflt" role="2Oq$k0">
-                <ref role="3cqZAo" node="4p1DAc3uDud" resolve="sysName" />
-              </node>
-              <node concept="liA8E" id="4p1DAc3DjDX" role="2OqNvi">
-                <ref role="37wK5l" to="wyt6:~String.contains(java.lang.CharSequence):boolean" resolve="contains" />
-                <node concept="Xl_RD" id="4p1DAc3DjLI" role="37wK5m">
-                  <property role="Xl_RC" value="bsd" />
-                </node>
-              </node>
-            </node>
-            <node concept="22lmx$" id="4p1DAc3BVUj" role="3uHU7B">
-              <node concept="2OqwBi" id="4p1DAc3uEV6" role="3uHU7B">
-                <node concept="37vLTw" id="4p1DAc3uE67" role="2Oq$k0">
-                  <ref role="3cqZAo" node="4p1DAc3uDud" resolve="sysName" />
-                </node>
-                <node concept="liA8E" id="4p1DAc3uIP_" role="2OqNvi">
-                  <ref role="37wK5l" to="wyt6:~String.contains(java.lang.CharSequence):boolean" resolve="contains" />
-                  <node concept="Xl_RD" id="4p1DAc3uIW8" role="37wK5m">
-                    <property role="Xl_RC" value="nux" />
-                  </node>
-                </node>
-              </node>
-              <node concept="2OqwBi" id="4p1DAc3BWmr" role="3uHU7w">
-                <node concept="37vLTw" id="4p1DAc3BVZJ" role="2Oq$k0">
-                  <ref role="3cqZAo" node="4p1DAc3uDud" resolve="sysName" />
-                </node>
-                <node concept="liA8E" id="4p1DAc3C0g8" role="2OqNvi">
-                  <ref role="37wK5l" to="wyt6:~String.contains(java.lang.CharSequence):boolean" resolve="contains" />
-                  <node concept="Xl_RD" id="4p1DAc3C0lV" role="37wK5m">
-                    <property role="Xl_RC" value="nix" />
-                  </node>
-                </node>
-              </node>
-            </node>
+        <node concept="3clFbF" id="6Vhl8QZLfdK" role="3cqZAp">
+          <node concept="10M0yZ" id="6Vhl8QZLfdJ" role="3clFbG">
+            <ref role="1PxDUh" to="zn9m:~SystemInfo" resolve="SystemInfo" />
+            <ref role="3cqZAo" to="zn9m:~SystemInfo.isLinux" resolve="isLinux" />
           </node>
         </node>
       </node>
