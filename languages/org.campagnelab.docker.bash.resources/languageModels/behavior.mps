@@ -1880,8 +1880,8 @@
                             <ref role="3Tt5mk" to="bs99:1ISEu8LMo3d" />
                           </node>
                         </node>
-                        <node concept="2qgKlT" id="6QVw52gsYHy" role="2OqNvi">
-                          <ref role="37wK5l" to="lcm8:2tqsND0ge2_" resolve="getRepositoryPath" />
+                        <node concept="2qgKlT" id="6Vhl8QZJOcP" role="2OqNvi">
+                          <ref role="37wK5l" to="lcm8:63NezpqzB9D" resolve="getRemotePluginRepoPath" />
                         </node>
                       </node>
                     </node>
