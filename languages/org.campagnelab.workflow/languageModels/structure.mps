@@ -150,7 +150,7 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="processes" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="5D7AjvYaj9M" resolve="ProcessRef" />
+      <ref role="20lvS9" node="2zDNr6iMGQZ" resolve="AbstractProcessRef" />
     </node>
     <node concept="1TJgyj" id="5HJ0QzxBRcw" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
@@ -176,7 +176,7 @@
   <node concept="1TIwiD" id="5D7AjvYaj9M">
     <property role="TrG5h" value="ProcessRef" />
     <property role="1pbfSe" value="1483787177" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="2zDNr6iMGQZ" resolve="AbstractProcessRef" />
     <node concept="1TJgyj" id="5D7AjvYaj9N" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="process" />
@@ -2210,6 +2210,34 @@
     <node concept="1TJgyi" id="7CUbWgsac57" role="1TKVEl">
       <property role="TrG5h" value="line" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2zDNr6iKQnv">
+    <property role="1pbfSe" value="1146276976" />
+    <property role="TrG5h" value="SplitProcessCombine" />
+    <property role="34LRSv" value="split process combine" />
+    <ref role="1TJDcQ" node="5D7AjvYaj9M" resolve="ProcessRef" />
+    <node concept="1TJgyj" id="2zDNr6iKQnw" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="splitProcess" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6tX5nBTatyL" resolve="Process" />
+    </node>
+    <node concept="1TJgyj" id="2zDNr6iKQnN" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="combineProcess" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6tX5nBTatyL" resolve="Process" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2zDNr6iMGQZ">
+    <property role="1pbfSe" value="1145791632" />
+    <property role="TrG5h" value="AbstractProcessRef" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="2zDNr6iMGR0" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
 </model>

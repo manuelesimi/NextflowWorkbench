@@ -96,6 +96,7 @@
       <concept id="3653684473245054700" name="org.campagnelab.workflow.structure.NewListLiteral" flags="ng" index="2J_sx7">
         <child id="3653684473245054701" name="elementType" index="2J_sx6" />
       </concept>
+      <concept id="2948113593646370239" name="org.campagnelab.workflow.structure.AbstractProcessRef" flags="ng" index="2U8K0e" />
       <concept id="8369613327464373434" name="org.campagnelab.workflow.structure.OutputChannel" flags="ng" index="1uLkD0" />
       <concept id="8369613327464009594" name="org.campagnelab.workflow.structure.InputChannel" flags="ng" index="1uYdA0">
         <reference id="8369613327464433607" name="connectedTo" index="1uK_4X" />
@@ -257,6 +258,7 @@
         <property role="TrG5h" value="combined" />
       </node>
     </node>
+    <node concept="2U8K0e" id="2zDNr6iPHVE" role="2$rEHq" />
     <node concept="1$O6w4" id="59BvSKQO2pB" role="2$L6iY">
       <property role="TrG5h" value="sampleIds" />
       <node concept="1$Fulc" id="59BvSKQO37s" role="1$O6w5">
