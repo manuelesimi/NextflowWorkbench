@@ -2,7 +2,7 @@
 <model ref="r:0583c0e9-dc14-4152-95a4-93036dce931b(org.campagnelab.workflow.structure)">
   <persistence version="9" />
   <languages>
-    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="1" />
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="-1" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -2212,6 +2212,16 @@
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
+  <node concept="1TIwiD" id="2zDNr6iMGQZ">
+    <property role="1pbfSe" value="1145791632" />
+    <property role="TrG5h" value="AbstractProcessRef" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="2zDNr6iMGR0" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+  </node>
   <node concept="1TIwiD" id="2zDNr6iKQnv">
     <property role="1pbfSe" value="1146276976" />
     <property role="TrG5h" value="SplitProcessCombine" />
@@ -2230,15 +2240,10 @@
       <ref role="20lvS9" node="6tX5nBTatyL" resolve="Process" />
     </node>
   </node>
-  <node concept="1TIwiD" id="2zDNr6iMGQZ">
-    <property role="1pbfSe" value="1145791632" />
-    <property role="TrG5h" value="AbstractProcessRef" />
-    <property role="R5$K7" value="true" />
-    <property role="R5$K2" value="false" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="2zDNr6iMGR0" role="PzmwI">
-      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
-    </node>
+  <node concept="PlHQZ" id="GxL7x1IXeH">
+    <property role="1pbfSe" value="1289590821" />
+    <property role="3GE5qa" value="scripts" />
+    <property role="TrG5h" value="HasDeclarations" />
   </node>
 </model>
 

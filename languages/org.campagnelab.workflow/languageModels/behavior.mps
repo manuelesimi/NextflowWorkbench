@@ -27,6 +27,7 @@
     <import index="6jv6" ref="r:ca9c89c0-011f-4597-8d3e-576d9add5d28(org.campagnelab.docker.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" implicit="true" />
+    <import index="87nw" ref="r:ca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3(de.slisson.mps.richtext.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -6536,6 +6537,23 @@
         </node>
       </node>
       <node concept="17QB3L" id="1dL8OevCtUD" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="GxL7x1IXeI">
+    <property role="3GE5qa" value="scripts" />
+    <ref role="13h7C2" to="iowz:GxL7x1IXeH" resolve="HasDeclarations" />
+    <node concept="13i0hz" id="GxL7x1IXeL" role="13h7CS">
+      <property role="13i0iv" value="true" />
+      <property role="13i0it" value="true" />
+      <property role="TrG5h" value="declarations" />
+      <node concept="3Tm1VV" id="GxL7x1IXeM" role="1B3o_S" />
+      <node concept="3clFbS" id="GxL7x1IXeO" role="3clF47" />
+      <node concept="3Tqbb2" id="GxL7x1J4jk" role="3clF45">
+        <ref role="ehGHo" to="87nw:2dWzqxEB$Tx" resolve="Text" />
+      </node>
+    </node>
+    <node concept="13hLZK" id="GxL7x1IXeJ" role="13h7CW">
+      <node concept="3clFbS" id="GxL7x1IXeK" role="2VODD2" />
     </node>
   </node>
 </model>
