@@ -1552,7 +1552,15 @@
       <node concept="3clFbS" id="GxL7x1Ndm8" role="2VODD2">
         <node concept="lc7rE" id="GxL7x1Ndmk" role="3cqZAp">
           <node concept="la8eA" id="GxL7x1Ndmx" role="lcghm">
-            <property role="lacIc" value="$JVMMemoryMinus" />
+            <property role="lacIc" value="$memoryForJVM_" />
+          </node>
+          <node concept="l9hG8" id="GxL7x1ORMH" role="lcghm">
+            <node concept="2OqwBi" id="GxL7x1ORQK" role="lb14g">
+              <node concept="117lpO" id="GxL7x1ORNE" role="2Oq$k0" />
+              <node concept="3TrcHB" id="GxL7x1ORYi" role="2OqNvi">
+                <ref role="3TsBF5" to="dlwq:GxL7x1OPar" resolve="id" />
+              </node>
+            </node>
           </node>
         </node>
       </node>
