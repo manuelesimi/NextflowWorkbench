@@ -47,6 +47,8 @@
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
+      <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
+      <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
       <concept id="3383245079137382180" name="jetbrains.mps.lang.editor.structure.StyleClass" flags="ig" index="14StLt" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
         <child id="1088186146602" name="editorComponent" index="1sWHZn" />
@@ -682,21 +684,64 @@
       <node concept="l2Vlx" id="2Iemm50S8Rg" role="2iSdaV" />
     </node>
   </node>
-  <node concept="24kQdi" id="6Vhl8QZMLBZ">
-    <property role="3GE5qa" value="values" />
-    <ref role="1XX52x" to="dlwq:6Vhl8QZMKpl" resolve="ProcessInstanceMemory" />
-    <node concept="3F0ifn" id="6Vhl8QZMLC1" role="2wV5jI">
-      <property role="3F0ifm" value="$memory" />
-      <node concept="VechU" id="6Vhl8QZMLMd" role="3F10Kt">
-        <property role="Vb096" value="DARK_BLUE" />
-      </node>
-    </node>
-  </node>
   <node concept="24kQdi" id="GxL7x1L_rB">
     <property role="3GE5qa" value="values" />
     <ref role="1XX52x" to="dlwq:GxL7x1L_rx" resolve="DynamicValue" />
     <node concept="PMmxH" id="GxL7x1L_rD" role="2wV5jI">
       <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      <node concept="VechU" id="GxL7x1MA9S" role="3F10Kt">
+        <property role="Vb096" value="DARK_BLUE" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="GxL7x1MhOo">
+    <property role="3GE5qa" value="values" />
+    <ref role="1XX52x" to="dlwq:GxL7x1MhOg" resolve="JVMMemoryMinus" />
+    <node concept="3EZMnI" id="GxL7x1MhOq" role="2wV5jI">
+      <node concept="2iRfu4" id="GxL7x1MhOt" role="2iSdaV" />
+      <node concept="3F0ifn" id="GxL7x1MhOS" role="3EZMnx">
+        <property role="3F0ifm" value="$((TASK_MEMORY_FOR_JVM - " />
+        <node concept="11L4FC" id="GxL7x1MtDk" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="11LMrY" id="GxL7x1MtDl" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="VechU" id="GxL7x1MXXq" role="3F10Kt">
+          <property role="Vb096" value="DARK_BLUE" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="GxL7x1MhPy" role="3EZMnx">
+        <property role="1$x2rV" value="decrease memory of" />
+        <ref role="1NtTu8" to="dlwq:GxL7x1MhPf" resolve="minus" />
+        <node concept="11L4FC" id="GxL7x1MtDu" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="11LMrY" id="GxL7x1MtDv" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="VechU" id="GxL7x1MwVO" role="3F10Kt">
+          <property role="Vb096" value="blue" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="GxL7x1MhQj" role="3EZMnx">
+        <property role="3F0ifm" value="))" />
+        <node concept="11L4FC" id="GxL7x1MhSd" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="11LMrY" id="GxL7x1MhU6" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="VechU" id="GxL7x1MXXW" role="3F10Kt">
+          <property role="Vb096" value="DARK_BLUE" />
+        </node>
+      </node>
+      <node concept="11L4FC" id="GxL7x1MAfh" role="3F10Kt">
+        <property role="VOm3f" value="true" />
+      </node>
+      <node concept="11LMrY" id="GxL7x1MAh7" role="3F10Kt">
+        <property role="VOm3f" value="true" />
+      </node>
     </node>
   </node>
 </model>

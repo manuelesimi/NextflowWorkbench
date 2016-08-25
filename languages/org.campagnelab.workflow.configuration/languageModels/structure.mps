@@ -538,25 +538,11 @@
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
-  <node concept="1TIwiD" id="6Vhl8QZMKpl">
-    <property role="1pbfSe" value="781998818" />
-    <property role="TrG5h" value="ProcessInstanceMemory" />
-    <property role="R4oN_" value="Memory assigned to the process instance" />
-    <property role="34LRSv" value="$memory" />
-    <property role="3GE5qa" value="values" />
-    <ref role="1TJDcQ" node="GxL7x1L_rx" resolve="DynamicValue" />
-    <node concept="PrWs8" id="GxL7x1L_qS" role="PzmwI">
-      <ref role="PrY4T" node="GxL7x1L$QS" resolve="NeedsMemoryOption" />
-    </node>
-    <node concept="PrWs8" id="GxL7x1J4S8" role="PzmwI">
-      <ref role="PrY4T" to="iowz:GxL7x1IXeH" resolve="HasDeclarations" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="GxL7x1L$K$">
     <property role="1pbfSe" value="1290277020" />
     <property role="3GE5qa" value="values" />
     <property role="TrG5h" value="JVMMemory" />
-    <property role="34LRSv" value="$memoryForJVM" />
+    <property role="34LRSv" value="$TASK_MEMORY_FOR_JVM" />
     <property role="R4oN_" value="Memory assigned to the process instance formatted for the JVM." />
     <ref role="1TJDcQ" node="GxL7x1L_rx" resolve="DynamicValue" />
     <node concept="PrWs8" id="GxL7x1L_rj" role="PzmwI">
@@ -578,6 +564,38 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="GxL7x1L_rI" role="PzmwI">
       <ref role="PrY4T" to="87nw:2dWzqxEBBFG" resolve="IWord" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="GxL7x1MhOg">
+    <property role="1pbfSe" value="1290461576" />
+    <property role="3GE5qa" value="values" />
+    <property role="TrG5h" value="JVMMemoryMinus" />
+    <property role="34LRSv" value="$TASK_MEMORY_FOR_JVM_MINUS" />
+    <property role="R4oN_" value="Memory assigned to the process instance formatted for the JVM minus the amount specified." />
+    <ref role="1TJDcQ" node="GxL7x1L_rx" resolve="DynamicValue" />
+    <node concept="PrWs8" id="GxL7x1MhOh" role="PzmwI">
+      <ref role="PrY4T" node="GxL7x1L$QS" resolve="NeedsMemoryOption" />
+    </node>
+    <node concept="PrWs8" id="GxL7x1MhOi" role="PzmwI">
+      <ref role="PrY4T" to="iowz:GxL7x1IXeH" resolve="HasDeclarations" />
+    </node>
+    <node concept="1TJgyi" id="GxL7x1MhPf" role="1TKVEl">
+      <property role="TrG5h" value="minus" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6Vhl8QZMKpl">
+    <property role="1pbfSe" value="781998818" />
+    <property role="TrG5h" value="ProcessInstanceMemory" />
+    <property role="R4oN_" value="Memory assigned to the process instance" />
+    <property role="34LRSv" value="$TASK_MEMORY" />
+    <property role="3GE5qa" value="values" />
+    <ref role="1TJDcQ" node="GxL7x1L_rx" resolve="DynamicValue" />
+    <node concept="PrWs8" id="GxL7x1MM19" role="PzmwI">
+      <ref role="PrY4T" node="GxL7x1L$QS" resolve="NeedsMemoryOption" />
+    </node>
+    <node concept="PrWs8" id="GxL7x1J4S8" role="PzmwI">
+      <ref role="PrY4T" to="iowz:GxL7x1IXeH" resolve="HasDeclarations" />
     </node>
   </node>
 </model>
