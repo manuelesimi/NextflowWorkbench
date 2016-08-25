@@ -1520,12 +1520,26 @@
     </node>
   </node>
   <node concept="WtQ9Q" id="6Vhl8QZNoZ2">
+    <property role="3GE5qa" value="values" />
     <ref role="WuzLi" to="dlwq:6Vhl8QZMKpl" resolve="ProcessInstanceMemory" />
     <node concept="11bSqf" id="6Vhl8QZNoZ3" role="11c4hB">
       <node concept="3clFbS" id="6Vhl8QZNoZ4" role="2VODD2">
         <node concept="lc7rE" id="6Vhl8QZNoZg" role="3cqZAp">
           <node concept="la8eA" id="6Vhl8QZNuv8" role="lcghm">
             <property role="lacIc" value="$taskMemory" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="GxL7x1L$PX">
+    <property role="3GE5qa" value="values" />
+    <ref role="WuzLi" to="dlwq:GxL7x1L$K$" resolve="JVMMemory" />
+    <node concept="11bSqf" id="GxL7x1L$PY" role="11c4hB">
+      <node concept="3clFbS" id="GxL7x1L$PZ" role="2VODD2">
+        <node concept="lc7rE" id="GxL7x1LRt4" role="3cqZAp">
+          <node concept="la8eA" id="GxL7x1LRt5" role="lcghm">
+            <property role="lacIc" value="$memoryForJVM" />
           </node>
         </node>
       </node>

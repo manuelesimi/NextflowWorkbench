@@ -510,6 +510,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="GxL7x1J4Si">
+    <property role="3GE5qa" value="values" />
     <ref role="13h7C2" to="dlwq:6Vhl8QZMKpl" resolve="ProcessInstanceMemory" />
     <node concept="13hLZK" id="GxL7x1J4Sj" role="13h7CW">
       <node concept="3clFbS" id="GxL7x1J4Sk" role="2VODD2" />
@@ -543,6 +544,45 @@
         </node>
       </node>
       <node concept="3Tqbb2" id="GxL7x1J4Sq" role="3clF45">
+        <ref role="ehGHo" to="87nw:2dWzqxEB$Tx" resolve="Text" />
+      </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="GxL7x1L$KX">
+    <property role="3GE5qa" value="values" />
+    <ref role="13h7C2" to="dlwq:GxL7x1L$K$" resolve="JVMMemory" />
+    <node concept="13hLZK" id="GxL7x1L$KY" role="13h7CW">
+      <node concept="3clFbS" id="GxL7x1L$KZ" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="GxL7x1L$L0" role="13h7CS">
+      <property role="13i0iv" value="false" />
+      <property role="13i0it" value="false" />
+      <property role="TrG5h" value="declarations" />
+      <ref role="13i0hy" to="mqvz:GxL7x1IXeL" resolve="declarations" />
+      <node concept="3Tm1VV" id="GxL7x1L$L1" role="1B3o_S" />
+      <node concept="3clFbS" id="GxL7x1L$L4" role="3clF47">
+        <node concept="3cpWs8" id="GxL7x1L$Ln" role="3cqZAp">
+          <node concept="3cpWsn" id="GxL7x1L$Lq" role="3cpWs9">
+            <property role="TrG5h" value="declarations" />
+            <node concept="3Tqbb2" id="GxL7x1L$Lm" role="1tU5fm">
+              <ref role="ehGHo" to="87nw:2dWzqxEB$Tx" resolve="Text" />
+            </node>
+            <node concept="2c44tf" id="GxL7x1L$M0" role="33vP2m">
+              <node concept="19SGf9" id="GxL7x1L$N5" role="2c44tc">
+                <node concept="19SUe$" id="GxL7x1L$N6" role="19SJt6">
+                  <property role="19SUeA" value="tempMemory=&quot;!{task.memory}&quot;&#10;memoryForJVM=${tempMemory/ GB/G}" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="GxL7x1L$Pj" role="3cqZAp">
+          <node concept="37vLTw" id="GxL7x1L$Pk" role="3cqZAk">
+            <ref role="3cqZAo" node="GxL7x1L$Lq" resolve="declarations" />
+          </node>
+        </node>
+      </node>
+      <node concept="3Tqbb2" id="GxL7x1L$L5" role="3clF45">
         <ref role="ehGHo" to="87nw:2dWzqxEB$Tx" resolve="Text" />
       </node>
     </node>

@@ -8,8 +8,8 @@
   <imports>
     <import index="q2ta" ref="r:cbd6943f-6de3-44a2-ba40-40c257b794e1(org.campagnelab.util.files.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="87nw" ref="r:ca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3(de.slisson.mps.richtext.structure)" implicit="true" />
     <import index="iowz" ref="r:0583c0e9-dc14-4152-95a4-93036dce931b(org.campagnelab.workflow.structure)" implicit="true" />
+    <import index="87nw" ref="r:ca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3(de.slisson.mps.richtext.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -32,6 +32,7 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ" />
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -542,12 +543,41 @@
     <property role="TrG5h" value="ProcessInstanceMemory" />
     <property role="R4oN_" value="Memory assigned to the process instance" />
     <property role="34LRSv" value="$memory" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="6Vhl8QZMKpm" role="PzmwI">
-      <ref role="PrY4T" to="87nw:2dWzqxEBBFG" resolve="IWord" />
+    <property role="3GE5qa" value="values" />
+    <ref role="1TJDcQ" node="GxL7x1L_rx" resolve="DynamicValue" />
+    <node concept="PrWs8" id="GxL7x1L_qS" role="PzmwI">
+      <ref role="PrY4T" node="GxL7x1L$QS" resolve="NeedsMemoryOption" />
     </node>
     <node concept="PrWs8" id="GxL7x1J4S8" role="PzmwI">
       <ref role="PrY4T" to="iowz:GxL7x1IXeH" resolve="HasDeclarations" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="GxL7x1L$K$">
+    <property role="1pbfSe" value="1290277020" />
+    <property role="3GE5qa" value="values" />
+    <property role="TrG5h" value="JVMMemory" />
+    <property role="34LRSv" value="$memoryForJVM" />
+    <property role="R4oN_" value="Memory assigned to the process instance formatted for the JVM." />
+    <ref role="1TJDcQ" node="GxL7x1L_rx" resolve="DynamicValue" />
+    <node concept="PrWs8" id="GxL7x1L_rj" role="PzmwI">
+      <ref role="PrY4T" node="GxL7x1L$QS" resolve="NeedsMemoryOption" />
+    </node>
+    <node concept="PrWs8" id="GxL7x1L$KN" role="PzmwI">
+      <ref role="PrY4T" to="iowz:GxL7x1IXeH" resolve="HasDeclarations" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="GxL7x1L$QS">
+    <property role="1pbfSe" value="1290277424" />
+    <property role="3GE5qa" value="values" />
+    <property role="TrG5h" value="NeedsMemoryOption" />
+  </node>
+  <node concept="1TIwiD" id="GxL7x1L_rx">
+    <property role="1pbfSe" value="1290279769" />
+    <property role="3GE5qa" value="values" />
+    <property role="TrG5h" value="DynamicValue" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="GxL7x1L_rI" role="PzmwI">
+      <ref role="PrY4T" to="87nw:2dWzqxEBBFG" resolve="IWord" />
     </node>
   </node>
 </model>

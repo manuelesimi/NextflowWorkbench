@@ -161,118 +161,119 @@
       <ref role="1YaFvo" to="dlwq:5KN4KqZiCvz" resolve="WorkflowConfig" />
     </node>
   </node>
-  <node concept="18kY7G" id="6Vhl8QZMUtL">
-    <property role="TrG5h" value="check_ProcessInstanceMemory" />
-    <node concept="3clFbS" id="6Vhl8QZMUtM" role="18ibNy">
-      <node concept="3cpWs8" id="6Vhl8QZMYaz" role="3cqZAp">
-        <node concept="3cpWsn" id="6Vhl8QZMYaA" role="3cpWs9">
+  <node concept="18kY7G" id="GxL7x1L$QZ">
+    <property role="TrG5h" value="check_NeedsMemoryOption" />
+    <property role="3GE5qa" value="values" />
+    <node concept="3clFbS" id="GxL7x1L$R0" role="18ibNy">
+      <node concept="3cpWs8" id="GxL7x1L$Z8" role="3cqZAp">
+        <node concept="3cpWsn" id="GxL7x1L$Z9" role="3cpWs9">
           <property role="TrG5h" value="options" />
-          <node concept="2I9FWS" id="6Vhl8QZMYax" role="1tU5fm" />
-          <node concept="2OqwBi" id="6Vhl8QZMYbA" role="33vP2m">
-            <node concept="2OqwBi" id="6Vhl8QZMYbB" role="2Oq$k0">
-              <node concept="1YBJjd" id="6Vhl8QZMYbC" role="2Oq$k0">
-                <ref role="1YBMHb" node="6Vhl8QZMUtO" resolve="processInstanceMemory" />
+          <node concept="2I9FWS" id="GxL7x1L$Za" role="1tU5fm" />
+          <node concept="2OqwBi" id="GxL7x1L$Zb" role="33vP2m">
+            <node concept="2OqwBi" id="GxL7x1L$Zc" role="2Oq$k0">
+              <node concept="1YBJjd" id="GxL7x1L_aU" role="2Oq$k0">
+                <ref role="1YBMHb" node="GxL7x1L$R2" resolve="needsMemoryOption" />
               </node>
-              <node concept="2Xjw5R" id="6Vhl8QZMYbD" role="2OqNvi">
-                <node concept="1xMEDy" id="6Vhl8QZMYbE" role="1xVPHs">
-                  <node concept="chp4Y" id="6Vhl8QZMYbF" role="ri$Ld">
+              <node concept="2Xjw5R" id="GxL7x1L$Ze" role="2OqNvi">
+                <node concept="1xMEDy" id="GxL7x1L$Zf" role="1xVPHs">
+                  <node concept="chp4Y" id="GxL7x1L$Zg" role="ri$Ld">
                     <ref role="cht4Q" to="iowz:6tX5nBTatyL" resolve="Process" />
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="3Tsc0h" id="6Vhl8QZMYbG" role="2OqNvi">
+            <node concept="3Tsc0h" id="GxL7x1L$Zh" role="2OqNvi">
               <ref role="3TtcxE" to="iowz:59canFNwpDb" />
             </node>
           </node>
         </node>
       </node>
-      <node concept="3clFbJ" id="6Vhl8QZMYfV" role="3cqZAp">
-        <node concept="3clFbS" id="6Vhl8QZMYfX" role="3clFbx">
-          <node concept="2MkqsV" id="6Vhl8QZN7U5" role="3cqZAp">
-            <node concept="Xl_RD" id="6Vhl8QZN7Uq" role="2MkJ7o">
-              <property role="Xl_RC" value="The $memory variable can be used only when the Process requests the memory it needs." />
+      <node concept="3clFbJ" id="GxL7x1L$Zi" role="3cqZAp">
+        <node concept="3clFbS" id="GxL7x1L$Zj" role="3clFbx">
+          <node concept="2MkqsV" id="GxL7x1L$Zk" role="3cqZAp">
+            <node concept="Xl_RD" id="GxL7x1L$Zl" role="2MkJ7o">
+              <property role="Xl_RC" value="The variable can be used only when the Process requests the memory it needs to run." />
             </node>
-            <node concept="1YBJjd" id="6Vhl8QZN7YZ" role="2OEOjV">
-              <ref role="1YBMHb" node="6Vhl8QZMUtO" resolve="processInstanceMemory" />
+            <node concept="1YBJjd" id="GxL7x1L_ir" role="2OEOjV">
+              <ref role="1YBMHb" node="GxL7x1L$R2" resolve="needsMemoryOption" />
             </node>
           </node>
         </node>
-        <node concept="1Wc70l" id="GxL7x1KRGh" role="3clFbw">
-          <node concept="1Wc70l" id="GxL7x1KRxK" role="3uHU7B">
-            <node concept="2OqwBi" id="6Vhl8QZMZ0I" role="3uHU7B">
-              <node concept="37vLTw" id="6Vhl8QZMYgK" role="2Oq$k0">
-                <ref role="3cqZAo" node="6Vhl8QZMYaA" resolve="options" />
+        <node concept="1Wc70l" id="GxL7x1L$Zn" role="3clFbw">
+          <node concept="1Wc70l" id="GxL7x1L$Zo" role="3uHU7B">
+            <node concept="2OqwBi" id="GxL7x1L$Zp" role="3uHU7B">
+              <node concept="37vLTw" id="GxL7x1L$Zq" role="2Oq$k0">
+                <ref role="3cqZAo" node="GxL7x1L$Z9" resolve="options" />
               </node>
-              <node concept="1v1jN8" id="6Vhl8QZN12m" role="2OqNvi" />
+              <node concept="1v1jN8" id="GxL7x1L$Zr" role="2OqNvi" />
             </node>
-            <node concept="2OqwBi" id="6Vhl8QZN4ld" role="3uHU7w">
-              <node concept="2OqwBi" id="6Vhl8QZN1O0" role="2Oq$k0">
-                <node concept="37vLTw" id="6Vhl8QZN1$L" role="2Oq$k0">
-                  <ref role="3cqZAo" node="6Vhl8QZMYaA" resolve="options" />
+            <node concept="2OqwBi" id="GxL7x1L$Zs" role="3uHU7w">
+              <node concept="2OqwBi" id="GxL7x1L$Zt" role="2Oq$k0">
+                <node concept="37vLTw" id="GxL7x1L$Zu" role="2Oq$k0">
+                  <ref role="3cqZAo" node="GxL7x1L$Z9" resolve="options" />
                 </node>
-                <node concept="3zZkjj" id="6Vhl8QZN2Ni" role="2OqNvi">
-                  <node concept="1bVj0M" id="6Vhl8QZN2Nk" role="23t8la">
-                    <node concept="3clFbS" id="6Vhl8QZN2Nl" role="1bW5cS">
-                      <node concept="3clFbF" id="6Vhl8QZN2Qo" role="3cqZAp">
-                        <node concept="2OqwBi" id="6Vhl8QZN2TE" role="3clFbG">
-                          <node concept="37vLTw" id="6Vhl8QZN2Qn" role="2Oq$k0">
-                            <ref role="3cqZAo" node="6Vhl8QZN2Nm" resolve="it" />
+                <node concept="3zZkjj" id="GxL7x1L$Zv" role="2OqNvi">
+                  <node concept="1bVj0M" id="GxL7x1L$Zw" role="23t8la">
+                    <node concept="3clFbS" id="GxL7x1L$Zx" role="1bW5cS">
+                      <node concept="3clFbF" id="GxL7x1L$Zy" role="3cqZAp">
+                        <node concept="2OqwBi" id="GxL7x1L$Zz" role="3clFbG">
+                          <node concept="37vLTw" id="GxL7x1L$Z$" role="2Oq$k0">
+                            <ref role="3cqZAo" node="GxL7x1L$ZB" resolve="it" />
                           </node>
-                          <node concept="1mIQ4w" id="6Vhl8QZN2Zh" role="2OqNvi">
-                            <node concept="chp4Y" id="6Vhl8QZN32Z" role="cj9EA">
+                          <node concept="1mIQ4w" id="GxL7x1L$Z_" role="2OqNvi">
+                            <node concept="chp4Y" id="GxL7x1L$ZA" role="cj9EA">
                               <ref role="cht4Q" to="dlwq:5KN4KqYYwDS" resolve="Memory" />
                             </node>
                           </node>
                         </node>
                       </node>
                     </node>
-                    <node concept="Rh6nW" id="6Vhl8QZN2Nm" role="1bW2Oz">
+                    <node concept="Rh6nW" id="GxL7x1L$ZB" role="1bW2Oz">
                       <property role="TrG5h" value="it" />
-                      <node concept="2jxLKc" id="6Vhl8QZN2Nn" role="1tU5fm" />
+                      <node concept="2jxLKc" id="GxL7x1L$ZC" role="1tU5fm" />
                     </node>
                   </node>
                 </node>
               </node>
-              <node concept="1v1jN8" id="6Vhl8QZN7ui" role="2OqNvi" />
+              <node concept="1v1jN8" id="GxL7x1L$ZD" role="2OqNvi" />
             </node>
           </node>
-          <node concept="2OqwBi" id="6Vhl8QZN7Gq" role="3uHU7w">
-            <node concept="2OqwBi" id="6Vhl8QZN7Gr" role="2Oq$k0">
-              <node concept="37vLTw" id="6Vhl8QZN7Gs" role="2Oq$k0">
-                <ref role="3cqZAo" node="6Vhl8QZMYaA" resolve="options" />
+          <node concept="2OqwBi" id="GxL7x1L$ZE" role="3uHU7w">
+            <node concept="2OqwBi" id="GxL7x1L$ZF" role="2Oq$k0">
+              <node concept="37vLTw" id="GxL7x1L$ZG" role="2Oq$k0">
+                <ref role="3cqZAo" node="GxL7x1L$Z9" resolve="options" />
               </node>
-              <node concept="3zZkjj" id="6Vhl8QZN7Gt" role="2OqNvi">
-                <node concept="1bVj0M" id="6Vhl8QZN7Gu" role="23t8la">
-                  <node concept="3clFbS" id="6Vhl8QZN7Gv" role="1bW5cS">
-                    <node concept="3clFbF" id="6Vhl8QZN7Gw" role="3cqZAp">
-                      <node concept="2OqwBi" id="6Vhl8QZN7Gx" role="3clFbG">
-                        <node concept="37vLTw" id="6Vhl8QZN7Gy" role="2Oq$k0">
-                          <ref role="3cqZAo" node="6Vhl8QZN7G_" resolve="it" />
+              <node concept="3zZkjj" id="GxL7x1L$ZH" role="2OqNvi">
+                <node concept="1bVj0M" id="GxL7x1L$ZI" role="23t8la">
+                  <node concept="3clFbS" id="GxL7x1L$ZJ" role="1bW5cS">
+                    <node concept="3clFbF" id="GxL7x1L$ZK" role="3cqZAp">
+                      <node concept="2OqwBi" id="GxL7x1L$ZL" role="3clFbG">
+                        <node concept="37vLTw" id="GxL7x1L$ZM" role="2Oq$k0">
+                          <ref role="3cqZAo" node="GxL7x1L$ZP" resolve="it" />
                         </node>
-                        <node concept="1mIQ4w" id="6Vhl8QZN7Gz" role="2OqNvi">
-                          <node concept="chp4Y" id="6Vhl8QZN7NF" role="cj9EA">
+                        <node concept="1mIQ4w" id="GxL7x1L$ZN" role="2OqNvi">
+                          <node concept="chp4Y" id="GxL7x1L$ZO" role="cj9EA">
                             <ref role="cht4Q" to="dlwq:5MXxGMDKwXG" resolve="MemoryDynamic" />
                           </node>
                         </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="Rh6nW" id="6Vhl8QZN7G_" role="1bW2Oz">
+                  <node concept="Rh6nW" id="GxL7x1L$ZP" role="1bW2Oz">
                     <property role="TrG5h" value="it" />
-                    <node concept="2jxLKc" id="6Vhl8QZN7GA" role="1tU5fm" />
+                    <node concept="2jxLKc" id="GxL7x1L$ZQ" role="1tU5fm" />
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="1v1jN8" id="6Vhl8QZN7GB" role="2OqNvi" />
+            <node concept="1v1jN8" id="GxL7x1L$ZR" role="2OqNvi" />
           </node>
         </node>
       </node>
     </node>
-    <node concept="1YaCAy" id="6Vhl8QZMUtO" role="1YuTPh">
-      <property role="TrG5h" value="processInstanceMemory" />
-      <ref role="1YaFvo" to="dlwq:6Vhl8QZMKpl" resolve="ProcessInstanceMemory" />
+    <node concept="1YaCAy" id="GxL7x1L$R2" role="1YuTPh">
+      <property role="TrG5h" value="needsMemoryOption" />
+      <ref role="1YaFvo" to="dlwq:GxL7x1L$QS" resolve="NeedsMemoryOption" />
     </node>
   </node>
 </model>
