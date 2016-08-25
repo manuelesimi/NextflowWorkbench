@@ -8,6 +8,8 @@
   <imports>
     <import index="q2ta" ref="r:cbd6943f-6de3-44a2-ba40-40c257b794e1(org.campagnelab.util.files.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="87nw" ref="r:ca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3(de.slisson.mps.richtext.structure)" implicit="true" />
+    <import index="iowz" ref="r:0583c0e9-dc14-4152-95a4-93036dce931b(org.campagnelab.workflow.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -166,7 +168,7 @@
     <property role="3GE5qa" value="processOptions" />
     <property role="TrG5h" value="Memory" />
     <property role="34LRSv" value="memory" />
-    <property role="R4oN_" value="Memory allocated for the process' execution" />
+    <property role="R4oN_" value="Memory allocated for the process' execution." />
     <property role="1pbfSe" value="455941502" />
     <ref role="1TJDcQ" node="dhtvqFdzNV" resolve="StringOption" />
     <node concept="1TJgyi" id="2Hxg8Ag1XNQ" role="1TKVEl">
@@ -533,6 +535,19 @@
     <node concept="1TJgyi" id="2Iemm50RT7T" role="1TKVEl">
       <property role="TrG5h" value="version" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6Vhl8QZMKpl">
+    <property role="1pbfSe" value="781998818" />
+    <property role="TrG5h" value="ProcessInstanceMemory" />
+    <property role="R4oN_" value="Memory assigned to the process instance" />
+    <property role="34LRSv" value="$memory" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="6Vhl8QZMKpm" role="PzmwI">
+      <ref role="PrY4T" to="87nw:2dWzqxEBBFG" resolve="IWord" />
+    </node>
+    <node concept="PrWs8" id="GxL7x1J4S8" role="PzmwI">
+      <ref role="PrY4T" to="iowz:GxL7x1IXeH" resolve="HasDeclarations" />
     </node>
   </node>
 </model>

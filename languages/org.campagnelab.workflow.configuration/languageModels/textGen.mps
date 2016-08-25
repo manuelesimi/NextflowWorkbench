@@ -75,7 +75,7 @@
         <child id="1068580123160" name="condition" index="3clFbw" />
         <child id="1068580123161" name="ifTrue" index="3clFbx" />
       </concept>
-      <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" index="3clFbS">
+      <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
       <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT">
@@ -144,7 +144,7 @@
       <concept id="1233921373471" name="jetbrains.mps.lang.textGen.structure.LanguageTextGenDeclaration" flags="ig" index="1bsvg0">
         <child id="1233922432965" name="operation" index="1bwxVq" />
       </concept>
-      <concept id="1233922353619" name="jetbrains.mps.lang.textGen.structure.OperationDeclaration" flags="sg" index="1bwezc" />
+      <concept id="1233922353619" name="jetbrains.mps.lang.textGen.structure.OperationDeclaration" flags="sg" stub="3147100357551177019" index="1bwezc" />
       <concept id="1233924848298" name="jetbrains.mps.lang.textGen.structure.OperationCall" flags="ng" index="1bDJIP">
         <reference id="1234190664409" name="function" index="1rvKf6" />
         <child id="1234191323697" name="parameter" index="1ryhcI" />
@@ -1516,6 +1516,18 @@
           <node concept="l8MVK" id="5aAnXWT9jdi" role="lcghm" />
         </node>
         <node concept="3clFbH" id="5aAnXWT94mg" role="3cqZAp" />
+      </node>
+    </node>
+  </node>
+  <node concept="WtQ9Q" id="6Vhl8QZNoZ2">
+    <ref role="WuzLi" to="dlwq:6Vhl8QZMKpl" resolve="ProcessInstanceMemory" />
+    <node concept="11bSqf" id="6Vhl8QZNoZ3" role="11c4hB">
+      <node concept="3clFbS" id="6Vhl8QZNoZ4" role="2VODD2">
+        <node concept="lc7rE" id="6Vhl8QZNoZg" role="3cqZAp">
+          <node concept="la8eA" id="6Vhl8QZNuv8" role="lcghm">
+            <property role="lacIc" value="$taskMemory" />
+          </node>
+        </node>
       </node>
     </node>
   </node>

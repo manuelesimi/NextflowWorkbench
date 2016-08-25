@@ -682,5 +682,14 @@
       <node concept="l2Vlx" id="2Iemm50S8Rg" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="6Vhl8QZMLBZ">
+    <ref role="1XX52x" to="dlwq:6Vhl8QZMKpl" resolve="ProcessInstanceMemory" />
+    <node concept="3F0ifn" id="6Vhl8QZMLC1" role="2wV5jI">
+      <property role="3F0ifm" value="$memory" />
+      <node concept="VechU" id="6Vhl8QZMLMd" role="3F10Kt">
+        <property role="Vb096" value="DARK_BLUE" />
+      </node>
+    </node>
+  </node>
 </model>
 
