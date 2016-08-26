@@ -73,6 +73,7 @@
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389214265" name="jetbrains.mps.lang.editor.structure.EditorCellModel" flags="ng" index="3EYTF0">
+        <property id="1130859485024" name="attractsFocus" index="1cu_pB" />
         <child id="1142887637401" name="renderingCondition" index="pqm2j" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
@@ -713,6 +714,7 @@
       </node>
       <node concept="3F0A7n" id="GxL7x1MhPy" role="3EZMnx">
         <property role="1$x2rV" value="decrease memory of" />
+        <property role="1cu_pB" value="1" />
         <ref role="1NtTu8" to="dlwq:GxL7x1MhPf" resolve="minus" />
         <node concept="11L4FC" id="GxL7x1MtDu" role="3F10Kt">
           <property role="VOm3f" value="true" />
@@ -740,6 +742,57 @@
         <property role="VOm3f" value="true" />
       </node>
       <node concept="11LMrY" id="GxL7x1MAh7" role="3F10Kt">
+        <property role="VOm3f" value="true" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="GxL7x1PR04">
+    <property role="3GE5qa" value="values" />
+    <ref role="1XX52x" to="dlwq:GxL7x1PQZe" resolve="RandomString" />
+    <node concept="3EZMnI" id="GxL7x1PR06" role="2wV5jI">
+      <node concept="2iRfu4" id="GxL7x1PR07" role="2iSdaV" />
+      <node concept="3F0ifn" id="GxL7x1PR08" role="3EZMnx">
+        <property role="3F0ifm" value="$((RANDOM_STRING (" />
+        <node concept="11L4FC" id="GxL7x1PR09" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="11LMrY" id="GxL7x1PR0a" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="VechU" id="GxL7x1PR0b" role="3F10Kt">
+          <property role="Vb096" value="DARK_BLUE" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="GxL7x1PR0c" role="3EZMnx">
+        <property role="1$x2rV" value="length" />
+        <property role="1cu_pB" value="1" />
+        <ref role="1NtTu8" to="dlwq:GxL7x1PQZU" resolve="length" />
+        <node concept="11L4FC" id="GxL7x1PR0d" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="11LMrY" id="GxL7x1PR0e" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="VechU" id="GxL7x1PR0f" role="3F10Kt">
+          <property role="Vb096" value="blue" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="GxL7x1PR0g" role="3EZMnx">
+        <property role="3F0ifm" value=")))" />
+        <node concept="11L4FC" id="GxL7x1PR0h" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="11LMrY" id="GxL7x1PR0i" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="VechU" id="GxL7x1PR0j" role="3F10Kt">
+          <property role="Vb096" value="DARK_BLUE" />
+        </node>
+      </node>
+      <node concept="11L4FC" id="GxL7x1PR0k" role="3F10Kt">
+        <property role="VOm3f" value="true" />
+      </node>
+      <node concept="11LMrY" id="GxL7x1PR0l" role="3F10Kt">
         <property role="VOm3f" value="true" />
       </node>
     </node>

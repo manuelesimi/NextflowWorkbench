@@ -602,5 +602,20 @@
       <ref role="PrY4T" to="iowz:GxL7x1IXeH" resolve="HasDeclarations" />
     </node>
   </node>
+  <node concept="1TIwiD" id="GxL7x1PQZe">
+    <property role="1pbfSe" value="1291400262" />
+    <property role="3GE5qa" value="values" />
+    <property role="TrG5h" value="RandomString" />
+    <property role="34LRSv" value="$RANDOM_STRING" />
+    <property role="R4oN_" value="A random string of the specified length" />
+    <ref role="1TJDcQ" node="GxL7x1L_rx" resolve="DynamicValue" />
+    <node concept="1TJgyi" id="GxL7x1PQZU" role="1TKVEl">
+      <property role="TrG5h" value="length" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="PrWs8" id="GxL7x1PQZf" role="PzmwI">
+      <ref role="PrY4T" to="iowz:GxL7x1IXeH" resolve="HasDeclarations" />
+    </node>
+  </node>
 </model>
 
