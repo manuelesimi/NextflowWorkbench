@@ -25,6 +25,7 @@
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
+      <concept id="1225271369338" name="jetbrains.mps.baseLanguage.structure.IsEmptyOperation" flags="nn" index="17RlXB" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
@@ -97,6 +98,9 @@
       </concept>
       <concept id="1144101972840" name="jetbrains.mps.lang.smodel.structure.OperationParm_Concept" flags="ng" index="1xMEDy">
         <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
+      </concept>
+      <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
+        <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
       <concept id="1138056282393" name="jetbrains.mps.lang.smodel.structure.SLinkListAccess" flags="nn" index="3Tsc0h">
         <reference id="1138056546658" name="link" index="3TtcxE" />
@@ -274,6 +278,39 @@
     <node concept="1YaCAy" id="GxL7x1L$R2" role="1YuTPh">
       <property role="TrG5h" value="needsMemoryOption" />
       <ref role="1YaFvo" to="dlwq:GxL7x1L$QS" resolve="NeedsMemoryOption" />
+    </node>
+  </node>
+  <node concept="18kY7G" id="GxL7x1QKKp">
+    <property role="TrG5h" value="check_RandomString" />
+    <property role="3GE5qa" value="values" />
+    <node concept="3clFbS" id="GxL7x1QKKq" role="18ibNy">
+      <node concept="3clFbJ" id="GxL7x1QKKw" role="3cqZAp">
+        <node concept="2OqwBi" id="GxL7x1QL23" role="3clFbw">
+          <node concept="2OqwBi" id="GxL7x1QKNH" role="2Oq$k0">
+            <node concept="1YBJjd" id="GxL7x1QKKP" role="2Oq$k0">
+              <ref role="1YBMHb" node="GxL7x1QKKs" resolve="randomString" />
+            </node>
+            <node concept="3TrcHB" id="GxL7x1QKTC" role="2OqNvi">
+              <ref role="3TsBF5" to="dlwq:GxL7x1QyGx" resolve="characters" />
+            </node>
+          </node>
+          <node concept="17RlXB" id="GxL7x1QL8J" role="2OqNvi" />
+        </node>
+        <node concept="3clFbS" id="GxL7x1QKKy" role="3clFbx">
+          <node concept="2MkqsV" id="GxL7x1QL90" role="3cqZAp">
+            <node concept="Xl_RD" id="GxL7x1QL9l" role="2MkJ7o">
+              <property role="Xl_RC" value="Invalid set of characters. The string can't be generated." />
+            </node>
+            <node concept="1YBJjd" id="GxL7x1QL9S" role="2OEOjV">
+              <ref role="1YBMHb" node="GxL7x1QKKs" resolve="randomString" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="GxL7x1QKKs" role="1YuTPh">
+      <property role="TrG5h" value="randomString" />
+      <ref role="1YaFvo" to="dlwq:GxL7x1PQZe" resolve="RandomString" />
     </node>
   </node>
 </model>
