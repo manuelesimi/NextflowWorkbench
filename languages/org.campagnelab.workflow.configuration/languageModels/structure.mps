@@ -613,6 +613,10 @@
       <property role="TrG5h" value="length" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyi" id="GxL7x1QyGx" role="1TKVEl">
+      <property role="TrG5h" value="characters" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
     <node concept="PrWs8" id="GxL7x1PQZf" role="PzmwI">
       <ref role="PrY4T" to="iowz:GxL7x1IXeH" resolve="HasDeclarations" />
     </node>
