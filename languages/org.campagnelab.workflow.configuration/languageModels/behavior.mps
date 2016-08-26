@@ -592,7 +592,7 @@
             <node concept="2c44tf" id="GxL7x1L$M0" role="33vP2m">
               <node concept="19SGf9" id="GxL7x1L$N5" role="2c44tc">
                 <node concept="19SUe$" id="GxL7x1L$N6" role="19SJt6">
-                  <property role="19SUeA" value="tempMemory=&quot;!{task.memory}&quot;&#10;memoryForJVM=${tempMemory/ GB/G}" />
+                  <property role="19SUeA" value="tempMemory=&quot;!{task.memory}&quot;&#10;memoryForJVM=${tempMemory/ GB/G}&#10;" />
                 </node>
               </node>
             </node>
@@ -741,7 +741,7 @@
             <node concept="2c44tf" id="GxL7x1J4SX" role="33vP2m">
               <node concept="19SGf9" id="GxL7x1J4SY" role="2c44tc">
                 <node concept="19SUe$" id="GxL7x1J4SZ" role="19SJt6">
-                  <property role="19SUeA" value="taskMemory=&quot;!{task.memory}&quot;" />
+                  <property role="19SUeA" value="taskMemory=&quot;!{task.memory}&quot;&#10;" />
                 </node>
               </node>
             </node>
