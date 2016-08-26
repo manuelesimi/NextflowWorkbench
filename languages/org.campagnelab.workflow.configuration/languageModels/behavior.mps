@@ -948,7 +948,7 @@
             <node concept="2c44tf" id="GxL7x1PR1p" role="33vP2m">
               <node concept="19SGf9" id="GxL7x1PR1q" role="2c44tc">
                 <node concept="19SUe$" id="GxL7x1PR1r" role="19SJt6">
-                  <property role="19SUeA" value=" &#10;function randomString {&#10;  length=&quot;$1&quot;&#10;  s=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w $length | head -n 1)&#10;  echo &quot;${s}&quot;&#10;}&#10;" />
+                  <property role="19SUeA" value=" &#10;function randomString {&#10;  length=&quot;$1&quot;&#10;  s=$(env LC_CTYPE=C tr -dc &quot;a-zA-Z0-9&quot; &lt; /dev/urandom | head -c $length)&#10;  echo &quot;${s}&quot;&#10;}&#10;" />
                 </node>
               </node>
             </node>
