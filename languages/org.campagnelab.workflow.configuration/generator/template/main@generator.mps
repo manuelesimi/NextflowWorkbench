@@ -74,7 +74,9 @@
         <property id="6666499814681447926" name="attrName" index="2pNUuO" />
         <child id="6666499814681541918" name="value" index="2pMdts" />
       </concept>
-      <concept id="1622293396948952339" name="jetbrains.mps.core.xml.structure.XmlText" flags="nn" index="3o6iSG" />
+      <concept id="1622293396948952339" name="jetbrains.mps.core.xml.structure.XmlText" flags="nn" index="3o6iSG">
+        <property id="1622293396948953704" name="value" index="3o6i5n" />
+      </concept>
       <concept id="6786756355279841993" name="jetbrains.mps.core.xml.structure.XmlDocument" flags="ng" index="3rIKKV">
         <child id="6666499814681299055" name="rootElement" index="2pNm8H" />
       </concept>
@@ -194,6 +196,41 @@
                   </node>
                 </node>
                 <node concept="3x8VRR" id="5wD$zX25st5" role="2OqNvi" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3lhOvk" id="GxL7x1RMvj" role="3lj3bC">
+      <property role="13Pg2o" value="true" />
+      <ref role="30HIoZ" to="dlwq:5KN4KqZiCvz" resolve="WorkflowConfig" />
+      <ref role="3lhOvi" node="2cffJJS8DVj" resolve="runRemote" />
+      <node concept="30G5F_" id="GxL7x1RMvk" role="30HLyM">
+        <node concept="3clFbS" id="GxL7x1RMvl" role="2VODD2">
+          <node concept="3clFbF" id="GxL7x1RMvm" role="3cqZAp">
+            <node concept="1Wc70l" id="GxL7x1RMvn" role="3clFbG">
+              <node concept="3fqX7Q" id="GxL7x1RMvo" role="3uHU7w">
+                <node concept="2OqwBi" id="GxL7x1RMvp" role="3fr31v">
+                  <node concept="2OqwBi" id="GxL7x1RMvq" role="2Oq$k0">
+                    <node concept="30H73N" id="GxL7x1RMvr" role="2Oq$k0" />
+                    <node concept="3TrEf2" id="GxL7x1RMvs" role="2OqNvi">
+                      <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" />
+                    </node>
+                  </node>
+                  <node concept="3TrcHB" id="GxL7x1RMvt" role="2OqNvi">
+                    <ref role="3TsBF5" to="dlwq:2rsflnIuQAA" resolve="disabled" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="GxL7x1RMvu" role="3uHU7B">
+                <node concept="2OqwBi" id="GxL7x1RMvv" role="2Oq$k0">
+                  <node concept="30H73N" id="GxL7x1RMvw" role="2Oq$k0" />
+                  <node concept="3TrEf2" id="GxL7x1RMvx" role="2OqNvi">
+                    <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" />
+                  </node>
+                </node>
+                <node concept="3x8VRR" id="GxL7x1RMvy" role="2OqNvi" />
               </node>
             </node>
           </node>
@@ -1139,6 +1176,44 @@
           </node>
         </node>
         <node concept="3o6iSG" id="5OPtsPp$I4" role="3o6s8t" />
+        <node concept="2pNNFK" id="GxL7x1RNvE" role="3o6s8t">
+          <property role="2pNNFO" value="target" />
+          <node concept="2pNNFK" id="GxL7x1RNQF" role="3o6s8t">
+            <property role="2pNNFO" value="echo" />
+            <node concept="2pNUuL" id="GxL7x1RNQU" role="2pNNFR">
+              <property role="2pNUuO" value="file" />
+              <node concept="2pMdtt" id="GxL7x1RNRi" role="2pMdts">
+                <property role="2pMdty" value="${source.dir}/resumeNextflow" />
+              </node>
+            </node>
+            <node concept="2pNUuL" id="GxL7x1RNR4" role="2pNNFR">
+              <property role="2pNUuO" value="append" />
+              <node concept="2pMdtt" id="GxL7x1RNRd" role="2pMdts">
+                <property role="2pMdty" value="false" />
+              </node>
+            </node>
+            <node concept="3o6iSG" id="GxL7x1ROeE" role="3o6s8t">
+              <property role="3o6i5n" value="#!/bin/bash -l" />
+            </node>
+            <node concept="3o6iSG" id="GxL7x1SfbK" role="3o6s8t">
+              <property role="3o6i5n" value="cd ${remote.job.dir}" />
+            </node>
+            <node concept="3o6iSG" id="GxL7x1SflL" role="3o6s8t">
+              <property role="3o6i5n" value="export SCRIPT_DIR=${remote.job.dir}" />
+            </node>
+            <node concept="3o6iSG" id="GxL7x1SflY" role="3o6s8t">
+              <property role="3o6i5n" value="./runNextflow ${remote.job.dir}/${workflow.script} ${jars} ${nextflow.options} -resume " />
+            </node>
+            <node concept="3o6iSG" id="GxL7x1SfmO" role="3o6s8t" />
+          </node>
+          <node concept="2pNUuL" id="GxL7x1RNQs" role="2pNNFR">
+            <property role="2pNUuO" value="name" />
+            <node concept="2pMdtt" id="GxL7x1RNQx" role="2pMdts">
+              <property role="2pMdty" value="create-resume-script" />
+            </node>
+          </node>
+        </node>
+        <node concept="3o6iSG" id="GxL7x1RNRn" role="3o6s8t" />
         <node concept="2pNNFK" id="5OPtsPp$Kg" role="3o6s8t">
           <property role="2pNNFO" value="target" />
           <node concept="2pNUuL" id="5OPtsPp$Mq" role="2pNNFR">
@@ -1150,7 +1225,7 @@
           <node concept="2pNUuL" id="5OPtsPp$PC" role="2pNNFR">
             <property role="2pNUuO" value="depends" />
             <node concept="2pMdtt" id="5OPtsPp$PK" role="2pMdts">
-              <property role="2pMdty" value="create-job-dir" />
+              <property role="2pMdty" value="create-job-dir, create-resume-script" />
             </node>
           </node>
           <node concept="2pNNFK" id="5OPtsPp$QR" role="3o6s8t">
@@ -1234,6 +1309,41 @@
               </node>
             </node>
           </node>
+          <node concept="2pNNFK" id="GxL7x1SKJf" role="3o6s8t">
+            <property role="2pNNFO" value="sshexec" />
+            <property role="qg3DV" value="true" />
+            <node concept="2pNUuL" id="GxL7x1SKJg" role="2pNNFR">
+              <property role="2pNUuO" value="host" />
+              <node concept="2pMdtt" id="GxL7x1SKJh" role="2pMdts">
+                <property role="2pMdty" value="${submission.machine}" />
+              </node>
+            </node>
+            <node concept="2pNUuL" id="GxL7x1SKJi" role="2pNNFR">
+              <property role="2pNUuO" value="username" />
+              <node concept="2pMdtt" id="GxL7x1SKJj" role="2pMdts">
+                <property role="2pMdty" value="${remote.username}" />
+              </node>
+            </node>
+            <node concept="2pNUuL" id="GxL7x1SKJk" role="2pNNFR">
+              <property role="2pNUuO" value="trust" />
+              <node concept="2pMdtt" id="GxL7x1SKJl" role="2pMdts">
+                <property role="2pMdty" value="yes" />
+              </node>
+            </node>
+            <node concept="2pNUuL" id="GxL7x1SKJm" role="2pNNFR">
+              <property role="2pNUuO" value="keyfile" />
+              <node concept="2pMdtt" id="GxL7x1SKJn" role="2pMdts">
+                <property role="2pMdty" value="${keyfile}" />
+              </node>
+            </node>
+            <node concept="2pNUuL" id="GxL7x1SKJo" role="2pNNFR">
+              <property role="2pNUuO" value="command" />
+              <node concept="2pMdtt" id="GxL7x1SKJp" role="2pMdts">
+                <property role="2pMdty" value="chmod a+x ${remote.job.dir}/resumeNextflow" />
+              </node>
+            </node>
+          </node>
+          <node concept="3o6iSG" id="GxL7x1SKIu" role="3o6s8t" />
         </node>
         <node concept="3o6iSG" id="5OPtsPp_70" role="3o6s8t" />
         <node concept="2pNNFK" id="5OPtsPp_he" role="3o6s8t">
