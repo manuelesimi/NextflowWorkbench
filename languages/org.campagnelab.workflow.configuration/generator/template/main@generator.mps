@@ -415,7 +415,28 @@
             <property role="2pNUuO" value="value" />
           </node>
         </node>
-        <node concept="3o6iSG" id="4Orz$oyiWak" role="3o6s8t" />
+        <node concept="2pNNFK" id="GxL7x1TnNT" role="3o6s8t">
+          <property role="2pNNFO" value="basename" />
+          <property role="qg3DV" value="true" />
+          <node concept="2pNUuL" id="GxL7x1TnNU" role="2pNNFR">
+            <property role="2pNUuO" value="property" />
+            <node concept="2pMdtt" id="GxL7x1TnNV" role="2pMdts">
+              <property role="2pMdty" value="workflow.name" />
+            </node>
+          </node>
+          <node concept="2pNUuL" id="GxL7x1TnNW" role="2pNNFR">
+            <property role="2pNUuO" value="file" />
+            <node concept="2pMdtt" id="GxL7x1TnNX" role="2pMdts">
+              <property role="2pMdty" value="${workflow.script}" />
+            </node>
+          </node>
+          <node concept="2pNUuL" id="GxL7x1TnNY" role="2pNNFR">
+            <property role="2pNUuO" value="suffix" />
+            <node concept="2pMdtt" id="GxL7x1TnNZ" role="2pMdts">
+              <property role="2pMdty" value=".nf" />
+            </node>
+          </node>
+        </node>
         <node concept="2pNNFK" id="53yaZUOwk3D" role="3o6s8t">
           <property role="2pNNFO" value="echo" />
           <node concept="2pNUuL" id="53yaZUOwk4r" role="2pNNFR">
@@ -440,6 +461,108 @@
             <property role="2pNUuO" value="environment" />
             <node concept="2pMdtt" id="251keZkzlc7" role="2pMdts">
               <property role="2pMdty" value="env" />
+            </node>
+          </node>
+        </node>
+        <node concept="2pNNFK" id="GxL7x1Tpog" role="3o6s8t">
+          <property role="2pNNFO" value="target" />
+          <node concept="2pNNFK" id="GxL7x1U9IB" role="3o6s8t">
+            <property role="2pNNFO" value="echo" />
+            <node concept="3o6iSG" id="GxL7x1U9Nw" role="3o6s8t">
+              <property role="3o6i5n" value="Creating resume file in ${nextflow-local.basedir}/resumeLocale" />
+            </node>
+          </node>
+          <node concept="2pNUuL" id="GxL7x1TpDF" role="2pNNFR">
+            <property role="2pNUuO" value="name" />
+            <node concept="2pMdtt" id="GxL7x1TpDK" role="2pMdts">
+              <property role="2pMdty" value="create-resume-script" />
+            </node>
+          </node>
+          <node concept="2pNNFK" id="GxL7x1TpVu" role="3o6s8t">
+            <property role="2pNNFO" value="echo" />
+            <node concept="2pNUuL" id="GxL7x1TpVv" role="2pNNFR">
+              <property role="2pNUuO" value="file" />
+              <node concept="2pMdtt" id="GxL7x1TpVw" role="2pMdts">
+                <property role="2pMdty" value="${nextflow-local.basedir}/resumeLocale" />
+              </node>
+            </node>
+            <node concept="2pNUuL" id="GxL7x1TpVx" role="2pNNFR">
+              <property role="2pNUuO" value="append" />
+              <node concept="2pMdtt" id="GxL7x1TpVy" role="2pMdts">
+                <property role="2pMdty" value="false" />
+              </node>
+            </node>
+            <node concept="3o6iSG" id="GxL7x1TpVz" role="3o6s8t">
+              <property role="3o6i5n" value="#!/bin/bash -l" />
+            </node>
+            <node concept="3o6iSG" id="GxL7x1TpV$" role="3o6s8t">
+              <property role="3o6i5n" value="cd ${job.dir}" />
+            </node>
+            <node concept="3o6iSG" id="GxL7x1Tq6a" role="3o6s8t">
+              <property role="3o6i5n" value="export NXF_CLASSPATH=${nxf.classpath}" />
+            </node>
+            <node concept="3o6iSG" id="GxL7x1Tq5P" role="3o6s8t">
+              <property role="3o6i5n" value="${nextflow.home}/nextflow run -lib ${nxf.classpath} ${nextflowOptions} -resume" />
+            </node>
+          </node>
+          <node concept="2pNNFK" id="GxL7x1TrhF" role="3o6s8t">
+            <property role="2pNNFO" value="echo" />
+            <node concept="2pNUuL" id="GxL7x1TrhG" role="2pNNFR">
+              <property role="2pNUuO" value="file" />
+              <node concept="2pMdtt" id="GxL7x1TrhH" role="2pMdts">
+                <property role="2pMdty" value="${nextflow-local.basedir}/resumeLocale" />
+              </node>
+            </node>
+            <node concept="2pNUuL" id="GxL7x1TrhI" role="2pNNFR">
+              <property role="2pNUuO" value="append" />
+              <node concept="2pMdtt" id="GxL7x1TrhJ" role="2pMdts">
+                <property role="2pMdty" value="true" />
+              </node>
+            </node>
+            <node concept="3o6iSG" id="GxL7x1TrZC" role="3o6s8t">
+              <property role="3o6i5n" value=" -with-docker " />
+            </node>
+            <node concept="1W57fq" id="GxL7x1TrZM" role="lGtFl">
+              <node concept="3IZrLx" id="GxL7x1TrZN" role="3IZSJc">
+                <node concept="3clFbS" id="GxL7x1TrZO" role="2VODD2">
+                  <node concept="3clFbF" id="GxL7x1Ts6R" role="3cqZAp">
+                    <node concept="2OqwBi" id="GxL7x1Ts6S" role="3clFbG">
+                      <node concept="2OqwBi" id="GxL7x1Ts6T" role="2Oq$k0">
+                        <node concept="2OqwBi" id="GxL7x1Ts6U" role="2Oq$k0">
+                          <node concept="30H73N" id="GxL7x1Ts6V" role="2Oq$k0" />
+                          <node concept="3Tsc0h" id="GxL7x1Ts6W" role="2OqNvi">
+                            <ref role="3TtcxE" to="dlwq:1nj$XVfY5Rs" />
+                          </node>
+                        </node>
+                        <node concept="v3k3i" id="GxL7x1Ts6X" role="2OqNvi">
+                          <node concept="chp4Y" id="GxL7x1Ts6Y" role="v3oSu">
+                            <ref role="cht4Q" to="dlwq:1nj$XVfY62i" resolve="WithDocker" />
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3GX2aA" id="GxL7x1Ts6Z" role="2OqNvi" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2pNNFK" id="GxL7x1TreY" role="3o6s8t">
+            <property role="2pNNFO" value="echo" />
+            <node concept="2pNUuL" id="GxL7x1Trgg" role="2pNNFR">
+              <property role="2pNUuO" value="file" />
+              <node concept="2pMdtt" id="GxL7x1Trgh" role="2pMdts">
+                <property role="2pMdty" value="${nextflow-local.basedir}/resumeLocale" />
+              </node>
+            </node>
+            <node concept="2pNUuL" id="GxL7x1Trg2" role="2pNNFR">
+              <property role="2pNUuO" value="append" />
+              <node concept="2pMdtt" id="GxL7x1Trgb" role="2pMdts">
+                <property role="2pMdty" value="true" />
+              </node>
+            </node>
+            <node concept="3o6iSG" id="GxL7x1Trk$" role="3o6s8t">
+              <property role="3o6i5n" value=" ${workflow.script} ${workflow.commandline}" />
             </node>
           </node>
         </node>
@@ -566,8 +689,8 @@
               </node>
             </node>
             <node concept="2pNNFK" id="1nj$XVfXmE5" role="3o6s8t">
-              <property role="2pNNFO" value="arg" />
               <property role="qg3DV" value="true" />
+              <property role="2pNNFO" value="arg" />
               <node concept="2pNUuL" id="1nj$XVfXmE6" role="2pNNFR">
                 <property role="2pNUuO" value="value" />
                 <node concept="2pMdtt" id="1nj$XVfXmOT" role="2pMdts">
@@ -654,6 +777,12 @@
             <property role="2pNUuO" value="name" />
             <node concept="2pMdtt" id="6qWs7gtKwVU" role="2pMdts">
               <property role="2pMdty" value="submit" />
+            </node>
+          </node>
+          <node concept="2pNUuL" id="GxL7x1TpEe" role="2pNNFR">
+            <property role="2pNUuO" value="depends" />
+            <node concept="2pMdtt" id="GxL7x1TpMg" role="2pMdts">
+              <property role="2pMdty" value="create-resume-script" />
             </node>
           </node>
         </node>
