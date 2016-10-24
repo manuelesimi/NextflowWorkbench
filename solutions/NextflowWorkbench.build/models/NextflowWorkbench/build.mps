@@ -17,7 +17,7 @@
     <import index="jve8" ref="r:7a1d0bd8-1aba-4125-b773-9acdceb69280(org.campagnelab.build.Interactive)" />
     <import index="1uca" ref="r:1990a995-1ef9-44ba-bdba-f60301d5e5f6(org.campagnelab.build.ClusterConfig)" />
     <import index="nr1s" ref="r:41c5e6e6-d21c-4739-aa05-3b0328c9486c(org.campagnelab.build.TextOutput)" />
-    <import index="9b59" ref="r:d2c1095a-594a-4ff4-97d7-a186cca5ed85(XChart.build)" />
+    <import index="vh2l" ref="r:64aeeca7-3a4b-4dcc-b81a-48f20fa34cb4(org.campangelab.xchart)" />
   </imports>
   <registry>
     <language id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml">
@@ -200,7 +200,7 @@
         <node concept="2Ry0Ak" id="_lyg7ThQEV" role="iGT6I">
           <property role="2Ry0Am" value=".." />
           <node concept="2Ry0Ak" id="_lyg7ThQGS" role="2Ry0An">
-            <property role="2Ry0Am" value="NYoSh" />
+            <property role="2Ry0Am" value="NYoSh.core" />
           </node>
         </node>
       </node>
@@ -210,7 +210,7 @@
       <node concept="55IIr" id="3A$s7PqiTbl" role="398pKh">
         <node concept="2Ry0Ak" id="3A$s7PqiTbm" role="iGT6I">
           <property role="2Ry0Am" value=".." />
-          <node concept="2Ry0Ak" id="3A$s7PqiTxA" role="2Ry0An">
+          <node concept="2Ry0Ak" id="kVrT7847p7" role="2Ry0An">
             <property role="2Ry0Am" value="XChart" />
           </node>
         </node>
@@ -398,20 +398,8 @@
         </node>
       </node>
     </node>
-    <node concept="2sgV4H" id="3A$s7PqiSyw" role="1l3spa">
-      <ref role="1l3spb" to="9b59:7XxitGzkyrh" resolve="XChart" />
-      <node concept="398BVA" id="3A$s7PqiU2n" role="2JcizS">
-        <ref role="398BVh" node="3A$s7PqiTbk" resolve="org.campagnelab.xchart.home" />
-        <node concept="2Ry0Ak" id="3A$s7PqiU2s" role="iGT6I">
-          <property role="2Ry0Am" value="build" />
-          <node concept="2Ry0Ak" id="3A$s7PqiU2t" role="2Ry0An">
-            <property role="2Ry0Am" value="artifacts" />
-            <node concept="2Ry0Ak" id="3A$s7PqiUdh" role="2Ry0An">
-              <property role="2Ry0Am" value="XChart" />
-            </node>
-          </node>
-        </node>
-      </node>
+    <node concept="2sgV4H" id="kVrT784853" role="1l3spa">
+      <ref role="1l3spb" to="vh2l:7XxitGzkyrh" resolve="XChart" />
     </node>
     <node concept="1l3spV" id="4oJiZHqTePT" role="1l3spN">
       <node concept="3981dG" id="4oJiZHqTePU" role="39821P">
@@ -1311,8 +1299,8 @@
       <node concept="m$_yC" id="3A$s7Pqiz5G" role="m$_yJ">
         <ref role="m$_y1" to="nr1s:2mFg1uCEgGJ" resolve="org.campagnelab.TextOutput" />
       </node>
-      <node concept="m$_yC" id="3A$s7PqiSaz" role="m$_yJ">
-        <ref role="m$_y1" to="9b59:7XxitGzkyrN" resolve="XChart" />
+      <node concept="m$_yC" id="kVrT7848lF" role="m$_yJ">
+        <ref role="m$_y1" to="vh2l:7XxitGzkyrN" resolve="XChart" />
       </node>
       <node concept="m$_yC" id="5p7XGHaCCSg" role="m$_yJ">
         <ref role="m$_y1" to="90a9:4hvHh3QW$Eh" resolve="de.slisson.mps.all" />
