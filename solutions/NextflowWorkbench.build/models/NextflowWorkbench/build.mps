@@ -3453,7 +3453,7 @@
         </node>
       </node>
       <node concept="1E1JtD" id="csIV3g_aVD" role="2G$12L">
-        <property role="BnDLt" value="true" />
+        <property role="BnDLt" value="false" />
         <property role="TrG5h" value="org.campagnelab.workflow.nyosh" />
         <property role="3LESm3" value="5cf93bc1-d0da-4893-b739-63b17fe296b1" />
         <property role="2GAjPV" value="false" />

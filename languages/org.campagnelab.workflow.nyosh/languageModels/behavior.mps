@@ -10,16 +10,7 @@
   <imports>
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
-    <import index="bs99" ref="r:29480130-ace9-4987-af0f-a6efca1c6495(org.campagnelab.gobyweb.interactive.structure)" />
-    <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
-    <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" />
-    <import index="dzk5" ref="r:2bfcc546-5c51-4762-9df2-c43920be4458(org.campagnelab.gobyweb.plugins.structure)" />
     <import index="3jiv" ref="r:36d353e8-689e-4297-b8ea-7712719668fa(org.campagnelab.workflow.nyosh.structure)" />
-    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
-    <import index="lcm8" ref="r:19e666fd-ce33-4549-bbc2-aa106ce25584(org.campagnelab.gobyweb.interactive.behavior)" />
-    <import index="td6j" ref="0202ed86-955d-4227-9c20-377dd6b1f9ff/java:org.campagnelab.nyosh.environment.parsers(org.campagnelab.nyosh.lib/)" />
-    <import index="6pk0" ref="r:48f4e449-1a18-435e-ae88-4830aa794dc7(org.campagnelab.nyosh.environment.structure)" />
-    <import index="935h" ref="r:c68a8ced-fbf7-48e1-b1e0-40266e57501f(org.campagnelab.gobyweb.structure)" />
     <import index="mqvz" ref="r:c1c13fef-323d-4ec9-8c38-25add998e514(org.campagnelab.workflow.behavior)" />
     <import index="440p" ref="r:a6c7903c-0b83-4bcf-8e49-8f150f2412bf(org.campagnelab.nyosh.interactive.structure)" implicit="true" />
     <import index="rk0i" ref="r:5c1a2e64-6ce3-44f3-9901-91d04f21d955(org.campagnelab.nyosh.interactive.behavior)" implicit="true" />
@@ -312,7 +303,7 @@
                     <node concept="2OqwBi" id="G5bxgNEk7L" role="2Oq$k0">
                       <node concept="13iPFW" id="G5bxgNEk32" role="2Oq$k0" />
                       <node concept="3Tsc0h" id="4YJHQQrZlIb" role="2OqNvi">
-                        <ref role="3TtcxE" to="3jiv:G5bxgNBxbO" />
+                        <ref role="3TtcxE" to="3jiv:G5bxgNBxbO" resolve="instructions" />
                       </node>
                     </node>
                     <node concept="TSZUe" id="G5bxgNEp8a" role="2OqNvi">
@@ -395,7 +386,7 @@
                       <node concept="2OqwBi" id="G5bxgNJIUO" role="2Oq$k0">
                         <node concept="13iPFW" id="G5bxgNJIUP" role="2Oq$k0" />
                         <node concept="3Tsc0h" id="4YJHQQrZlTP" role="2OqNvi">
-                          <ref role="3TtcxE" to="3jiv:G5bxgNBxbO" />
+                          <ref role="3TtcxE" to="3jiv:G5bxgNBxbO" resolve="instructions" />
                         </node>
                       </node>
                       <node concept="TSZUe" id="G5bxgNJIUR" role="2OqNvi">
@@ -535,7 +526,7 @@
           <node concept="2OqwBi" id="G5bxgNCB6a" role="2GsD0m">
             <node concept="13iPFW" id="G5bxgNCB3o" role="2Oq$k0" />
             <node concept="3Tsc0h" id="4YJHQQrZlyx" role="2OqNvi">
-              <ref role="3TtcxE" to="3jiv:G5bxgNBxbO" />
+              <ref role="3TtcxE" to="3jiv:G5bxgNBxbO" resolve="instructions" />
             </node>
           </node>
           <node concept="3clFbS" id="G5bxgNCB2T" role="2LFqv$">
