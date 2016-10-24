@@ -7,7 +7,6 @@
   </languages>
   <imports>
     <import index="dzk5" ref="r:2bfcc546-5c51-4762-9df2-c43920be4458(org.campagnelab.gobyweb.plugins.structure)" />
-    <import index="6pk0" ref="r:48f4e449-1a18-435e-ae88-4830aa794dc7(org.campagnelab.nyosh.environment.structure)" />
     <import index="iowz" ref="r:0583c0e9-dc14-4152-95a4-93036dce931b(org.campagnelab.workflow.structure)" />
     <import index="87nw" ref="r:ca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3(de.slisson.mps.richtext.structure)" />
     <import index="r9td" ref="r:c348bb19-2aba-41c5-afe7-9424496b2a89(org.campagnelab.docker.bash.structure)" />
@@ -372,24 +371,6 @@
     </node>
     <node concept="PrWs8" id="7SK$kQZA25U" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="7SK$kQZ_WyS">
-    <property role="3GE5qa" value="environment" />
-    <property role="TrG5h" value="EnvVariableValue" />
-    <property role="34LRSv" value="env var" />
-    <property role="R4oN_" value="variable available" />
-    <property role="EcuMT" value="9092927410773936312" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="7SK$kQZ_WBF" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="var" />
-      <property role="20lbJX" value="1" />
-      <property role="IQ2ns" value="9092927410773936619" />
-      <ref role="20lvS9" to="6pk0:5a_m_wWNCiv" resolve="EnvVariableDeclaration" />
-    </node>
-    <node concept="PrWs8" id="7SK$kQZ_WzY" role="PzmwI">
-      <ref role="PrY4T" node="7SK$kQZvhmu" resolve="EnvironmentValueValue" />
     </node>
   </node>
   <node concept="1TIwiD" id="1Fq$Xhj22Kd">
