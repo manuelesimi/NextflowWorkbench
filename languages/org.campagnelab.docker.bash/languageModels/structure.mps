@@ -13,9 +13,9 @@
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
+        <property id="6714410169261853888" name="conceptId" index="EcuMT" />
         <property id="4628067390765907488" name="conceptShortDescription" index="R4oN_" />
         <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
-        <property id="1587916991969465369" name="conceptId" index="1pbfSe" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
@@ -32,12 +32,14 @@
         <child id="1169129564478" name="implements" index="PzmwI" />
       </concept>
       <concept id="1071489288299" name="jetbrains.mps.lang.structure.structure.PropertyDeclaration" flags="ig" index="1TJgyi">
+        <property id="241647608299431129" name="propertyId" index="IQ2nx" />
         <reference id="1082985295845" name="dataType" index="AX2Wp" />
       </concept>
       <concept id="1071489288298" name="jetbrains.mps.lang.structure.structure.LinkDeclaration" flags="ig" index="1TJgyj">
         <property id="1071599776563" name="role" index="20kJfa" />
         <property id="1071599893252" name="sourceCardinality" index="20lbJX" />
         <property id="1071599937831" name="metaClass" index="20lmBu" />
+        <property id="241647608299431140" name="linkId" index="IQ2ns" />
         <reference id="1071599976176" name="target" index="20lvS9" />
       </concept>
     </language>
@@ -54,11 +56,12 @@
     <property role="TrG5h" value="DockerBashScript" />
     <property role="R4oN_" value="a plain bash script" />
     <property role="34LRSv" value="bash script" />
-    <property role="1pbfSe" value="389742934" />
+    <property role="EcuMT" value="1644224175107836969" />
     <node concept="1TJgyj" id="1rhtiO0qoN4" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="script" />
       <property role="20lbJX" value="1" />
+      <property role="IQ2ns" value="1644224175107837124" />
       <ref role="20lvS9" to="87nw:2dWzqxEB$Tx" resolve="Text" />
     </node>
     <node concept="PrWs8" id="6A9boVQ06Vc" role="PzmwI">
@@ -68,26 +71,29 @@
   <node concept="1TIwiD" id="2h_fDmyfOuW">
     <property role="TrG5h" value="InteractivePath" />
     <property role="3GE5qa" value="paths" />
-    <property role="1pbfSe" value="962296239" />
+    <property role="EcuMT" value="2622571170406287292" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="2h_fDmyfOuX" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="path" />
       <property role="20lbJX" value="1..n" />
+      <property role="IQ2ns" value="2622571170406287293" />
       <ref role="20lvS9" node="2h_fDmyfOuY" resolve="PathPart" />
     </node>
   </node>
   <node concept="1TIwiD" id="2h_fDmyfOuY">
     <property role="TrG5h" value="PathPart" />
     <property role="3GE5qa" value="paths" />
-    <property role="1pbfSe" value="962296237" />
+    <property role="EcuMT" value="2622571170406287294" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="2h_fDmyfOuZ" role="1TKVEl">
       <property role="TrG5h" value="part" />
+      <property role="IQ2nx" value="2622571170406287295" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
     <node concept="1TJgyi" id="2h_fDmyfOv0" role="1TKVEl">
       <property role="TrG5h" value="isDirectory" />
+      <property role="IQ2nx" value="2622571170406287296" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
   </node>
@@ -96,11 +102,12 @@
     <property role="34LRSv" value="path" />
     <property role="R4oN_" value="path inside a docker container" />
     <property role="3GE5qa" value="paths" />
-    <property role="1pbfSe" value="962296234" />
+    <property role="EcuMT" value="2622571170406287297" />
     <ref role="1TJDcQ" node="2h_fDmyfOuW" resolve="InteractivePath" />
     <node concept="1TJgyj" id="2h_fDmyfOv2" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="dockerContainer" />
+      <property role="IQ2ns" value="2622571170406287298" />
       <ref role="20lvS9" to="6jv6:1D6dZ$xfhyW" resolve="DockerContainer" />
     </node>
     <node concept="PrWs8" id="2h_fDmyfOv3" role="PzmwI">
@@ -115,23 +122,26 @@
     <property role="34LRSv" value="BashInDocker" />
     <property role="19KtqR" value="true" />
     <property role="MwhBj" value="${module}/icons/BashScript-1.png" />
-    <property role="1pbfSe" value="1992115042" />
+    <property role="EcuMT" value="147628039490029687" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="8cuIHOGcLk" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20lbJX" value="1" />
       <property role="20kJfa" value="script" />
+      <property role="IQ2ns" value="147628039490030676" />
       <ref role="20lvS9" node="6A9boVQ01ys" resolve="GenerateBashFragment" />
     </node>
     <node concept="1TJgyj" id="irqYu7yXR0" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="container" />
       <property role="20lbJX" value="1" />
+      <property role="IQ2ns" value="331977639697571264" />
       <ref role="20lvS9" to="6jv6:1D6dZ$xcXJU" resolve="ImageInfoForDockerContainer" />
     </node>
     <node concept="1TJgyj" id="8cuIHOGcLo" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="config" />
+      <property role="IQ2ns" value="147628039490030680" />
       <ref role="20lvS9" to="6jv6:7MTH03m4HK1" resolve="Config" />
     </node>
     <node concept="PrWs8" id="8cuIHOGf5W" role="PzmwI">
@@ -141,7 +151,7 @@
   <node concept="PlHQZ" id="6A9boVQ01ys">
     <property role="3GE5qa" value="" />
     <property role="TrG5h" value="GenerateBashFragment" />
-    <property role="1pbfSe" value="1602831914" />
+    <property role="EcuMT" value="7604659537827600540" />
     <node concept="PrWs8" id="6A9boVQ06Vh" role="PrDN$">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>

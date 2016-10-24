@@ -46,8 +46,8 @@
     <import index="eva" ref="r:a1b1112d-dd34-4046-a6a3-811fd290d232(jetbrains.mps.execution.configurations.pluginSolution.plugin)" />
     <import index="z60i" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt(JDK/)" />
     <import index="mqvz" ref="r:c1c13fef-323d-4ec9-8c38-25add998e514(org.campagnelab.workflow.behavior)" />
-    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang()" />
-    <import index="z1c4" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.project()" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
+    <import index="z1c4" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.project(MPS.Platform/)" />
     <import index="lui2" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.module(MPS.OpenAPI/)" />
     <import index="b0pz" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.project.facets(MPS.Core/)" />
     <import index="5wms" ref="r:1862093e-489f-4e75-a318-b6a3a267d39c(command)" />
@@ -64,7 +64,7 @@
   </imports>
   <registry>
     <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
-      <concept id="8974276187400029883" name="jetbrains.mps.lang.resources.structure.IconResource" flags="ng" index="1QGGSu">
+      <concept id="8974276187400029883" name="jetbrains.mps.lang.resources.structure.FileIcon" flags="ng" index="1QGGSu">
         <child id="6976585500156684809" name="iconExpression" index="3xaMm5" />
       </concept>
     </language>
@@ -506,8 +506,8 @@
         <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
       </concept>
       <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI">
-        <reference id="1140138128738" name="concept" index="1PxNhF" />
-        <child id="1140138123956" name="leftExpression" index="1PxMeX" />
+        <reference id="1140138128738" name="concept_old" index="1PxNhF" />
+        <child id="1140138123956" name="leftExpression_old" index="1PxMeX" />
       </concept>
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
@@ -2548,7 +2548,7 @@
                               <ref role="3cqZAo" node="1KUoCipvy8V" resolve="node" />
                             </node>
                             <node concept="3Tsc0h" id="29U0K5du91o" role="2OqNvi">
-                              <ref role="3TtcxE" to="iowz:5D7AjvYaj9H" />
+                              <ref role="3TtcxE" to="iowz:5D7AjvYaj9H" resolve="processes" />
                             </node>
                           </node>
                           <node concept="1z4cxt" id="29U0K5du91p" role="2OqNvi">
@@ -2563,11 +2563,11 @@
                                           <ref role="3cqZAo" node="29U0K5du91$" resolve="it" />
                                         </node>
                                         <node concept="3TrEf2" id="29U0K5du91y" role="2OqNvi">
-                                          <ref role="3Tt5mk" to="iowz:5D7AjvYaj9N" />
+                                          <ref role="3Tt5mk" to="iowz:5D7AjvYaj9N" resolve="process" />
                                         </node>
                                       </node>
                                       <node concept="3TrEf2" id="29U0K5du91z" role="2OqNvi">
-                                        <ref role="3Tt5mk" to="iowz:irqYu7yXR0" />
+                                        <ref role="3Tt5mk" to="iowz:irqYu7yXR0" resolve="container" />
                                       </node>
                                     </node>
                                   </node>
@@ -2581,7 +2581,7 @@
                           </node>
                         </node>
                         <node concept="3TrEf2" id="29U0K5dvB9b" role="2OqNvi">
-                          <ref role="3Tt5mk" to="iowz:5D7AjvYaj9N" />
+                          <ref role="3Tt5mk" to="iowz:5D7AjvYaj9N" resolve="process" />
                         </node>
                       </node>
                     </node>
@@ -2748,7 +2748,7 @@
                                       <ref role="3cqZAo" node="1PwW9iwY683" resolve="config" />
                                     </node>
                                     <node concept="3TrEf2" id="2rsflnIvS0r" role="2OqNvi">
-                                      <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" />
+                                      <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" resolve="remoteSubmission" />
                                     </node>
                                   </node>
                                   <node concept="3TrcHB" id="2rsflnIvS0s" role="2OqNvi">
@@ -2762,7 +2762,7 @@
                                     <ref role="3cqZAo" node="1PwW9iwY683" resolve="config" />
                                   </node>
                                   <node concept="3TrEf2" id="1PwW9iwYjFR" role="2OqNvi">
-                                    <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" />
+                                    <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" resolve="remoteSubmission" />
                                   </node>
                                 </node>
                                 <node concept="3x8VRR" id="1PwW9iwYmFB" role="2OqNvi" />
@@ -2802,11 +2802,11 @@
                                       <ref role="3cqZAo" node="1PwW9iwY683" resolve="config" />
                                     </node>
                                     <node concept="3TrEf2" id="7zis7bMuhac" role="2OqNvi">
-                                      <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" />
+                                      <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" resolve="remoteSubmission" />
                                     </node>
                                   </node>
                                   <node concept="3TrEf2" id="7zis7bMuhWc" role="2OqNvi">
-                                    <ref role="3Tt5mk" to="dlwq:5KN4KqYQkSQ" />
+                                    <ref role="3Tt5mk" to="dlwq:5KN4KqYQkSQ" resolve="username" />
                                   </node>
                                 </node>
                                 <node concept="3TrcHB" id="7zis7bMujzQ" role="2OqNvi">
@@ -2827,11 +2827,11 @@
                                       <ref role="3cqZAo" node="1PwW9iwY683" resolve="config" />
                                     </node>
                                     <node concept="3TrEf2" id="7zis7bMulqd" role="2OqNvi">
-                                      <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" />
+                                      <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" resolve="remoteSubmission" />
                                     </node>
                                   </node>
                                   <node concept="3TrEf2" id="7zis7bMumd5" role="2OqNvi">
-                                    <ref role="3Tt5mk" to="dlwq:5KN4KqYQkSP" />
+                                    <ref role="3Tt5mk" to="dlwq:5KN4KqYQkSP" resolve="hostname" />
                                   </node>
                                 </node>
                                 <node concept="3TrcHB" id="7zis7bMun21" role="2OqNvi">
@@ -2860,11 +2860,11 @@
                                                 <ref role="3cqZAo" node="1PwW9iwY683" resolve="config" />
                                               </node>
                                               <node concept="3TrEf2" id="7zis7bM$xbn" role="2OqNvi">
-                                                <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" />
+                                                <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" resolve="remoteSubmission" />
                                               </node>
                                             </node>
                                             <node concept="3TrEf2" id="7zis7bM$y3S" role="2OqNvi">
-                                              <ref role="3Tt5mk" to="dlwq:5KN4KqYQkSR" />
+                                              <ref role="3Tt5mk" to="dlwq:5KN4KqYQkSR" resolve="jobArea" />
                                             </node>
                                           </node>
                                           <node concept="3TrcHB" id="7zis7bM$$Qk" role="2OqNvi">
@@ -2905,7 +2905,7 @@
                               <ref role="3cqZAo" node="1PwW9iwY683" resolve="config" />
                             </node>
                             <node concept="3TrEf2" id="7zis7bMueTZ" role="2OqNvi">
-                              <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" />
+                              <ref role="3Tt5mk" to="dlwq:5KN4KqZiCvA" resolve="remoteSubmission" />
                             </node>
                           </node>
                           <node concept="3x8VRR" id="7zis7bMufIc" role="2OqNvi" />
