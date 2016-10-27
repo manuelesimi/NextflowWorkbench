@@ -383,8 +383,8 @@
       </concept>
     </language>
     <language id="c6c823fb-a9da-46e7-9850-129b0f7a7aa5" name="org.campagnelab.workflow">
-      <concept id="3121388506938957370" name="org.campagnelab.workflow.structure.TupleType" flags="ng" index="1h3xP" />
-      <concept id="3526016120162721360" name="org.campagnelab.workflow.structure.FileType" flags="ng" index="3UtRaE" />
+      <concept id="3121388506938957370" name="org.campagnelab.workflow.structure.TupleType" flags="ig" index="1h3xP" />
+      <concept id="3526016120162721360" name="org.campagnelab.workflow.structure.FileType" flags="ig" index="3UtRaE" />
     </language>
     <language id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections">
       <concept id="1204796164442" name="jetbrains.mps.baseLanguage.collections.structure.InternalSequenceOperation" flags="nn" index="23sCx2">
@@ -2279,6 +2279,26 @@
           </node>
         </node>
         <node concept="x79VA" id="7JR6ozOeJ3q" role="3nqlJM" />
+      </node>
+    </node>
+    <node concept="13i0hz" id="12yJ$zBZm2u" role="13h7CS">
+      <property role="TrG5h" value="getProcess" />
+      <property role="13i0it" value="false" />
+      <property role="13i0iv" value="false" />
+      <ref role="13i0hy" node="12yJ$zBZlJY" resolve="getProcess" />
+      <node concept="3Tm1VV" id="12yJ$zBZm2v" role="1B3o_S" />
+      <node concept="3clFbS" id="12yJ$zBZm2y" role="3clF47">
+        <node concept="3clFbF" id="12yJ$zBZqV7" role="3cqZAp">
+          <node concept="2OqwBi" id="12yJ$zBZr5m" role="3clFbG">
+            <node concept="13iPFW" id="12yJ$zBZqV6" role="2Oq$k0" />
+            <node concept="3TrEf2" id="12yJ$zBZr$2" role="2OqNvi">
+              <ref role="3Tt5mk" to="iowz:5D7AjvYaj9N" resolve="process" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tqbb2" id="12yJ$zBZm2z" role="3clF45">
+        <ref role="ehGHo" to="iowz:6tX5nBTatyL" resolve="Process" />
       </node>
     </node>
   </node>
@@ -6554,6 +6574,22 @@
     </node>
     <node concept="13hLZK" id="GxL7x1IXeJ" role="13h7CW">
       <node concept="3clFbS" id="GxL7x1IXeK" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="12yJ$zBZlJN">
+    <ref role="13h7C2" to="iowz:2zDNr6iMGQZ" resolve="AbstractProcessRef" />
+    <node concept="13i0hz" id="12yJ$zBZlJY" role="13h7CS">
+      <property role="TrG5h" value="getProcess" />
+      <property role="13i0it" value="true" />
+      <property role="13i0iv" value="true" />
+      <node concept="3Tm1VV" id="12yJ$zBZlJZ" role="1B3o_S" />
+      <node concept="3Tqbb2" id="12yJ$zBZlKe" role="3clF45">
+        <ref role="ehGHo" to="iowz:6tX5nBTatyL" resolve="Process" />
+      </node>
+      <node concept="3clFbS" id="12yJ$zBZlK1" role="3clF47" />
+    </node>
+    <node concept="13hLZK" id="12yJ$zBZlJO" role="13h7CW">
+      <node concept="3clFbS" id="12yJ$zBZlJP" role="2VODD2" />
     </node>
   </node>
 </model>
