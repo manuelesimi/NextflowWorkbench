@@ -233,6 +233,7 @@
       <concept id="1203518072036" name="jetbrains.mps.baseLanguage.collections.structure.SmartClosureParameterDeclaration" flags="ig" index="Rh6nW" />
       <concept id="1160600644654" name="jetbrains.mps.baseLanguage.collections.structure.ListCreatorWithInit" flags="nn" index="Tc6Ow" />
       <concept id="1160612413312" name="jetbrains.mps.baseLanguage.collections.structure.AddElementOperation" flags="nn" index="TSZUe" />
+      <concept id="1160666733551" name="jetbrains.mps.baseLanguage.collections.structure.AddAllElementsOperation" flags="nn" index="X8dFx" />
       <concept id="1202120902084" name="jetbrains.mps.baseLanguage.collections.structure.WhereOperation" flags="nn" index="3zZkjj" />
     </language>
   </registry>
@@ -507,15 +508,15 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="7yLt8tTSSmn" role="3cqZAp">
-          <node concept="2OqwBi" id="7yLt8tTSSmr" role="3clFbG">
-            <node concept="37vLTw" id="3GM_nagTxi3" role="2Oq$k0">
+        <node concept="3clFbF" id="12yJ$zBKjxO" role="3cqZAp">
+          <node concept="2OqwBi" id="12yJ$zBKkmp" role="3clFbG">
+            <node concept="37vLTw" id="12yJ$zBKjxM" role="2Oq$k0">
               <ref role="3cqZAo" node="j$XAJDK0Ek" resolve="classPath" />
             </node>
-            <node concept="TSZUe" id="7yLt8tTSSmx" role="2OqNvi">
-              <node concept="2YIFZM" id="7yLt8tTSSm_" role="25WWJ7">
+            <node concept="X8dFx" id="12yJ$zBKlD4" role="2OqNvi">
+              <node concept="2YIFZM" id="12yJ$zBKlZk" role="25WWJ7">
+                <ref role="37wK5l" to="zkib:~CommonPaths.getJDKPath():java.util.List" resolve="getJDKPath" />
                 <ref role="1Pybhc" to="zkib:~CommonPaths" resolve="CommonPaths" />
-                <ref role="37wK5l" to="zkib:~CommonPaths.getToolsJar():java.lang.String" resolve="getToolsJar" />
               </node>
             </node>
           </node>
