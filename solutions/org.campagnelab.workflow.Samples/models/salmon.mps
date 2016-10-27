@@ -6,16 +6,19 @@
     <use id="66f96b90-b2af-4ce4-92ca-dc0e9d7e2b43" name="org.campagnelab.nyosh.interactive" version="0" />
     <use id="0b7d8bbd-896e-495e-be60-01a0d738a649" name="org.campagnelab.gobyweb.plugins" version="0" />
     <use id="a8fb88b0-7e9f-478c-aab4-a1b076131192" name="org.campagnelab.gobyweb.interactive" version="0" />
+    <use id="f55d6853-b373-41dd-bc8e-331fd6e2c764" name="org.campagnelab.bash.nyosh" version="0" />
     <devkit ref="74a4431b-c31f-4707-ad8a-3f4f3c105ee2(org.campagnelab.NextflowWorkbench)" />
   </languages>
   <imports>
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="8oaq" ref="0202ed86-955d-4227-9c20-377dd6b1f9ff/java:org.apache.commons.io(org.campagnelab.nyosh.lib/)" />
     <import index="eoo2" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.nio.file(JDK/)" />
+    <import index="iuj9" ref="r:b8fcf1e4-ccc5-4a08-9b19-9b2e4e857cd7(org.campagnelab.bash.nyosh.structure)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="a8fb88b0-7e9f-478c-aab4-a1b076131192" name="org.campagnelab.gobyweb.interactive">
+      <concept id="5865189911929158310" name="org.campagnelab.gobyweb.interactive.structure.NYoShUser" flags="ng" index="9QaQ0" />
       <concept id="1405392831553684079" name="org.campagnelab.gobyweb.interactive.structure.StringAttribute" flags="ng" index="2t8VsU">
         <property id="1405392831553684183" name="value" index="2t8Vu2" />
       </concept>
@@ -39,6 +42,7 @@
         <property id="1997533223704022892" name="artifactRepoPath" index="EkYqe" />
       </concept>
       <concept id="2051553890368778876" name="org.campagnelab.gobyweb.interactive.structure.ExecutionEnvironment" flags="ng" index="3lueso">
+        <reference id="5865189911929158304" name="owner" index="9QaQ6" />
         <child id="1997533223701807309" name="pluginRepository" index="Esi$J" />
         <child id="2051553890368785070" name="jobArea" index="3lu1Za" />
       </concept>
@@ -373,6 +377,14 @@
       </concept>
       <concept id="8074343669091902386" name="org.campagnelab.workflow.structure.ValueInAChannelRef" flags="ng" index="3YE7tV">
         <reference id="8074343669091902431" name="value" index="3YE7sm" />
+      </concept>
+    </language>
+    <language id="57af9408-ffae-472e-9367-5cb44434e8b3" name="org.campagnelab.gobyweb.interactive.users">
+      <concept id="5865189911928341182" name="org.campagnelab.gobyweb.interactive.users.structure.User" flags="ng" index="9Pdmo">
+        <property id="5865189911928341274" name="id" index="9PdgW" />
+      </concept>
+      <concept id="5865189911928298169" name="org.campagnelab.gobyweb.interactive.users.structure.NYoShUsers" flags="ng" index="9PoQv">
+        <child id="5865189911928367305" name="users" index="9PbZJ" />
       </concept>
     </language>
   </registry>
@@ -956,6 +968,7 @@
   </node>
   <node concept="3lueso" id="2yY4N2z3T5$">
     <property role="TrG5h" value="Environment" />
+    <ref role="9QaQ6" node="7UcLk9c686i" resolve="owner" />
     <node concept="Eubbw" id="2yY4N2z3T5_" role="Esi$J">
       <property role="3NC_3j" value="187" />
       <property role="Eu9oP" value="${org.campagnelab.gobyweb.pluginRepo}" />
@@ -9468,6 +9481,12 @@
     <property role="TrG5h" value="docker.config" />
     <property role="2EEQw2" value="/usr/local/bin/docker" />
     <property role="2E$TAj" value="--tlsverify --tlscacert=&quot;/Users/manuelesimi/.docker/machine/certs/ca.pem&quot; --tlscert=&quot;/Users/manuelesimi/.docker/machine/certs/cert.pem&quot; --tlskey=&quot;/Users/manuelesimi/.docker/machine/certs/key.pem&quot; -H=tcp://192.168.99.100:2376" />
+  </node>
+  <node concept="9PoQv" id="7UcLk9c686f">
+    <node concept="9QaQ0" id="7UcLk9c686i" role="9PbZJ">
+      <property role="9PdgW" value="owner" />
+      <property role="TrG5h" value="owner" />
+    </node>
   </node>
 </model>
 

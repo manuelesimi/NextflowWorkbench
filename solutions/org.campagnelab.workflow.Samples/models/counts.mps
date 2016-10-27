@@ -1110,10 +1110,6 @@
       <property role="3zaeVo" value="true" />
     </node>
   </node>
-  <node concept="2EEQw1" id="7ejpSqHd7NO">
-    <property role="2EEQw2" value="/usr/local/bin/docker" />
-    <property role="2E$TAj" value="--tlsverify --tlscacert=&quot;/Users/mas2182/.docker/machine/machines/dev/ca.pem&quot; --tlscert=&quot;/Users/mas2182/.docker/machine/machines/dev/cert.pem&quot; --tlskey=&quot;/Users/mas2182/.docker/machine/machines/dev/key.pem&quot; -H=tcp://192.168.99.101:2376" />
-  </node>
   <node concept="2$rMIF" id="5G7wwTNAYTs">
     <property role="TrG5h" value="PreprocessReads" />
     <node concept="2$rEH5" id="5G7wwTNAYTw" role="2$rEHq">
@@ -1916,6 +1912,11 @@
         </node>
       </node>
     </node>
+  </node>
+  <node concept="2EEQw1" id="7UcLk9c64VX">
+    <property role="TrG5h" value="docker.config" />
+    <property role="2EEQw2" value="/usr/local/bin/docker" />
+    <property role="2E$TAj" value="" />
   </node>
 </model>
 

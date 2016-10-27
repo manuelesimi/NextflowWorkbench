@@ -20,6 +20,7 @@
   </imports>
   <registry>
     <language id="a8fb88b0-7e9f-478c-aab4-a1b076131192" name="org.campagnelab.gobyweb.interactive">
+      <concept id="5865189911929158310" name="org.campagnelab.gobyweb.interactive.structure.NYoShUser" flags="ng" index="9QaQ0" />
       <concept id="1405392831553684079" name="org.campagnelab.gobyweb.interactive.structure.StringAttribute" flags="ng" index="2t8VsU">
         <property id="1405392831553684183" name="value" index="2t8Vu2" />
       </concept>
@@ -44,6 +45,7 @@
         <property id="6449713081311226572" name="workingDirectory" index="13fL4G" />
       </concept>
       <concept id="2051553890368778876" name="org.campagnelab.gobyweb.interactive.structure.ExecutionEnvironment" flags="ng" index="3lueso">
+        <reference id="5865189911929158304" name="owner" index="9QaQ6" />
         <child id="1997533223701807309" name="pluginRepository" index="Esi$J" />
         <child id="2051553890368785070" name="jobArea" index="3lu1Za" />
       </concept>
@@ -396,6 +398,14 @@
       </concept>
       <concept id="8074343669091902386" name="org.campagnelab.workflow.structure.ValueInAChannelRef" flags="ng" index="3YE7tV">
         <reference id="8074343669091902431" name="value" index="3YE7sm" />
+      </concept>
+    </language>
+    <language id="57af9408-ffae-472e-9367-5cb44434e8b3" name="org.campagnelab.gobyweb.interactive.users">
+      <concept id="5865189911928341182" name="org.campagnelab.gobyweb.interactive.users.structure.User" flags="ng" index="9Pdmo">
+        <property id="5865189911928341274" name="id" index="9PdgW" />
+      </concept>
+      <concept id="5865189911928298169" name="org.campagnelab.gobyweb.interactive.users.structure.NYoShUsers" flags="ng" index="9PoQv">
+        <child id="5865189911928367305" name="users" index="9PbZJ" />
       </concept>
     </language>
   </registry>
@@ -984,6 +994,7 @@
   </node>
   <node concept="3lueso" id="10rnQzwTSvV">
     <property role="TrG5h" value="Environment" />
+    <ref role="9QaQ6" node="7UcLk9c67PG" resolve="owner" />
     <node concept="Eubbw" id="10rnQzwTSvW" role="Esi$J">
       <property role="3NC_3j" value="187" />
       <property role="Eu9oP" value="${org.campagnelab.gobyweb.pluginRepo}" />
@@ -9600,6 +9611,12 @@
           <property role="2J_sxC" value="5" />
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="9PoQv" id="7UcLk9c67PD">
+    <node concept="9QaQ0" id="7UcLk9c67PG" role="9PbZJ">
+      <property role="9PdgW" value="owner" />
+      <property role="TrG5h" value="owner" />
     </node>
   </node>
 </model>
