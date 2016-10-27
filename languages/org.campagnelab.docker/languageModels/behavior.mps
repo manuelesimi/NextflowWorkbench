@@ -49,6 +49,7 @@
     <import index="ends" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.extapi.persistence(MPS.Core/)" />
     <import index="3ju5" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.vfs(MPS.Core/)" />
     <import index="26gq" ref="25281c03-4a7c-4b57-9221-24a10fc36ef5/java:com.spotify.docker.client.exceptions(org.campagnelab.docker/)" />
+    <import index="ao3" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.text(MPS.Core/)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" implicit="true" />
     <import index="cb06" ref="r:28ea7b9c-cb3a-4bec-8a85-2ccbe0339d0d(org.campagnelab.docker.bash.behavior)" implicit="true" />
   </imports>
@@ -839,66 +840,15 @@
           </node>
         </node>
         <node concept="3clFbH" id="7MTH03m4hcs" role="3cqZAp" />
-        <node concept="3cpWs8" id="6otXYHBgt4F" role="3cqZAp">
-          <node concept="3cpWsn" id="6otXYHBgt4E" role="3cpWs9">
-            <property role="TrG5h" value="result" />
-            <property role="3TUv4t" value="false" />
-            <node concept="3uibUv" id="6otXYHBgt4G" role="1tU5fm">
-              <ref role="3uigEE" to="yy4t:~TextGenerationResult" resolve="TextGenerationResult" />
-            </node>
-            <node concept="2YIFZM" id="5BbChSjLogB" role="33vP2m">
-              <ref role="37wK5l" to="yy4t:~TextGen.generateText(org.jetbrains.mps.openapi.model.SNode):jetbrains.mps.textGen.TextGenerationResult" resolve="generateText" />
-              <ref role="1Pybhc" to="yy4t:~TextGen" resolve="TextGen" />
-              <node concept="13iPFW" id="5BbChSjLogC" role="37wK5m" />
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbJ" id="6otXYHBgt4M" role="3cqZAp">
-          <node concept="2OqwBi" id="6otXYHBgt8L" role="3clFbw">
-            <node concept="37vLTw" id="6otXYHBgt8K" role="2Oq$k0">
-              <ref role="3cqZAo" node="6otXYHBgt4E" resolve="result" />
-            </node>
-            <node concept="liA8E" id="6otXYHBgt8M" role="2OqNvi">
-              <ref role="37wK5l" to="yy4t:~TextGenerationResult.hasErrors():boolean" resolve="hasErrors" />
-            </node>
-          </node>
-          <node concept="3clFbS" id="6otXYHBgt4P" role="3clFbx">
-            <node concept="3clFbF" id="7MTH03m4e94" role="3cqZAp">
-              <node concept="37vLTI" id="7MTH03m4fE$" role="3clFbG">
-                <node concept="Xl_RD" id="7MTH03m4fEQ" role="37vLTx">
-                  <property role="Xl_RC" value="Cannot generate text" />
-                </node>
-                <node concept="2OqwBi" id="7MTH03m4evj" role="37vLTJ">
-                  <node concept="13iPFW" id="7MTH03m4e92" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="7MTH03m4fkZ" role="2OqNvi">
-                    <ref role="3TsBF5" to="6jv6:7MTH03m3SFy" resolve="message" />
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="34ab3g" id="5BbChSjKWlm" role="3cqZAp">
-              <property role="35gtTG" value="error" />
-              <node concept="Xl_RD" id="5BbChSjKWlo" role="34bqiv">
-                <property role="Xl_RC" value="Cannot generate text from Dockerfile" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3cpWs8" id="6otXYHBgt4Y" role="3cqZAp">
           <node concept="3cpWsn" id="6otXYHBgt4X" role="3cpWs9">
             <property role="TrG5h" value="content" />
             <property role="3TUv4t" value="false" />
             <node concept="17QB3L" id="5BbChSjLFtJ" role="1tU5fm" />
-            <node concept="10QFUN" id="6otXYHBgt50" role="33vP2m">
-              <node concept="2OqwBi" id="6otXYHBgt8V" role="10QFUP">
-                <node concept="37vLTw" id="6otXYHBgt8U" role="2Oq$k0">
-                  <ref role="3cqZAo" node="6otXYHBgt4E" resolve="result" />
-                </node>
-                <node concept="liA8E" id="6otXYHBgt8W" role="2OqNvi">
-                  <ref role="37wK5l" to="yy4t:~TextGenerationResult.getResult():java.lang.Object" resolve="getResult" />
-                </node>
-              </node>
-              <node concept="17QB3L" id="7MTH03m27_n" role="10QFUM" />
+            <node concept="2YIFZM" id="7ZDUr_GAsd$" role="33vP2m">
+              <ref role="37wK5l" to="ao3:~TextGeneratorEngine.generateText(org.jetbrains.mps.openapi.model.SNode):java.lang.String" resolve="generateText" />
+              <ref role="1Pybhc" to="ao3:~TextGeneratorEngine" resolve="TextGeneratorEngine" />
+              <node concept="13iPFW" id="7ZDUr_GAsqk" role="37wK5m" />
             </node>
           </node>
         </node>
