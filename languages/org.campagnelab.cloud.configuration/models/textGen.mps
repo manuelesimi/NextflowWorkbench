@@ -95,6 +95,10 @@
       </concept>
       <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="7453996997717780434" name="jetbrains.mps.lang.smodel.structure.Node_GetSConceptOperation" flags="nn" index="2yIwOk" />
+      <concept id="2396822768958367367" name="jetbrains.mps.lang.smodel.structure.AbstractTypeCastExpression" flags="nn" index="$5XWr">
+        <reference id="6733348108486823428" name="concept" index="1m5ApE" />
+        <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
+      </concept>
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
       <concept id="1176109685393" name="jetbrains.mps.lang.smodel.structure.Model_RootsIncludingImportedOperation" flags="nn" index="3lApI0">
         <reference id="1176109685394" name="concept" index="3lApI3" />
@@ -104,6 +108,7 @@
       <concept id="1172326502327" name="jetbrains.mps.lang.smodel.structure.Concept_IsExactlyOperation" flags="nn" index="3O6GUB">
         <child id="1206733650006" name="conceptArgument" index="3QVz_e" />
       </concept>
+      <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI" />
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
       </concept>
@@ -664,41 +669,44 @@
             <node concept="3Tqbb2" id="4gEJt6_NHde" role="1tU5fm">
               <ref role="ehGHo" to="45iu:4gEJt6_N$lk" resolve="Preemptibility" />
             </node>
-            <node concept="2OqwBi" id="4gEJt6_NHwE" role="33vP2m">
-              <node concept="2OqwBi" id="4gEJt6_NHwF" role="2Oq$k0">
-                <node concept="2OqwBi" id="4gEJt6_NHwG" role="2Oq$k0">
-                  <node concept="117lpO" id="4gEJt6_NHwH" role="2Oq$k0" />
-                  <node concept="3Tsc0h" id="4gEJt6_NHwI" role="2OqNvi">
-                    <ref role="3TtcxE" to="45iu:3pj0Oa6G7SH" resolve="options" />
+            <node concept="1PxgMI" id="12yJ$zBLQ0J" role="33vP2m">
+              <ref role="1m5ApE" to="45iu:4gEJt6_N$lk" resolve="Preemptibility" />
+              <node concept="2OqwBi" id="4gEJt6_NHwE" role="1m5AlR">
+                <node concept="2OqwBi" id="4gEJt6_NHwF" role="2Oq$k0">
+                  <node concept="2OqwBi" id="4gEJt6_NHwG" role="2Oq$k0">
+                    <node concept="117lpO" id="4gEJt6_NHwH" role="2Oq$k0" />
+                    <node concept="3Tsc0h" id="4gEJt6_NHwI" role="2OqNvi">
+                      <ref role="3TtcxE" to="45iu:3pj0Oa6G7SH" resolve="options" />
+                    </node>
                   </node>
-                </node>
-                <node concept="3zZkjj" id="4gEJt6_NHwJ" role="2OqNvi">
-                  <node concept="1bVj0M" id="4gEJt6_NHwK" role="23t8la">
-                    <node concept="3clFbS" id="4gEJt6_NHwL" role="1bW5cS">
-                      <node concept="3clFbF" id="4gEJt6_NHwM" role="3cqZAp">
-                        <node concept="2OqwBi" id="4gEJt6_NHwN" role="3clFbG">
-                          <node concept="2OqwBi" id="4gEJt6_NHwO" role="2Oq$k0">
-                            <node concept="37vLTw" id="4gEJt6_NHwP" role="2Oq$k0">
-                              <ref role="3cqZAo" node="4gEJt6_NHwT" resolve="it" />
+                  <node concept="3zZkjj" id="4gEJt6_NHwJ" role="2OqNvi">
+                    <node concept="1bVj0M" id="4gEJt6_NHwK" role="23t8la">
+                      <node concept="3clFbS" id="4gEJt6_NHwL" role="1bW5cS">
+                        <node concept="3clFbF" id="4gEJt6_NHwM" role="3cqZAp">
+                          <node concept="2OqwBi" id="4gEJt6_NHwN" role="3clFbG">
+                            <node concept="2OqwBi" id="4gEJt6_NHwO" role="2Oq$k0">
+                              <node concept="37vLTw" id="4gEJt6_NHwP" role="2Oq$k0">
+                                <ref role="3cqZAo" node="4gEJt6_NHwT" resolve="it" />
+                              </node>
+                              <node concept="2yIwOk" id="4gEJt6_NHwQ" role="2OqNvi" />
                             </node>
-                            <node concept="2yIwOk" id="4gEJt6_NHwQ" role="2OqNvi" />
-                          </node>
-                          <node concept="3O6GUB" id="4gEJt6_NHwR" role="2OqNvi">
-                            <node concept="chp4Y" id="4gEJt6_NId6" role="3QVz_e">
-                              <ref role="cht4Q" to="45iu:4gEJt6_N$lk" resolve="Preemptibility" />
+                            <node concept="3O6GUB" id="4gEJt6_NHwR" role="2OqNvi">
+                              <node concept="chp4Y" id="4gEJt6_NId6" role="3QVz_e">
+                                <ref role="cht4Q" to="45iu:4gEJt6_N$lk" resolve="Preemptibility" />
+                              </node>
                             </node>
                           </node>
                         </node>
                       </node>
-                    </node>
-                    <node concept="Rh6nW" id="4gEJt6_NHwT" role="1bW2Oz">
-                      <property role="TrG5h" value="it" />
-                      <node concept="2jxLKc" id="4gEJt6_NHwU" role="1tU5fm" />
+                      <node concept="Rh6nW" id="4gEJt6_NHwT" role="1bW2Oz">
+                        <property role="TrG5h" value="it" />
+                        <node concept="2jxLKc" id="4gEJt6_NHwU" role="1tU5fm" />
+                      </node>
                     </node>
                   </node>
                 </node>
+                <node concept="1uHKPH" id="4gEJt6_NHwV" role="2OqNvi" />
               </node>
-              <node concept="1uHKPH" id="4gEJt6_NHwV" role="2OqNvi" />
             </node>
           </node>
         </node>

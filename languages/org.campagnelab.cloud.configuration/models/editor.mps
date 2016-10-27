@@ -3,7 +3,6 @@
   <persistence version="9" />
   <languages>
     <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
     <import index="45iu" ref="r:e59beccc-d8f0-42c7-8989-c96c06e46e91(org.campagnelab.cloud.configuration.structure)" implicit="true" />
@@ -120,7 +119,7 @@
       </node>
       <node concept="3F0ifn" id="3pj0Oa6GbxJ" role="3EZMnx" />
       <node concept="3F2HdR" id="3pj0Oa6Gbz1" role="3EZMnx">
-        <ref role="1NtTu8" to="45iu:3pj0Oa6G7SH" />
+        <ref role="1NtTu8" to="45iu:3pj0Oa6G7SH" resolve="options" />
         <node concept="2iRkQZ" id="3pj0Oa6Gbz3" role="2czzBx" />
         <node concept="VPxyj" id="3pj0Oa6Gb_5" role="3F10Kt">
           <property role="VOm3f" value="false" />
