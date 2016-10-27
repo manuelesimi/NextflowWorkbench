@@ -3298,7 +3298,7 @@
         </node>
       </node>
       <node concept="1E1JtD" id="3A$s7Pqh3$g" role="2G$12L">
-        <property role="BnDLt" value="true" />
+        <property role="BnDLt" value="false" />
         <property role="TrG5h" value="org.campagnelab.bash.nyosh" />
         <property role="3LESm3" value="f55d6853-b373-41dd-bc8e-331fd6e2c764" />
         <property role="2GAjPV" value="false" />
@@ -3528,7 +3528,7 @@
         </node>
         <node concept="1SiIV0" id="csIV3g_bVi" role="3bR37C">
           <node concept="1Busua" id="csIV3g_bVj" role="1SiIV1">
-            <ref role="1Busuk" to="t9i9:2mFg1uCD9qf" resolve="org.campagnelab.nyosh.interactive" />
+            <ref role="1Busuk" to="t9i9:kVrT783XXb" resolve="org.campagnelab.nyosh.interactive" />
           </node>
         </node>
         <node concept="1SiIV0" id="csIV3g_bVk" role="3bR37C">

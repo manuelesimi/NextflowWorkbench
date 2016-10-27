@@ -58,7 +58,7 @@
   </imports>
   <registry>
     <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
-      <concept id="8974276187400029883" name="jetbrains.mps.lang.resources.structure.IconResource" flags="ng" index="1QGGSu">
+      <concept id="8974276187400029883" name="jetbrains.mps.lang.resources.structure.FileIcon" flags="ng" index="1QGGSu">
         <child id="6976585500156684809" name="iconExpression" index="3xaMm5" />
       </concept>
     </language>
@@ -349,8 +349,8 @@
         <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
       </concept>
       <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI">
-        <reference id="1140138128738" name="concept" index="1PxNhF" />
-        <child id="1140138123956" name="leftExpression" index="1PxMeX" />
+        <reference id="1140138128738" name="concept_old" index="1PxNhF" />
+        <child id="1140138123956" name="leftExpression_old" index="1PxMeX" />
       </concept>
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
@@ -686,7 +686,7 @@
               <node concept="2OqwBi" id="uB8nTHDQEz" role="2Oq$k0">
                 <node concept="2ShNRf" id="uB8nTHDQvS" role="2Oq$k0">
                   <node concept="1pGfFk" id="uB8nTHDQvU" role="2ShVmc">
-                    <ref role="37wK5l" to="z1c4:~MPSProject.&lt;init&gt;(com.intellij.openapi.project.Project)" resolve="MPSProject" />
+                    <ref role="37wK5l" to="z1c4:~MPSProject.&lt;init&gt;(com.intellij.openapi.project.Project,jetbrains.mps.ide.vfs.ProjectRootListenerComponent)" resolve="MPSProject" />
                     <node concept="2OqwBi" id="uB8nTHDQvV" role="37wK5m">
                       <node concept="2WthIp" id="uB8nTHDQvW" role="2Oq$k0" />
                       <node concept="3a8Xsn" id="uB8nTHDQvX" role="2OqNvi" />
@@ -1029,7 +1029,7 @@
                             <ref role="3cqZAo" node="18MzsNNKE4E" resolve="node" />
                           </node>
                           <node concept="3TrEf2" id="5NMxi75BqrJ" role="2OqNvi">
-                            <ref role="3Tt5mk" to="r9td:8cuIHOGcLk" />
+                            <ref role="3Tt5mk" to="r9td:8cuIHOGcLk" resolve="script" />
                           </node>
                         </node>
                         <node concept="2qgKlT" id="5NMxi75Bri2" role="2OqNvi">
