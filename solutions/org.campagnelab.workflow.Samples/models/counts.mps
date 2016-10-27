@@ -318,7 +318,7 @@
       </node>
     </node>
     <node concept="1CVceo" id="4xTPTl95XMn" role="2$L6iY">
-      <property role="TrG5h" value="fastq Files" />
+      <property role="TrG5h" value="fastq_Files" />
       <node concept="2J_sx7" id="4xTPTl95XMo" role="2$L62I">
         <node concept="pA3Yv" id="4xTPTl969Lp" role="2J_sx6">
           <ref role="pA3H2" node="4xTPTl969LW" resolve="Fastq files" />
@@ -328,7 +328,7 @@
     <node concept="2$rEH5" id="7ejpSqGJUXQ" role="2$rEHq">
       <ref role="2$rEH4" node="7ejpSqGJDQd" resolve="Sample_irstOneMillionSequences" />
       <node concept="1uYdA0" id="7ejpSqGJUXR" role="1uLvPH">
-        <ref role="1uK_4X" node="4xTPTl95XMn" resolve="fastq Files" />
+        <ref role="1uK_4X" node="4xTPTl95XMn" resolve="fastq_Files" />
       </node>
       <node concept="1uLkD0" id="7ejpSqGJUXS" role="1uLvPA">
         <property role="TrG5h" value="out" />
@@ -410,7 +410,7 @@
     </node>
   </node>
   <node concept="2$rMIF" id="7ejpSqGKVCD">
-    <property role="TrG5h" value="Align With Kallisto" />
+    <property role="TrG5h" value="Align_With_Kallisto" />
     <node concept="1CVceo" id="7ejpSqGKVO1" role="2$L6iY">
       <property role="TrG5h" value="input" />
       <node concept="2J_sx7" id="7ejpSqGKVO2" role="2$L62I" />
@@ -1396,6 +1396,11 @@
           <property role="19SUeA" value=" echo done splittig" />
         </node>
       </node>
+    </node>
+    <node concept="VtuK3" id="7UcLk9c5BSh" role="234boB">
+      <property role="VuL0s" value="latest" />
+      <property role="VuL0v" value="artifacts" />
+      <property role="GbyUj" value="base" />
     </node>
   </node>
   <node concept="2ulcR8" id="iewVIi_T9Y">

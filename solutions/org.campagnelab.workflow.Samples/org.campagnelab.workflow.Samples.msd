@@ -10,6 +10,7 @@
     <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
     <dependency reexport="false">0202ed86-955d-4227-9c20-377dd6b1f9ff(org.campagnelab.nyosh.lib)</dependency>
     <dependency reexport="false">7c739b34-3e5e-410f-b0a5-b9614d9685f7(org.campagnelab.workflow.rna-seq)</dependency>
+    <dependency reexport="false">0b7d8bbd-896e-495e-be60-01a0d738a649(org.campagnelab.gobyweb.plugins)</dependency>
   </dependencies>
   <usedDevKits>
     <usedDevKit>74a4431b-c31f-4707-ad8a-3f4f3c105ee2(org.campagnelab.NextflowWorkbench)</usedDevKit>
@@ -61,6 +62,7 @@
     <module reference="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" version="0" />
     <module reference="c72da2b9-7cce-4447-8389-f407dc1158b7(jetbrains.mps.lang.structure)" version="0" />
     <module reference="63ed0b3a-e2ca-4245-8600-dfbe1ddba42b(org.campagnelab.docker.bash.run)" version="0" />
+    <module reference="0b7d8bbd-896e-495e-be60-01a0d738a649(org.campagnelab.gobyweb.plugins)" version="0" />
     <module reference="0202ed86-955d-4227-9c20-377dd6b1f9ff(org.campagnelab.nyosh.lib)" version="0" />
     <module reference="a16c15b3-e423-4aad-81e7-18bb74e1f395(org.campagnelab.util.execution.ant)" version="0" />
     <module reference="8f30b27b-57ec-411a-9ffa-0c6f223dcf72(org.campagnelab.workflow.Samples)" version="0" />
