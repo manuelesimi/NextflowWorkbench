@@ -338,6 +338,10 @@
         <child id="1144104376918" name="parameter" index="1xVPHs" />
       </concept>
       <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
+      <concept id="2396822768958367367" name="jetbrains.mps.lang.smodel.structure.AbstractTypeCastExpression" flags="nn" index="$5XWr">
+        <reference id="6733348108486823428" name="concept" index="1m5ApE" />
+        <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
+      </concept>
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
       <concept id="1212008292747" name="jetbrains.mps.lang.smodel.structure.Model_GetLongNameOperation" flags="nn" index="LkI2h" />
       <concept id="1171407110247" name="jetbrains.mps.lang.smodel.structure.Node_GetAncestorOperation" flags="nn" index="2Xjw5R" />
@@ -348,10 +352,7 @@
       <concept id="1144101972840" name="jetbrains.mps.lang.smodel.structure.OperationParm_Concept" flags="ng" index="1xMEDy">
         <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
       </concept>
-      <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI">
-        <reference id="1140138128738" name="concept_old" index="1PxNhF" />
-        <child id="1140138123956" name="leftExpression_old" index="1PxMeX" />
-      </concept>
+      <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI" />
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
       </concept>
@@ -990,8 +991,9 @@
                 <ref role="37wK5l" to="z1c3:~ProjectModelAccess.&lt;init&gt;(jetbrains.mps.project.Project)" resolve="ProjectModelAccess" />
                 <node concept="2ShNRf" id="7MQ4nb0hbbx" role="37wK5m">
                   <node concept="1pGfFk" id="7MQ4nb0hcGM" role="2ShVmc">
-                    <ref role="37wK5l" to="z1c4:~MPSProject.&lt;init&gt;(com.intellij.openapi.project.Project)" resolve="MPSProject" />
+                    <ref role="37wK5l" to="z1c4:~MPSProject.&lt;init&gt;(com.intellij.openapi.project.Project,jetbrains.mps.ide.vfs.ProjectRootListenerComponent)" resolve="MPSProject" />
                     <node concept="21ER0p" id="6DdhZ$b8EZ1" role="37wK5m" />
+                    <node concept="10Nm6u" id="12yJ$zBKoC7" role="37wK5m" />
                   </node>
                 </node>
               </node>
@@ -1000,24 +1002,24 @@
               <ref role="37wK5l" to="w1kc:~ModelAccessBase.runReadAction(java.lang.Runnable):void" resolve="runReadAction" />
               <node concept="1bVj0M" id="7MQ4nb0he3p" role="37wK5m">
                 <node concept="3clFbS" id="7MQ4nb0he3q" role="1bW5cS">
-                  <node concept="3clFbF" id="18MzsNNKFuX" role="3cqZAp">
-                    <node concept="37vLTI" id="18MzsNNKFPf" role="3clFbG">
-                      <node concept="37vLTw" id="18MzsNNKFuV" role="37vLTJ">
-                        <ref role="3cqZAo" node="18MzsNNKE4E" resolve="node" />
-                      </node>
-                      <node concept="1PxgMI" id="1KUoCipvy8X" role="37vLTx">
-                        <ref role="1PxNhF" to="r9td:8cuIHOGcxR" resolve="DockerBash" />
-                        <node concept="2OqwBi" id="1KUoCipvy8Y" role="1PxMeX">
-                          <node concept="2OqwBi" id="1KUoCipvy8Z" role="2Oq$k0">
-                            <node concept="RBKsg" id="1KUoCipvy90" role="2Oq$k0" />
-                            <node concept="yHkDZ" id="18MzsNNKBE8" role="2OqNvi">
+                  <node concept="3clFbF" id="12yJ$zBKphg" role="3cqZAp">
+                    <node concept="37vLTI" id="12yJ$zBKpWI" role="3clFbG">
+                      <node concept="1PxgMI" id="12yJ$zBKtXp" role="37vLTx">
+                        <ref role="1m5ApE" to="r9td:8cuIHOGcxR" resolve="DockerBash" />
+                        <node concept="2OqwBi" id="12yJ$zBKrCz" role="1m5AlR">
+                          <node concept="2OqwBi" id="12yJ$zBKqyS" role="2Oq$k0">
+                            <node concept="RBKsg" id="12yJ$zBKqet" role="2Oq$k0" />
+                            <node concept="yHkDZ" id="12yJ$zBKr14" role="2OqNvi">
                               <ref role="yHkDY" node="6efZaUfTws1" resolve="myNode" />
                             </node>
                           </node>
-                          <node concept="2XshWL" id="1KUoCipvy92" role="2OqNvi">
+                          <node concept="2XshWL" id="12yJ$zBKtl9" role="2OqNvi">
                             <ref role="2WH_rO" to="awpe:7byHRlLC1PV" resolve="getNode" />
                           </node>
                         </node>
+                      </node>
+                      <node concept="37vLTw" id="12yJ$zBKphe" role="37vLTJ">
+                        <ref role="3cqZAo" node="18MzsNNKE4E" resolve="node" />
                       </node>
                     </node>
                   </node>
