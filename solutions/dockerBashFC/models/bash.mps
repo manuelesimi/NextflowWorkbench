@@ -242,7 +242,6 @@
       <concept id="8987412447080958668" name="org.campagnelab.docker.structure.DockerImage" flags="ng" index="2E_JVc">
         <property id="8987412447080959633" name="id" index="2E_JEh" />
         <property id="6819868375259551868" name="taggedAs" index="GSh9r" />
-        <child id="430664643838761227" name="containers" index="WF_SX" />
       </concept>
       <concept id="8987412447079095297" name="org.campagnelab.docker.structure.Config" flags="ng" index="2EEQw1">
         <property id="8987412447079095298" name="pathToDocker" index="2EEQw2" />
@@ -261,9 +260,6 @@
         <property id="6819868375264208052" name="id" index="GbyUj" />
         <property id="1893262236499912677" name="tag" index="VuL0s" />
         <property id="1893262236499912678" name="userName" index="VuL0v" />
-      </concept>
-      <concept id="430664643838735225" name="org.campagnelab.docker.structure.ContainerRef" flags="ng" index="WEvhf">
-        <reference id="430664643838735312" name="container" index="WEvjA" />
       </concept>
     </language>
     <language id="c6c823fb-a9da-46e7-9850-129b0f7a7aa5" name="org.campagnelab.workflow">
@@ -8722,52 +8718,16 @@
     <property role="GSh9r" value="mas2181/artifact-software:latest" />
     <property role="2E_JEh" value="artifact-software" />
     <property role="TrG5h" value="image" />
-    <node concept="WEvhf" id="1CWHgioSbzn" role="WF_SX">
-      <ref role="WEvjA" node="1CWHgioRk5t" resolve="interactive" />
-    </node>
-    <node concept="WEvhf" id="1CWHgioSbzE" role="WF_SX">
-      <ref role="WEvjA" node="1CWHgioSbzp" resolve="interactive" />
-    </node>
   </node>
   <node concept="2E_JVc" id="15pzti8KDgp">
     <property role="GSh9r" value="artifacts/dl4j:latest " />
     <property role="2E_JEh" value="dl4j" />
     <property role="TrG5h" value="image" />
-    <node concept="WEvhf" id="15pzti8M1qI" role="WF_SX">
-      <ref role="WEvjA" node="15pzti8M1qH" resolve="interactive" />
-    </node>
   </node>
   <node concept="2E_JVc" id="15pzti8M1qZ">
     <property role="GSh9r" value="artifacts/dl4j:latest " />
     <property role="2E_JEh" value="dl4j" />
     <property role="TrG5h" value="image" />
-    <node concept="WEvhf" id="2uoXx0vnBH2" role="WF_SX">
-      <ref role="WEvjA" node="2uoXx0vnBH1" resolve="interactive" />
-    </node>
-    <node concept="WEvhf" id="3C9jHpG7wST" role="WF_SX">
-      <ref role="WEvjA" node="3C9jHpG7wSS" resolve="interactive" />
-    </node>
-    <node concept="WEvhf" id="3C9jHpG7wSX" role="WF_SX">
-      <ref role="WEvjA" node="3C9jHpG7wSW" resolve="interactive" />
-    </node>
-    <node concept="WEvhf" id="2F3Qlw97N7L" role="WF_SX">
-      <ref role="WEvjA" node="2F3Qlw97N7K" resolve="interactive" />
-    </node>
-    <node concept="WEvhf" id="2F3Qlw97N7R" role="WF_SX">
-      <ref role="WEvjA" node="2F3Qlw97N7Q" resolve="interactive" />
-    </node>
-    <node concept="WEvhf" id="3DC7OdoVFbm" role="WF_SX">
-      <ref role="WEvjA" node="3DC7OdoVFbl" resolve="interactive" />
-    </node>
-    <node concept="WEvhf" id="3DC7OdoVFbt" role="WF_SX">
-      <ref role="WEvjA" node="3DC7OdoVFbk" resolve="interactive" />
-    </node>
-    <node concept="WEvhf" id="3DC7OdoVJfV" role="WF_SX">
-      <ref role="WEvjA" node="3DC7OdoVJfU" resolve="_interactive" />
-    </node>
-    <node concept="WEvhf" id="3nORUy$Q1B3" role="WF_SX">
-      <ref role="WEvjA" node="3nORUy$PHUr" resolve="int2" />
-    </node>
   </node>
   <node concept="2EEQw1" id="2uoXx0vowJ5">
     <property role="TrG5h" value="docker.config" />
