@@ -2,7 +2,7 @@
 <model ref="r:30dc0ab7-951f-462f-b5ae-6760525b0724(org.campagnelab.workflow.configuration.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -153,7 +153,7 @@
     <property role="3GE5qa" value="remoteSubmission" />
     <ref role="1XX52x" to="dlwq:5KN4KqYQkSL" resolve="RemoteSetEnv" />
     <node concept="1iCGBv" id="5KN4KqYQkY7" role="2wV5jI">
-      <ref role="1NtTu8" to="dlwq:5KN4KqYQkSM" />
+      <ref role="1NtTu8" to="dlwq:5KN4KqYQkSM" resolve="file" />
       <node concept="pVoyu" id="5KN4KqYQkY8" role="3F10Kt">
         <property role="VOm3f" value="true" />
       </node>
@@ -162,7 +162,7 @@
       </node>
       <node concept="1sVBvm" id="5KN4KqYQkYa" role="1sWHZn">
         <node concept="3F2HdR" id="5KN4KqYQkYb" role="2wV5jI">
-          <ref role="1NtTu8" to="q2ta:3LlDVJSEHDq" />
+          <ref role="1NtTu8" to="q2ta:3LlDVJSEHDq" resolve="lines" />
           <node concept="l2Vlx" id="5KN4KqYQkYc" role="2czzBx" />
           <node concept="pVoyu" id="5KN4KqYQkYd" role="3F10Kt">
             <property role="VOm3f" value="true" />
@@ -220,7 +220,7 @@
         </node>
       </node>
       <node concept="3F1sOY" id="5KN4KqYQkYj" role="3EZMnx">
-        <ref role="1NtTu8" to="dlwq:5KN4KqYQkSQ" />
+        <ref role="1NtTu8" to="dlwq:5KN4KqYQkSQ" resolve="username" />
         <node concept="pVoyu" id="5KN4KqYQkYk" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -229,7 +229,7 @@
         </node>
       </node>
       <node concept="3F1sOY" id="5KN4KqYQkYm" role="3EZMnx">
-        <ref role="1NtTu8" to="dlwq:5KN4KqYQkSP" />
+        <ref role="1NtTu8" to="dlwq:5KN4KqYQkSP" resolve="hostname" />
         <node concept="lj46D" id="5KN4KqYQkYn" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -241,7 +241,7 @@
         </node>
       </node>
       <node concept="3F1sOY" id="5KN4KqYQkYq" role="3EZMnx">
-        <ref role="1NtTu8" to="dlwq:5KN4KqYQkSR" />
+        <ref role="1NtTu8" to="dlwq:5KN4KqYQkSR" resolve="jobArea" />
         <node concept="ljvvj" id="5KN4KqYQkYr" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -250,7 +250,7 @@
         </node>
       </node>
       <node concept="3F1sOY" id="5KN4KqYQkYt" role="3EZMnx">
-        <ref role="1NtTu8" to="dlwq:5KN4KqYQkSS" />
+        <ref role="1NtTu8" to="dlwq:5KN4KqYQkSS" resolve="keyfile" />
         <node concept="lj46D" id="5KN4KqYQkYu" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -272,7 +272,7 @@
       </node>
       <node concept="3F1sOY" id="5KN4KqYQkY_" role="3EZMnx">
         <property role="1$x2rV" value="Add settings" />
-        <ref role="1NtTu8" to="dlwq:5KN4KqYQkST" />
+        <ref role="1NtTu8" to="dlwq:5KN4KqYQkST" resolve="setEnv" />
         <node concept="lj46D" id="5KN4KqYQkYA" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -296,7 +296,7 @@
       </node>
       <node concept="3F2HdR" id="5KN4KqZbL4t" role="3EZMnx">
         <property role="2czwfO" value="," />
-        <ref role="1NtTu8" to="dlwq:5KN4KqZbL4m" />
+        <ref role="1NtTu8" to="dlwq:5KN4KqZbL4m" resolve="queueElements" />
       </node>
     </node>
   </node>
@@ -323,13 +323,13 @@
         </node>
       </node>
       <node concept="3F1sOY" id="dhtvqEN_y0" role="3EZMnx">
-        <ref role="1NtTu8" to="dlwq:dhtvqEN_js" />
+        <ref role="1NtTu8" to="dlwq:dhtvqEN_js" resolve="maxRetries" />
         <node concept="pVoyu" id="dhtvqEN_yX" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
       <node concept="3F1sOY" id="dhtvqEN__0" role="3EZMnx">
-        <ref role="1NtTu8" to="dlwq:dhtvqEN_jA" />
+        <ref role="1NtTu8" to="dlwq:dhtvqEN_jA" resolve="maxErrors" />
         <node concept="pVoyu" id="dhtvqEN_A4" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -401,7 +401,7 @@
       <node concept="3F1sOY" id="2Iemm50RT9q" role="3EZMnx">
         <property role="39s7Ar" value="true" />
         <property role="1$x2rV" value="latest version available" />
-        <ref role="1NtTu8" to="dlwq:2Iemm50RT7M" />
+        <ref role="1NtTu8" to="dlwq:2Iemm50RT7M" resolve="nextflowVersion" />
       </node>
       <node concept="3F0ifn" id="5KN4KqZiCvI" role="3EZMnx">
         <property role="3F0ifm" value="nextflow.config: " />
@@ -419,10 +419,10 @@
         </node>
       </node>
       <node concept="3F1sOY" id="5KN4KqZiCvN" role="3EZMnx">
-        <ref role="1NtTu8" to="dlwq:5KN4KqZiCv$" />
+        <ref role="1NtTu8" to="dlwq:5KN4KqZiCv$" resolve="executor" />
       </node>
       <node concept="3F2HdR" id="5KN4KqZiCvO" role="3EZMnx">
-        <ref role="1NtTu8" to="dlwq:5KN4KqZiCv_" />
+        <ref role="1NtTu8" to="dlwq:5KN4KqZiCv_" resolve="processOptions" />
         <node concept="l2Vlx" id="5KN4KqZiCvP" role="2czzBx" />
         <node concept="pVoyu" id="5KN4KqZiCvQ" role="3F10Kt">
           <property role="VOm3f" value="true" />
@@ -438,7 +438,7 @@
       <node concept="3F0ifn" id="5KN4KqZiCvT" role="3EZMnx" />
       <node concept="3F1sOY" id="5KN4KqZiCvU" role="3EZMnx">
         <property role="1$x2rV" value="optional config for remote submissions" />
-        <ref role="1NtTu8" to="dlwq:5KN4KqZiCvA" />
+        <ref role="1NtTu8" to="dlwq:5KN4KqZiCvA" resolve="remoteSubmission" />
         <node concept="pVoyu" id="5KN4KqZiCvV" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -462,7 +462,7 @@
         </node>
       </node>
       <node concept="3F2HdR" id="1nj$XVg1Ie9" role="3EZMnx">
-        <ref role="1NtTu8" to="dlwq:1nj$XVfY5Rs" />
+        <ref role="1NtTu8" to="dlwq:1nj$XVfY5Rs" resolve="containerOptions" />
         <node concept="l2Vlx" id="1nj$XVg1Ieb" role="2czzBx" />
         <node concept="pVoyu" id="1nj$XVg1IeO" role="3F10Kt">
           <property role="VOm3f" value="true" />

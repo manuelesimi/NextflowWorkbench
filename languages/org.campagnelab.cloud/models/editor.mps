@@ -2,10 +2,10 @@
 <model ref="r:d3bd6da4-2ef5-47ae-ae2d-f5a9d9800b0d(org.campagnelab.cloud.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <use id="c1ba4037-e4db-47d8-8b61-b3c805b648f2" name="org.campagnelab.ui" version="0" />
     <use id="fe9d76d7-5809-45c9-ae28-a40915b4d6ff" name="jetbrains.mps.lang.checkedName" version="0" />
-    <use id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin" version="0" />
+    <use id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin" version="1" />
     <use id="443f4c36-fcf5-4eb6-9500-8d06ed259e3e" name="jetbrains.mps.baseLanguage.classifiers" version="0" />
     <use id="ed6d7656-532c-4bc2-81d1-af945aeb8280" name="jetbrains.mps.baseLanguage.blTypes" version="0" />
     <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
@@ -157,7 +157,7 @@
       <node concept="3EZMnI" id="6A9boVQ2ENa" role="3EZMnx">
         <node concept="l2Vlx" id="6A9boVQ2ENb" role="2iSdaV" />
         <node concept="3F1sOY" id="7QDG7s96oue" role="3EZMnx">
-          <ref role="1NtTu8" to="5lbf:7QDG7s96n86" />
+          <ref role="1NtTu8" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
           <node concept="pVoyu" id="7QDG7s96oy5" role="3F10Kt">
             <property role="VOm3f" value="true" />
           </node>
@@ -501,7 +501,7 @@
     <node concept="3EZMnI" id="1LKL2LEpxLp" role="6VMZX">
       <node concept="2iRfu4" id="1LKL2LEpxLq" role="2iSdaV" />
       <node concept="3F1sOY" id="1LKL2LEpxID" role="3EZMnx">
-        <ref role="1NtTu8" to="5lbf:irqYu7yXR0" />
+        <ref role="1NtTu8" to="5lbf:irqYu7yXR0" resolve="container" />
       </node>
     </node>
   </node>

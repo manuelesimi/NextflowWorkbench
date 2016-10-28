@@ -3,7 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="c1ba4037-e4db-47d8-8b61-b3c805b648f2" name="org.campagnelab.ui" version="0" />
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -141,7 +141,7 @@
                 <node concept="2OqwBi" id="G5bxgO233F" role="2Oq$k0">
                   <node concept="1VaYGm" id="G5bxgO232c" role="2Oq$k0" />
                   <node concept="3Tsc0h" id="4YJHQQrZko5" role="2OqNvi">
-                    <ref role="3TtcxE" to="3jiv:G5bxgNBxbO" />
+                    <ref role="3TtcxE" to="3jiv:G5bxgNBxbO" resolve="instructions" />
                   </node>
                 </node>
                 <node concept="liA8E" id="G5bxgO27$X" role="2OqNvi">
@@ -153,7 +153,7 @@
         </node>
       </node>
       <node concept="3F2HdR" id="G5bxgNBy7W" role="3EZMnx">
-        <ref role="1NtTu8" to="3jiv:G5bxgNBxbO" />
+        <ref role="1NtTu8" to="3jiv:G5bxgNBxbO" resolve="instructions" />
         <node concept="2EHx9g" id="G5bxgNBy88" role="2czzBx" />
         <node concept="pVoyu" id="G5bxgNBy83" role="3F10Kt">
           <property role="VOm3f" value="true" />
@@ -173,7 +173,7 @@
         <node concept="Vb9p2" id="5OmLCqMGSTL" role="3F10Kt" />
       </node>
       <node concept="1iCGBv" id="4HNd3hiUVh6" role="3EZMnx">
-        <ref role="1NtTu8" to="3jiv:4HNd3hiUKXQ" />
+        <ref role="1NtTu8" to="3jiv:4HNd3hiUKXQ" resolve="ExplicitFileBag" />
         <node concept="1sVBvm" id="4HNd3hiUVh8" role="1sWHZn">
           <node concept="3F0A7n" id="4HNd3hiUVhh" role="2wV5jI">
             <property role="1Intyy" value="true" />

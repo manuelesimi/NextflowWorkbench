@@ -2,13 +2,13 @@
 <model ref="r:92ff202b-e2b7-497f-b482-a17ebcdaa3e6(org.campagnelab.docker.actions.plugin)">
   <persistence version="9" />
   <languages>
-    <use id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin" version="0" />
+    <use id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin" version="1" />
     <use id="ef7bf5ac-d06c-4342-b11d-e42104eb9343" name="jetbrains.mps.lang.plugin.standalone" version="0" />
     <use id="443f4c36-fcf5-4eb6-9500-8d06ed259e3e" name="jetbrains.mps.baseLanguage.classifiers" version="0" />
     <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
     <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="0" />
     <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
-    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="2" />
+    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="4" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
   </languages>
   <imports>
@@ -755,7 +755,7 @@
                       </node>
                     </node>
                     <node concept="3Tsc0h" id="1hjSjLbarOo" role="2OqNvi">
-                      <ref role="3TtcxE" to="6jv6:1D6dZ$xfn$I" />
+                      <ref role="3TtcxE" to="6jv6:1D6dZ$xfn$I" resolve="instructions" />
                     </node>
                   </node>
                   <node concept="X8dFx" id="1hjSjLbawQz" role="2OqNvi">
@@ -1380,7 +1380,7 @@
                       </node>
                     </node>
                     <node concept="3Tsc0h" id="3PCtB6rK7L9" role="2OqNvi">
-                      <ref role="3TtcxE" to="6jv6:1D6dZ$xfn$I" />
+                      <ref role="3TtcxE" to="6jv6:1D6dZ$xfn$I" resolve="instructions" />
                     </node>
                   </node>
                   <node concept="X8dFx" id="3PCtB6rK7La" role="2OqNvi">

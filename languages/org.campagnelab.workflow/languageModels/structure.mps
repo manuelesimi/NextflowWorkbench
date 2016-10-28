@@ -2,7 +2,8 @@
 <model ref="r:0583c0e9-dc14-4152-95a4-93036dce931b(org.campagnelab.workflow.structure)">
   <persistence version="9" />
   <languages>
-    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="-1" />
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="3" />
+    <use id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources" version="2" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -15,6 +16,11 @@
     <import index="tpfo" ref="r:00000000-0000-4000-0000-011c89590518(jetbrains.mps.baseLanguage.regexp.structure)" implicit="true" />
   </imports>
   <registry>
+    <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
+      <concept id="8974276187400029883" name="jetbrains.mps.lang.resources.structure.FileIcon" flags="ng" index="1QGGSu">
+        <property id="2756621024541341363" name="file" index="1iqoE4" />
+      </concept>
+    </language>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1224240836180" name="jetbrains.mps.lang.structure.structure.DeprecatedNodeAnnotation" flags="ig" index="asaX9">
         <property id="1225118933224" name="comment" index="YLQ7P" />
@@ -35,9 +41,9 @@
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
       <concept id="1071489090640" name="jetbrains.mps.lang.structure.structure.ConceptDeclaration" flags="ig" index="1TIwiD">
-        <property id="1160488491229" name="iconPath" index="MwhBj" />
         <property id="1096454100552" name="rootable" index="19KtqR" />
         <reference id="1071489389519" name="extends" index="1TJDcQ" />
+        <child id="6327362524875300597" name="icon" index="rwd14" />
         <child id="1169129564478" name="implements" index="PzmwI" />
       </concept>
       <concept id="1071489288299" name="jetbrains.mps.lang.structure.structure.PropertyDeclaration" flags="ig" index="1TJgyi">
@@ -68,7 +74,6 @@
     <property role="R4oN_" value="a Nextflow-like process" />
     <property role="19KtqR" value="true" />
     <property role="R5$K7" value="false" />
-    <property role="MwhBj" value="${module}/icons/ProcessIcon-5.png" />
     <property role="EcuMT" value="7457140171610904753" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="2DLgRb6lLmE" role="1TKVEl">
@@ -128,6 +133,9 @@
     <node concept="PrWs8" id="7lol28i6hlG" role="PzmwI">
       <ref role="PrY4T" node="7lol28i6h3r" resolve="NameMustBeAJavaValidIdentifier" />
     </node>
+    <node concept="1QGGSu" id="7UcLk9c6hdk" role="rwd14">
+      <property role="1iqoE4" value="${module}/icons/ProcessIcon-5.png" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6tX5nBTaD$x">
     <property role="TrG5h" value="Script" />
@@ -142,7 +150,6 @@
     <property role="34LRSv" value="Workflow" />
     <property role="19KtqR" value="true" />
     <property role="R4oN_" value="A Nextflow-like workflow" />
-    <property role="MwhBj" value="${module}/icons/WorkflowIcon-2.png" />
     <property role="EcuMT" value="6505336652526301852" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="PffOQSWT20" role="1TKVEl">
@@ -185,6 +192,9 @@
     </node>
     <node concept="PrWs8" id="7lol28i6hlX" role="PzmwI">
       <ref role="PrY4T" node="7lol28i6h3r" resolve="NameMustBeAJavaValidIdentifier" />
+    </node>
+    <node concept="1QGGSu" id="7UcLk9c6hdj" role="rwd14">
+      <property role="1iqoE4" value="${module}/icons/WorkflowIcon-2.png" />
     </node>
   </node>
   <node concept="1TIwiD" id="5D7AjvYaj9M">

@@ -19,7 +19,6 @@
     <import index="xtuj" ref="r:b3d6bed8-7d36-47a6-b17a-037b1c81e85e(CorrectWorkflows)" />
     <import index="hg90" ref="r:fabfd97d-2a4e-4254-8652-f9c389bfe16e(processes)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
-    <import index="q1qp" ref="f:diff_old#r:d77d6fe3-a37c-4c8b-a584-a584d1c37587(documentation.model@old)" implicit="true" />
   </imports>
   <registry>
     <language id="93bc01ac-08ca-4f11-9c7d-614d04055dfb" name="org.campagnelab.mps.editor2pdf">
@@ -933,22 +932,16 @@
     <property role="2E_JEh" value="artifact-software" />
     <property role="TrG5h" value="image" />
     <property role="3GE5qa" value="docker" />
-    <node concept="WEvhf" id="6zGYz0lS2_g" role="WF_SX">
-      <ref role="WEvjA" to="q1qp:6zGYz0lS2zw" resolve="interactive" />
-    </node>
   </node>
   <node concept="2E_JVc" id="6zGYz0lRcfn">
     <property role="GSh9r" value="mas2181/artifact-software:latest" />
     <property role="2E_JEh" value="artifact-software" />
     <property role="TrG5h" value="image" />
     <property role="3GE5qa" value="docker" />
-    <node concept="WEvhf" id="6zGYz0lRch2" role="WF_SX">
-      <ref role="WEvjA" to="q1qp:6zGYz0lRcfr" resolve="interactive" />
-    </node>
     <node concept="3ZW7eb" id="6zGYz0lRcKP" role="lGtFl">
       <property role="2ripvU" value="1" />
       <property role="TrG5h" value="DockerImageRootNode" />
-      <ref role="KZaLW" to="q1qp:3WNK9KXJFMx" resolve="JasonFIGURES" />
+      <ref role="KZaLW" node="3WNK9KXJFMx" resolve="JasonFIGURES" />
     </node>
   </node>
   <node concept="GbKB8" id="6zGYz0lS2zw">
@@ -957,7 +950,7 @@
     <property role="1vm7qE" value="true" />
     <property role="3yMj3R" value="sleep 1000" />
     <property role="3GE5qa" value="docker" />
-    <ref role="3zcJb$" to="q1qp:6zGYz0lS2zs" resolve="image" />
+    <ref role="3zcJb$" to="2hwc:6hgQMAA5rLh" resolve="image" />
   </node>
   <node concept="2$rMIF" id="6kZ7DevQGNz">
     <property role="TrG5h" value="Workflow1" />

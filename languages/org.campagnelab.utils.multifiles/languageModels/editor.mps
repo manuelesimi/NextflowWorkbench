@@ -2,8 +2,8 @@
 <model ref="r:7ef95b56-0be7-450e-a194-4f55e37ba2d2(org.campagnelab.util.files.editor)">
   <persistence version="9" />
   <languages>
-    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="0" />
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
+    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="3" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -65,7 +65,7 @@
       </node>
       <node concept="2iRkQZ" id="3LlDVJSEHGh" role="2iSdaV" />
       <node concept="3F2HdR" id="3LlDVJSEHGc" role="3EZMnx">
-        <ref role="1NtTu8" to="q2ta:3LlDVJSEHDz" />
+        <ref role="1NtTu8" to="q2ta:3LlDVJSEHDz" resolve="files" />
         <node concept="pVoyu" id="59canFNyW7Z" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -89,7 +89,7 @@
         <property role="3F0ifm" value="Content:" />
       </node>
       <node concept="3F2HdR" id="3LlDVJSEHI8" role="3EZMnx">
-        <ref role="1NtTu8" to="q2ta:3LlDVJSEHDq" />
+        <ref role="1NtTu8" to="q2ta:3LlDVJSEHDq" resolve="lines" />
         <node concept="pVoyu" id="3LlDVJSEHIr" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>

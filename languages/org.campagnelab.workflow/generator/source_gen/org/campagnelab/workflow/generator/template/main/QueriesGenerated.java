@@ -29,7 +29,7 @@ import jetbrains.mps.internal.collections.runtime.IVisitor;
 import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.internal.collections.runtime.ITranslator2;
 import jetbrains.mps.generator.template.MappingScriptContext;
-import jetbrains.mps.generator.template.TemplateQueryContext;
+import jetbrains.mps.generator.template.TemplateVarContext;
 
 @Generated
 public class QueriesGenerated {
@@ -204,7 +204,7 @@ public class QueriesGenerated {
   public static void mappingScript_CodeBlock_1159484055316888204(final MappingScriptContext _context) {
     for (SNode closureWorkflow : ListSequence.fromList(SModelOperations.nodes(_context.getModel(), MetaAdapterFactory.getConcept(0xc6c823fba9da46e7L, 0x9850129b0f7a7aa5L, 0x5a68901f1459fb6aL, "org.campagnelab.workflow.structure.ClosureLiteralWorkFlow")))) {
       for (SNode closureLiteral : ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(closureWorkflow, MetaAdapterFactory.getContainmentLink(0xc6c823fba9da46e7L, 0x9850129b0f7a7aa5L, 0x5a68901f1459fb6aL, 0x66f41b22a6fa763aL, "closure")), MetaAdapterFactory.getContainmentLink(0xfd3920347849419dL, 0x907112563d152375L, 0x1174bed3125L, 0x1174bf02c34L, "parameter")))) {
-        SNode closureParameter = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xc6c823fba9da46e7L, 0x9850129b0f7a7aa5L, 0x1017509ae7e448e2L, "org.campagnelab.workflow.structure.ParameterContainer")));
+        SNode closureParameter = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xc6c823fba9da46e7L, 0x9850129b0f7a7aa5L, 0x1017509ae7e448e2L, "org.campagnelab.workflow.structure.ParameterContainer"));
         {
           final SNode tupleType = SLinkOperations.getTarget(closureLiteral, MetaAdapterFactory.getContainmentLink(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0x450368d90ce15bc3L, 0x4ed4d318133c80ceL, "type"));
           if (SNodeOperations.isInstanceOf(tupleType, MetaAdapterFactory.getConcept(0xc6c823fba9da46e7L, 0x9850129b0f7a7aa5L, 0x2b51664f2a155e3aL, "org.campagnelab.workflow.structure.TupleType"))) {
@@ -217,7 +217,7 @@ public class QueriesGenerated {
       }
     }
   }
-  public static Object insertMacro_varValue_2297428842558675819(final TemplateQueryContext _context) {
+  public static Object insertMacro_varValue_2297428842558675819(final TemplateVarContext _context) {
     SNode currentWorkflow = SNodeOperations.as(_context.getOriginalCopiedInputNode(SNodeOperations.getNodeAncestor(_context.getNode(), MetaAdapterFactory.getConcept(0xc6c823fba9da46e7L, 0x9850129b0f7a7aa5L, 0x5a479937fe28b29cL, "org.campagnelab.workflow.structure.Workflow"), false, false)), MetaAdapterFactory.getConcept(0xc6c823fba9da46e7L, 0x9850129b0f7a7aa5L, 0x5a479937fe28b29cL, "org.campagnelab.workflow.structure.Workflow"));
 
     return ListSequence.fromList(SNodeOperations.getNodeDescendants(currentWorkflow, MetaAdapterFactory.getConcept(0xc6c823fba9da46e7L, 0x9850129b0f7a7aa5L, 0xf4adeec5270056eL, "org.campagnelab.workflow.structure.FunctionWithClosure"), false, new SAbstractConcept[]{})).where(new IWhereFilter<SNode>() {

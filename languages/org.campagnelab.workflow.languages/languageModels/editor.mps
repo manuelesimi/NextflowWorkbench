@@ -2,7 +2,7 @@
 <model ref="r:0b6caec7-d559-42ca-8a84-69b8d3e1e85c(org.campagnelab.workflow.languages.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -68,13 +68,13 @@
         <property role="3F0ifm" value="Folders to add to PATH:" />
       </node>
       <node concept="3F1sOY" id="2nCkD5nYO4k" role="3EZMnx">
-        <ref role="1NtTu8" to="x2t3:2nCkD5nYNF1" />
+        <ref role="1NtTu8" to="x2t3:2nCkD5nYNF1" resolve="binPaths" />
       </node>
       <node concept="3F0ifn" id="2h4swG_Firq" role="3EZMnx">
         <property role="3F0ifm" value="Bash fragment:" />
       </node>
       <node concept="3F1sOY" id="2h4swG_Firw" role="3EZMnx">
-        <ref role="1NtTu8" to="iowz:70dPcAeBC7L" />
+        <ref role="1NtTu8" to="iowz:70dPcAeBC7L" resolve="text" />
         <node concept="lj46D" id="2nCkD5nZ1Rr" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -90,7 +90,7 @@
         <property role="3F0ifm" value="Paths for Python modules:" />
       </node>
       <node concept="3F1sOY" id="1wgQ7fIjhuO" role="3EZMnx">
-        <ref role="1NtTu8" to="x2t3:1wgQ7fIjgNX" />
+        <ref role="1NtTu8" to="x2t3:1wgQ7fIjgNX" resolve="pythonPaths" />
         <node concept="lj46D" id="1wgQ7fIkm8B" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -99,7 +99,7 @@
         <property role="3F0ifm" value="Python code:" />
       </node>
       <node concept="3F1sOY" id="1wgQ7fIjaYi" role="3EZMnx">
-        <ref role="1NtTu8" to="iowz:70dPcAeBC7L" />
+        <ref role="1NtTu8" to="iowz:70dPcAeBC7L" resolve="text" />
         <node concept="lj46D" id="2nCkD5nZ1Rl" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -110,7 +110,7 @@
   <node concept="24kQdi" id="1wgQ7fIkbgR">
     <ref role="1XX52x" to="x2t3:1wgQ7fIjgMx" resolve="AdditionalPaths" />
     <node concept="3F2HdR" id="1wgQ7fIkwaD" role="2wV5jI">
-      <ref role="1NtTu8" to="x2t3:1wgQ7fIjgNU" />
+      <ref role="1NtTu8" to="x2t3:1wgQ7fIjgNU" resolve="paths" />
       <node concept="lj46D" id="6XP3gVe0gBw" role="3F10Kt">
         <property role="VOm3f" value="true" />
       </node>
@@ -139,7 +139,7 @@
         <property role="3F0ifm" value="CLASSPATH:" />
       </node>
       <node concept="3F1sOY" id="4GDrEajUpef" role="3EZMnx">
-        <ref role="1NtTu8" to="x2t3:4GDrEajUnMe" />
+        <ref role="1NtTu8" to="x2t3:4GDrEajUnMe" resolve="classpath" />
         <node concept="lj46D" id="4GDrEajUpeg" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -148,7 +148,7 @@
         <property role="3F0ifm" value="Java class:" />
       </node>
       <node concept="3F1sOY" id="4GDrEajUpei" role="3EZMnx">
-        <ref role="1NtTu8" to="x2t3:4GDrEajUnMr" />
+        <ref role="1NtTu8" to="x2t3:4GDrEajUnMr" resolve="clazz" />
         <node concept="lj46D" id="4GDrEajUpej" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -163,11 +163,11 @@
         <property role="3F0ifm" value="R script" />
       </node>
       <node concept="3F2HdR" id="7ejpSqH9TbU" role="3EZMnx">
-        <ref role="1NtTu8" to="x2t3:7ejpSqH9TbI" />
+        <ref role="1NtTu8" to="x2t3:7ejpSqH9TbI" resolve="arguments" />
         <node concept="l2Vlx" id="7ejpSqH9TbW" role="2czzBx" />
       </node>
       <node concept="3F1sOY" id="7ejpSqH8S6o" role="3EZMnx">
-        <ref role="1NtTu8" to="iowz:70dPcAeBC7L" />
+        <ref role="1NtTu8" to="iowz:70dPcAeBC7L" resolve="text" />
         <node concept="pVoyu" id="7ejpSqH8S6u" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -178,7 +178,7 @@
   <node concept="24kQdi" id="7ejpSqH9Tbs">
     <ref role="1XX52x" to="x2t3:7ejpSqH9SWf" resolve="RScriptArgumentInput" />
     <node concept="1iCGBv" id="7ejpSqH9Tbu" role="2wV5jI">
-      <ref role="1NtTu8" to="x2t3:7ejpSqH9Tbk" />
+      <ref role="1NtTu8" to="x2t3:7ejpSqH9Tbk" resolve="input" />
       <node concept="1sVBvm" id="7ejpSqH9Tbw" role="1sWHZn">
         <node concept="3F0A7n" id="7ejpSqH9TbE" role="2wV5jI">
           <property role="1Intyy" value="true" />
@@ -191,7 +191,7 @@
     <ref role="1XX52x" to="x2t3:7ejpSqHgRwA" resolve="RScriptArgumentTuple" />
     <node concept="3EZMnI" id="7ejpSqHhDMp" role="2wV5jI">
       <node concept="1iCGBv" id="7ejpSqHhDMw" role="3EZMnx">
-        <ref role="1NtTu8" to="x2t3:7ejpSqHgRwB" />
+        <ref role="1NtTu8" to="x2t3:7ejpSqHgRwB" resolve="input" />
         <node concept="1sVBvm" id="7ejpSqHhDMy" role="1sWHZn">
           <node concept="3F0A7n" id="7ejpSqHhDMD" role="2wV5jI">
             <property role="1Intyy" value="true" />

@@ -2,7 +2,7 @@
 <model ref="r:46d195b3-580b-4855-93c5-820b8400438f(org.campagnelab.cloud.actions)">
   <persistence version="9" />
   <languages>
-    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="0" />
+    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="3" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -129,7 +129,7 @@
               <node concept="2OqwBi" id="5EXCMiTrLKj" role="37vLTJ">
                 <node concept="1r4Lsj" id="5EXCMiTrLHf" role="2Oq$k0" />
                 <node concept="3TrEf2" id="5wsmBEGRrNJ" role="2OqNvi">
-                  <ref role="3Tt5mk" to="5lbf:irqYu7yXR0" />
+                  <ref role="3Tt5mk" to="5lbf:irqYu7yXR0" resolve="container" />
                 </node>
               </node>
             </node>
@@ -143,7 +143,7 @@
                 <node concept="2OqwBi" id="5EXCMiTrMg8" role="2Oq$k0">
                   <node concept="1r4Lsj" id="5EXCMiTrMcu" role="2Oq$k0" />
                   <node concept="3TrEf2" id="5wsmBEGRrV_" role="2OqNvi">
-                    <ref role="3Tt5mk" to="5lbf:irqYu7yXR0" />
+                    <ref role="3Tt5mk" to="5lbf:irqYu7yXR0" resolve="container" />
                   </node>
                 </node>
                 <node concept="3TrcHB" id="5EXCMiTrNfD" role="2OqNvi">
@@ -161,7 +161,7 @@
                 <node concept="2OqwBi" id="5EXCMiTrN2f" role="2Oq$k0">
                   <node concept="1r4Lsj" id="5EXCMiTrN2g" role="2Oq$k0" />
                   <node concept="3TrEf2" id="5wsmBEGRrEJ" role="2OqNvi">
-                    <ref role="3Tt5mk" to="5lbf:irqYu7yXR0" />
+                    <ref role="3Tt5mk" to="5lbf:irqYu7yXR0" resolve="container" />
                   </node>
                 </node>
                 <node concept="3TrcHB" id="5EXCMiTrN2i" role="2OqNvi">
@@ -179,7 +179,7 @@
                 <node concept="2OqwBi" id="5EXCMiTrNmo" role="2Oq$k0">
                   <node concept="1r4Lsj" id="5EXCMiTrNmp" role="2Oq$k0" />
                   <node concept="3TrEf2" id="5wsmBEGRs06" role="2OqNvi">
-                    <ref role="3Tt5mk" to="5lbf:irqYu7yXR0" />
+                    <ref role="3Tt5mk" to="5lbf:irqYu7yXR0" resolve="container" />
                   </node>
                 </node>
                 <node concept="3TrcHB" id="5EXCMiTrNvU" role="2OqNvi">
@@ -219,7 +219,7 @@
               <node concept="2OqwBi" id="6_LFt8Z$w0J" role="37vLTJ">
                 <node concept="1r4Lsj" id="6_LFt8Z$w0K" role="2Oq$k0" />
                 <node concept="3TrEf2" id="5wsmBEGRrAe" role="2OqNvi">
-                  <ref role="3Tt5mk" to="5lbf:8cuIHOGcLo" />
+                  <ref role="3Tt5mk" to="5lbf:8cuIHOGcLo" resolve="dockerConfig" />
                 </node>
               </node>
               <node concept="2OqwBi" id="6_LFt8Z$w0M" role="37vLTx">

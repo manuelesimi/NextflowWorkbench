@@ -2,7 +2,7 @@
 <model ref="r:ac82a190-a1ea-4219-b083-9bbd0d3c9a27(org.campagnelab.workflow.configuration.actions)">
   <persistence version="9" />
   <languages>
-    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="0" />
+    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="3" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -111,7 +111,7 @@
                       </node>
                     </node>
                     <node concept="3Tsc0h" id="1dL8Oevlb27" role="2OqNvi">
-                      <ref role="3TtcxE" to="dlwq:1nj$XVfY5Rs" />
+                      <ref role="3TtcxE" to="dlwq:1nj$XVfY5Rs" resolve="containerOptions" />
                     </node>
                   </node>
                   <node concept="WFELt" id="1dL8OevlcTa" role="2OqNvi">
@@ -135,7 +135,7 @@
                     </node>
                   </node>
                   <node concept="3Tsc0h" id="1dL8Oevl6zd" role="2OqNvi">
-                    <ref role="3TtcxE" to="dlwq:1nj$XVfY5Rs" />
+                    <ref role="3TtcxE" to="dlwq:1nj$XVfY5Rs" resolve="containerOptions" />
                   </node>
                 </node>
                 <node concept="3zZkjj" id="1dL8Oevlayw" role="2OqNvi">
