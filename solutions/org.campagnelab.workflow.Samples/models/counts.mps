@@ -4,15 +4,15 @@
   <languages>
     <use id="f55d6853-b373-41dd-bc8e-331fd6e2c764" name="org.campagnelab.bash.nyosh" version="0" />
     <use id="5cf93bc1-d0da-4893-b739-63b17fe296b1" name="org.campagnelab.workflow.nyosh" version="0" />
-    <use id="66f96b90-b2af-4ce4-92ca-dc0e9d7e2b43" name="org.campagnelab.nyosh.interactive" version="0" />
-    <use id="a8fb88b0-7e9f-478c-aab4-a1b076131192" name="org.campagnelab.gobyweb.interactive" version="0" />
     <use id="0b7d8bbd-896e-495e-be60-01a0d738a649" name="org.campagnelab.gobyweb.plugins" version="0" />
     <use id="316e8289-cb69-4927-8bfe-edde5cd32037" name="org.campagnelab.workflow.languages" version="0" />
     <devkit ref="74a4431b-c31f-4707-ad8a-3f4f3c105ee2(org.campagnelab.NextflowWorkbench)" />
+    <devkit ref="51c21de2-7a87-42be-b8b1-46d4b4c6d244(org.campagnelab.docker.gobyweb)" />
   </languages>
   <imports>
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="bd2x" ref="r:aa9c91aa-8100-4e98-88e5-b9737f1d54b8(model.organisms)" implicit="true" />
   </imports>
   <registry>
     <language id="a8fb88b0-7e9f-478c-aab4-a1b076131192" name="org.campagnelab.gobyweb.interactive">
@@ -137,6 +137,14 @@
     <language id="5cf93bc1-d0da-4893-b739-63b17fe296b1" name="org.campagnelab.workflow.nyosh">
       <concept id="5436746574500400043" name="org.campagnelab.workflow.nyosh.structure.ExplicitFileBagRef" flags="ng" index="pA3Yv">
         <reference id="5436746574500401014" name="ExplicitFileBag" index="pA3H2" />
+      </concept>
+    </language>
+    <language id="b8e13d6b-cd9f-48e3-99ae-1c182918d003" name="org.campagnelab.gobyweb.interactive.organisms">
+      <concept id="7026862576601481551" name="org.campagnelab.gobyweb.interactive.organisms.structure.OrganismAttribute" flags="ng" index="3MliW7">
+        <child id="7026862576601511204" name="value" index="3MltHG" />
+      </concept>
+      <concept id="7026862576601488640" name="org.campagnelab.gobyweb.interactive.organisms.structure.OrganismValue" flags="ng" index="3Mljd8">
+        <reference id="7026862576601514724" name="organism" index="3MlqMG" />
       </concept>
     </language>
     <language id="3b74e3b7-7336-414d-8899-64a293a44a07" name="org.campagnelab.docker.bash">
@@ -628,9 +636,11 @@
             <property role="2vk9_M" value="KALLISTO_INDEX" />
             <property role="2vk9_N" value="INDEX" />
             <property role="TrG5h" value="organism" />
-            <node concept="2t8VsU" id="39rfs1g6s_2" role="2vnsw6">
-              <property role="2t8Vu2" value="Homo_sapiens" />
-              <property role="TrG5h" value="organism" />
+            <node concept="3MliW7" id="7UcLk9ceTUa" role="2vnsw6">
+              <property role="TrG5h" value="ORGANISM" />
+              <node concept="3Mljd8" id="7UcLk9ceTUe" role="3MltHG">
+                <ref role="3MlqMG" to="bd2x:2c$PAgEvj_8" resolve="human" />
+              </node>
             </node>
           </node>
           <node concept="2vnsz3" id="39rfs1g6s_3" role="1NFp1Y">
@@ -682,7 +692,7 @@
               <property role="TrG5h" value="organism" />
               <node concept="2vraTB" id="39rfs1g6s_c" role="2vnsw6">
                 <property role="TrG5h" value="organism" />
-                <ref role="2vraA5" node="39rfs1g6s_2" resolve="organism" />
+                <ref role="2vraA5" node="7UcLk9ceTUa" resolve="ORGANISM" />
               </node>
             </node>
             <node concept="2vnsz3" id="39rfs1g6s_d" role="1NFp1Y">
@@ -1600,9 +1610,11 @@
             <property role="2vk9_M" value="KALLISTO_INDEX" />
             <property role="2vk9_N" value="INDEX" />
             <property role="TrG5h" value="organism" />
-            <node concept="2t8VsU" id="59BvSKQHAGd" role="2vnsw6">
-              <property role="2t8Vu2" value="Homo_sapiens" />
-              <property role="TrG5h" value="organism" />
+            <node concept="3MliW7" id="7UcLk9ceYXW" role="2vnsw6">
+              <property role="TrG5h" value="ORGANISM" />
+              <node concept="3Mljd8" id="7UcLk9ceYY0" role="3MltHG">
+                <ref role="3MlqMG" to="bd2x:2c$PAgEvj_8" resolve="human" />
+              </node>
             </node>
           </node>
           <node concept="2vnsz3" id="59BvSKQHAGe" role="1NFp1Y">
@@ -1654,7 +1666,7 @@
               <property role="TrG5h" value="organism" />
               <node concept="2vraTB" id="59BvSKQHAGp" role="2vnsw6">
                 <property role="TrG5h" value="organism" />
-                <ref role="2vraA5" node="59BvSKQHAGd" resolve="organism" />
+                <ref role="2vraA5" node="7UcLk9ceYXW" resolve="ORGANISM" />
               </node>
             </node>
             <node concept="2vnsz3" id="59BvSKQHAGq" role="1NFp1Y">
