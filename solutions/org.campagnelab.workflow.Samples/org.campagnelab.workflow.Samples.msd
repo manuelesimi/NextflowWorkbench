@@ -15,7 +15,6 @@
   </dependencies>
   <usedDevKits>
     <usedDevKit>74a4431b-c31f-4707-ad8a-3f4f3c105ee2(org.campagnelab.NextflowWorkbench)</usedDevKit>
-    <usedDevKit>f818ef32-d5bf-46fa-b215-1c17570a2e46(org.campagnelab.docker.gobyweb)</usedDevKit>
     <usedDevKit>51c21de2-7a87-42be-b8b1-46d4b4c6d244(org.campagnelab.docker.gobyweb)</usedDevKit>
   </usedDevKits>
   <languageVersions>
