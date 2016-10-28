@@ -12,7 +12,6 @@
     <dependency reexport="false">7c739b34-3e5e-410f-b0a5-b9614d9685f7(org.campagnelab.workflow.rna-seq)</dependency>
     <dependency reexport="false">0b7d8bbd-896e-495e-be60-01a0d738a649(org.campagnelab.gobyweb.plugins)</dependency>
     <dependency reexport="false">f55d6853-b373-41dd-bc8e-331fd6e2c764(org.campagnelab.bash.nyosh)</dependency>
-    <dependency reexport="false">51c21de2-7a87-42be-b8b1-46d4b4c6d244(org.campagnelab.docker.gobyweb)</dependency>
   </dependencies>
   <usedDevKits>
     <usedDevKit>74a4431b-c31f-4707-ad8a-3f4f3c105ee2(org.campagnelab.NextflowWorkbench)</usedDevKit>
@@ -91,7 +90,6 @@
     <module reference="25281c03-4a7c-4b57-9221-24a10fc36ef5(org.campagnelab.docker)" version="0" />
     <module reference="3b74e3b7-7336-414d-8899-64a293a44a07(org.campagnelab.docker.bash)" version="0" />
     <module reference="63ed0b3a-e2ca-4245-8600-dfbe1ddba42b(org.campagnelab.docker.bash.run)" version="0" />
-    <module reference="51c21de2-7a87-42be-b8b1-46d4b4c6d244(org.campagnelab.docker.gobyweb)" version="0" />
     <module reference="adfd00cb-58d7-4094-bca8-f941a491e04f(org.campagnelab.gobyweb)" version="0" />
     <module reference="a8fb88b0-7e9f-478c-aab4-a1b076131192(org.campagnelab.gobyweb.interactive)" version="0" />
     <module reference="57af9408-ffae-472e-9367-5cb44434e8b3(org.campagnelab.gobyweb.interactive.users)" version="0" />
