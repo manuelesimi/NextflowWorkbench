@@ -10,7 +10,6 @@
     <dependency reexport="false">25281c03-4a7c-4b57-9221-24a10fc36ef5(org.campagnelab.docker)</dependency>
     <dependency reexport="false">3b74e3b7-7336-414d-8899-64a293a44a07(org.campagnelab.docker.bash)</dependency>
     <dependency reexport="false">a21a7294-c126-4f63-8335-8fecd8c28c7e(org.campagnelab.NYoSh)</dependency>
-    <dependency reexport="false">0f071fdb-3faa-4b8c-9f5e-1da0a01466d5(org.campagnelab.nyosh.environment)</dependency>
     <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
   </dependencies>
   <languageVersions>
@@ -76,7 +75,6 @@
     <module reference="20d83b64-d10f-48d1-990d-513b574c4956(org.campagnelab.background)" version="0" />
     <module reference="25281c03-4a7c-4b57-9221-24a10fc36ef5(org.campagnelab.docker)" version="0" />
     <module reference="3b74e3b7-7336-414d-8899-64a293a44a07(org.campagnelab.docker.bash)" version="0" />
-    <module reference="0f071fdb-3faa-4b8c-9f5e-1da0a01466d5(org.campagnelab.nyosh.environment)" version="0" />
     <module reference="c6567f13-87ab-4686-8f6f-42e8228c0e27(org.campagnelab.nyosh.gstring)" version="0" />
     <module reference="0202ed86-955d-4227-9c20-377dd6b1f9ff(org.campagnelab.nyosh.lib)" version="0" />
     <module reference="c1ba4037-e4db-47d8-8b61-b3c805b648f2(org.campagnelab.ui)" version="0" />
