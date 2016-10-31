@@ -986,7 +986,7 @@
     <mkdir dir="${build.tmp}/default/org.campagnelab.cloud.jar" />
     <mkdir dir="${build.tmp}/default/org.campagnelab.cloud.jar/META-INF" />
     <echoxml file="${build.tmp}/default/org.campagnelab.cloud.jar/META-INF/module.xml">
-      <module namespace="org.campagnelab.cloud" type="language" uuid="623a2b1a-b697-4740-a77b-1b2c688211a8">
+      <module namespace="org.campagnelab.cloud" type="language" uuid="f7196c5e-3839-47b2-a69a-cc57b10442a1">
         <dependencies>
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" />
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" />
@@ -1017,7 +1017,7 @@
       <fileset dir="${build.tmp}/default/org.campagnelab.cloud.jar" />
     </jar>
     <jar destfile="${build.tmp}/default/NextflowWorkbench__dl__lbrace_workbench_version_rbrace_.zip/NextflowWorkbench/languages/NextflowWorkbench/org.campagnelab.cloud-generator.jar" duplicate="preserve">
-      <fileset dir="${build.tmp}/java/out/org.campagnelab.cloud#9118880234057215714" />
+      <fileset dir="${build.tmp}/java/out/org.campagnelab.cloud#6538561612137028660" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.campagnelab.cloud-generator-template">
       <fileset dir="${basedir}/languages/org.campagnelab.cloud/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
@@ -1160,26 +1160,26 @@
   <target name="buildDependents" />
   
   <target name="fetchDependencies">
+    <mkdir dir="${build.tmp}/deps/org.campagnelab.GobyWeb/org.campagnelab.GobyWeb-_dl__lbrace_gobyweb_version_rbrace_.zip" />
+    <unzip src="${artifacts.org.campagnelab.GobyWeb}/org.campagnelab.GobyWeb-${org.campagnelab.GobyWeb.gobyweb_version}.zip" dest="${build.tmp}/deps/org.campagnelab.GobyWeb/org.campagnelab.GobyWeb-_dl__lbrace_gobyweb_version_rbrace_.zip" />
     <mkdir dir="${build.tmp}/deps/XChart/XChart__dl__lbrace_XChart_version_rbrace_.zip" />
     <unzip src="${artifacts.XChart}/XChart_${XChart.XChart_version}.zip" dest="${build.tmp}/deps/XChart/XChart__dl__lbrace_XChart_version_rbrace_.zip" />
     <mkdir dir="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip" />
     <unzip src="${artifacts.mps-sl-all}/mps-sl-all.zip" dest="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip" />
-    <mkdir dir="${build.tmp}/deps/org.campagnelab.GobyWeb/org.campagnelab.GobyWeb-_dl__lbrace_gobyweb_version_rbrace_.zip" />
-    <unzip src="${artifacts.org.campagnelab.GobyWeb}/org.campagnelab.GobyWeb-${org.campagnelab.GobyWeb.gobyweb_version}.zip" dest="${build.tmp}/deps/org.campagnelab.GobyWeb/org.campagnelab.GobyWeb-_dl__lbrace_gobyweb_version_rbrace_.zip" />
-    <mkdir dir="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip" />
-    <unzip src="${artifacts.org.campagnelab.NYoSh}/org.campagnelab.NYoSh-${org.campagnelab.NYoSh.nyosh_version}.zip" dest="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip" />
-    <mkdir dir="${build.tmp}/deps/org.campagnelab.Logger/org.campagnelab.logger-_dl__lbrace_logger.version_rbrace_.zip" />
-    <unzip src="${artifacts.org.campagnelab.Logger}/org.campagnelab.logger-${org.campagnelab.Logger.logger.version}.zip" dest="${build.tmp}/deps/org.campagnelab.Logger/org.campagnelab.logger-_dl__lbrace_logger.version_rbrace_.zip" />
-    <mkdir dir="${build.tmp}/deps/org.campagnelab.Background/org.campagnelab.background-_dl__lbrace_background_version_rbrace_.zip" />
-    <unzip src="${artifacts.org.campagnelab.Background}/org.campagnelab.background-${org.campagnelab.Background.background_version}.zip" dest="${build.tmp}/deps/org.campagnelab.Background/org.campagnelab.background-_dl__lbrace_background_version_rbrace_.zip" />
-    <mkdir dir="${build.tmp}/deps/org.campagnelab.ClusterConfig/org.campagnelab.ClusterConfig-_dl__lbrace_clusterConfig_version_rbrace_.zip" />
-    <unzip src="${artifacts.org.campagnelab.ClusterConfig}/org.campagnelab.ClusterConfig-${org.campagnelab.ClusterConfig.clusterConfig_version}.zip" dest="${build.tmp}/deps/org.campagnelab.ClusterConfig/org.campagnelab.ClusterConfig-_dl__lbrace_clusterConfig_version_rbrace_.zip" />
-    <mkdir dir="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-_dl__lbrace_ui_version_rbrace_.zip" />
-    <unzip src="${artifacts.org.campagnelab.mps.UI}/org.campagnelab.UI-${org.campagnelab.mps.UI.ui_version}.zip" dest="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-_dl__lbrace_ui_version_rbrace_.zip" />
     <mkdir dir="${build.tmp}/deps/org.campagnelab.Interactive/org.campagnelab.Interactive-_dl__lbrace_interactive_version_rbrace_.zip" />
     <unzip src="${artifacts.org.campagnelab.Interactive}/org.campagnelab.Interactive-${org.campagnelab.Interactive.interactive_version}.zip" dest="${build.tmp}/deps/org.campagnelab.Interactive/org.campagnelab.Interactive-_dl__lbrace_interactive_version_rbrace_.zip" />
+    <mkdir dir="${build.tmp}/deps/org.campagnelab.ClusterConfig/org.campagnelab.ClusterConfig-_dl__lbrace_clusterConfig_version_rbrace_.zip" />
+    <unzip src="${artifacts.org.campagnelab.ClusterConfig}/org.campagnelab.ClusterConfig-${org.campagnelab.ClusterConfig.clusterConfig_version}.zip" dest="${build.tmp}/deps/org.campagnelab.ClusterConfig/org.campagnelab.ClusterConfig-_dl__lbrace_clusterConfig_version_rbrace_.zip" />
+    <mkdir dir="${build.tmp}/deps/org.campagnelab.Logger/org.campagnelab.logger-_dl__lbrace_logger.version_rbrace_.zip" />
+    <unzip src="${artifacts.org.campagnelab.Logger}/org.campagnelab.logger-${org.campagnelab.Logger.logger.version}.zip" dest="${build.tmp}/deps/org.campagnelab.Logger/org.campagnelab.logger-_dl__lbrace_logger.version_rbrace_.zip" />
+    <mkdir dir="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-_dl__lbrace_ui_version_rbrace_.zip" />
+    <unzip src="${artifacts.org.campagnelab.mps.UI}/org.campagnelab.UI-${org.campagnelab.mps.UI.ui_version}.zip" dest="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-_dl__lbrace_ui_version_rbrace_.zip" />
     <mkdir dir="${build.tmp}/deps/org.campagnelab.TextOutput/org.campagnelab.TextOutput-_dl__lbrace_textoutput_version_rbrace_.zip" />
     <unzip src="${artifacts.org.campagnelab.TextOutput}/org.campagnelab.TextOutput-${org.campagnelab.TextOutput.textoutput_version}.zip" dest="${build.tmp}/deps/org.campagnelab.TextOutput/org.campagnelab.TextOutput-_dl__lbrace_textoutput_version_rbrace_.zip" />
+    <mkdir dir="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip" />
+    <unzip src="${artifacts.org.campagnelab.NYoSh}/org.campagnelab.NYoSh-${org.campagnelab.NYoSh.nyosh_version}.zip" dest="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip" />
+    <mkdir dir="${build.tmp}/deps/org.campagnelab.Background/org.campagnelab.background-_dl__lbrace_background_version_rbrace_.zip" />
+    <unzip src="${artifacts.org.campagnelab.Background}/org.campagnelab.background-${org.campagnelab.Background.background_version}.zip" dest="${build.tmp}/deps/org.campagnelab.Background/org.campagnelab.background-_dl__lbrace_background_version_rbrace_.zip" />
   </target>
   
   <target name="build" depends="assemble" />
@@ -1189,7 +1189,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.org.campagnelab.workflow.run, java.compile.org.campagnelab.util.execution.ant, java.compile.java.modules.cycle.1, java.compile.org.campagnelab.workflow, java.compile.org.campagnelab.workflow#4801669429698558903, java.compile.org.campagnelab.util.files, java.compile.org.campagnelab.util.files#4347565441068750769, java.compile.org.campagnelab.workflow.configuration, java.compile.org.campagnelab.workflow.configuration#6643674794994245037, java.compile.org.campagnelab.docker.actions, java.compile.java.modules.cycle.2, java.compile.org.campagnelab.docker, java.compile.org.campagnelab.docker#1893262236498675230, java.compile.org.campagnelab.docker.bash, java.compile.org.campagnelab.docker.bash#1644224175107836483, java.compile.org.campagnelab.docker.bash.run, java.compile.org.campagnelab.bash.nyosh, java.compile.org.campagnelab.bash.nyosh#1311266352922350059, java.compile.org.campagnelab.workflow.nyosh, java.compile.org.campagnelab.workflow.nyosh#8711081419074365022, java.compile.org.campagnelab.icons, java.compile.org.campagnelab.icons#2792722825445473265, java.compile.org.campagnelab.workflow.languages, java.compile.org.campagnelab.workflow.languages#2613339075984005628, java.compile.org.campagnelab.workflow.Samples, java.compile.org.campagnelab.workflow.rna-seq, java.compile.java.modules.cycle.3, java.compile.org.campagnelab.cloud.configuration, java.compile.org.campagnelab.cloud.configuration#6538561612137032718, java.compile.org.campagnelab.cloud, java.compile.org.campagnelab.cloud#9118880234057215714, java.compile.org.campagnelab.cloud.preferences" />
+  <target name="compileJava" depends="java.compile.org.campagnelab.workflow.run, java.compile.org.campagnelab.util.execution.ant, java.compile.java.modules.cycle.1, java.compile.org.campagnelab.workflow, java.compile.org.campagnelab.workflow#4801669429698558903, java.compile.org.campagnelab.util.files, java.compile.org.campagnelab.util.files#4347565441068750769, java.compile.org.campagnelab.workflow.configuration, java.compile.org.campagnelab.workflow.configuration#6643674794994245037, java.compile.org.campagnelab.docker.actions, java.compile.java.modules.cycle.2, java.compile.org.campagnelab.docker, java.compile.org.campagnelab.docker#1893262236498675230, java.compile.org.campagnelab.docker.bash, java.compile.org.campagnelab.docker.bash#1644224175107836483, java.compile.org.campagnelab.docker.bash.run, java.compile.org.campagnelab.bash.nyosh, java.compile.org.campagnelab.bash.nyosh#1311266352922350059, java.compile.org.campagnelab.workflow.nyosh, java.compile.org.campagnelab.workflow.nyosh#8711081419074365022, java.compile.org.campagnelab.icons, java.compile.org.campagnelab.icons#2792722825445473265, java.compile.org.campagnelab.workflow.languages, java.compile.org.campagnelab.workflow.languages#2613339075984005628, java.compile.org.campagnelab.workflow.Samples, java.compile.org.campagnelab.workflow.rna-seq, java.compile.java.modules.cycle.3, java.compile.org.campagnelab.cloud.configuration, java.compile.org.campagnelab.cloud.configuration#6538561612137032718, java.compile.org.campagnelab.cloud, java.compile.org.campagnelab.cloud#6538561612137028660, java.compile.org.campagnelab.cloud.preferences" />
   
   <target name="processResources" />
   
@@ -1245,7 +1245,6 @@
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.bootstrap-languages.devkit" />
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.general-purpose.devkit" />
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.language-design.devkit" />
-      <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.templates.devkit" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.baseLanguage.lightweightdsl.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.access.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
@@ -1373,15 +1372,15 @@
       </chunk>
       <chunk bootstrap="true">
         <module file="${basedir}/languages/org.campagnelab.docker.bash.resources/org.campagnelab.docker.bash.resources.mpl" />
-        <module file="${basedir}/languages/org.campagnelab.cloud/org.campagnelab.cloud.mpl" />
+        <module file="${basedir}/languages/org.campagnelab.cloud/org.campagnelab.cloud.mpl" bootstrap="true" />
         <module file="${basedir}/languages/org.campagnelab.cloud.configuration/org.campagnelab.cloud.configuration.mpl" />
-        <module file="${basedir}/devkits/cloud/org.campagnelab.compute.cloud.devkit" />
         <module file="${basedir}/solutions/org.campagnelab.docker.actions/org.campagnelab.docker.actions.msd" />
         <module file="${basedir}/languages/org.campagnelab.workflow/org.campagnelab.workflow.mpl" bootstrap="true" />
         <module file="${basedir}/languages/org.campagnelab.workflow.configuration/org.campagnelab.workflow.configuration.mpl" />
       </chunk>
       <chunk>
         <module file="${basedir}/devkits/org.campagnelab.NextflowWorkbench.devkit" />
+        <module file="${basedir}/devkits/cloud/org.campagnelab.compute.cloud.devkit" />
         <module file="${basedir}/solutions/org.campagnelab.docker.bash.run/org.campagnelab.docker.bash.run.msd" />
         <module file="${basedir}/allDevkits/docker/org.campagnelab.docker.dev.devkit" />
         <module file="${basedir}/devkits/org.campagnelab.docker.gobyweb/org.campagnelab.docker.gobyweb.devkit" />
@@ -4300,7 +4299,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.java.modules.cycle.3" depends="java.compile.org.campagnelab.cloud.preferences, java.compile.org.campagnelab.docker, fetchDependencies">
+  <target name="java.compile.java.modules.cycle.3" depends="java.compile.org.campagnelab.docker, java.compile.org.campagnelab.docker.bash, java.compile.org.campagnelab.cloud.preferences, fetchDependencies">
     <mkdir dir="${build.tmp}/java.modules.cycle.3" />
     <javac destdir="${build.tmp}/java.modules.cycle.3" fork="true" encoding="utf8" nowarn="true" includeantruntime="false">
       <compilerarg value="-Xlint:none" />
@@ -4327,20 +4326,6 @@
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
-        <fileset file="${artifacts.mps}/lib/log4j.jar" />
-        <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset file="${artifacts.mps}/lib/jdom.jar" />
-        <fileset file="${artifacts.mps}/lib/trove4j.jar" />
-        <fileset file="${artifacts.mps}/lib/xstream-1.4.8.jar" />
-        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
-        <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.5.2.jar" />
-        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
-        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/languages/NYoSh/org.campagnelab.util.jar" />
-        <fileset file="${artifacts.mps}/plugins/mps-execution-api/lib/execution-api.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.docker/httpcore-4.4.1.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.docker/asm-util-5.0.3.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.docker/asm-tree-5.0.3.jar" />
@@ -4419,10 +4404,16 @@
         <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/scala-library-2.9.2.jar" />
         <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/org.campagnelab.stepslogger-1.1.0.jar" />
         <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/plugins-2.5.4.jar" />
-        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/lib/diff_match_patch.jar" />
-        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/log4j.jar" />
+        <fileset file="${artifacts.mps}/lib/annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/jdom.jar" />
+        <fileset file="${artifacts.mps}/lib/trove4j.jar" />
+        <fileset file="${artifacts.mps}/lib/xstream-1.4.8.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
+        <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
+        <fileset file="${artifacts.mps}/lib/ecj-4.5.2.jar" />
+        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
-        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
@@ -4431,21 +4422,36 @@
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.editor.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.sharedConcepts.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset file="${build.tmp}/deps/org.campagnelab.Background/org.campagnelab.background-_dl__lbrace_background_version_rbrace_.zip/Background/languages/org.campagnelab.background.jar" />
         <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/languages/NYoSh/org.campagnelab.nyosh.lib.jar" />
         <fileset file="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-_dl__lbrace_ui_version_rbrace_.zip/UI/languages/org.campagnelab.ui.jar" />
         <fileset file="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-_dl__lbrace_ui_version_rbrace_.zip/UI/languages/org.campagnelab.ui.code.jar" />
-        <pathelement path="${build.tmp}/java/out/org.campagnelab.cloud.preferences" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/languages/NYoSh/org.campagnelab.util.jar" />
+        <fileset file="${artifacts.mps}/plugins/mps-execution-api/lib/execution-api.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/lib/diff_match_patch.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.tuples.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.checkedName.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.plugin.jar" />
+        <fileset file="${artifacts.mps}/languages/workbench/jetbrains.mps.lang.plugin.standalone.jar" />
         <pathelement path="${build.tmp}/java/out/org.campagnelab.docker" />
+        <pathelement path="${build.tmp}/java/out/org.campagnelab.docker.bash" />
+        <pathelement path="${build.tmp}/java/out/org.campagnelab.cloud.preferences" />
       </classpath>
     </javac>
   </target>
   
-  <target name="java.compile.org.campagnelab.cloud.configuration" depends="java.compile.java.modules.cycle.3, fetchDependencies">
+  <target name="java.compile.org.campagnelab.cloud.configuration" depends="java.compile.org.campagnelab.docker, java.compile.org.campagnelab.docker.bash, java.compile.java.modules.cycle.3, fetchDependencies">
     <mkdir dir="${basedir}/languages/org.campagnelab.cloud.configuration/source_gen" />
     <mkdir dir="${build.tmp}/java/out/org.campagnelab.cloud.configuration" />
     <javac destdir="${build.tmp}/java/out/org.campagnelab.cloud.configuration" fork="true" encoding="utf8" includeantruntime="false" debug="true" source="1.8" target="1.8">
@@ -4472,6 +4478,86 @@
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <pathelement path="${build.tmp}/java/out/org.campagnelab.docker" />
+        <pathelement path="${build.tmp}/java/out/org.campagnelab.docker.bash" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/httpcore-4.4.1.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/asm-util-5.0.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/asm-tree-5.0.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jewelcli-0.6.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-jaxrs-json-provider-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/logging-2.1.1.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jersey-entity-filtering-2.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jnr-constants-0.8.7.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/raven-logback-4.1.2.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jnr-posix-3.0.12.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/httpclient-4.5.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jersey-client-2.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/hamcrest-core-1.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jimfs-1.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/commons-lang-2.6.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-jaxrs-base-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jffi-1.2.9-native.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/javax.ws.rs-api-2.0.1.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/javax.inject-2.4.0-b25.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/raven-4.1.2.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/logback-classic-1.0.13.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/hamcrest-library-1.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/aopalliance-repackaged-2.4.0-b25.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-databind-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/bcprov-jdk15on-1.52.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jnr-unixsocket-0.8.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/slf4j-api-1.7.12.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jnr-x86asm-1.0.2.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-module-jaxb-annotations-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/osgi-resource-locator-1.0.1.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/hk2-locator-2.4.0-b25.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/bcpkix-jdk15on-1.52.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-core-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-annotations-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jersey-apache-connector-2.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/objenesis-2.1.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/javassist-3.18.1-GA.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/guava-18.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/commons-logging-1.2.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/hk2-utils-2.4.0-b25.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jffi-1.2.9.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/asm-analysis-5.0.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-datatype-guava-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/logback-core-1.0.13.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/asm-commons-5.0.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/javax.annotation-api-1.2.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/commons-codec-1.9.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jnr-ffi-2.0.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/asm-5.0.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jnr-enxio-0.9.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jersey-guava-2.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/mockito-core-1.10.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/joda-time-2.8.2.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/commons-compress-1.9.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jersey-common-2.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jersey-media-json-jackson-2.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/junit-4.12.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/hk2-api-2.4.0-b25.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/docker-client-5.0.2.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/mercury-api-1.0-SNAPSHOT.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/fastutil-6.4.4.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/dsiutils-2.0.7.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/activemq-client-5.9.1.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/artifacts-2.3.2.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/commons-io-2.4.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/filesets-1.3.3.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/geronimo-j2ee-management_1.1_spec-1.0.1.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/geronimo-jms_1.1_spec-1.1.1.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/groovy-all-1.8.6.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/hawtbuf-1.9.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/nyosh-runtime-support-1.1.3.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/option-validation-language-2.1.0.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/wildcard-1.03.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/slf4j-api-1.7.5.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/serverside-dependencies-1.0.13-full.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/scala-library-2.9.2.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/org.campagnelab.stepslogger-1.1.0.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/plugins-2.5.4.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
@@ -4481,9 +4567,26 @@
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset file="${artifacts.mps}/lib/ecj-4.5.2.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.classifiers.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.editor.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.sharedConcepts.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.Background/org.campagnelab.background-_dl__lbrace_background_version_rbrace_.zip/Background/languages/org.campagnelab.background.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/languages/NYoSh/org.campagnelab.nyosh.lib.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-_dl__lbrace_ui_version_rbrace_.zip/UI/languages/org.campagnelab.ui.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-_dl__lbrace_ui_version_rbrace_.zip/UI/languages/org.campagnelab.ui.code.jar" />
         <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/languages/NYoSh/org.campagnelab.util.jar" />
         <pathelement path="${build.tmp}/java.modules.cycle.3" />
       </classpath>
@@ -4538,7 +4641,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.org.campagnelab.cloud" depends="java.compile.org.campagnelab.cloud.preferences, java.compile.org.campagnelab.docker, java.compile.java.modules.cycle.3, fetchDependencies">
+  <target name="java.compile.org.campagnelab.cloud" depends="java.compile.org.campagnelab.cloud.preferences, java.compile.org.campagnelab.docker, java.compile.org.campagnelab.docker.bash, java.compile.java.modules.cycle.3, fetchDependencies">
     <mkdir dir="${basedir}/languages/org.campagnelab.cloud/source_gen" />
     <mkdir dir="${build.tmp}/java/out/org.campagnelab.cloud" />
     <javac destdir="${build.tmp}/java/out/org.campagnelab.cloud" fork="true" encoding="utf8" includeantruntime="false" debug="true" source="1.8" target="1.8">
@@ -4568,6 +4671,162 @@
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/org.campagnelab.cloud.preferences" />
         <pathelement path="${build.tmp}/java/out/org.campagnelab.docker" />
+        <pathelement path="${build.tmp}/java/out/org.campagnelab.docker.bash" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/httpcore-4.4.1.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/asm-util-5.0.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/asm-tree-5.0.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jewelcli-0.6.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-jaxrs-json-provider-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/logging-2.1.1.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jersey-entity-filtering-2.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jnr-constants-0.8.7.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/raven-logback-4.1.2.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jnr-posix-3.0.12.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/httpclient-4.5.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jersey-client-2.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/hamcrest-core-1.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jimfs-1.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/commons-lang-2.6.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-jaxrs-base-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jffi-1.2.9-native.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/javax.ws.rs-api-2.0.1.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/javax.inject-2.4.0-b25.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/raven-4.1.2.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/logback-classic-1.0.13.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/hamcrest-library-1.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/aopalliance-repackaged-2.4.0-b25.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-databind-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/bcprov-jdk15on-1.52.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jnr-unixsocket-0.8.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/slf4j-api-1.7.12.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jnr-x86asm-1.0.2.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-module-jaxb-annotations-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/osgi-resource-locator-1.0.1.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/hk2-locator-2.4.0-b25.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/bcpkix-jdk15on-1.52.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-core-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-annotations-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jersey-apache-connector-2.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/objenesis-2.1.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/javassist-3.18.1-GA.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/guava-18.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/commons-logging-1.2.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/hk2-utils-2.4.0-b25.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jffi-1.2.9.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/asm-analysis-5.0.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jackson-datatype-guava-2.6.0.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/logback-core-1.0.13.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/asm-commons-5.0.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/javax.annotation-api-1.2.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/commons-codec-1.9.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jnr-ffi-2.0.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/asm-5.0.3.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jnr-enxio-0.9.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jersey-guava-2.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/mockito-core-1.10.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/joda-time-2.8.2.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/commons-compress-1.9.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jersey-common-2.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/jersey-media-json-jackson-2.19.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/junit-4.12.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/hk2-api-2.4.0-b25.jar" />
+        <fileset file="${basedir}/languages/org.campagnelab.docker/docker-client-5.0.2.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/mercury-api-1.0-SNAPSHOT.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/fastutil-6.4.4.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/dsiutils-2.0.7.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/activemq-client-5.9.1.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/artifacts-2.3.2.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/commons-io-2.4.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/filesets-1.3.3.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/geronimo-j2ee-management_1.1_spec-1.0.1.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/geronimo-jms_1.1_spec-1.1.1.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/groovy-all-1.8.6.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/hawtbuf-1.9.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/nyosh-runtime-support-1.1.3.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/option-validation-language-2.1.0.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/wildcard-1.03.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/slf4j-api-1.7.5.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/serverside-dependencies-1.0.13-full.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/scala-library-2.9.2.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/org.campagnelab.stepslogger-1.1.0.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/plugins-2.5.4.jar" />
+        <fileset file="${artifacts.mps}/lib/log4j.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/lib/diff_match_patch.jar" />
+        <fileset file="${artifacts.mps}/lib/annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/jdom.jar" />
+        <fileset file="${artifacts.mps}/lib/trove4j.jar" />
+        <fileset file="${artifacts.mps}/lib/xstream-1.4.8.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
+        <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
+        <fileset file="${artifacts.mps}/lib/ecj-4.5.2.jar" />
+        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.classifiers.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.tuples.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.checkedName.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.editor.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.plugin.jar" />
+        <fileset file="${artifacts.mps}/languages/workbench/jetbrains.mps.lang.plugin.standalone.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.sharedConcepts.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.Background/org.campagnelab.background-_dl__lbrace_background_version_rbrace_.zip/Background/languages/org.campagnelab.background.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/languages/NYoSh/org.campagnelab.nyosh.lib.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-_dl__lbrace_ui_version_rbrace_.zip/UI/languages/org.campagnelab.ui.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-_dl__lbrace_ui_version_rbrace_.zip/UI/languages/org.campagnelab.ui.code.jar" />
+        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/languages/NYoSh/org.campagnelab.util.jar" />
+        <pathelement path="${build.tmp}/java.modules.cycle.3" />
+      </classpath>
+    </javac>
+    <copy todir="${build.tmp}/java/out/org.campagnelab.cloud">
+      <fileset dir="${basedir}/languages/org.campagnelab.cloud/source_gen" excludes="**/*.java" />
+    </copy>
+  </target>
+  
+  <target name="java.compile.org.campagnelab.cloud#6538561612137028660" depends="java.compile.org.campagnelab.cloud, java.compile.org.campagnelab.docker, java.compile.org.campagnelab.docker.bash, fetchDependencies">
+    <mkdir dir="${basedir}/languages/org.campagnelab.cloud/generator/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/org.campagnelab.cloud#6538561612137028660" />
+    <javac destdir="${build.tmp}/java/out/org.campagnelab.cloud#6538561612137028660" fork="true" encoding="utf8" includeantruntime="false" debug="true" source="1.8" target="1.8">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/languages/org.campagnelab.cloud/generator/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mps}/lib/mps-behavior-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-logging.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <pathelement path="${build.tmp}/java/out/org.campagnelab.cloud" />
+        <pathelement path="${build.tmp}/java/out/org.campagnelab.docker" />
+        <pathelement path="${build.tmp}/java/out/org.campagnelab.docker.bash" />
         <fileset file="${basedir}/languages/org.campagnelab.docker/httpcore-4.4.1.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.docker/asm-util-5.0.3.jar" />
         <fileset file="${basedir}/languages/org.campagnelab.docker/asm-tree-5.0.3.jar" />
@@ -4678,58 +4937,9 @@
         <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/languages/NYoSh/org.campagnelab.nyosh.lib.jar" />
         <fileset file="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-_dl__lbrace_ui_version_rbrace_.zip/UI/languages/org.campagnelab.ui.jar" />
         <fileset file="${build.tmp}/deps/org.campagnelab.mps.UI/org.campagnelab.UI-_dl__lbrace_ui_version_rbrace_.zip/UI/languages/org.campagnelab.ui.code.jar" />
-        <fileset file="${build.tmp}/deps/org.campagnelab.NYoSh/org.campagnelab.NYoSh-_dl__lbrace_nyosh_version_rbrace_.zip/NYoSh/languages/NYoSh/org.campagnelab.util.jar" />
-        <pathelement path="${build.tmp}/java.modules.cycle.3" />
       </classpath>
     </javac>
-    <copy todir="${build.tmp}/java/out/org.campagnelab.cloud">
-      <fileset dir="${basedir}/languages/org.campagnelab.cloud/source_gen" excludes="**/*.java" />
-    </copy>
-  </target>
-  
-  <target name="java.compile.org.campagnelab.cloud#9118880234057215714" depends="java.compile.org.campagnelab.cloud, fetchDependencies">
-    <mkdir dir="${basedir}/languages/org.campagnelab.cloud/generator/source_gen" />
-    <mkdir dir="${build.tmp}/java/out/org.campagnelab.cloud#9118880234057215714" />
-    <javac destdir="${build.tmp}/java/out/org.campagnelab.cloud#9118880234057215714" fork="true" encoding="utf8" includeantruntime="false" debug="true" source="1.8" target="1.8">
-      <compilerarg value="-Xlint:none" />
-      <src>
-        <path location="${basedir}/languages/org.campagnelab.cloud/generator/source_gen" />
-      </src>
-      <classpath>
-        <fileset file="${artifacts.mps}/lib/mps-behavior-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-logging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
-        <pathelement path="${build.tmp}/java/out/org.campagnelab.cloud" />
-        <fileset file="${artifacts.mps}/lib/log4j.jar" />
-        <fileset file="${artifacts.mps}/lib/annotations.jar" />
-        <fileset file="${artifacts.mps}/lib/jdom.jar" />
-        <fileset file="${artifacts.mps}/lib/trove4j.jar" />
-        <fileset file="${artifacts.mps}/lib/xstream-1.4.8.jar" />
-        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
-        <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.5.2.jar" />
-        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
-      </classpath>
-    </javac>
-    <copy todir="${build.tmp}/java/out/org.campagnelab.cloud#9118880234057215714">
+    <copy todir="${build.tmp}/java/out/org.campagnelab.cloud#6538561612137028660">
       <fileset dir="${basedir}/languages/org.campagnelab.cloud/generator/source_gen" excludes="**/*.java" />
     </copy>
   </target>
@@ -4785,6 +4995,8 @@
     <delete dir="${basedir}/solutions/org.campagnelab.util.execution/source_gen" />
     <delete dir="${basedir}/languages/org.campagnelab.utils.multifiles/source_gen" />
     <delete dir="${basedir}/languages/org.campagnelab.docker.bash.resources/generator/source_gen" />
+    <delete dir="${basedir}/languages/org.campagnelab.cloud/generator/source_gen" />
+    <delete dir="${basedir}/languages/org.campagnelab.cloud.configuration/generator/source_gen" />
     <delete dir="${basedir}/solutions/org.campagnelab.docker.bash.run/source_gen" />
     <delete dir="${basedir}/languages/org.campagnelab.workflow/generator/source_gen" />
     <delete dir="${basedir}/languages/org.campagnelab.workflow.configuration/generator/source_gen" />

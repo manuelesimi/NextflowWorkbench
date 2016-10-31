@@ -3657,7 +3657,7 @@
       <node concept="1E1JtD" id="3ZmttCiayme" role="2G$12L">
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="org.campagnelab.cloud" />
-        <property role="3LESm3" value="623a2b1a-b697-4740-a77b-1b2c688211a8" />
+        <property role="3LESm3" value="f7196c5e-3839-47b2-a69a-cc57b10442a1" />
         <property role="2GAjPV" value="false" />
         <node concept="55IIr" id="3ZmttCiaymh" role="3LF7KH">
           <node concept="2Ry0Ak" id="3ZmttCiayVf" role="iGT6I">
@@ -3695,9 +3695,68 @@
           </node>
         </node>
         <node concept="1yeLz9" id="3PAwInyQHoL" role="1TViLv">
-          <property role="TrG5h" value="org.campagnelab.cloud#9118880234057215714" />
-          <property role="3LESm3" value="89067f00-0f9b-47ec-9e0a-016315b30174" />
+          <property role="TrG5h" value="org.campagnelab.cloud#6538561612137028660" />
+          <property role="3LESm3" value="9facc1d5-e96b-4e8b-af80-6200fa33f1d9" />
           <property role="2GAjPV" value="false" />
+        </node>
+        <node concept="1SiIV0" id="lSMa_VjP52" role="3bR37C">
+          <node concept="3bR9La" id="lSMa_VjP53" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbJb" resolve="MPS.Platform" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="lSMa_VjP54" role="3bR37C">
+          <node concept="3bR9La" id="lSMa_VjP55" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="2yVjOHGmOYJ" resolve="org.campagnelab.docker.bash" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="lSMa_VjP56" role="3bR37C">
+          <node concept="3bR9La" id="lSMa_VjP57" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="90a9:4p3FRivDLPG" resolve="de.slisson.mps.editor.multiline" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="lSMa_VjP58" role="3bR37C">
+          <node concept="3bR9La" id="lSMa_VjP59" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6L2l" resolve="jetbrains.mps.baseLanguage.logging" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="lSMa_VjP5a" role="3bR37C">
+          <node concept="3bR9La" id="lSMa_VjP5b" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="lSMa_VjP5c" role="3bR37C">
+          <node concept="3bR9La" id="lSMa_VjP5d" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="lSMa_VjP5e" role="3bR37C">
+          <node concept="3bR9La" id="lSMa_VjP5f" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="lSMa_VjP5g" role="3bR37C">
+          <node concept="3bR9La" id="lSMa_VjP5h" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:2eDSGe9d1pJ" resolve="jetbrains.mps.lang.plugin.standalone" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="lSMa_VjP5i" role="3bR37C">
+          <node concept="3bR9La" id="lSMa_VjP5j" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:2eDSGe9d1q1" resolve="MPS.Workbench" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="lSMa_VjP5k" role="3bR37C">
+          <node concept="1Busua" id="lSMa_VjP5l" role="1SiIV1">
+            <ref role="1Busuk" node="2yVjOHGmOYJ" resolve="org.campagnelab.docker.bash" />
+          </node>
         </node>
       </node>
       <node concept="1E1JtA" id="3ZmttCia$EL" role="2G$12L">
