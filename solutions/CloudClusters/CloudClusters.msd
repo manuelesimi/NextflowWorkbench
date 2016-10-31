@@ -8,6 +8,7 @@
   <sourcePath />
   <dependencies>
     <dependency reexport="false">7c739b34-3e5e-410f-b0a5-b9614d9685f7(org.campagnelab.workflow.rna-seq)</dependency>
+    <dependency reexport="false">36018c14-41aa-420b-859e-85b61ed57eed(playground)</dependency>
   </dependencies>
   <usedDevKits>
     <usedDevKit>5b2dfdd5-812f-48af-8989-85fe63dcbc1d(org.campagnelab.compute.cloud)</usedDevKit>
@@ -29,7 +30,7 @@
     <language slang="l:7866978e-a0f0-4cc7-81bc-4d213d9375e1:jetbrains.mps.lang.smodel" version="4" />
     <language slang="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" version="3" />
     <language slang="l:9ded098b-ad6a-4657-bfd9-48636cfe8bc3:jetbrains.mps.lang.traceable" version="0" />
-    <language slang="l:f7196c5e-3839-47b2-a69a-cc57b10442a1:org.campagnelab.cloud" version="0" />
+    <language slang="l:f7196c5e-3839-47b2-a69a-cc57b10442a1:org.campagnelab.cloud" version="-1" />
     <language slang="l:c513c71c-d9f3-4625-83dc-6180e1012e68:org.campagnelab.cloud.configuration" version="0" />
     <language slang="l:25281c03-4a7c-4b57-9221-24a10fc36ef5:org.campagnelab.docker" version="0" />
     <language slang="l:3b74e3b7-7336-414d-8899-64a293a44a07:org.campagnelab.docker.bash" version="0" />
@@ -52,6 +53,7 @@
     <module reference="a16c15b3-e423-4aad-81e7-18bb74e1f395(org.campagnelab.util.execution.ant)" version="0" />
     <module reference="7c739b34-3e5e-410f-b0a5-b9614d9685f7(org.campagnelab.workflow.rna-seq)" version="0" />
     <module reference="c039a1a6-4680-46fa-b571-a6a5f1e49ab6(org.campagnelab.workflow.run)" version="0" />
+    <module reference="36018c14-41aa-420b-859e-85b61ed57eed(playground)" version="0" />
   </dependencyVersions>
 </solution>
 

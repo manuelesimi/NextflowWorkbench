@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:75e1c48d-ef75-4597-8484-ee964eb5621d(org.campagnelab.cloud.generator.template.main@generator)">
+<model ref="r:2584dd07-7dd9-4713-8206-ea2543762b68(org.campagnelab.cloud.generator.template.main@generator)">
   <persistence version="9" />
   <languages>
-    <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
+    <use id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator" version="0" />
+    <use id="d7706f63-9be2-479c-a3da-ae92af1e64d5" name="jetbrains.mps.lang.generator.generationContext" version="0" />
+    <use id="f7196c5e-3839-47b2-a69a-cc57b10442a1" name="org.campagnelab.cloud" version="-1" />
+    <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
+    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports />
   <registry>
@@ -15,7 +19,7 @@
       </concept>
     </language>
   </registry>
-  <node concept="bUwia" id="7UcLk9cjUVz">
+  <node concept="bUwia" id="5EXCMiTrHKP">
     <property role="TrG5h" value="main" />
   </node>
 </model>

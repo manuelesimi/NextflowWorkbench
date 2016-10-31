@@ -2,11 +2,10 @@
 <model ref="r:b71e56d6-cd9a-4073-a81b-ddd25cb88225(clusters)">
   <persistence version="9" />
   <languages>
-    <devkit ref="5b2dfdd5-812f-48af-8989-85fe63dcbc1d(org.campagnelab.compute.cloud)" />
     <devkit ref="74a4431b-c31f-4707-ad8a-3f4f3c105ee2(org.campagnelab.NextflowWorkbench)" />
+    <devkit ref="5b2dfdd5-812f-48af-8989-85fe63dcbc1d(org.campagnelab.compute.cloud)" />
   </languages>
   <imports>
-    <import index="c248" ref="642f71f8-327a-425b-84f9-44ad58786d27/f:project#7c739b34-3e5e-410f-b0a5-b9614d9685f7(jetbrains.mps.lang.project.modules/module.org.campagnelab.workflow.rna-seq@project_stub)" />
     <import index="pmhg" ref="r:2a81c50e-f78d-4a61-a46c-82e6c99b659d(sra)" />
     <import index="ass7" ref="r:d7f2e001-f82c-4379-aa69-f5a37b97ebec(fastQC)" />
     <import index="1c09" ref="r:ceab30bb-72b2-4b22-9ea6-3ea754d0b737(kallisto)" />

@@ -40,7 +40,7 @@
     <language slang="l:9ded098b-ad6a-4657-bfd9-48636cfe8bc3:jetbrains.mps.lang.traceable" version="0" />
     <language slang="l:20d83b64-d10f-48d1-990d-513b574c4956:org.campagnelab.background" version="0" />
     <language slang="l:f55d6853-b373-41dd-bc8e-331fd6e2c764:org.campagnelab.bash.nyosh" version="0" />
-    <language slang="l:f7196c5e-3839-47b2-a69a-cc57b10442a1:org.campagnelab.cloud" version="0" />
+    <language slang="l:f7196c5e-3839-47b2-a69a-cc57b10442a1:org.campagnelab.cloud" version="-1" />
     <language slang="l:c513c71c-d9f3-4625-83dc-6180e1012e68:org.campagnelab.cloud.configuration" version="0" />
     <language slang="l:25281c03-4a7c-4b57-9221-24a10fc36ef5:org.campagnelab.docker" version="0" />
     <language slang="l:3b74e3b7-7336-414d-8899-64a293a44a07:org.campagnelab.docker.bash" version="0" />

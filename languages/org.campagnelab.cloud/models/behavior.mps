@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:f8d56d39-b0b5-425e-8f72-34c4e8a2f8d5(org.campagnelab.cloud.behavior)">
+<model ref="r:1da0d023-6dc0-485a-9478-dfc86aa855ad(org.campagnelab.cloud.behavior)">
   <persistence version="9" />
   <languages>
     <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="0" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
-    <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="2" />
-    <use id="774bf8a0-62e5-41e1-af63-f4812e60e48b" name="jetbrains.mps.baseLanguage.checkedDots" version="0" />
-    <use id="ef7bf5ac-d06c-4342-b11d-e42104eb9343" name="jetbrains.mps.lang.plugin.standalone" version="0" />
-    <use id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin" version="1" />
-    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="4" />
     <use id="20d83b64-d10f-48d1-990d-513b574c4956" name="org.campagnelab.background" version="0" />
-    <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="0" />
-    <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
-    <use id="a21a7294-c126-4f63-8335-8fecd8c28c7e" name="org.campagnelab.NYoSh" version="0" />
     <use id="c6567f13-87ab-4686-8f6f-42e8228c0e27" name="org.campagnelab.nyosh.gstring" version="0" />
-    <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
-    <use id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures" version="0" />
-    <devkit ref="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
+    <use id="a21a7294-c126-4f63-8335-8fecd8c28c7e" name="org.campagnelab.NYoSh" version="0" />
+    <use id="ed6d7656-532c-4bc2-81d1-af945aeb8280" name="jetbrains.mps.baseLanguage.blTypes" version="0" />
+    <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
+    <use id="774bf8a0-62e5-41e1-af63-f4812e60e48b" name="jetbrains.mps.baseLanguage.checkedDots" version="0" />
+    <use id="c1ba4037-e4db-47d8-8b61-b3c805b648f2" name="org.campagnelab.ui" version="0" />
+    <use id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin" version="1" />
+    <use id="ef7bf5ac-d06c-4342-b11d-e42104eb9343" name="jetbrains.mps.lang.plugin.standalone" version="0" />
+    <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="2" />
+    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="cdcm" ref="r:391123bf-abf2-4a24-a4ce-058a96abb887(org.campagnelab.cloud.structure)" />
+    <import index="rzxe" ref="r:c8f01c5c-0641-4bdc-875e-539c2c78a0be(org.campagnelab.docker.behavior)" />
+    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
+    <import index="6jv6" ref="r:ca9c89c0-011f-4597-8d3e-576d9add5d28(org.campagnelab.docker.structure)" />
+    <import index="zn9m" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.util(MPS.IDEA/)" />
+    <import index="eoo2" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.nio.file(JDK/)" />
+    <import index="7x5y" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.nio.charset(JDK/)" />
+    <import index="yy4t" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.textGen(MPS.Core/)" />
     <import index="ujkv" ref="r:c4ccd0c8-ae0a-4ce1-b1b2-29dd8a943a6b(org.campagnelab.util.persistence)" />
+    <import index="tpib" ref="r:00000000-0000-4000-0000-011c8959057f(jetbrains.mps.baseLanguage.logging.structure)" />
+    <import index="w1kc" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel(MPS.Core/)" />
+    <import index="mhbf" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.model(MPS.OpenAPI/)" />
     <import index="z1c3" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.project(MPS.Core/)" />
     <import index="alof" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.ide.project(MPS.Platform/)" />
     <import index="ivm0" ref="r:f7c3f04b-0d46-4016-bf5e-37ab9a5f8c7e(org.campagnelab.cloud.preferences.plugin)" />
-    <import index="3229" ref="r:a82c5084-a1df-4f27-8e96-c1c3c407b051(org.campagnelab.cloud.configuration.behavior)" />
-    <import index="6jv6" ref="r:ca9c89c0-011f-4597-8d3e-576d9add5d28(org.campagnelab.docker.structure)" />
-    <import index="rzxe" ref="r:c8f01c5c-0641-4bdc-875e-539c2c78a0be(org.campagnelab.docker.behavior)" />
-    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
-    <import index="eoo2" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.nio.file(JDK/)" />
-    <import index="7x5y" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.nio.charset(JDK/)" />
-    <import index="zn9m" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.util(MPS.IDEA/)" />
-    <import index="45iu" ref="r:e59beccc-d8f0-42c7-8989-c96c06e46e91(org.campagnelab.cloud.configuration.structure)" />
+    <import index="cj4x" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.openapi.editor(MPS.Editor/)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
-    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
-    <import index="mhbf" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.model(MPS.OpenAPI/)" />
+    <import index="5lbf" ref="r:65d366f2-ae3b-4b81-85e6-342aa070f572(org.campagnelab.cloud.structure)" implicit="true" />
+    <import index="3229" ref="r:a82c5084-a1df-4f27-8e96-c1c3c407b051(org.campagnelab.cloud.configuration.behavior)" implicit="true" />
+    <import index="45iu" ref="r:e59beccc-d8f0-42c7-8989-c96c06e46e91(org.campagnelab.cloud.configuration.structure)" implicit="true" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin">
@@ -213,15 +214,10 @@
       </concept>
     </language>
     <language id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc">
-      <concept id="5858074156537516430" name="jetbrains.mps.baseLanguage.javadoc.structure.ReturnBlockDocTag" flags="ng" index="x79VA">
-        <property id="5858074156537516431" name="text" index="x79VB" />
-      </concept>
       <concept id="5349172909345501395" name="jetbrains.mps.baseLanguage.javadoc.structure.BaseDocComment" flags="ng" index="P$AiS">
         <child id="8465538089690331502" name="body" index="TZ5H$" />
       </concept>
-      <concept id="5349172909345532724" name="jetbrains.mps.baseLanguage.javadoc.structure.MethodDocComment" flags="ng" index="P$JXv">
-        <child id="5858074156537516440" name="return" index="x79VK" />
-      </concept>
+      <concept id="5349172909345532724" name="jetbrains.mps.baseLanguage.javadoc.structure.MethodDocComment" flags="ng" index="P$JXv" />
       <concept id="8465538089690331500" name="jetbrains.mps.baseLanguage.javadoc.structure.CommentLine" flags="ng" index="TZ5HA">
         <child id="8970989240999019149" name="part" index="1dT_Ay" />
       </concept>
@@ -334,7 +330,7 @@
     </language>
   </registry>
   <node concept="13h7C7" id="5wsmBEGRnsl">
-    <ref role="13h7C2" to="cdcm:5EXCMiTrJMh" resolve="ContainerWithEC" />
+    <ref role="13h7C2" to="5lbf:5EXCMiTrJMh" resolve="ContainerWithEC" />
     <node concept="13i0hz" id="3C40c0STRGf" role="13h7CS">
       <property role="TrG5h" value="dataFolder" />
       <node concept="3Tm1VV" id="3C40c0STRGg" role="1B3o_S" />
@@ -353,9 +349,6 @@
           <node concept="1dT_AC" id="3C40c0STSC1" role="1dT_Ay">
             <property role="1dT_AB" value="Gets the local folder mounted in the EC container under /data" />
           </node>
-        </node>
-        <node concept="x79VA" id="3C40c0STSC2" role="x79VK">
-          <property role="x79VB" value="the local folder" />
         </node>
       </node>
     </node>
@@ -532,7 +525,7 @@
             <node concept="2OqwBi" id="65yh485pJLX" role="37vLTJ">
               <node concept="13iPFW" id="65yh485pJyK" role="2Oq$k0" />
               <node concept="3TrcHB" id="65yh485pJYO" role="2OqNvi">
-                <ref role="3TsBF5" to="cdcm:65yh485pHid" resolve="notes" />
+                <ref role="3TsBF5" to="5lbf:65yh485pHid" resolve="notes" />
               </node>
             </node>
           </node>
@@ -656,7 +649,7 @@
             <node concept="2OqwBi" id="3pj0Oa6GL1s" role="2Oq$k0">
               <node concept="13iPFW" id="3pj0Oa6GKFP" role="2Oq$k0" />
               <node concept="3TrEf2" id="7QDG7s96s0T" role="2OqNvi">
-                <ref role="3Tt5mk" to="cdcm:7QDG7s96n86" resolve="clusterConfig" />
+                <ref role="3Tt5mk" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
               </node>
             </node>
             <node concept="2qgKlT" id="3pj0Oa6GLss" role="2OqNvi">
@@ -673,7 +666,7 @@
               <node concept="2OqwBi" id="3pj0Oa6F_zp" role="2Oq$k0">
                 <node concept="13iPFW" id="3pj0Oa6F_zq" role="2Oq$k0" />
                 <node concept="3TrEf2" id="3pj0Oa6F_zr" role="2OqNvi">
-                  <ref role="3Tt5mk" to="cdcm:7UcLk9cjM3_" resolve="dockerConfig" />
+                  <ref role="3Tt5mk" to="5lbf:8cuIHOGcLo" resolve="dockerConfig" />
                 </node>
               </node>
               <node concept="3TrcHB" id="3pj0Oa6F_zs" role="2OqNvi">
@@ -691,7 +684,7 @@
               <node concept="2OqwBi" id="3pj0Oa6F_zx" role="2Oq$k0">
                 <node concept="13iPFW" id="3pj0Oa6F_zy" role="2Oq$k0" />
                 <node concept="3TrEf2" id="3pj0Oa6F_zz" role="2OqNvi">
-                  <ref role="3Tt5mk" to="cdcm:7UcLk9cjM3_" resolve="dockerConfig" />
+                  <ref role="3Tt5mk" to="5lbf:8cuIHOGcLo" resolve="dockerConfig" />
                 </node>
               </node>
               <node concept="2qgKlT" id="3DC7OdoUmWo" role="2OqNvi">
@@ -710,7 +703,7 @@
                 <node concept="2OqwBi" id="3pj0Oa6F_zJ" role="2Oq$k0">
                   <node concept="13iPFW" id="3pj0Oa6F_zK" role="2Oq$k0" />
                   <node concept="3TrEf2" id="3pj0Oa6F_zL" role="2OqNvi">
-                    <ref role="3Tt5mk" to="cdcm:7UcLk9cjM3$" resolve="container" />
+                    <ref role="3Tt5mk" to="5lbf:irqYu7yXR0" resolve="container" />
                   </node>
                 </node>
                 <node concept="3TrcHB" id="3pj0Oa6F_zM" role="2OqNvi">
@@ -724,7 +717,7 @@
                       <node concept="2OqwBi" id="3pj0Oa6F_zR" role="2Oq$k0">
                         <node concept="13iPFW" id="3pj0Oa6F_zS" role="2Oq$k0" />
                         <node concept="3TrEf2" id="3pj0Oa6F_zT" role="2OqNvi">
-                          <ref role="3Tt5mk" to="cdcm:7UcLk9cjM3$" resolve="container" />
+                          <ref role="3Tt5mk" to="5lbf:irqYu7yXR0" resolve="container" />
                         </node>
                       </node>
                       <node concept="3TrcHB" id="3pj0Oa6F_zU" role="2OqNvi">
@@ -739,7 +732,7 @@
                     <node concept="2OqwBi" id="3pj0Oa6F_zX" role="2Oq$k0">
                       <node concept="13iPFW" id="3pj0Oa6F_zY" role="2Oq$k0" />
                       <node concept="3TrEf2" id="3pj0Oa6F_zZ" role="2OqNvi">
-                        <ref role="3Tt5mk" to="cdcm:7UcLk9cjM3$" resolve="container" />
+                        <ref role="3Tt5mk" to="5lbf:irqYu7yXR0" resolve="container" />
                       </node>
                     </node>
                     <node concept="3TrcHB" id="3pj0Oa6F_$0" role="2OqNvi">
@@ -763,7 +756,7 @@
               <node concept="2OqwBi" id="rQ5OKPj3lN" role="2Oq$k0">
                 <node concept="13iPFW" id="rQ5OKPj3jL" role="2Oq$k0" />
                 <node concept="3TrEf2" id="7QDG7s96uKM" role="2OqNvi">
-                  <ref role="3Tt5mk" to="cdcm:7QDG7s96n86" resolve="clusterConfig" />
+                  <ref role="3Tt5mk" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
                 </node>
               </node>
               <node concept="2qgKlT" id="rQ5OKPj3Jf" role="2OqNvi">
@@ -1099,7 +1092,7 @@
                     <node concept="2OqwBi" id="2qF0d014Jxw" role="2Oq$k0">
                       <node concept="13iPFW" id="2qF0d014Jxx" role="2Oq$k0" />
                       <node concept="3TrEf2" id="2qF0d014Jxy" role="2OqNvi">
-                        <ref role="3Tt5mk" to="cdcm:7QDG7s96n86" resolve="clusterConfig" />
+                        <ref role="3Tt5mk" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
                       </node>
                     </node>
                     <node concept="2qgKlT" id="2qF0d014Jxz" role="2OqNvi">
@@ -1126,7 +1119,7 @@
                 <node concept="2OqwBi" id="5Pg96r0QOfa" role="2Oq$k0">
                   <node concept="13iPFW" id="5Pg96r0QOcE" role="2Oq$k0" />
                   <node concept="3TrEf2" id="5Pg96r0QOzn" role="2OqNvi">
-                    <ref role="3Tt5mk" to="cdcm:7QDG7s96n86" resolve="clusterConfig" />
+                    <ref role="3Tt5mk" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
                   </node>
                 </node>
                 <node concept="2qgKlT" id="5Pg96r0QOMr" role="2OqNvi">
@@ -1154,7 +1147,7 @@
                             <node concept="2OqwBi" id="lDSZH2EiLZ" role="2Oq$k0">
                               <node concept="13iPFW" id="lDSZH2EiM0" role="2Oq$k0" />
                               <node concept="3TrEf2" id="lDSZH2EiM1" role="2OqNvi">
-                                <ref role="3Tt5mk" to="cdcm:7QDG7s96n86" resolve="clusterConfig" />
+                                <ref role="3Tt5mk" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
                               </node>
                             </node>
                             <node concept="3Tsc0h" id="lDSZH2EmA6" role="2OqNvi">
@@ -1395,7 +1388,7 @@
                 <node concept="2OqwBi" id="5Pg96r0QPft" role="2Oq$k0">
                   <node concept="13iPFW" id="5Pg96r0QPfu" role="2Oq$k0" />
                   <node concept="3TrEf2" id="5Pg96r0QPfv" role="2OqNvi">
-                    <ref role="3Tt5mk" to="cdcm:7QDG7s96n86" resolve="clusterConfig" />
+                    <ref role="3Tt5mk" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
                   </node>
                 </node>
                 <node concept="2qgKlT" id="5Pg96r0QQ9L" role="2OqNvi">
@@ -1433,7 +1426,7 @@
                 <node concept="2OqwBi" id="5Pg96r0QQ_t" role="2Oq$k0">
                   <node concept="13iPFW" id="5Pg96r0QQ_u" role="2Oq$k0" />
                   <node concept="3TrEf2" id="5Pg96r0QQ_v" role="2OqNvi">
-                    <ref role="3Tt5mk" to="cdcm:7QDG7s96n86" resolve="clusterConfig" />
+                    <ref role="3Tt5mk" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
                   </node>
                 </node>
                 <node concept="2qgKlT" id="5Pg96r0QRuK" role="2OqNvi">
@@ -1501,7 +1494,7 @@
                 <node concept="2OqwBi" id="6hZyplrBRNF" role="2Oq$k0">
                   <node concept="13iPFW" id="6hZyplrBRLh" role="2Oq$k0" />
                   <node concept="3TrEf2" id="6hZyplrBS7N" role="2OqNvi">
-                    <ref role="3Tt5mk" to="cdcm:7QDG7s96n86" resolve="clusterConfig" />
+                    <ref role="3Tt5mk" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
                   </node>
                 </node>
                 <node concept="2qgKlT" id="6hZyplrBSYf" role="2OqNvi">
@@ -1545,7 +1538,7 @@
                     <node concept="2OqwBi" id="109XeHbQHLd" role="2Oq$k0">
                       <node concept="13iPFW" id="109XeHbQHLe" role="2Oq$k0" />
                       <node concept="3TrEf2" id="109XeHbQHLf" role="2OqNvi">
-                        <ref role="3Tt5mk" to="cdcm:7QDG7s96n86" resolve="clusterConfig" />
+                        <ref role="3Tt5mk" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
                       </node>
                     </node>
                     <node concept="2qgKlT" id="3C40c0SSK1O" role="2OqNvi">
@@ -1605,7 +1598,7 @@
                   <node concept="2OqwBi" id="lDSZH2EeCH" role="2Oq$k0">
                     <node concept="13iPFW" id="lDSZH2EeCI" role="2Oq$k0" />
                     <node concept="3TrEf2" id="lDSZH2EeCJ" role="2OqNvi">
-                      <ref role="3Tt5mk" to="cdcm:7QDG7s96n86" resolve="clusterConfig" />
+                      <ref role="3Tt5mk" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
                     </node>
                   </node>
                   <node concept="2qgKlT" id="lDSZH2EeCK" role="2OqNvi">
@@ -1657,7 +1650,7 @@
                   <node concept="2OqwBi" id="lDSZH2EeD1" role="2Oq$k0">
                     <node concept="13iPFW" id="lDSZH2EeD2" role="2Oq$k0" />
                     <node concept="3TrEf2" id="lDSZH2EeD3" role="2OqNvi">
-                      <ref role="3Tt5mk" to="cdcm:7QDG7s96n86" resolve="clusterConfig" />
+                      <ref role="3Tt5mk" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
                     </node>
                   </node>
                   <node concept="2qgKlT" id="lDSZH2EeD4" role="2OqNvi">
@@ -1815,7 +1808,7 @@
                             <node concept="2OqwBi" id="lDSZH2EeE1" role="2Oq$k0">
                               <node concept="13iPFW" id="lDSZH2EeE2" role="2Oq$k0" />
                               <node concept="3TrEf2" id="lDSZH2EeE3" role="2OqNvi">
-                                <ref role="3Tt5mk" to="cdcm:7QDG7s96n86" resolve="clusterConfig" />
+                                <ref role="3Tt5mk" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
                               </node>
                             </node>
                             <node concept="2qgKlT" id="lDSZH2EeE4" role="2OqNvi">

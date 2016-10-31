@@ -6,9 +6,9 @@
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="cdcm" ref="r:391123bf-abf2-4a24-a4ce-058a96abb887(org.campagnelab.cloud.structure)" />
+    <import index="5lbf" ref="r:65d366f2-ae3b-4b81-85e6-342aa070f572(org.campagnelab.cloud.structure)" />
+    <import index="5lwc" ref="r:1da0d023-6dc0-485a-9478-dfc86aa855ad(org.campagnelab.cloud.behavior)" />
     <import index="45iu" ref="r:e59beccc-d8f0-42c7-8989-c96c06e46e91(org.campagnelab.cloud.configuration.structure)" implicit="true" />
-    <import index="ddva" ref="r:f8d56d39-b0b5-425e-8f72-34c4e8a2f8d5(org.campagnelab.cloud.behavior)" implicit="true" />
     <import index="3229" ref="r:a82c5084-a1df-4f27-8e96-c1c3c407b051(org.campagnelab.cloud.configuration.behavior)" implicit="true" />
   </imports>
   <registry>
@@ -171,13 +171,13 @@
                     <node concept="I4A8Y" id="1PwW9ix00sv" role="2OqNvi" />
                   </node>
                   <node concept="3lApI0" id="1PwW9ix00sw" role="2OqNvi">
-                    <ref role="3lApI3" to="cdcm:5EXCMiTrJMh" resolve="ContainerWithEC" />
+                    <ref role="3lApI3" to="5lbf:5EXCMiTrJMh" resolve="ContainerWithEC" />
                   </node>
                 </node>
                 <node concept="1uHKPH" id="1PwW9ix00sx" role="2OqNvi" />
               </node>
-              <node concept="2qgKlT" id="6U4QULBCXSo" role="2OqNvi">
-                <ref role="37wK5l" to="ddva:7vFwTqSSm$y" resolve="getClientID" />
+              <node concept="2qgKlT" id="5vsHJ6gLQgw" role="2OqNvi">
+                <ref role="37wK5l" to="5lwc:7vFwTqSSm$y" resolve="getClientID" />
               </node>
             </node>
           </node>
@@ -221,13 +221,13 @@
                     <node concept="I4A8Y" id="1PwW9ix0wAD" role="2OqNvi" />
                   </node>
                   <node concept="3lApI0" id="1PwW9ix0wAE" role="2OqNvi">
-                    <ref role="3lApI3" to="cdcm:5EXCMiTrJMh" resolve="ContainerWithEC" />
+                    <ref role="3lApI3" to="5lbf:5EXCMiTrJMh" resolve="ContainerWithEC" />
                   </node>
                 </node>
                 <node concept="1uHKPH" id="1PwW9ix0wAF" role="2OqNvi" />
               </node>
-              <node concept="2qgKlT" id="6U4QULBCZdu" role="2OqNvi">
-                <ref role="37wK5l" to="ddva:65yh485oPzU" resolve="getSecret" />
+              <node concept="2qgKlT" id="5vsHJ6gLQBF" role="2OqNvi">
+                <ref role="37wK5l" to="5lwc:65yh485oPzU" resolve="getSecret" />
               </node>
             </node>
           </node>
@@ -271,13 +271,13 @@
                     <node concept="I4A8Y" id="1PwW9ix0yTQ" role="2OqNvi" />
                   </node>
                   <node concept="3lApI0" id="1PwW9ix0yTR" role="2OqNvi">
-                    <ref role="3lApI3" to="cdcm:5EXCMiTrJMh" resolve="ContainerWithEC" />
+                    <ref role="3lApI3" to="5lbf:5EXCMiTrJMh" resolve="ContainerWithEC" />
                   </node>
                 </node>
                 <node concept="1uHKPH" id="1PwW9ix0yTS" role="2OqNvi" />
               </node>
-              <node concept="2qgKlT" id="6U4QULBCZCh" role="2OqNvi">
-                <ref role="37wK5l" to="ddva:7vFwTqSSnpd" resolve="getProjectID" />
+              <node concept="2qgKlT" id="5vsHJ6gLSBK" role="2OqNvi">
+                <ref role="37wK5l" to="5lwc:7vFwTqSSnpd" resolve="getProjectID" />
               </node>
             </node>
           </node>

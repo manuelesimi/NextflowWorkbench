@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:2c230746-1c84-4dde-bf59-323e8595c731(org.campagnelab.cloud.editor)">
+<model ref="r:d3bd6da4-2ef5-47ae-ae2d-f5a9d9800b0d(org.campagnelab.cloud.editor)">
   <persistence version="9" />
   <languages>
     <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <use id="c1ba4037-e4db-47d8-8b61-b3c805b648f2" name="org.campagnelab.ui" version="0" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
-    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="4" />
+    <use id="fe9d76d7-5809-45c9-ae28-a40915b4d6ff" name="jetbrains.mps.lang.checkedName" version="0" />
+    <use id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin" version="1" />
+    <use id="443f4c36-fcf5-4eb6-9500-8d06ed259e3e" name="jetbrains.mps.baseLanguage.classifiers" version="0" />
+    <use id="ed6d7656-532c-4bc2-81d1-af945aeb8280" name="jetbrains.mps.baseLanguage.blTypes" version="0" />
+    <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
+    <use id="ef7bf5ac-d06c-4342-b11d-e42104eb9343" name="jetbrains.mps.lang.plugin.standalone" version="0" />
+    <use id="774bf8a0-62e5-41e1-af63-f4812e60e48b" name="jetbrains.mps.baseLanguage.checkedDots" version="0" />
+    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="0" />
     <use id="31c91def-a131-41a1-9018-102874f49a12" name="de.slisson.mps.editor.multiline" version="0" />
-    <devkit ref="2677cb18-f558-4e33-bc38-a5139cee06dc(jetbrains.mps.devkit.language-design)" />
+    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="cdcm" ref="r:391123bf-abf2-4a24-a4ce-058a96abb887(org.campagnelab.cloud.structure)" />
+    <import index="rzxe" ref="r:c8f01c5c-0641-4bdc-875e-539c2c78a0be(org.campagnelab.docker.behavior)" />
     <import index="z1c3" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.project(MPS.Core/)" />
     <import index="alof" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.ide.project(MPS.Platform/)" />
+    <import index="xj2j" ref="86441d7a-e194-42da-81a5-2161ec62a379/java:jetbrains.mps.plugins.projectplugins(MPS.Workbench/)" />
+    <import index="ivm0" ref="r:f7c3f04b-0d46-4016-bf5e-37ab9a5f8c7e(org.campagnelab.cloud.preferences.plugin)" />
+    <import index="tgbt" ref="r:c70ee934-afb1-4c02-b6a9-1c4d1908a792(jetbrains.mps.lang.plugin.standalone.structure)" />
     <import index="cj4x" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.openapi.editor(MPS.Editor/)" />
-    <import index="ddva" ref="r:f8d56d39-b0b5-425e-8f72-34c4e8a2f8d5(org.campagnelab.cloud.behavior)" />
-    <import index="axnf" ref="r:fcce6a5c-ee8c-4323-bf77-2655c9be3bf1(org.campagnelab.docker.bash.editor)" />
+    <import index="mhbf" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.model(MPS.OpenAPI/)" />
+    <import index="5lwc" ref="r:1da0d023-6dc0-485a-9478-dfc86aa855ad(org.campagnelab.cloud.behavior)" />
+    <import index="5lbf" ref="r:65d366f2-ae3b-4b81-85e6-342aa070f572(org.campagnelab.cloud.structure)" />
+    <import index="wap1" ref="r:9aa85a40-e98d-42a5-a8fd-9f607a4dc9a0(de.slisson.mps.editor.multiline.structure)" />
+    <import index="jef7" ref="r:b34afbb0-553b-4e3b-8562-859e6864b1d6(de.slisson.mps.editor.multiline.editor)" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -137,15 +149,15 @@
     </language>
   </registry>
   <node concept="24kQdi" id="5EXCMiTrK$k">
-    <ref role="1XX52x" to="cdcm:5EXCMiTrJMh" resolve="ContainerWithEC" />
+    <ref role="1XX52x" to="5lbf:5EXCMiTrJMh" resolve="ContainerWithEC" />
     <node concept="3EZMnI" id="2qF0d00RPVS" role="2wV5jI">
       <property role="1cu_pB" value="0" />
       <node concept="3F0ifn" id="2qF0d00RRAO" role="3EZMnx" />
       <node concept="2iRkQZ" id="2qF0d00RPVT" role="2iSdaV" />
-      <node concept="3EZMnI" id="7UcLk9cjMhY" role="3EZMnx">
-        <node concept="l2Vlx" id="7UcLk9cjMhZ" role="2iSdaV" />
+      <node concept="3EZMnI" id="6A9boVQ2ENa" role="3EZMnx">
+        <node concept="l2Vlx" id="6A9boVQ2ENb" role="2iSdaV" />
         <node concept="3F1sOY" id="7QDG7s96oue" role="3EZMnx">
-          <ref role="1NtTu8" to="cdcm:7QDG7s96n86" resolve="clusterConfig" />
+          <ref role="1NtTu8" to="5lbf:7QDG7s96n86" resolve="clusterConfig" />
           <node concept="pVoyu" id="7QDG7s96oy5" role="3F10Kt">
             <property role="VOm3f" value="true" />
           </node>
@@ -158,7 +170,7 @@
             <property role="VOm3f" value="true" />
           </node>
         </node>
-        <node concept="3F0ifn" id="7UcLk9cjMi0" role="3EZMnx">
+        <node concept="3F0ifn" id="1rhtiO0qtHg" role="3EZMnx">
           <property role="3F0ifm" value="Manage your Cloud Cluster:" />
           <node concept="ljvvj" id="7QDG7s979vR" role="3F10Kt">
             <property role="VOm3f" value="true" />
@@ -202,7 +214,7 @@
                     <node concept="2OqwBi" id="7QDG7s971Lg" role="3clFbG">
                       <node concept="1VaYGm" id="7QDG7s971Lh" role="2Oq$k0" />
                       <node concept="2qgKlT" id="7QDG7s971Li" role="2OqNvi">
-                        <ref role="37wK5l" to="ddva:5Pg96r0QF5m" resolve="create" />
+                        <ref role="37wK5l" to="5lwc:5Pg96r0QF5m" resolve="create" />
                         <node concept="37vLTw" id="7QDG7s971Lj" role="37wK5m">
                           <ref role="3cqZAo" node="7QDG7s971L9" resolve="mpsProject" />
                         </node>
@@ -251,7 +263,7 @@
                     <node concept="2OqwBi" id="7QDG7s972uM" role="3clFbG">
                       <node concept="1VaYGm" id="7QDG7s972uN" role="2Oq$k0" />
                       <node concept="2qgKlT" id="7QDG7s972uO" role="2OqNvi">
-                        <ref role="37wK5l" to="ddva:5wsmBEGRnso" resolve="destroy" />
+                        <ref role="37wK5l" to="5lwc:5wsmBEGRnso" resolve="destroy" />
                         <node concept="37vLTw" id="7QDG7s972uP" role="37wK5m">
                           <ref role="3cqZAo" node="7QDG7s972uF" resolve="mpsProject" />
                         </node>
@@ -297,7 +309,7 @@
                     <node concept="2OqwBi" id="6hZyplrBQAU" role="3clFbG">
                       <node concept="1VaYGm" id="6hZyplrBQAV" role="2Oq$k0" />
                       <node concept="2qgKlT" id="6hZyplrBQAW" role="2OqNvi">
-                        <ref role="37wK5l" to="ddva:6hZyplrBQNd" resolve="nodes" />
+                        <ref role="37wK5l" to="5lwc:6hZyplrBQNd" resolve="nodes" />
                         <node concept="37vLTw" id="6hZyplrBQAX" role="37wK5m">
                           <ref role="3cqZAo" node="6hZyplrBQAN" resolve="mpsProject" />
                         </node>
@@ -343,7 +355,7 @@
                     <node concept="2OqwBi" id="4iZtcSrbQH9" role="3clFbG">
                       <node concept="1VaYGm" id="4iZtcSrbQFb" role="2Oq$k0" />
                       <node concept="2qgKlT" id="4iZtcSrbR8s" role="2OqNvi">
-                        <ref role="37wK5l" to="ddva:4iZtcSrbJKs" resolve="login" />
+                        <ref role="37wK5l" to="5lwc:4iZtcSrbJKs" resolve="login" />
                         <node concept="37vLTw" id="4iZtcSrbRbA" role="37wK5m">
                           <ref role="3cqZAo" node="7QDG7s973pX" resolve="mpsProject" />
                         </node>
@@ -389,7 +401,7 @@
                     <node concept="2OqwBi" id="5wsmBEGRo0c" role="3clFbG">
                       <node concept="1VaYGm" id="5wsmBEGRnYg" role="2Oq$k0" />
                       <node concept="2qgKlT" id="5wsmBEGRo5Y" role="2OqNvi">
-                        <ref role="37wK5l" to="ddva:5wsmBEGRntR" resolve="terminal" />
+                        <ref role="37wK5l" to="5lwc:5wsmBEGRntR" resolve="terminal" />
                         <node concept="37vLTw" id="5PL1gPW3_z2" role="37wK5m">
                           <ref role="3cqZAo" node="ES8jtOrHPj" resolve="mpsProject" />
                         </node>
@@ -435,14 +447,14 @@
                     <node concept="2OqwBi" id="3C40c0SSHaq" role="3clFbG">
                       <node concept="1VaYGm" id="3C40c0SSH8s" role="2Oq$k0" />
                       <node concept="2qgKlT" id="3C40c0SSHj0" role="2OqNvi">
-                        <ref role="37wK5l" to="ddva:109XeHbQHL1" resolve="access" />
+                        <ref role="37wK5l" to="5lwc:109XeHbQHL1" resolve="access" />
                         <node concept="37vLTw" id="3C40c0SSHjc" role="37wK5m">
                           <ref role="3cqZAo" node="7QDG7s9711L" resolve="mpsProject" />
                         </node>
                         <node concept="2OqwBi" id="3C40c0SSKsc" role="37wK5m">
                           <node concept="1VaYGm" id="3C40c0SSKq4" role="2Oq$k0" />
                           <node concept="3TrcHB" id="3C40c0SSKxm" role="2OqNvi">
-                            <ref role="3TsBF5" to="cdcm:7QDG7s977DJ" resolve="credentials" />
+                            <ref role="3TsBF5" to="5lbf:7QDG7s977DJ" resolve="credentials" />
                           </node>
                         </node>
                       </node>
@@ -474,7 +486,7 @@
           <node concept="2v7bAL" id="5Pg96r0Qp6q" role="3EZMnx">
             <property role="1O74Pk" value="true" />
             <property role="1$x2rV" value="paste credentials here" />
-            <ref role="1NtTu8" to="cdcm:7QDG7s977DJ" resolve="credentials" />
+            <ref role="1NtTu8" to="5lbf:7QDG7s977DJ" resolve="credentials" />
             <node concept="VechU" id="5Pg96r0Qt03" role="3F10Kt">
               <property role="Vb096" value="DARK_GREEN" />
             </node>
@@ -489,7 +501,7 @@
     <node concept="3EZMnI" id="1LKL2LEpxLp" role="6VMZX">
       <node concept="2iRfu4" id="1LKL2LEpxLq" role="2iSdaV" />
       <node concept="3F1sOY" id="1LKL2LEpxID" role="3EZMnx">
-        <ref role="1NtTu8" to="cdcm:7UcLk9cjM3$" resolve="container" />
+        <ref role="1NtTu8" to="5lbf:irqYu7yXR0" resolve="container" />
       </node>
     </node>
   </node>
