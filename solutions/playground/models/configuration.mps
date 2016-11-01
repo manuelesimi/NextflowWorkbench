@@ -209,7 +209,6 @@
       </node>
     </node>
   </node>
-  <node concept="2$rMIF" id="1D3_UgfpkQ0" />
   <node concept="2$rMIF" id="1D3_Ugf7PdG">
     <property role="TrG5h" value="TwoInputTest" />
     <node concept="1CVceo" id="1D3_Ugf7Pe5" role="2$L6iY">

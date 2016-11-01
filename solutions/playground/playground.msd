@@ -12,12 +12,14 @@
     <dependency reexport="false">0202ed86-955d-4227-9c20-377dd6b1f9ff(org.campagnelab.nyosh.lib)</dependency>
     <dependency reexport="false">8f30b27b-57ec-411a-9ffa-0c6f223dcf72(org.campagnelab.workflow.Samples)</dependency>
     <dependency reexport="false">0b7d8bbd-896e-495e-be60-01a0d738a649(org.campagnelab.gobyweb.plugins)</dependency>
+    <dependency reexport="false">f55d6853-b373-41dd-bc8e-331fd6e2c764(org.campagnelab.bash.nyosh)</dependency>
   </dependencies>
   <usedDevKits>
     <usedDevKit>74a4431b-c31f-4707-ad8a-3f4f3c105ee2(org.campagnelab.NextflowWorkbench)</usedDevKit>
     <usedDevKit>d2e60c30-8b22-476c-b514-62205a22222e(org.campagnelab.docker.dev)</usedDevKit>
     <usedDevKit>f818ef32-d5bf-46fa-b215-1c17570a2e46(org.campagnelab.docker.gobyweb)</usedDevKit>
     <usedDevKit>5b2dfdd5-812f-48af-8989-85fe63dcbc1d(org.campagnelab.compute.cloud)</usedDevKit>
+    <usedDevKit>51c21de2-7a87-42be-b8b1-46d4b4c6d244(org.campagnelab.docker.gobyweb)</usedDevKit>
   </usedDevKits>
   <languageVersions>
     <language slang="l:31c91def-a131-41a1-9018-102874f49a12:de.slisson.mps.editor.multiline" version="0" />
@@ -46,6 +48,9 @@
     <language slang="l:3b74e3b7-7336-414d-8899-64a293a44a07:org.campagnelab.docker.bash" version="0" />
     <language slang="l:adfd00cb-58d7-4094-bca8-f941a491e04f:org.campagnelab.gobyweb" version="0" />
     <language slang="l:a8fb88b0-7e9f-478c-aab4-a1b076131192:org.campagnelab.gobyweb.interactive" version="0" />
+    <language slang="l:853d29f2-dbd7-4a64-a6cd-27608b08e948:org.campagnelab.gobyweb.interactive.mappings" version="0" />
+    <language slang="l:b8e13d6b-cd9f-48e3-99ae-1c182918d003:org.campagnelab.gobyweb.interactive.organisms" version="0" />
+    <language slang="l:25660412-38c2-4984-b968-1ec5b8149f10:org.campagnelab.gobyweb.interactive.platforms" version="0" />
     <language slang="l:57af9408-ffae-472e-9367-5cb44434e8b3:org.campagnelab.gobyweb.interactive.users" version="0" />
     <language slang="l:0b7d8bbd-896e-495e-be60-01a0d738a649:org.campagnelab.gobyweb.plugins" version="0" />
     <language slang="l:43809d33-d5e3-4390-917e-3944cb211ee3:org.campagnelab.icons" version="0" />
@@ -69,16 +74,45 @@
     <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
     <module reference="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" version="0" />
     <module reference="cce85e64-7b37-4ad5-b0e6-9d18324cdfb3(de.itemis.mps.selection.runtime)" version="0" />
+    <module reference="31c91def-a131-41a1-9018-102874f49a12(de.slisson.mps.editor.multiline)" version="0" />
     <module reference="92d2ea16-5a42-4fdf-a676-c7604efe3504(de.slisson.mps.richtext)" version="0" />
+    <module reference="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" version="0" />
+    <module reference="ed6d7656-532c-4bc2-81d1-af945aeb8280(jetbrains.mps.baseLanguage.blTypes)" version="0" />
+    <module reference="443f4c36-fcf5-4eb6-9500-8d06ed259e3e(jetbrains.mps.baseLanguage.classifiers)" version="0" />
+    <module reference="fd392034-7849-419d-9071-12563d152375(jetbrains.mps.baseLanguage.closures)" version="0" />
+    <module reference="83888646-71ce-4f1c-9c53-c54016f6ad4f(jetbrains.mps.baseLanguage.collections)" version="0" />
+    <module reference="760a0a8c-eabb-4521-8bfd-65db761a9ba3(jetbrains.mps.baseLanguage.logging)" version="0" />
+    <module reference="e39e4a59-8cb6-498e-860e-8fa8361c0d90(jetbrains.mps.baseLanguage.scopes)" version="0" />
+    <module reference="aee9cad2-acd4-4608-aef2-0004f6a1cdbd(jetbrains.mps.lang.actions)" version="0" />
     <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
+    <module reference="18bc6592-03a6-4e29-a83a-7ff23bde13ba(jetbrains.mps.lang.editor)" version="0" />
     <module reference="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" version="0" />
+    <module reference="13744753-c81f-424a-9c1b-cf8943bf4e86(jetbrains.mps.lang.sharedConcepts)" version="0" />
+    <module reference="7866978e-a0f0-4cc7-81bc-4d213d9375e1(jetbrains.mps.lang.smodel)" version="1" />
     <module reference="c72da2b9-7cce-4447-8389-f407dc1158b7(jetbrains.mps.lang.structure)" version="0" />
+    <module reference="9ded098b-ad6a-4657-bfd9-48636cfe8bc3(jetbrains.mps.lang.traceable)" version="0" />
+    <module reference="a1250a4d-c090-42c3-ad7c-d298a3357dd4(jetbrains.mps.make.runtime)" version="0" />
+    <module reference="20d83b64-d10f-48d1-990d-513b574c4956(org.campagnelab.background)" version="0" />
+    <module reference="f55d6853-b373-41dd-bc8e-331fd6e2c764(org.campagnelab.bash.nyosh)" version="0" />
     <module reference="2183f281-ca53-4c69-af11-465550230ecd(org.campagnelab.cloud.preferences)" version="0" />
+    <module reference="7620dd3f-7541-48a3-b1e6-01cced81a7a5(org.campagnelab.clusterConfig)" version="0" />
+    <module reference="25281c03-4a7c-4b57-9221-24a10fc36ef5(org.campagnelab.docker)" version="0" />
+    <module reference="3b74e3b7-7336-414d-8899-64a293a44a07(org.campagnelab.docker.bash)" version="0" />
     <module reference="63ed0b3a-e2ca-4245-8600-dfbe1ddba42b(org.campagnelab.docker.bash.run)" version="0" />
+    <module reference="adfd00cb-58d7-4094-bca8-f941a491e04f(org.campagnelab.gobyweb)" version="0" />
+    <module reference="a8fb88b0-7e9f-478c-aab4-a1b076131192(org.campagnelab.gobyweb.interactive)" version="0" />
+    <module reference="57af9408-ffae-472e-9367-5cb44434e8b3(org.campagnelab.gobyweb.interactive.users)" version="0" />
     <module reference="0b7d8bbd-896e-495e-be60-01a0d738a649(org.campagnelab.gobyweb.plugins)" version="0" />
+    <module reference="43809d33-d5e3-4390-917e-3944cb211ee3(org.campagnelab.icons)" version="0" />
     <module reference="0202ed86-955d-4227-9c20-377dd6b1f9ff(org.campagnelab.nyosh.lib)" version="0" />
+    <module reference="901f5cf3-dc77-4c1e-bc5a-6382baee28b4(org.campagnelab.textoutput)" version="0" />
+    <module reference="c1ba4037-e4db-47d8-8b61-b3c805b648f2(org.campagnelab.ui)" version="0" />
+    <module reference="2b3d76b7-a9ea-44f6-8a30-283c3ffb5f0a(org.campagnelab.ui.code)" version="0" />
     <module reference="a16c15b3-e423-4aad-81e7-18bb74e1f395(org.campagnelab.util.execution.ant)" version="0" />
+    <module reference="d4767029-894b-41e1-b76e-850baa598e5b(org.campagnelab.util.files)" version="0" />
+    <module reference="c6c823fb-a9da-46e7-9850-129b0f7a7aa5(org.campagnelab.workflow)" version="0" />
     <module reference="8f30b27b-57ec-411a-9ffa-0c6f223dcf72(org.campagnelab.workflow.Samples)" version="0" />
+    <module reference="f9b7dda6-7ab5-4936-ad1b-2d45c57833dc(org.campagnelab.workflow.configuration)" version="0" />
     <module reference="c039a1a6-4680-46fa-b571-a6a5f1e49ab6(org.campagnelab.workflow.run)" version="0" />
     <module reference="36018c14-41aa-420b-859e-85b61ed57eed(playground)" version="0" />
   </dependencyVersions>
