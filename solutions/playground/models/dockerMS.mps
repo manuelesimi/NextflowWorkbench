@@ -18,6 +18,7 @@
   </languages>
   <imports>
     <import index="iuj9" ref="r:b8fcf1e4-ccc5-4a08-9b19-9b2e4e857cd7(org.campagnelab.bash.nyosh.structure)" />
+    <import index="bd2x" ref="r:aa9c91aa-8100-4e98-88e5-b9737f1d54b8(model.organisms)" implicit="true" />
   </imports>
   <registry>
     <language id="a8fb88b0-7e9f-478c-aab4-a1b076131192" name="org.campagnelab.gobyweb.interactive">
@@ -134,6 +135,14 @@
         <child id="5359535375768188281" name="attributeValues" index="1NFp1Y" />
       </concept>
       <concept id="7630370243519798795" name="org.campagnelab.bash.nyosh.structure.DockerArtifactPath" flags="ng" index="1OktH4" />
+    </language>
+    <language id="b8e13d6b-cd9f-48e3-99ae-1c182918d003" name="org.campagnelab.gobyweb.interactive.organisms">
+      <concept id="7026862576601481551" name="org.campagnelab.gobyweb.interactive.organisms.structure.OrganismAttribute" flags="ng" index="3MliW7">
+        <child id="7026862576601511204" name="value" index="3MltHG" />
+      </concept>
+      <concept id="7026862576601488640" name="org.campagnelab.gobyweb.interactive.organisms.structure.OrganismValue" flags="ng" index="3Mljd8">
+        <reference id="7026862576601514724" name="organism" index="3MlqMG" />
+      </concept>
     </language>
     <language id="3b74e3b7-7336-414d-8899-64a293a44a07" name="org.campagnelab.docker.bash">
       <concept id="2622571170406287292" name="org.campagnelab.docker.bash.structure.InteractivePath" flags="ng" index="26mB$D">
@@ -8908,9 +8917,11 @@
             <property role="2vk9_M" value="KALLISTO_INDEX" />
             <property role="2vk9_N" value="INDEX" />
             <property role="TrG5h" value="organism" />
-            <node concept="2t8VsU" id="5cVzYEjgn6Y" role="2vnsw6">
-              <property role="2t8Vu2" value="homo_sapiens" />
-              <property role="TrG5h" value="organism" />
+            <node concept="3MliW7" id="3BY_YNh0X5C" role="2vnsw6">
+              <property role="TrG5h" value="ORGANISM" />
+              <node concept="3Mljd8" id="3BY_YNh0X5D" role="3MltHG">
+                <ref role="3MlqMG" to="bd2x:2c$PAgEvj_8" resolve="human" />
+              </node>
             </node>
           </node>
           <node concept="2vnsz3" id="5cVzYEjgn6Z" role="1NFp1Y">
@@ -8944,7 +8955,7 @@
               <property role="TrG5h" value="organism" />
               <node concept="2vraTB" id="5cVzYEjgn76" role="2vnsw6">
                 <property role="TrG5h" value="organism" />
-                <ref role="2vraA5" node="5cVzYEjgn6Y" resolve="organism" />
+                <ref role="2vraA5" node="3BY_YNh0X5C" resolve="ORGANISM" />
               </node>
             </node>
             <node concept="2vnsz3" id="5cVzYEjgn77" role="1NFp1Y">
@@ -10710,11 +10721,6 @@
     <property role="TrG5h" value="docker.config" />
     <property role="2EEQw2" value="/usr/local/bin/docker" />
     <property role="2E$TAj" value="" />
-  </node>
-  <node concept="1QJbas" id="3BY_YNg8VAv">
-    <node concept="VtuK3" id="3BY_YNg8VAx" role="234boB">
-      <property role="VuL0s" value="latest" />
-    </node>
   </node>
 </model>
 

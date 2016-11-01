@@ -168,11 +168,11 @@
     <node concept="2$rEH5" id="dhtvqF4gZr" role="2$rEHq">
       <ref role="2$rEH4" node="dhtvqF4gWY" resolve="JustToTestConfigDirectives" />
       <node concept="3yMh_Y" id="dhtvqFuAQF" role="2McKjg">
-        <property role="2C0Vil" value="35" />
+        <property role="2C0Vil" value="32" />
         <property role="2VpDLZ" value="GB" />
       </node>
       <node concept="3z7tYA" id="dhtvqFuAQO" role="2McKjg">
-        <property role="2C3xdR" value="456" />
+        <property role="2C3xdR" value="8" />
       </node>
       <node concept="3z9RHV" id="dhtvqFvcZF" role="2McKjg">
         <property role="2C0Vil" value="3h" />
