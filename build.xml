@@ -7,7 +7,7 @@
   <property name="mps_home" location="" />
   <property name="org.campagnelab.goby.workbench.home" location="${basedir}/../NYoSh.core" />
   <property name="org.campagnelab.xchart.home" location="${basedir}/../XChart" />
-  <property name="workbench_version" value="1.6.2" />
+  <property name="workbench_version" value="1.6.3" />
   <property name="nextflow_version" value="0.21.2" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.mpsExecutionPlugin" location="${mps_home}" />
@@ -92,7 +92,7 @@
         <depends>de.slisson.mps.all</depends>
         <depends>de.itemis.mps.selection</depends>
         <depends>de.slisson.mps.richtext</depends>
-        <idea-version until-build="163.1" since-build="162.1616" />
+        <idea-version until-build="162.2189" since-build="162.2189" />
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
