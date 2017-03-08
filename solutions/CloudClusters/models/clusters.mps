@@ -153,7 +153,7 @@
   <node concept="3zOPYP" id="1FavoX$xsQi">
     <property role="TrG5h" value="ManageCloudCluster" />
     <property role="1OHsCo" value="&lt;paste public ssh keys here&gt;" />
-    <property role="1$193f" value=" MPS project: MPS Project [nextflowworkbench:37 modules] IDEA project: Project '/Users/fac2003/MPSProjects/git/nextflowworkbench' NextflowWorkbench PrefComponent: org.campagnelab.cloud.preferences.plugin.GridEngineCluster_PreferencesComponent@17a8cd56 secret: rLBmNJiCSEfji5XbArdVnDxf project nextflow-workbench-test1 client 223877930626-4gt9mt9abcharqoaicnd05mq65bm8ne0.apps.googleusercontent.com" />
+    <property role="1$193f" value=" MPS project: MPS Project [NextflowWorkbench:37 modules] IDEA project: Project '/Users/mas2182/Lab/Projects/MPS/3.4/nextflowworkbench' NextflowWorkbench PrefComponent: org.campagnelab.cloud.preferences.plugin.GridEngineCluster_PreferencesComponent@33b0fec7 secret: rLBmNJiCSEfji5XbArdVnDxf project nextflow-workbench-test1 client  223877930626-4gt9mt9abcharqoaicnd05mq65bm8ne0.apps.googleusercontent.com " />
     <ref role="1QJbqN" node="7UgDMXPp$tz" resolve="docker.config" />
     <node concept="VtuK3" id="1FavoX$xsQj" role="234boB">
       <property role="VuL0s" value="1.5.4" />
@@ -165,7 +165,7 @@
       <property role="TrG5h" value="cluster.config" />
       <node concept="1Q0NwO" id="1FavoX$xsQl" role="2KSRPJ">
         <property role="TrG5h" value="Cluster name" />
-        <property role="Zm4_2" value="QueueReconfigTest2" />
+        <property role="Zm4_2" value="gobyweb3-cluster" />
       </node>
       <node concept="1Q2HBG" id="1FavoX$xsQm" role="2KSRPJ">
         <property role="TrG5h" value="Zone for cluster resources" />
@@ -189,7 +189,7 @@
       </node>
       <node concept="1rOJCK" id="1FavoX$xsQr" role="2KSRPJ">
         <property role="TrG5h" value="Compute node type" />
-        <property role="1rOIkb" value="n1-standard-2" />
+        <property role="1rOIkb" value="n1-standard-4" />
       </node>
       <node concept="1mWehH" id="1FavoX$xsQs" role="2KSRPJ">
         <property role="TrG5h" value="Disk size local to each worker node" />
@@ -201,7 +201,7 @@
       </node>
       <node concept="2tz3XF" id="1FavoX$xsQt" role="2KSRPJ">
         <property role="TrG5h" value="Folder with manager credentials" />
-        <property role="2tz3XC" value="/Users/fac2003/.ssh" />
+        <property role="2tz3XC" value="/Users/mas2182/.ssh" />
       </node>
     </node>
   </node>
