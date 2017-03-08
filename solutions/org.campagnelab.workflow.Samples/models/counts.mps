@@ -331,7 +331,7 @@
       </node>
     </node>
     <node concept="2$rEH5" id="7ejpSqGJUXQ" role="2$rEHq">
-      <ref role="2$rEH4" node="7ejpSqGJDQd" resolve="Sample_irstOneMillionSequences" />
+      <ref role="2$rEH4" node="7ejpSqGJDQd" resolve="Sample_FirstOneMillionSequences" />
       <node concept="1uYdA0" id="7ejpSqGJUXR" role="1uLvPH">
         <ref role="1uK_4X" node="4xTPTl95XMn" resolve="fastq_Files" />
       </node>
@@ -380,7 +380,7 @@
     </node>
   </node>
   <node concept="2ulcR8" id="7ejpSqGJDQd">
-    <property role="TrG5h" value="Sample_irstOneMillionSequences" />
+    <property role="TrG5h" value="Sample_FirstOneMillionSequences" />
     <node concept="2lYRya" id="7ejpSqGJQpY" role="2ulM79">
       <property role="TrG5h" value="*-1M.fastq.gz" />
       <node concept="16pRw0" id="7ejpSqGJQq6" role="2ybFLk" />
