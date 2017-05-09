@@ -1608,8 +1608,8 @@
             <property role="2vk9_N" value="INDEX" />
             <property role="TrG5h" value="organism" />
             <node concept="3MliW7" id="7UcLk9ceYXW" role="2vnsw6">
-              <property role="TrG5h" value="ORGANISM" />
-              <node concept="3Mljd8" id="7UcLk9ceYY0" role="3MltHG">
+              <property role="TrG5h" value="organism" />
+              <node concept="3Mljd8" id="3SLYf1HseR6" role="3MltHG">
                 <ref role="3MlqMG" to="bd2x:2c$PAgEvj_8" resolve="human" />
               </node>
             </node>
@@ -1661,9 +1661,11 @@
               <property role="2vk9_M" value="ENSEMBL_TRANSCRIPTS" />
               <property role="2vk9_N" value="TOPLEVEL" />
               <property role="TrG5h" value="organism" />
-              <node concept="2vraTB" id="59BvSKQHAGp" role="2vnsw6">
+              <node concept="3MliW7" id="3SLYf1HsdwB" role="2vnsw6">
                 <property role="TrG5h" value="organism" />
-                <ref role="2vraA5" node="7UcLk9ceYXW" resolve="ORGANISM" />
+                <node concept="3Mljd8" id="3SLYf1HsdwN" role="3MltHG">
+                  <ref role="3MlqMG" to="bd2x:2c$PAgEvj_8" resolve="human" />
+                </node>
               </node>
             </node>
             <node concept="2vnsz3" id="59BvSKQHAGq" role="1NFp1Y">
