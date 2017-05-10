@@ -808,5 +808,28 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="2p_rl262uZ8">
+    <property role="3GE5qa" value="remoteSubmission" />
+    <ref role="1XX52x" to="dlwq:5KN4KqYQkSJ" resolve="JobArea" />
+    <node concept="3EZMnI" id="2p_rl262uZa" role="2wV5jI">
+      <node concept="PMmxH" id="2p_rl262uZb" role="3EZMnx">
+        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+        <node concept="Vb9p2" id="2p_rl262uZc" role="3F10Kt">
+          <property role="Vbekb" value="BOLD" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="2p_rl262uZd" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="3F0A7n" id="2p_rl262uZe" role="3EZMnx">
+        <property role="1$x2rV" value="Absolute path of the remote folder (e.g. /home/ubuntu/jobs)" />
+        <ref role="1NtTu8" to="dlwq:5KN4KqYQkSV" resolve="value" />
+        <node concept="VechU" id="2p_rl262uZf" role="3F10Kt">
+          <property role="Vb096" value="blue" />
+        </node>
+      </node>
+      <node concept="2iRfu4" id="2p_rl262uZg" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 
