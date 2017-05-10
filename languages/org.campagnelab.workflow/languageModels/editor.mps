@@ -240,6 +240,7 @@
         <child id="1073389446424" name="childCellModel" index="3EZMnx" />
       </concept>
       <concept id="1073389577006" name="jetbrains.mps.lang.editor.structure.CellModel_Constant" flags="sn" stub="3610246225209162225" index="3F0ifn">
+        <property id="1082639509531" name="nullText" index="ilYzB" />
         <property id="1073389577007" name="text" index="3F0ifm" />
       </concept>
       <concept id="1073389658414" name="jetbrains.mps.lang.editor.structure.CellModel_Property" flags="sg" stub="730538219796134133" index="3F0A7n" />
@@ -4246,6 +4247,7 @@
     <ref role="1XX52x" to="iowz:2zDNr6iMGQZ" resolve="AbstractProcessRef" />
     <node concept="3F0ifn" id="2zDNr6iPIxp" role="2wV5jI">
       <property role="3F0ifm" value="" />
+      <property role="ilYzB" value="Select the process" />
       <node concept="OXEIz" id="2zDNr6iPIxu" role="P5bDN">
         <node concept="UkePV" id="2zDNr6iPIxy" role="OY2wv">
           <ref role="Ul1FP" to="iowz:2zDNr6iMGQZ" resolve="AbstractProcessRef" />
