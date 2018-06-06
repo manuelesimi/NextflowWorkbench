@@ -8,7 +8,7 @@
   <sourcePath />
   <dependencies>
     <dependency reexport="false">422c2909-59d6-41a9-b318-40e6256b250f(jetbrains.mps.ide.build)</dependency>
-    <dependency reexport="false">f1fb7b1c-ce0d-423c-9369-4a661d600029(de.slisson.mps.all.build)</dependency>
+    <dependency reexport="false">f1fb7b1c-ce0d-423c-9369-4a661d600029(de.itemis.mps.extensions.build)</dependency>
     <dependency reexport="false">db7b3503-2b94-491e-9afb-40ef2d987a04(NYoSh.build-plugins)</dependency>
     <dependency reexport="false">458e7a44-300a-4712-95cd-255c2e0c289d(XChart.newBuild)</dependency>
     <dependency reexport="false">67a7a82f-8cda-415d-bd80-b2a736c3f548(build.plugins)</dependency>
@@ -26,7 +26,7 @@
     <module reference="db7b3503-2b94-491e-9afb-40ef2d987a04(NYoSh.build-plugins)" version="0" />
     <module reference="b460c747-8fe8-48f0-9831-b1174d708742(NextflowWorkbench.build)" version="0" />
     <module reference="458e7a44-300a-4712-95cd-255c2e0c289d(XChart.newBuild)" version="0" />
-    <module reference="f1fb7b1c-ce0d-423c-9369-4a661d600029(de.slisson.mps.all.build)" version="0" />
+    <module reference="f1fb7b1c-ce0d-423c-9369-4a661d600029(de.itemis.mps.extensions.build)" version="0" />
     <module reference="422c2909-59d6-41a9-b318-40e6256b250f(jetbrains.mps.ide.build)" version="0" />
   </dependencyVersions>
 </solution>
