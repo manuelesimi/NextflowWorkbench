@@ -2,6 +2,7 @@
 <model ref="r:90a2bd8b-f00e-4e35-af4b-cd6c92f84c49(org.campagnelab.util.files.textGen)">
   <persistence version="9" />
   <languages>
+    <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
     <devkit ref="fa73d85a-ac7f-447b-846c-fcdc41caa600(jetbrains.mps.devkit.aspect.textgen)" />
   </languages>
   <imports>
@@ -54,9 +55,9 @@
       <concept id="1233749247888" name="jetbrains.mps.lang.textGen.structure.GenerateTextDeclaration" flags="in" index="11bSqf" />
     </language>
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
-      <concept id="1167227138527" name="jetbrains.mps.baseLanguage.logging.structure.LogStatement" flags="nn" index="34ab3g">
-        <property id="1167245565795" name="severity" index="35gtTG" />
-        <child id="1167227463056" name="logExpression" index="34bqiv" />
+      <concept id="2034914114981261497" name="jetbrains.mps.baseLanguage.logging.structure.LogLowLevelStatement" flags="ng" index="RRSsy">
+        <property id="2034914114981261751" name="severity" index="RRSoG" />
+        <child id="2034914114981261753" name="message" index="RRSoy" />
       </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
@@ -107,16 +108,16 @@
     <ref role="WuzLi" to="q2ta:3LlDVJSEHD1" resolve="PlainTextFile" />
     <node concept="11bSqf" id="3LlDVJSEIp5" role="11c4hB">
       <node concept="3clFbS" id="3LlDVJSEIp6" role="2VODD2">
-        <node concept="34ab3g" id="7b1yRZVBjWJ" role="3cqZAp">
-          <property role="35gtTG" value="info" />
-          <node concept="3cpWs3" id="7b1yRZVBk8C" role="34bqiv">
-            <node concept="2OqwBi" id="7b1yRZVBkdw" role="3uHU7w">
-              <node concept="117lpO" id="7b1yRZVBk93" role="2Oq$k0" />
-              <node concept="3TrcHB" id="7b1yRZVBkoE" role="2OqNvi">
+        <node concept="RRSsy" id="7N6u_AKke9V" role="3cqZAp">
+          <property role="RRSoG" value="info" />
+          <node concept="3cpWs3" id="7N6u_AKkehX" role="RRSoy">
+            <node concept="2OqwBi" id="7N6u_AKkehY" role="3uHU7w">
+              <node concept="117lpO" id="7N6u_AKkehZ" role="2Oq$k0" />
+              <node concept="3TrcHB" id="7N6u_AKkei0" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
               </node>
             </node>
-            <node concept="Xl_RD" id="7b1yRZVBjWL" role="3uHU7B">
+            <node concept="Xl_RD" id="7N6u_AKkei1" role="3uHU7B">
               <property role="Xl_RC" value="writing output file: " />
             </node>
           </node>
