@@ -2,10 +2,9 @@
 <model ref="r:41a89c07-a9d8-4a41-aa71-a98d76b35438(org.campagnelab.bash.nyosh.typesystem)">
   <persistence version="9" />
   <languages>
-    <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="0" />
     <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
     <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+    <devkit ref="00000000-0000-4000-0000-1de82b3a4936(jetbrains.mps.devkit.aspect.typesystem)" />
   </languages>
   <imports>
     <import index="bs99" ref="r:29480130-ace9-4987-af0f-a6efca1c6495(org.campagnelab.gobyweb.interactive.structure)" implicit="true" />
@@ -200,7 +199,7 @@
                     <ref role="1YBMHb" node="10rnQzwWWml" resolve="script" />
                   </node>
                   <node concept="3TrEf2" id="5VB4_zEGfi9" role="2OqNvi">
-                    <ref role="3Tt5mk" to="iuj9:5VB4_zEuxaq" />
+                    <ref role="3Tt5mk" to="iuj9:5VB4_zEuxaq" resolve="resourceSpecs" />
                   </node>
                 </node>
               </node>
@@ -213,7 +212,7 @@
                       <ref role="3cqZAo" node="10rnQzwWWSc" resolve="env" />
                     </node>
                     <node concept="3TrEf2" id="10rnQzwX0x$" role="2OqNvi">
-                      <ref role="3Tt5mk" to="bs99:1LS_mj908EI" />
+                      <ref role="3Tt5mk" to="bs99:1LS_mj908EI" resolve="jobArea" />
                     </node>
                   </node>
                   <node concept="3TrcHB" id="10rnQzwX0Y8" role="2OqNvi">
@@ -228,7 +227,7 @@
                     <ref role="3cqZAo" node="10rnQzwWWSc" resolve="env" />
                   </node>
                   <node concept="3TrEf2" id="10rnQzwWZ_p" role="2OqNvi">
-                    <ref role="3Tt5mk" to="bs99:1LS_mj908EI" />
+                    <ref role="3Tt5mk" to="bs99:1LS_mj908EI" resolve="jobArea" />
                   </node>
                 </node>
                 <node concept="3w_OXm" id="10rnQzwX00L" role="2OqNvi" />
@@ -248,7 +247,7 @@
                     <ref role="1YBMHb" node="10rnQzwWWml" resolve="script" />
                   </node>
                   <node concept="3TrEf2" id="5VB4_zEuKwB" role="2OqNvi">
-                    <ref role="3Tt5mk" to="iuj9:5VB4_zEuxaq" />
+                    <ref role="3Tt5mk" to="iuj9:5VB4_zEuxaq" resolve="resourceSpecs" />
                   </node>
                 </node>
                 <node concept="2qgKlT" id="5VB4_zEuLcg" role="2OqNvi">
@@ -299,7 +298,7 @@
                 <ref role="1YBMHb" node="6A9boVQYVb$" resolve="referenceAttribute" />
               </node>
               <node concept="3TrEf2" id="6A9boVQYWAM" role="2OqNvi">
-                <ref role="3Tt5mk" to="iuj9:6A9boVQTogb" />
+                <ref role="3Tt5mk" to="iuj9:6A9boVQTogb" resolve="ref" />
               </node>
             </node>
             <node concept="3Cnw8n" id="6A9boVQYWEy" role="2OEOjU">
@@ -321,7 +320,7 @@
                 <ref role="1YBMHb" node="6A9boVQYVb$" resolve="referenceAttribute" />
               </node>
               <node concept="3TrEf2" id="6A9boVQYVpx" role="2OqNvi">
-                <ref role="3Tt5mk" to="iuj9:6A9boVQTogb" />
+                <ref role="3Tt5mk" to="iuj9:6A9boVQTogb" resolve="ref" />
               </node>
             </node>
             <node concept="25OxAV" id="6A9boVR4nS6" role="2OqNvi" />
@@ -388,7 +387,7 @@
                     <ref role="QwW4h" node="6A9boVQYWFF" resolve="reference" />
                   </node>
                   <node concept="3TrEf2" id="6A9boVQZfwx" role="2OqNvi">
-                    <ref role="3Tt5mk" to="iuj9:6A9boVQTogb" />
+                    <ref role="3Tt5mk" to="iuj9:6A9boVQTogb" resolve="ref" />
                   </node>
                 </node>
               </node>
@@ -439,7 +438,7 @@
                 <ref role="1YBMHb" node="4DwTgsTMuyb" resolve="adapter" />
               </node>
               <node concept="3TrEf2" id="4DwTgsTMxJ8" role="2OqNvi">
-                <ref role="3Tt5mk" to="iuj9:6A9boVQPem8" />
+                <ref role="3Tt5mk" to="iuj9:6A9boVQPem8" resolve="attribute" />
               </node>
             </node>
           </node>
@@ -451,7 +450,7 @@
                 <ref role="1YBMHb" node="4DwTgsTMuyb" resolve="adapter" />
               </node>
               <node concept="3TrEf2" id="4DwTgsTMuSM" role="2OqNvi">
-                <ref role="3Tt5mk" to="iuj9:6A9boVQPem8" />
+                <ref role="3Tt5mk" to="iuj9:6A9boVQPem8" resolve="attribute" />
               </node>
             </node>
             <node concept="2qgKlT" id="4DwTgsTMvr5" role="2OqNvi">

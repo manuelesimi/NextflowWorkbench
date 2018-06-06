@@ -2,7 +2,7 @@
 <model ref="r:ec4f17c1-cc50-42c2-b7f5-bbcb63f141c2(org.campagnelab.icons.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="11" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -34,8 +34,6 @@
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
-        <property id="1073389446425" name="vertical" index="3EZMnw" />
-        <property id="1073389446426" name="gridLayout" index="3EZMnz" />
         <child id="1106270802874" name="cellLayout" index="2iSdaV" />
         <child id="1073389446424" name="childCellModel" index="3EZMnx" />
       </concept>
@@ -57,8 +55,6 @@
       <property role="3F0ifm" value="$icon$" />
     </node>
     <node concept="3EZMnI" id="g_ucs4S" role="6VMZX">
-      <property role="3EZMnw" value="true" />
-      <property role="3EZMnz" value="true" />
       <node concept="PMmxH" id="hF4Fl_7" role="3EZMnx">
         <ref role="PMmxG" to="tpc5:hF4ssnw" resolve="_CellModel_Common" />
       </node>
@@ -69,9 +65,7 @@
         <property role="3F0ifm" value="Icon cell:" />
       </node>
       <node concept="3EZMnI" id="hF4Ff3Y" role="3EZMnx">
-        <property role="3EZMnw" value="true" />
         <node concept="3EZMnI" id="hF4FgO4" role="3EZMnx">
-          <property role="3EZMnw" value="false" />
           <node concept="3F0ifn" id="hF4FgO5" role="3EZMnx">
             <property role="3F0ifm" value="icon path: " />
             <ref role="1k5W1q" to="tpc5:hF4H1c8" resolve="property" />

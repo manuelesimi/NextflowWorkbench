@@ -2,7 +2,7 @@
 <model ref="r:1dd17313-65f8-4a8b-9990-ad71037db82b(org.campagnelab.workflow.languages.behavior)">
   <persistence version="9" />
   <languages>
-    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="0" />
+    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="1" />
     <use id="ed6d7656-532c-4bc2-81d1-af945aeb8280" name="jetbrains.mps.baseLanguage.blTypes" version="0" />
     <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
     <use id="d8f591ec-4d86-4af2-9f92-a9e93c803ffa" name="jetbrains.mps.lang.scopes" version="0" />
@@ -108,14 +108,13 @@
       <concept id="4693937538533521280" name="jetbrains.mps.lang.smodel.structure.OfConceptOperation" flags="ng" index="v3k3i">
         <child id="4693937538533538124" name="requestedConcept" index="v3oSu" />
       </concept>
-      <concept id="8866923313515890008" name="jetbrains.mps.lang.smodel.structure.AsNodeOperation" flags="nn" index="FGMqu" />
       <concept id="1171305280644" name="jetbrains.mps.lang.smodel.structure.Node_GetDescendantsOperation" flags="nn" index="2Rf3mk" />
       <concept id="1171407110247" name="jetbrains.mps.lang.smodel.structure.Node_GetAncestorOperation" flags="nn" index="2Xjw5R" />
-      <concept id="2644386474300074836" name="jetbrains.mps.lang.smodel.structure.ConceptIdRefExpression" flags="nn" index="35c_gC">
-        <reference id="2644386474300074837" name="conceptDeclaration" index="35c_gD" />
-      </concept>
       <concept id="1144101972840" name="jetbrains.mps.lang.smodel.structure.OperationParm_Concept" flags="ng" index="1xMEDy">
         <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
+      </concept>
+      <concept id="1219352745532" name="jetbrains.mps.lang.smodel.structure.NodeRefExpression" flags="nn" index="3B5_sB">
+        <reference id="1219352800908" name="referentNode" index="3B5MYn" />
       </concept>
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
@@ -186,7 +185,7 @@
                       <ref role="3cqZAo" node="7ejpSqHl4bg" resolve="process" />
                     </node>
                     <node concept="3Tsc0h" id="7ejpSqHldOi" role="2OqNvi">
-                      <ref role="3TtcxE" to="iowz:6tX5nBTaziI" />
+                      <ref role="3TtcxE" to="iowz:6tX5nBTaziI" resolve="inputs" />
                     </node>
                   </node>
                   <node concept="v3k3i" id="7ejpSqHlJZL" role="2OqNvi">
@@ -199,11 +198,8 @@
             </node>
           </node>
           <node concept="3clFbC" id="7ejpSqHavJI" role="3clFbw">
-            <node concept="2OqwBi" id="7ejpSqHazag" role="3uHU7w">
-              <node concept="35c_gC" id="7ejpSqHavLz" role="2Oq$k0">
-                <ref role="35c_gD" to="iowz:2fLVrqPJSZI" resolve="ProcessInput" />
-              </node>
-              <node concept="FGMqu" id="7ejpSqHazx3" role="2OqNvi" />
+            <node concept="3B5_sB" id="7ejpSqHazag" role="3uHU7w">
+              <ref role="3B5MYn" to="iowz:2fLVrqPJSZI" resolve="ProcessInput" />
             </node>
             <node concept="37vLTw" id="7ejpSqHavHn" role="3uHU7B">
               <ref role="3cqZAo" node="7ejpSqHaiAg" resolve="kind" />
@@ -222,7 +218,7 @@
                       <ref role="3cqZAo" node="7ejpSqHl4bg" resolve="process" />
                     </node>
                     <node concept="3Tsc0h" id="7ejpSqHlesL" role="2OqNvi">
-                      <ref role="3TtcxE" to="iowz:6tX5nBTaziI" />
+                      <ref role="3TtcxE" to="iowz:6tX5nBTaziI" resolve="inputs" />
                     </node>
                   </node>
                   <node concept="3goQfb" id="7ejpSqHli9U" role="2OqNvi">
@@ -254,11 +250,8 @@
             </node>
           </node>
           <node concept="3clFbC" id="7ejpSqHgRKr" role="3clFbw">
-            <node concept="2OqwBi" id="7ejpSqHgRKs" role="3uHU7w">
-              <node concept="35c_gC" id="7ejpSqHgRKt" role="2Oq$k0">
-                <ref role="35c_gD" to="iowz:6qiI2N5sbyo" resolve="TupleElement" />
-              </node>
-              <node concept="FGMqu" id="7ejpSqHgRKu" role="2OqNvi" />
+            <node concept="3B5_sB" id="7ejpSqHgRKs" role="3uHU7w">
+              <ref role="3B5MYn" to="iowz:6qiI2N5sbyo" resolve="TupleElement" />
             </node>
             <node concept="37vLTw" id="7ejpSqHgRKv" role="3uHU7B">
               <ref role="3cqZAo" node="7ejpSqHaiAg" resolve="kind" />

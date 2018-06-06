@@ -2,9 +2,7 @@
 <model ref="r:ca9c89c0-011f-4597-8d3e-576d9add5d28(org.campagnelab.docker.structure)">
   <persistence version="9" />
   <languages>
-    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="3" />
-    <use id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources" version="2" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+    <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
     <import index="87nw" ref="r:ca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3(de.slisson.mps.richtext.structure)" />
@@ -12,6 +10,9 @@
   </imports>
   <registry>
     <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
+      <concept id="5177162104569058199" name="jetbrains.mps.lang.resources.structure.HelpURL" flags="ng" index="1sEMCm">
+        <property id="5177162104569058200" name="url" index="1sEMCp" />
+      </concept>
       <concept id="8974276187400029883" name="jetbrains.mps.lang.resources.structure.FileIcon" flags="ng" index="1QGGSu">
         <property id="2756621024541341363" name="file" index="1iqoE4" />
       </concept>
@@ -21,12 +22,12 @@
         <property id="1225118933224" name="comment" index="YLQ7P" />
       </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
-        <property id="2465654535473034588" name="helpURL" index="2Bxbrw" />
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
         <property id="4628067390765907488" name="conceptShortDescription" index="R4oN_" />
         <property id="4628067390765956807" name="final" index="R5$K2" />
         <property id="4628067390765956802" name="abstract" index="R5$K7" />
         <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
+        <child id="1780177113170204155" name="helpURL" index="bvy1s" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
@@ -163,7 +164,6 @@
     <property role="R4oN_" value="Specifies who maintains this dockerfile" />
     <property role="34LRSv" value="MAINTAINER" />
     <property role="3GE5qa" value="instructions" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#maintainer" />
     <property role="EcuMT" value="1893262236499932072" />
     <ref role="1TJDcQ" node="1D6dZ$xfn3w" resolve="DockerBuildInstruction" />
     <node concept="1TJgyi" id="1D6dZ$xfneD" role="1TKVEl">
@@ -176,13 +176,15 @@
       <property role="IQ2nx" value="1893262236499932075" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1sEMCm" id="7rUxCdAUHVu" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#maintainer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1D6dZ$xfnpX">
     <property role="TrG5h" value="FromInstruction" />
     <property role="34LRSv" value="FROM" />
     <property role="R4oN_" value="The container to build from" />
     <property role="3GE5qa" value="instructions" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#from" />
     <property role="EcuMT" value="1893262236499932797" />
     <ref role="1TJDcQ" node="1D6dZ$xfn3w" resolve="DockerBuildInstruction" />
     <node concept="1TJgyj" id="1D6dZ$xfnq0" role="1TKVEi">
@@ -192,13 +194,15 @@
       <property role="IQ2ns" value="1893262236499932800" />
       <ref role="20lvS9" node="1D6dZ$xcXJU" resolve="ImageInfoForDockerContainer" />
     </node>
+    <node concept="1sEMCm" id="7rUxCdAUHVn" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#from" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1D6dZ$xfNCh">
     <property role="TrG5h" value="RunInstruction" />
     <property role="34LRSv" value="RUN" />
     <property role="R4oN_" value="Run a command in the container" />
     <property role="3GE5qa" value="instructions" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#run" />
     <property role="EcuMT" value="1893262236500048401" />
     <ref role="1TJDcQ" node="1D6dZ$xfn3w" resolve="DockerBuildInstruction" />
     <node concept="1TJgyj" id="1D6dZ$xfNXI" role="1TKVEi">
@@ -207,13 +211,15 @@
       <property role="IQ2ns" value="1893262236500049774" />
       <ref role="20lvS9" to="87nw:2dWzqxEB$Tx" resolve="Text" />
     </node>
+    <node concept="1sEMCm" id="7rUxCdAUHVt" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#run" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1D6dZ$xgNkx">
     <property role="TrG5h" value="AddInstruction" />
     <property role="34LRSv" value="ADD" />
     <property role="R4oN_" value="Add a file to the container" />
     <property role="3GE5qa" value="instructions" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#add" />
     <property role="EcuMT" value="1893262236500309281" />
     <ref role="1TJDcQ" node="1D6dZ$xfn3w" resolve="DockerBuildInstruction" />
     <node concept="1TJgyj" id="BMuHr2RziJ" role="1TKVEi">
@@ -235,6 +241,9 @@
       <property role="TrG5h" value="destination" />
       <property role="IQ2nx" value="1893262236500309977" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1sEMCm" id="7rUxCdAUHVs" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#add" />
     </node>
   </node>
   <node concept="1TIwiD" id="7MTH03m4HK1">
@@ -391,7 +400,6 @@
     <property role="34LRSv" value="ENV" />
     <property role="3GE5qa" value="instructions" />
     <property role="R4oN_" value="Define an environment variable" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#env" />
     <property role="EcuMT" value="4077712437829700149" />
     <ref role="1TJDcQ" node="1D6dZ$xfn3w" resolve="DockerBuildInstruction" />
     <node concept="1TJgyj" id="3DjWPY6Pi20" role="1TKVEi">
@@ -400,6 +408,9 @@
       <property role="20lbJX" value="1..n" />
       <property role="IQ2ns" value="4202970468876361856" />
       <ref role="20lvS9" node="3DjWPY6PrI8" resolve="EnvVariableAssignment" />
+    </node>
+    <node concept="1sEMCm" id="7rUxCdAUHVy" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#env" />
     </node>
   </node>
   <node concept="1TIwiD" id="3DjWPY6PrI8">
@@ -423,7 +434,6 @@
     <property role="34LRSv" value="CMD" />
     <property role="R4oN_" value="Specifies the default command arguments for the container" />
     <property role="3GE5qa" value="instructions" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#cmd" />
     <property role="EcuMT" value="4202970468879724310" />
     <ref role="1TJDcQ" node="1D6dZ$xfn3w" resolve="DockerBuildInstruction" />
     <node concept="1TJgyj" id="33aW7OwA6gp" role="1TKVEi">
@@ -432,6 +442,9 @@
       <property role="20lbJX" value="1..n" />
       <property role="IQ2ns" value="3515886879324529689" />
       <ref role="20lvS9" node="33aW7OwAeeF" resolve="CommandElement" />
+    </node>
+    <node concept="1sEMCm" id="7rUxCdAUHVr" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#cmd" />
     </node>
   </node>
   <node concept="1TIwiD" id="33aW7OwAeeF">
@@ -450,7 +463,6 @@
     <property role="TrG5h" value="LabelInstruction" />
     <property role="34LRSv" value="LABEL" />
     <property role="R4oN_" value="Use to define meta-data for an image" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#label" />
     <property role="EcuMT" value="3515886879331681162" />
     <ref role="1TJDcQ" node="1D6dZ$xfn3w" resolve="DockerBuildInstruction" />
     <node concept="1TJgyj" id="33aW7Ox1ofp" role="1TKVEi">
@@ -460,13 +472,15 @@
       <property role="IQ2ns" value="3515886879331681241" />
       <ref role="20lvS9" node="3DjWPY6PrI8" resolve="EnvVariableAssignment" />
     </node>
+    <node concept="1sEMCm" id="7rUxCdAUHVm" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#label" />
+    </node>
   </node>
   <node concept="1TIwiD" id="33aW7OxaW4W">
     <property role="3GE5qa" value="instructions" />
     <property role="TrG5h" value="ExposeInstruction" />
     <property role="34LRSv" value="EXPOSE" />
     <property role="R4oN_" value="Expose ports, declaring that the container will listen to them" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#expose" />
     <property role="EcuMT" value="3515886879334187324" />
     <ref role="1TJDcQ" node="1D6dZ$xfn3w" resolve="DockerBuildInstruction" />
     <node concept="1TJgyj" id="33aW7OxaWlY" role="1TKVEi">
@@ -475,6 +489,9 @@
       <property role="20lbJX" value="1..n" />
       <property role="IQ2ns" value="3515886879334188414" />
       <ref role="20lvS9" node="33aW7OxaW6z" resolve="ExposedPort" />
+    </node>
+    <node concept="1sEMCm" id="7rUxCdAUHVx" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#expose" />
     </node>
   </node>
   <node concept="1TIwiD" id="33aW7OxaW6z">
@@ -493,7 +510,6 @@
     <property role="TrG5h" value="OnBuildInstruction" />
     <property role="34LRSv" value="ONBUILD" />
     <property role="R4oN_" value="Execute this intruction on the next build that uses this image (FROM)" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#onbuild" />
     <property role="EcuMT" value="3515886879335677516" />
     <ref role="1TJDcQ" node="1D6dZ$xfn3w" resolve="DockerBuildInstruction" />
     <node concept="1TJgyj" id="33aW7OxgBUl" role="1TKVEi">
@@ -503,13 +519,15 @@
       <property role="IQ2ns" value="3515886879335677589" />
       <ref role="20lvS9" node="1D6dZ$xfn3w" resolve="DockerBuildInstruction" />
     </node>
+    <node concept="1sEMCm" id="7rUxCdAUHVl" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#onbuild" />
+    </node>
   </node>
   <node concept="1TIwiD" id="BMuHr2ytQI">
     <property role="3GE5qa" value="instructions" />
     <property role="TrG5h" value="WorkdirInstruction" />
     <property role="34LRSv" value="WORKDIR" />
     <property role="R4oN_" value="Set the work directory to use when running the container" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#workdir" />
     <property role="EcuMT" value="716770353510735278" />
     <ref role="1TJDcQ" node="1D6dZ$xfn3w" resolve="DockerBuildInstruction" />
     <node concept="1TJgyi" id="BMuHr2ytTW" role="1TKVEl">
@@ -517,19 +535,24 @@
       <property role="IQ2nx" value="716770353510735484" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1sEMCm" id="7rUxCdAUHVw" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#workdir" />
+    </node>
   </node>
   <node concept="1TIwiD" id="BMuHr2ADDA">
     <property role="3GE5qa" value="instructions" />
     <property role="TrG5h" value="UserInstruction" />
     <property role="34LRSv" value="USER" />
     <property role="R4oN_" value="Set the user to run as" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#user" />
     <property role="EcuMT" value="716770353511832166" />
     <ref role="1TJDcQ" node="1D6dZ$xfn3w" resolve="DockerBuildInstruction" />
     <node concept="1TJgyi" id="BMuHr2ADDB" role="1TKVEl">
       <property role="TrG5h" value="username" />
       <property role="IQ2nx" value="716770353511832167" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1sEMCm" id="7rUxCdAUHVo" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#user" />
     </node>
   </node>
   <node concept="1TIwiD" id="BMuHr2DQt$">
@@ -549,9 +572,11 @@
     <property role="TrG5h" value="CopyInstruction" />
     <property role="34LRSv" value="COPY" />
     <property role="R4oN_" value="Copy file(s) to the container" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#copy" />
     <property role="EcuMT" value="716770353515919183" />
     <ref role="1TJDcQ" node="1D6dZ$xgNkx" resolve="AddInstruction" />
+    <node concept="1sEMCm" id="7rUxCdAUHVv" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#copy" />
+    </node>
   </node>
   <node concept="1TIwiD" id="BMuHr2Rz41">
     <property role="3GE5qa" value="instructions" />
@@ -569,16 +594,17 @@
     <property role="34LRSv" value="ENTRYPOINT" />
     <property role="R4oN_" value="Specifies the default command/entry point" />
     <property role="3GE5qa" value="instructions" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#entrypoint" />
     <property role="EcuMT" value="716770353519069414" />
     <ref role="1TJDcQ" node="3DjWPY726Wm" resolve="CmdInstruction" />
+    <node concept="1sEMCm" id="7rUxCdAUHVp" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#entrypoint" />
+    </node>
   </node>
   <node concept="1TIwiD" id="BMuHr35ork">
     <property role="3GE5qa" value="instructions" />
     <property role="TrG5h" value="VolumeInstruction" />
     <property role="34LRSv" value="VOLUME" />
     <property role="R4oN_" value="Define one or more mount volumes" />
-    <property role="2Bxbrw" value="https://docs.docker.com/reference/builder/#volume" />
     <property role="EcuMT" value="716770353519888084" />
     <ref role="1TJDcQ" node="1D6dZ$xfn3w" resolve="DockerBuildInstruction" />
     <node concept="1TJgyj" id="BMuHr35oBj" role="1TKVEi">
@@ -587,6 +613,9 @@
       <property role="20lbJX" value="1..n" />
       <property role="IQ2ns" value="716770353519888851" />
       <ref role="20lvS9" node="BMuHr35oBd" resolve="VolumeName" />
+    </node>
+    <node concept="1sEMCm" id="7rUxCdAUHVq" role="bvy1s">
+      <property role="1sEMCp" value="https://docs.docker.com/reference/builder/#volume" />
     </node>
   </node>
   <node concept="1TIwiD" id="BMuHr35oBd">

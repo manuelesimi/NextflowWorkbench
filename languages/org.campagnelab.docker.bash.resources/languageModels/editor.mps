@@ -2,8 +2,8 @@
 <model ref="r:e067ad8d-0fb6-4da1-b3c6-24e177194191(org.campagnelab.bash.nyosh.editor)">
   <persistence version="9" />
   <languages>
-    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="3" />
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
+    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="4" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="11" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -66,6 +66,9 @@
       </concept>
       <concept id="1186414860679" name="jetbrains.mps.lang.editor.structure.EditableStyleClassItem" flags="ln" index="VPxyj" />
       <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
+      <concept id="1164996492011" name="jetbrains.mps.lang.editor.structure.CellMenuPart_ReferentPrimary" flags="ng" index="ZcVJ$">
+        <child id="6918029743851332884" name="matchingText" index="1NQq9M" />
+      </concept>
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
       <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
       <concept id="3383245079137382180" name="jetbrains.mps.lang.editor.structure.StyleClass" flags="ig" index="14StLt" />
@@ -133,6 +136,8 @@
       <concept id="1225900081164" name="jetbrains.mps.lang.editor.structure.CellModel_ReadOnlyModelAccessor" flags="sg" stub="3708815482283559694" index="1HlG4h">
         <child id="1225900141900" name="modelAccessor" index="1HlULh" />
       </concept>
+      <concept id="6918029743850363447" name="jetbrains.mps.lang.editor.structure.ConceptFunctionParameter_targetNode" flags="ng" index="1NM5Ph" />
+      <concept id="6918029743850308467" name="jetbrains.mps.lang.editor.structure.QueryFunction_RefPresentation" flags="ig" index="1NMggl" />
       <concept id="1176717841777" name="jetbrains.mps.lang.editor.structure.QueryFunction_ModelAccess_Getter" flags="in" index="3TQlhw" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
@@ -801,6 +806,27 @@
         <node concept="1sVBvm" id="7SK$kQZxXoN" role="1sWHZn">
           <node concept="3F1sOY" id="7SK$kQZxXp3" role="2wV5jI">
             <ref role="1NtTu8" to="iuj9:7SK$kQZxXho" resolve="value" />
+          </node>
+        </node>
+        <node concept="OXEIz" id="7rUxCdAUHRG" role="P5bDN">
+          <node concept="ZcVJ$" id="7rUxCdAUHRF" role="OY2wv">
+            <node concept="1NMggl" id="7rUxCdAUHRH" role="1NQq9M">
+              <node concept="3clFbS" id="7rUxCdAUHRI" role="2VODD2">
+                <node concept="3clFbF" id="7rUxCdAUHRJ" role="3cqZAp">
+                  <node concept="2OqwBi" id="7rUxCdAUHRK" role="3clFbG">
+                    <node concept="2OqwBi" id="7rUxCdAUHRL" role="2Oq$k0">
+                      <node concept="1NM5Ph" id="7rUxCdAUHRP" role="2Oq$k0" />
+                      <node concept="3TrEf2" id="7rUxCdAUHRN" role="2OqNvi">
+                        <ref role="3Tt5mk" to="iuj9:7SK$kQZxXho" resolve="value" />
+                      </node>
+                    </node>
+                    <node concept="2qgKlT" id="7rUxCdAUHRO" role="2OqNvi">
+                      <ref role="37wK5l" to="6na6:7SK$kQZAiSO" resolve="presentation" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>

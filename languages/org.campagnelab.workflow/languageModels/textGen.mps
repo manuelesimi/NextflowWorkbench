@@ -2,12 +2,11 @@
 <model ref="r:bb4b0e2d-ae9c-4abc-ab1e-fcb06cf3d71b(org.campagnelab.workflow.textGen)">
   <persistence version="9" />
   <languages>
-    <use id="b83431fe-5c8f-40bc-8a36-65e25f4dd253" name="jetbrains.mps.lang.textGen" version="0" />
-    <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="0" />
-    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="3" />
+    <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="1" />
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="6" />
     <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
-    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="6" />
+    <devkit ref="fa73d85a-ac7f-447b-846c-fcdc41caa600(jetbrains.mps.devkit.aspect.textgen)" />
   </languages>
   <imports>
     <import index="iowz" ref="r:0583c0e9-dc14-4152-95a4-93036dce931b(org.campagnelab.workflow.structure)" />
@@ -212,7 +211,7 @@
       <concept id="1236188139846" name="jetbrains.mps.lang.textGen.structure.WithIndentOperation" flags="nn" index="3izx1p">
         <child id="1236188238861" name="list" index="3izTki" />
       </concept>
-      <concept id="1234351783410" name="jetbrains.mps.lang.textGen.structure.BufferParameter" flags="nn" index="1_6nNH" />
+      <concept id="1234351783410" name="jetbrains.mps.lang.textGen.structure.BufferParameter" flags="ng" index="1_6nNH" />
       <concept id="1234524838116" name="jetbrains.mps.lang.textGen.structure.UtilityMethodDeclaration" flags="ng" index="1JqxBV" />
       <concept id="1234529062040" name="jetbrains.mps.lang.textGen.structure.UtilityMethodCall" flags="nn" index="1JECQ7">
         <reference id="1234529163244" name="function" index="1JF1rN" />
@@ -259,8 +258,8 @@
       <concept id="7453996997717780434" name="jetbrains.mps.lang.smodel.structure.Node_GetSConceptOperation" flags="nn" index="2yIwOk" />
       <concept id="8758390115028452779" name="jetbrains.mps.lang.smodel.structure.Node_GetReferencesOperation" flags="nn" index="2z74zc" />
       <concept id="2396822768958367367" name="jetbrains.mps.lang.smodel.structure.AbstractTypeCastExpression" flags="nn" index="$5XWr">
-        <reference id="6733348108486823428" name="concept" index="1m5ApE" />
         <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
+        <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
       </concept>
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
       <concept id="1145383075378" name="jetbrains.mps.lang.smodel.structure.SNodeListType" flags="in" index="2I9FWS">
@@ -1208,7 +1207,6 @@
                           <node concept="3cpWsn" id="1D3_Ugf7d5D" role="3cpWs9">
                             <property role="TrG5h" value="inputChannel" />
                             <node concept="1PxgMI" id="1D3_Ugf7dUC" role="33vP2m">
-                              <ref role="1m5ApE" to="iowz:7gAPJCERwXU" resolve="InputChannel" />
                               <node concept="2OqwBi" id="34JZ5vrZn2y" role="1m5AlR">
                                 <node concept="2OqwBi" id="34JZ5vrZlQN" role="2Oq$k0">
                                   <node concept="37vLTw" id="34JZ5vrZlPk" role="2Oq$k0">
@@ -1223,6 +1221,9 @@
                                     <ref role="3cqZAo" node="34JZ5vrZa3G" resolve="i" />
                                   </node>
                                 </node>
+                              </node>
+                              <node concept="chp4Y" id="7rUxCdAUJbP" role="3oSUPX">
+                                <ref role="cht4Q" to="iowz:7gAPJCERwXU" resolve="InputChannel" />
                               </node>
                             </node>
                             <node concept="3Tqbb2" id="1D3_Ugf7dEh" role="1tU5fm">
@@ -1518,7 +1519,6 @@
                                 </node>
                                 <node concept="TSZUe" id="59BvSKQDQhG" role="2OqNvi">
                                   <node concept="1PxgMI" id="59BvSKQE5vd" role="25WWJ7">
-                                    <ref role="1m5ApE" to="iowz:5frYURevrjw" resolve="DuplicateOutputChannelList" />
                                     <node concept="2OqwBi" id="59BvSKQE5cZ" role="1m5AlR">
                                       <node concept="2OqwBi" id="59BvSKQE5d0" role="2Oq$k0">
                                         <node concept="37vLTw" id="59BvSKQE5d1" role="2Oq$k0">
@@ -1533,6 +1533,9 @@
                                           <ref role="3cqZAo" node="34JZ5vs6EPX" resolve="i" />
                                         </node>
                                       </node>
+                                    </node>
+                                    <node concept="chp4Y" id="7rUxCdAUJcd" role="3oSUPX">
+                                      <ref role="cht4Q" to="iowz:5frYURevrjw" resolve="DuplicateOutputChannelList" />
                                     </node>
                                   </node>
                                 </node>
@@ -4943,8 +4946,10 @@
             <node concept="3K4zz7" id="1dL8OevCwRu" role="33vP2m">
               <node concept="2OqwBi" id="1dL8OevCxbo" role="3K4E3e">
                 <node concept="1PxgMI" id="1dL8OevCx3g" role="2Oq$k0">
-                  <ref role="1m5ApE" to="iowz:1dL8OevCtTA" resolve="FunctionNAinNextflow" />
                   <node concept="117lpO" id="1dL8OevCwV1" role="1m5AlR" />
+                  <node concept="chp4Y" id="7rUxCdAUJc2" role="3oSUPX">
+                    <ref role="cht4Q" to="iowz:1dL8OevCtTA" resolve="FunctionNAinNextflow" />
+                  </node>
                 </node>
                 <node concept="2qgKlT" id="1dL8OevCxiF" role="2OqNvi">
                   <ref role="37wK5l" to="mqvz:1dL8OevCtTE" resolve="functionName" />

@@ -2,8 +2,7 @@
 <model ref="r:8cf08a21-47f1-49cc-87d8-e3a9f075d9e1(org.campagnelab.docker.bash.typesystem)">
   <persistence version="9" />
   <languages>
-    <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="0" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+    <devkit ref="00000000-0000-4000-0000-1de82b3a4936(jetbrains.mps.devkit.aspect.typesystem)" />
   </languages>
   <imports>
     <import index="cb06" ref="r:28ea7b9c-cb3a-4bec-8a85-2ccbe0339d0d(org.campagnelab.docker.bash.behavior)" />
@@ -201,7 +200,7 @@
                 <ref role="1YBMHb" node="2h_fDmyfOIW" resolve="interactivePath" />
               </node>
               <node concept="3Tsc0h" id="2h_fDmyfOIU" role="2OqNvi">
-                <ref role="3TtcxE" to="r9td:2h_fDmyfOuX" />
+                <ref role="3TtcxE" to="r9td:2h_fDmyfOuX" resolve="path" />
               </node>
             </node>
             <node concept="34oBXx" id="2h_fDmyfOIV" role="2OqNvi" />
@@ -277,7 +276,7 @@
                 <ref role="1YBMHb" node="2yVjOHGueC4" resolve="dockerBash" />
               </node>
               <node concept="3TrEf2" id="4_wVviqC5UF" role="2OqNvi">
-                <ref role="3Tt5mk" to="r9td:8cuIHOGcLk" />
+                <ref role="3Tt5mk" to="r9td:8cuIHOGcLk" resolve="script" />
               </node>
             </node>
           </node>

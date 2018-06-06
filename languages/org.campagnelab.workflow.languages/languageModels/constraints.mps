@@ -2,8 +2,7 @@
 <model ref="r:f8221003-e505-431c-8f90-f49c74a30ecd(org.campagnelab.workflow.languages.constraints)">
   <persistence version="9" />
   <languages>
-    <use id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints" version="0" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+    <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />
   </languages>
   <imports>
     <import index="x2t3" ref="r:8b21a7be-f3e0-446c-818d-d242846e3ce7(org.campagnelab.workflow.languages.structure)" implicit="true" />
@@ -25,7 +24,7 @@
       </concept>
     </language>
     <language id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints">
-      <concept id="1202989531578" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_CanBeAChild" flags="in" index="nKS2y" />
+      <concept id="1202989531578" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_CanBeAChild" flags="ng" index="nKS2y" />
       <concept id="8401916545537438642" name="jetbrains.mps.lang.constraints.structure.InheritedNodeScopeFactory" flags="ng" index="1dDu$B">
         <reference id="8401916545537438643" name="kind" index="1dDu$A" />
       </concept>
@@ -48,7 +47,7 @@
   <node concept="1M2fIO" id="7ejpSqHa6qV">
     <ref role="1M2myG" to="x2t3:7ejpSqH9SWf" resolve="RScriptArgumentInput" />
     <node concept="1N5Pfh" id="7ejpSqHa6qW" role="1Mr941">
-      <ref role="1N5Vy1" to="x2t3:7ejpSqH9Tbk" />
+      <ref role="1N5Vy1" to="x2t3:7ejpSqH9Tbk" resolve="input" />
       <node concept="1dDu$B" id="7ejpSqHa6r2" role="1N6uqs">
         <ref role="1dDu$A" to="iowz:2fLVrqPJSZI" resolve="ProcessInput" />
       </node>
@@ -57,7 +56,7 @@
   <node concept="1M2fIO" id="7ejpSqHm2Pc">
     <ref role="1M2myG" to="x2t3:7ejpSqHgRwA" resolve="RScriptArgumentTuple" />
     <node concept="1N5Pfh" id="7ejpSqHm2Pd" role="1Mr941">
-      <ref role="1N5Vy1" to="x2t3:7ejpSqHgRwB" />
+      <ref role="1N5Vy1" to="x2t3:7ejpSqHgRwB" resolve="input" />
       <node concept="1dDu$B" id="7ejpSqHm2Pe" role="1N6uqs">
         <ref role="1dDu$A" to="iowz:6qiI2N5sbyo" resolve="TupleElement" />
       </node>

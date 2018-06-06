@@ -182,7 +182,6 @@
       <concept id="1140131837776" name="jetbrains.mps.lang.smodel.structure.Node_ReplaceWithAnotherOperation" flags="nn" index="1P9Npp">
         <child id="1140131861877" name="replacementNode" index="1P9ThW" />
       </concept>
-      <concept id="1140133623887" name="jetbrains.mps.lang.smodel.structure.Node_DeleteOperation" flags="nn" index="1PgB_6" />
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
       </concept>
@@ -192,6 +191,7 @@
       <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
         <reference id="1138056516764" name="link" index="3Tt5mk" />
       </concept>
+      <concept id="1228341669568" name="jetbrains.mps.lang.smodel.structure.Node_DetachOperation" flags="nn" index="3YRAZt" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
@@ -962,7 +962,7 @@
                       <ref role="3cqZAo" node="itossVbmLc" resolve="next" />
                     </node>
                     <node concept="3TrEf2" id="6nPnrrhpbfI" role="2OqNvi">
-                      <ref role="3Tt5mk" to="6jv6:1D6dZ$xfNXI" />
+                      <ref role="3Tt5mk" to="6jv6:1D6dZ$xfNXI" resolve="command" />
                     </node>
                   </node>
                   <node concept="2qgKlT" id="itossVbmLs" role="2OqNvi">
@@ -983,7 +983,7 @@
             <node concept="37vLTw" id="itossVboYi" role="2Oq$k0">
               <ref role="3cqZAo" node="itossVbmLc" resolve="next" />
             </node>
-            <node concept="1PgB_6" id="itossVbqYM" role="2OqNvi" />
+            <node concept="3YRAZt" id="itossVbqYM" role="2OqNvi" />
           </node>
         </node>
       </node>
@@ -1050,7 +1050,7 @@
                   <node concept="2OqwBi" id="itossVbdaC" role="2Oq$k0">
                     <node concept="2Sf5sV" id="itossVbd8D" role="2Oq$k0" />
                     <node concept="3TrEf2" id="itossVbdt0" role="2OqNvi">
-                      <ref role="3Tt5mk" to="6jv6:1D6dZ$xfNXI" />
+                      <ref role="3Tt5mk" to="6jv6:1D6dZ$xfNXI" resolve="command" />
                     </node>
                   </node>
                   <node concept="2qgKlT" id="itossVbdRv" role="2OqNvi">
@@ -1069,7 +1069,7 @@
         <node concept="3clFbF" id="itossVbmlK" role="3cqZAp">
           <node concept="2OqwBi" id="itossVbmoM" role="3clFbG">
             <node concept="2Sf5sV" id="itossVbmlI" role="2Oq$k0" />
-            <node concept="1PgB_6" id="itossVbmI2" role="2OqNvi" />
+            <node concept="3YRAZt" id="itossVbmI2" role="2OqNvi" />
           </node>
         </node>
       </node>

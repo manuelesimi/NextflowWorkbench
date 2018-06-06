@@ -2,8 +2,7 @@
 <model ref="r:3ce23427-7343-4b6f-8fc6-415c058a7f16(org.campagnelab.workflow.nyosh.textGen)">
   <persistence version="9" />
   <languages>
-    <use id="b83431fe-5c8f-40bc-8a36-65e25f4dd253" name="jetbrains.mps.lang.textGen" version="0" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+    <devkit ref="fa73d85a-ac7f-447b-846c-fcdc41caa600(jetbrains.mps.devkit.aspect.textgen)" />
   </languages>
   <imports>
     <import index="440p" ref="r:a6c7903c-0b83-4bcf-8e49-8f150f2412bf(org.campagnelab.nyosh.interactive.structure)" implicit="true" />
@@ -109,11 +108,11 @@
                   <node concept="2OqwBi" id="4yLR7SAqtKm" role="2Oq$k0">
                     <node concept="117lpO" id="4yLR7SAqqqH" role="2Oq$k0" />
                     <node concept="3TrEf2" id="4yLR7SAqKwj" role="2OqNvi">
-                      <ref role="3Tt5mk" to="3jiv:4HNd3hiUKXQ" />
+                      <ref role="3Tt5mk" to="3jiv:4HNd3hiUKXQ" resolve="ExplicitFileBag" />
                     </node>
                   </node>
                   <node concept="3Tsc0h" id="4yLR7SAqM6S" role="2OqNvi">
-                    <ref role="3TtcxE" to="440p:4PxeyvB$vgA" />
+                    <ref role="3TtcxE" to="440p:4PxeyvB$vgA" resolve="files" />
                   </node>
                 </node>
                 <node concept="3$u5V9" id="4yLR7SAr8th" role="2OqNvi">

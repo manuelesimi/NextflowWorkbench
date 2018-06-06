@@ -2,8 +2,7 @@
 <model ref="r:a67be04c-97c1-4fb5-995f-8c68d3fa2967(org.campagnelab.docker.bash.constraints)">
   <persistence version="9" />
   <languages>
-    <use id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints" version="0" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+    <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />
   </languages>
   <imports>
     <import index="r9td" ref="r:c348bb19-2aba-41c5-afe7-9424496b2a89(org.campagnelab.docker.bash.structure)" />
@@ -231,7 +230,7 @@
                 <node concept="2OqwBi" id="6A9boVQ6c1B" role="2Oq$k0">
                   <node concept="EsrRn" id="6A9boVQ6c05" role="2Oq$k0" />
                   <node concept="3TrEf2" id="6A9boVQ6cbg" role="2OqNvi">
-                    <ref role="3Tt5mk" to="r9td:8cuIHOGcLk" />
+                    <ref role="3Tt5mk" to="r9td:8cuIHOGcLk" resolve="script" />
                   </node>
                 </node>
                 <node concept="3TrcHB" id="6A9boVQ6cCx" role="2OqNvi">

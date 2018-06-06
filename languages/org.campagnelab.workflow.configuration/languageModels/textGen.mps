@@ -2,8 +2,7 @@
 <model ref="r:c4534a83-f4a7-4cda-99a5-901537cef15e(org.campagnelab.workflow.configuration.textGen)">
   <persistence version="9" />
   <languages>
-    <use id="b83431fe-5c8f-40bc-8a36-65e25f4dd253" name="jetbrains.mps.lang.textGen" version="-1" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+    <devkit ref="fa73d85a-ac7f-447b-846c-fcdc41caa600(jetbrains.mps.devkit.aspect.textgen)" />
   </languages>
   <imports>
     <import index="dlwq" ref="r:c01755fa-81b5-42b4-9022-2ba8b33ff6cc(org.campagnelab.workflow.configuration.structure)" />
@@ -160,8 +159,8 @@
       </concept>
       <concept id="7453996997717780434" name="jetbrains.mps.lang.smodel.structure.Node_GetSConceptOperation" flags="nn" index="2yIwOk" />
       <concept id="2396822768958367367" name="jetbrains.mps.lang.smodel.structure.AbstractTypeCastExpression" flags="nn" index="$5XWr">
-        <reference id="6733348108486823428" name="concept" index="1m5ApE" />
         <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
+        <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
       </concept>
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
       <concept id="1171315804604" name="jetbrains.mps.lang.smodel.structure.Model_RootsOperation" flags="nn" index="2RRcyG">
@@ -495,7 +494,6 @@
                 </node>
                 <node concept="2OqwBi" id="2DLgRb6lySq" role="37vLTx">
                   <node concept="1PxgMI" id="2DLgRb6lyFy" role="2Oq$k0">
-                    <ref role="1m5ApE" to="dlwq:1PwW9iwVJd4" resolve="ScratchOption" />
                     <node concept="2OqwBi" id="2DLgRb6luzS" role="1m5AlR">
                       <node concept="2OqwBi" id="2DLgRb6luzT" role="2Oq$k0">
                         <node concept="2OqwBi" id="2DLgRb6luzU" role="2Oq$k0">
@@ -531,6 +529,9 @@
                         </node>
                       </node>
                       <node concept="1uHKPH" id="2DLgRb6lu$9" role="2OqNvi" />
+                    </node>
+                    <node concept="chp4Y" id="7rUxCdAUJbB" role="3oSUPX">
+                      <ref role="cht4Q" to="dlwq:1PwW9iwVJd4" resolve="ScratchOption" />
                     </node>
                   </node>
                   <node concept="3TrcHB" id="2DLgRb6lAVV" role="2OqNvi">

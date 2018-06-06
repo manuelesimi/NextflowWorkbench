@@ -3,7 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build" version="-1" />
-    <use id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps" version="2" />
+    <use id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps" version="5" />
     <use id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml" version="-1" />
   </languages>
   <imports>
@@ -18,6 +18,7 @@
     <import index="1uca" ref="r:1990a995-1ef9-44ba-bdba-f60301d5e5f6(org.campagnelab.build.ClusterConfig)" />
     <import index="nr1s" ref="r:41c5e6e6-d21c-4739-aa05-3b0328c9486c(org.campagnelab.build.TextOutput)" />
     <import index="vh2l" ref="r:64aeeca7-3a4b-4dcc-b81a-48f20fa34cb4(org.campangelab.xchart)" />
+    <import index="trsn" ref="r:f0ddd417-c8a1-40da-9335-f5b63a47dd8c(build.plugins)" />
   </imports>
   <registry>
     <language id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml">
@@ -96,6 +97,10 @@
         <child id="7389400916848037006" name="children" index="39821P" />
       </concept>
       <concept id="841011766566059607" name="jetbrains.mps.build.structure.BuildStringNotEmpty" flags="ng" index="3_J27D" />
+      <concept id="5248329904287794596" name="jetbrains.mps.build.structure.BuildInputFiles" flags="ng" index="3LXTmp">
+        <child id="5248329904287794598" name="dir" index="3LXTmr" />
+        <child id="5248329904287794679" name="selectors" index="3LXTna" />
+      </concept>
       <concept id="4903714810883702019" name="jetbrains.mps.build.structure.BuildTextStringPart" flags="ng" index="3Mxwew">
         <property id="4903714810883755350" name="text" index="3MwjfP" />
       </concept>
@@ -142,11 +147,15 @@
       <concept id="868032131020265945" name="jetbrains.mps.build.mps.structure.BuildMPSPlugin" flags="ng" index="3b7kt6" />
       <concept id="5253498789149381388" name="jetbrains.mps.build.mps.structure.BuildMps_Module" flags="ng" index="3bQrTs">
         <property id="1500819558096356884" name="doNotCompile" index="2GAjPV" />
+        <child id="5253498789149547825" name="sources" index="3bR31x" />
         <child id="5253498789149547704" name="dependencies" index="3bR37C" />
       </concept>
       <concept id="5253498789149585690" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyOnModule" flags="ng" index="3bR9La">
         <property id="5253498789149547713" name="reexport" index="3bR36h" />
         <reference id="5253498789149547705" name="module" index="3bR37D" />
+      </concept>
+      <concept id="763829979718664966" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleResources" flags="ng" index="3rtmxn">
+        <child id="763829979718664967" name="files" index="3rtmxm" />
       </concept>
       <concept id="5507251971038816436" name="jetbrains.mps.build.mps.structure.BuildMps_Generator" flags="ng" index="1yeLz9" />
       <concept id="4278635856200826393" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyJar" flags="ng" index="1BurEX">
@@ -211,6 +220,17 @@
         </node>
       </node>
     </node>
+    <node concept="398rNT" id="1UrpUrLUcXs" role="1l3spd">
+      <property role="TrG5h" value="mps.extensions.home" />
+      <node concept="55IIr" id="1UrpUrLUcXt" role="398pKh">
+        <node concept="2Ry0Ak" id="1UrpUrLUcXu" role="iGT6I">
+          <property role="2Ry0Am" value=".." />
+          <node concept="2Ry0Ak" id="226mDSMEVJG" role="2Ry0An">
+            <property role="2Ry0Am" value="de.itemis.mps.extensions" />
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="2kB4xC" id="3gMg70bX6Gp" role="1l3spd">
       <property role="TrG5h" value="workbench_version" />
       <node concept="aVJcg" id="3gMg70bX6HN" role="aVJcv">
@@ -252,11 +272,12 @@
         <ref role="398BVh" node="4oJiZHqTePq" resolve="mps_home" />
       </node>
     </node>
-    <node concept="2sgV4H" id="4oJiZHqURiI" role="1l3spa">
-      <ref role="1l3spb" to="90a9:2Xjt3l56m0V" resolve="mps-sl-all" />
-      <node concept="55IIr" id="7UcLk9cfylT" role="2JcizS">
-        <node concept="2Ry0Ak" id="7UcLk9cfyrT" role="iGT6I">
-          <property role="2Ry0Am" value=".." />
+    <node concept="2sgV4H" id="fjQrsdNobh" role="1l3spa">
+      <ref role="1l3spb" to=":^" resolve="de.itemis.mps.extensions" />
+      <node concept="398BVA" id="fjQrsdNoqn" role="2JcizS">
+        <ref role="398BVh" node="1UrpUrLUcXs" resolve="mps.extensions.home" />
+        <node concept="2Ry0Ak" id="226mDSMEWpf" role="iGT6I">
+          <property role="2Ry0Am" value="" />
         </node>
       </node>
     </node>
@@ -1504,6 +1525,21 @@
             </node>
           </node>
         </node>
+        <node concept="3rtmxn" id="7rUxCdAUJpU" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJpV" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJpW" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJpX" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJpY" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJpZ" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.workflow.run" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="6DdhZ$aRzWF" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -1551,6 +1587,21 @@
             <ref role="3bR37D" to="ffeo:5xa9wY2vhaQ" resolve="jetbrains.mps.baseLanguage.execution.util" />
           </node>
         </node>
+        <node concept="3rtmxn" id="7rUxCdAUJq1" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJq2" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJq3" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJq4" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJq5" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJq6" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.util.execution" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="1E1JtD" id="4oJiZHqTePI" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -1574,24 +1625,13 @@
             <ref role="3bR37D" to="ffeo:7Kfy9QB6LfQ" resolve="jetbrains.mps.kernel" />
           </node>
         </node>
-        <node concept="1SiIV0" id="4oJiZHqUwpA" role="3bR37C">
-          <node concept="3bR9La" id="4oJiZHqUwpB" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" to="90a9:4p3FRivDLPG" resolve="de.slisson.mps.editor.multiline" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="4oJiZHqUwpC" role="3bR37C">
-          <node concept="1Busua" id="4oJiZHqUwpD" role="1SiIV1">
-            <ref role="1Busuk" to="90a9:1sO539bGQvB" resolve="de.slisson.mps.richtext" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="4oJiZHqUwpE" role="3bR37C">
           <node concept="1Busua" id="4oJiZHqUwpF" role="1SiIV1">
             <ref role="1Busuk" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
           </node>
         </node>
         <node concept="1yeLz9" id="4oJiZHqUwpG" role="1TViLv">
-          <property role="TrG5h" value="org.campagnelab.workflow#4801669429698558903" />
+          <property role="TrG5h" value="org.campagnelab.workflow#8573312739577064550" />
           <property role="3LESm3" value="74f88e3b-6560-4b8e-b494-6ac3e36982ec" />
           <property role="2GAjPV" value="false" />
           <node concept="1SiIV0" id="1B2iUhm3c5b" role="3bR37C">
@@ -1691,18 +1731,6 @@
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
           </node>
         </node>
-        <node concept="1SiIV0" id="3BZ$3BBKUvC" role="3bR37C">
-          <node concept="3bR9La" id="3BZ$3BBKUvD" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ffeo:7Kfy9QB6KZG" resolve="jetbrains.mps.baseLanguage.closures" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="T2H5Ppt6Jd" role="3bR37C">
-          <node concept="3bR9La" id="T2H5Ppt6Je" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ffeo:7Kfy9QB6L2F" resolve="jetbrains.mps.baseLanguage.tuples" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="7L02TeumUf3" role="3bR37C">
           <node concept="3bR9La" id="7L02TeumUf4" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -1733,6 +1761,21 @@
             <ref role="3bR37D" to="ffeo:7Kfy9QB6KYK" resolve="jetbrains.mps.baseLanguage.util" />
           </node>
         </node>
+        <node concept="3rtmxn" id="7rUxCdAUJp2" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJp3" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJp4" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJp5" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJp6" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJp7" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.workflow" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="1E1JtD" id="1B2iUhm3bS8" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -1751,9 +1794,24 @@
           </node>
         </node>
         <node concept="1yeLz9" id="1B2iUhm3bT_" role="1TViLv">
-          <property role="TrG5h" value="org.campagnelab.util.files#4347565441068750769" />
+          <property role="TrG5h" value="org.campagnelab.util.files#8573312739577064544" />
           <property role="3LESm3" value="f84cead2-6a53-436c-a6c4-de56c3c6a5d9" />
           <property role="2GAjPV" value="false" />
+        </node>
+        <node concept="3rtmxn" id="7rUxCdAUJpu" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJpv" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJpw" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJpx" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJpy" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJpz" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.utils.multifiles" />
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
       </node>
       <node concept="1E1JtD" id="6eMkF2c4Sia" role="2G$12L">
@@ -1784,7 +1842,7 @@
           </node>
         </node>
         <node concept="1yeLz9" id="6eMkF2c4SNk" role="1TViLv">
-          <property role="TrG5h" value="org.campagnelab.workflow.configuration#6643674794994245037" />
+          <property role="TrG5h" value="org.campagnelab.workflow.configuration#8573312739577064552" />
           <property role="3LESm3" value="32d56c97-ad0e-440c-bf4d-bb2bd39b94ea" />
           <property role="2GAjPV" value="false" />
           <node concept="1SiIV0" id="6eMkF2c4SNl" role="3bR37C">
@@ -1836,10 +1894,19 @@
             <ref role="3bR37D" to="ffeo:7Kfy9QB6L9c" resolve="jetbrains.mps.lang.quotation" />
           </node>
         </node>
-        <node concept="1SiIV0" id="5nz8ZxMgdDk" role="3bR37C">
-          <node concept="3bR9La" id="5nz8ZxMgdDl" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="90a9:1sO539bGQvB" resolve="de.slisson.mps.richtext" />
+        <node concept="3rtmxn" id="7rUxCdAUJq8" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJq9" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJqa" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJqb" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJqc" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJqd" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.workflow.configuration" />
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>
@@ -1901,6 +1968,21 @@
             <ref role="3bR37D" node="1rhtiO0obS0" resolve="org.campagnelab.docker" />
           </node>
         </node>
+        <node concept="3rtmxn" id="7rUxCdAUJpn" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJpo" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJpp" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJpq" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJpr" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJps" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.docker.actions" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="1E1JtD" id="1rhtiO0obS0" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -1918,18 +2000,6 @@
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="1rhtiO0ocr0" role="3bR37C">
-          <node concept="3bR9La" id="1rhtiO0ocr1" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" to="90a9:1sO539bGQvB" resolve="de.slisson.mps.richtext" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="1rhtiO0ocr2" role="3bR37C">
-          <node concept="3bR9La" id="1rhtiO0ocr3" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" to="t9i9:2mFg1uCD9q3" resolve="org.campagnelab.nyosh.lib" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="1rhtiO0ocr6" role="3bR37C">
           <node concept="3bR9La" id="1rhtiO0ocr7" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -1940,12 +2010,6 @@
           <node concept="3bR9La" id="1rhtiO0ocr9" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:1TaHNgiIbJb" resolve="MPS.Platform" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="1rhtiO0ocra" role="3bR37C">
-          <node concept="3bR9La" id="1rhtiO0ocrb" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" to="ael0:5KK2jWpWo0e" resolve="org.campagnelab.ui" />
           </node>
         </node>
         <node concept="1SiIV0" id="1rhtiO0ocrc" role="3bR37C">
@@ -1960,28 +2024,10 @@
             <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
           </node>
         </node>
-        <node concept="1SiIV0" id="1rhtiO0oe_M" role="3bR37C">
-          <node concept="3bR9La" id="1rhtiO0oe_N" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" to="x4gu:7ZmC9JYDkzN" resolve="org.campagnelab.background" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="1rhtiO0oe_Q" role="3bR37C">
-          <node concept="3bR9La" id="1rhtiO0oe_R" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="t9i9:2mFg1uCDcIx" resolve="org.campagnelab.gobyweb.tags" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="1rhtiO0oe_W" role="3bR37C">
           <node concept="3bR9La" id="1rhtiO0oe_X" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="1rhtiO0oe_Y" role="3bR37C">
-          <node concept="3bR9La" id="1rhtiO0oe_Z" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="h9g5:7ZmC9JYEfXW" resolve="org.campagnelab.logger" />
           </node>
         </node>
         <node concept="1SiIV0" id="1rhtiO0oeJC" role="3bR37C">
@@ -1989,13 +2035,8 @@
             <ref role="1Busuk" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
           </node>
         </node>
-        <node concept="1SiIV0" id="1rhtiO0oeJG" role="3bR37C">
-          <node concept="1Busua" id="1rhtiO0oeJH" role="1SiIV1">
-            <ref role="1Busuk" to="90a9:1sO539bGQvB" resolve="de.slisson.mps.richtext" />
-          </node>
-        </node>
         <node concept="1yeLz9" id="1rhtiO0oeJI" role="1TViLv">
-          <property role="TrG5h" value="org.campagnelab.docker#1893262236498675230" />
+          <property role="TrG5h" value="org.campagnelab.docker#8573312739577064551" />
           <property role="3LESm3" value="e227be64-d4e7-46cb-a9cf-67e02c6093dd" />
           <property role="2GAjPV" value="false" />
         </node>
@@ -2003,12 +2044,6 @@
           <node concept="3bR9La" id="x_3xEVK8Yl" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" node="2yVjOHGmOYJ" resolve="org.campagnelab.docker.bash" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="A$944B8xiD" role="3bR37C">
-          <node concept="3bR9La" id="A$944B8xiE" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="t9i9:nhsmU5vDUv" resolve="org.campagnelab.util" />
           </node>
         </node>
         <node concept="1SiIV0" id="10vX8P_6xuE" role="3bR37C">
@@ -2902,6 +2937,21 @@
             </node>
           </node>
         </node>
+        <node concept="3rtmxn" id="7rUxCdAUJqt" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJqu" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJqv" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJqw" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJqx" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJqy" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.docker" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="1E1JtD" id="2yVjOHGmOYJ" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -2936,13 +2986,8 @@
             <ref role="1Busuk" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
           </node>
         </node>
-        <node concept="1SiIV0" id="2yVjOHGmQsa" role="3bR37C">
-          <node concept="1Busua" id="2yVjOHGmQsb" role="1SiIV1">
-            <ref role="1Busuk" to="90a9:1sO539bGQvB" resolve="de.slisson.mps.richtext" />
-          </node>
-        </node>
         <node concept="1yeLz9" id="2yVjOHGmQsc" role="1TViLv">
-          <property role="TrG5h" value="org.campagnelab.docker.bash#1644224175107836483" />
+          <property role="TrG5h" value="org.campagnelab.docker.bash#8573312739577064548" />
           <property role="3LESm3" value="2fea3dc3-81dc-407b-b607-89f08543a577" />
           <property role="2GAjPV" value="false" />
           <node concept="1SiIV0" id="3A$s7Pqh0TA" role="3bR37C">
@@ -2979,6 +3024,21 @@
         <node concept="1SiIV0" id="5VB4_zDZlY2" role="3bR37C">
           <node concept="1Busua" id="5VB4_zDZlY3" role="1SiIV1">
             <ref role="1Busuk" node="1rhtiO0obS0" resolve="org.campagnelab.docker" />
+          </node>
+        </node>
+        <node concept="3rtmxn" id="7rUxCdAUJoV" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJoW" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJoX" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJoY" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJoZ" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJp0" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.docker.bash" />
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>
@@ -3070,6 +3130,21 @@
             <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
           </node>
         </node>
+        <node concept="3rtmxn" id="7rUxCdAUJoO" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJoP" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJoQ" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJoR" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJoS" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJoT" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.docker.bash.run" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="1E1JtD" id="3A$s7Pqh3$g" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -3085,24 +3160,6 @@
                 <property role="2Ry0Am" value="org.campagnelab.docker.bash.resources.mpl" />
               </node>
             </node>
-          </node>
-        </node>
-        <node concept="1SiIV0" id="3A$s7Pqh9u3" role="3bR37C">
-          <node concept="3bR9La" id="3A$s7Pqh9u4" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="t9i9:2mFg1uCD9q3" resolve="org.campagnelab.nyosh.lib" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="3A$s7PqhXSm" role="3bR37C">
-          <node concept="3bR9La" id="3A$s7PqhXSn" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" to="jve8:2mFg1uCEWeH" resolve="org.campagnelab.gobyweb.interactive" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="3A$s7PqhXSo" role="3bR37C">
-          <node concept="3bR9La" id="3A$s7PqhXSp" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="90a9:1sO539bGQvB" resolve="de.slisson.mps.richtext" />
           </node>
         </node>
         <node concept="1SiIV0" id="3A$s7PqhXSq" role="3bR37C">
@@ -3123,22 +3180,10 @@
             <ref role="3bR37D" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
           </node>
         </node>
-        <node concept="1SiIV0" id="3A$s7PqhXSw" role="3bR37C">
-          <node concept="3bR9La" id="3A$s7PqhXSx" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="t9i9:2mFg1uCDcIx" resolve="org.campagnelab.gobyweb.tags" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="3A$s7PqhXSy" role="3bR37C">
           <node concept="3bR9La" id="3A$s7PqhXSz" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:7Kfy9QB6LfQ" resolve="jetbrains.mps.kernel" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="3A$s7PqhXS$" role="3bR37C">
-          <node concept="3bR9La" id="3A$s7PqhXS_" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" to="5f6q:2mFg1uCEf5$" resolve="org.campagnelab.gobyweb.plugins" />
           </node>
         </node>
         <node concept="1SiIV0" id="3A$s7PqhXSG" role="3bR37C">
@@ -3156,26 +3201,10 @@
             <ref role="1Busuk" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
           </node>
         </node>
-        <node concept="1SiIV0" id="3A$s7PqhXSM" role="3bR37C">
-          <node concept="1Busua" id="3A$s7PqhXSN" role="1SiIV1">
-            <ref role="1Busuk" to="90a9:1sO539bGQvB" resolve="de.slisson.mps.richtext" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="3A$s7PqhXSO" role="3bR37C">
-          <node concept="1Busua" id="3A$s7PqhXSP" role="1SiIV1">
-            <ref role="1Busuk" to="jve8:2mFg1uCEWeH" resolve="org.campagnelab.gobyweb.interactive" />
-          </node>
-        </node>
         <node concept="1yeLz9" id="3A$s7PqhXSQ" role="1TViLv">
-          <property role="TrG5h" value="org.campagnelab.bash.nyosh#1311266352922350059" />
+          <property role="TrG5h" value="org.campagnelab.bash.nyosh#8573312739577064546" />
           <property role="3LESm3" value="af7defb3-deac-4122-a7f5-f3da202a2d54" />
           <property role="2GAjPV" value="false" />
-          <node concept="1SiIV0" id="3A$s7PqhXSR" role="3bR37C">
-            <node concept="3bR9La" id="3A$s7PqhXSS" role="1SiIV1">
-              <property role="3bR36h" value="false" />
-              <ref role="3bR37D" to="90a9:1sO539bGQvB" resolve="de.slisson.mps.richtext" />
-            </node>
-          </node>
           <node concept="1SiIV0" id="5VB4_zDZlYz" role="3bR37C">
             <node concept="3bR9La" id="5VB4_zDZlY$" role="1SiIV1">
               <property role="3bR36h" value="false" />
@@ -3183,16 +3212,25 @@
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="5VB4_zDZlYx" role="3bR37C">
-          <node concept="3bR9La" id="5VB4_zDZlYy" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" node="2yVjOHGmOYJ" resolve="org.campagnelab.docker.bash" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="A$944B8xrt" role="3bR37C">
           <node concept="3bR9La" id="A$944B8xru" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" node="1rhtiO0obS0" resolve="org.campagnelab.docker" />
+          </node>
+        </node>
+        <node concept="3rtmxn" id="7rUxCdAUJqm" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJqn" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJqo" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJqp" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJqq" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJqr" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.docker.bash.resources" />
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>
@@ -3210,24 +3248,6 @@
                 <property role="2Ry0Am" value="org.campagnelab.workflow.nyosh.mpl" />
               </node>
             </node>
-          </node>
-        </node>
-        <node concept="1SiIV0" id="csIV3g_aVI" role="3bR37C">
-          <node concept="3bR9La" id="csIV3g_aVJ" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="t9i9:2mFg1uCD9q3" resolve="org.campagnelab.nyosh.lib" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="csIV3g_aVK" role="3bR37C">
-          <node concept="3bR9La" id="csIV3g_aVL" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="5f6q:2mFg1uCEf5K" resolve="org.campagnelab.gobyweb" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="csIV3g_aVQ" role="3bR37C">
-          <node concept="3bR9La" id="csIV3g_aVR" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="jve8:2mFg1uCEWeH" resolve="org.campagnelab.gobyweb.interactive" />
           </node>
         </node>
         <node concept="1SiIV0" id="csIV3g_aVU" role="3bR37C">
@@ -3248,30 +3268,29 @@
             <ref role="3bR37D" to="ffeo:7Kfy9QB6LfQ" resolve="jetbrains.mps.kernel" />
           </node>
         </node>
-        <node concept="1SiIV0" id="csIV3g_aW4" role="3bR37C">
-          <node concept="3bR9La" id="csIV3g_aW5" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="5f6q:2mFg1uCEf5$" resolve="org.campagnelab.gobyweb.plugins" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="csIV3g_aWc" role="3bR37C">
           <node concept="1Busua" id="csIV3g_aWd" role="1SiIV1">
             <ref role="1Busuk" node="4oJiZHqTePI" resolve="org.campagnelab.workflow" />
           </node>
         </node>
         <node concept="1yeLz9" id="csIV3g_aWm" role="1TViLv">
-          <property role="TrG5h" value="org.campagnelab.workflow.nyosh#8711081419074365022" />
+          <property role="TrG5h" value="org.campagnelab.workflow.nyosh#8573312739577064549" />
           <property role="3LESm3" value="c3b92deb-032a-4572-bb02-e4e6cebc1d00" />
           <property role="2GAjPV" value="false" />
         </node>
-        <node concept="1SiIV0" id="csIV3g_bVi" role="3bR37C">
-          <node concept="1Busua" id="csIV3g_bVj" role="1SiIV1">
-            <ref role="1Busuk" to="t9i9:kVrT783XXb" resolve="org.campagnelab.nyosh.interactive" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="csIV3g_bVk" role="3bR37C">
-          <node concept="1Busua" id="csIV3g_bVl" role="1SiIV1">
-            <ref role="1Busuk" to="5f6q:2mFg1uCEf5K" resolve="org.campagnelab.gobyweb" />
+        <node concept="3rtmxn" id="7rUxCdAUJoH" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJoI" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJoJ" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJoK" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJoL" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJoM" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.workflow.nyosh" />
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>
@@ -3291,12 +3310,6 @@
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="3voMOJEmgcw" role="3bR37C">
-          <node concept="3bR9La" id="3voMOJEmgcx" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ffeo:7Kfy9QB6L4X" resolve="jetbrains.mps.lang.editor" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="3voMOJEmgcy" role="3bR37C">
           <node concept="3bR9La" id="3voMOJEmgcz" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -3309,7 +3322,7 @@
           </node>
         </node>
         <node concept="1yeLz9" id="3voMOJEmgcA" role="1TViLv">
-          <property role="TrG5h" value="org.campagnelab.icons#2792722825445473265" />
+          <property role="TrG5h" value="org.campagnelab.icons#8573312739577064547" />
           <property role="3LESm3" value="659f8f73-921e-4928-a676-8455423b8a6e" />
           <property role="2GAjPV" value="false" />
           <node concept="1SiIV0" id="3voMOJEmgcB" role="3bR37C">
@@ -3364,6 +3377,21 @@
             </node>
           </node>
         </node>
+        <node concept="3rtmxn" id="7rUxCdAUJp_" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJpA" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJpB" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJpC" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJpD" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJpE" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.icons" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="1E1JtD" id="10fZnn77aTx" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -3399,14 +3427,23 @@
           </node>
         </node>
         <node concept="1yeLz9" id="10fZnn77cTI" role="1TViLv">
-          <property role="TrG5h" value="org.campagnelab.workflow.languages#2613339075984005628" />
+          <property role="TrG5h" value="org.campagnelab.workflow.languages#8573312739577064545" />
           <property role="3LESm3" value="a953ec99-49a8-418c-a187-d9076e97113d" />
           <property role="2GAjPV" value="false" />
         </node>
-        <node concept="1SiIV0" id="10fZnn77K6h" role="3bR37C">
-          <node concept="3bR9La" id="10fZnn77K6i" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" to="t9i9:nhsmU5vDUv" resolve="org.campagnelab.util" />
+        <node concept="3rtmxn" id="7rUxCdAUJoA" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJoB" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJoC" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJoD" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJoE" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJoF" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.workflow.languages" />
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>
@@ -3433,9 +3470,6 @@
         </node>
         <node concept="3LEDTy" id="dhtvqDS6Ck" role="3LEDUa">
           <ref role="3LEDTV" node="1B2iUhm3bS8" resolve="org.campagnelab.util.files" />
-        </node>
-        <node concept="3LEDTy" id="1WG1fjcFvoi" role="3LEDUa">
-          <ref role="3LEDTV" to="90a9:1sO539bGQvB" resolve="de.slisson.mps.richtext" />
         </node>
         <node concept="3LEDTy" id="3BZ$3BBKUwE" role="3LEDUa">
           <ref role="3LEDTV" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
@@ -3489,21 +3523,6 @@
         <node concept="3LEDTy" id="1c4JsiUFKot" role="3LEDUa">
           <ref role="3LEDTV" node="1rhtiO0obS0" resolve="org.campagnelab.docker" />
         </node>
-        <node concept="3LEDTy" id="1c4JsiUFKou" role="3LEDUa">
-          <ref role="3LEDTV" to="ael0:5KK2jWpWo0e" resolve="org.campagnelab.ui" />
-        </node>
-        <node concept="3LEDTy" id="1c4JsiUFKov" role="3LEDUa">
-          <ref role="3LEDTV" to="h9g5:7ZmC9JYEfXW" resolve="org.campagnelab.logger" />
-        </node>
-        <node concept="3LEDTy" id="1c4JsiUFKow" role="3LEDUa">
-          <ref role="3LEDTV" to="x4gu:7ZmC9JYDkzN" resolve="org.campagnelab.background" />
-        </node>
-        <node concept="3LEDTy" id="1c4JsiUFKox" role="3LEDUa">
-          <ref role="3LEDTV" to="t9i9:2mFg1uCD9q3" resolve="org.campagnelab.nyosh.lib" />
-        </node>
-        <node concept="3LEDTy" id="1c4JsiUFKoy" role="3LEDUa">
-          <ref role="3LEDTV" to="90a9:1sO539bGQvB" resolve="de.slisson.mps.richtext" />
-        </node>
         <node concept="3LEDTy" id="1c4JsiUFKoz" role="3LEDUa">
           <ref role="3LEDTV" to="ffeo:568PkTlOK5Q" resolve="jetbrains.mps.core.xml" />
         </node>
@@ -3539,12 +3558,6 @@
             <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
           </node>
         </node>
-        <node concept="1SiIV0" id="csIV3g_bVF" role="3bR37C">
-          <node concept="3bR9La" id="csIV3g_bVG" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="t9i9:2mFg1uCD9q3" resolve="org.campagnelab.nyosh.lib" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="5t2Hg$bsIfp" role="3bR37C">
           <node concept="3bR9La" id="5t2Hg$bsIfq" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -3557,14 +3570,23 @@
             <ref role="3bR37D" node="3A$s7Pqh3$g" resolve="org.campagnelab.bash.nyosh" />
           </node>
         </node>
-        <node concept="1SiIV0" id="7UcLk9c6yyg" role="3bR37C">
-          <node concept="3bR9La" id="7UcLk9c6yyh" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="5f6q:2mFg1uCEf5$" resolve="org.campagnelab.gobyweb.plugins" />
-          </node>
-        </node>
         <node concept="3LFrX1" id="7UcLk9cfcOV" role="3bR37C">
           <ref role="3LFrX2" node="7UcLk9c6zc_" resolve="org.campagnelab.docker.gobyweb" />
+        </node>
+        <node concept="3rtmxn" id="7rUxCdAUJpN" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJpO" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJpP" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJpQ" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJpR" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJpS" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.workflow.Samples" />
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
       </node>
       <node concept="1E1JtA" id="6nLXN__2exd" role="2G$12L">
@@ -3579,6 +3601,21 @@
               <property role="2Ry0Am" value="org.campagnelab.workflow.rna-seq" />
               <node concept="2Ry0Ak" id="6nLXN__2g1r" role="2Ry0An">
                 <property role="2Ry0Am" value="org.campagnelab.workflow.rna-seq.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3rtmxn" id="7rUxCdAUJpg" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJph" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJpi" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJpj" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJpk" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJpl" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.workflow.rna-seq" />
+                </node>
               </node>
             </node>
           </node>
@@ -3612,12 +3649,6 @@
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
           </node>
         </node>
-        <node concept="1SiIV0" id="3PAwInyQHnW" role="3bR37C">
-          <node concept="3bR9La" id="3PAwInyQHnX" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="t9i9:nhsmU5vDUv" resolve="org.campagnelab.util" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="3PAwInyQHnY" role="3bR37C">
           <node concept="3bR9La" id="3PAwInyQHnZ" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -3625,9 +3656,24 @@
           </node>
         </node>
         <node concept="1yeLz9" id="3PAwInyQHo0" role="1TViLv">
-          <property role="TrG5h" value="org.campagnelab.cloud.configuration#6538561612137032718" />
+          <property role="TrG5h" value="org.campagnelab.cloud.configuration#8573312739577064543" />
           <property role="3LESm3" value="57b1bed9-c9a2-432f-90c6-6d469988b24f" />
           <property role="2GAjPV" value="false" />
+        </node>
+        <node concept="3rtmxn" id="7rUxCdAUJp9" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJpa" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJpb" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJpc" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJpd" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJpe" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.cloud.configuration" />
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
       </node>
       <node concept="1E1JtD" id="3ZmttCiayme" role="2G$12L">
@@ -3658,12 +3704,6 @@
             <ref role="3bR37D" node="3ZmttCia$EL" resolve="org.campagnelab.cloud.preferences" />
           </node>
         </node>
-        <node concept="1SiIV0" id="3PAwInyQHoF" role="3bR37C">
-          <node concept="3bR9La" id="3PAwInyQHoG" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="t9i9:nhsmU5vDUv" resolve="org.campagnelab.util" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="3PAwInyQHoH" role="3bR37C">
           <node concept="3bR9La" id="3PAwInyQHoI" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -3671,7 +3711,7 @@
           </node>
         </node>
         <node concept="1yeLz9" id="3PAwInyQHoL" role="1TViLv">
-          <property role="TrG5h" value="org.campagnelab.cloud#6538561612137028660" />
+          <property role="TrG5h" value="org.campagnelab.cloud#8573312739577064553" />
           <property role="3LESm3" value="9facc1d5-e96b-4e8b-af80-6200fa33f1d9" />
           <property role="2GAjPV" value="false" />
         </node>
@@ -3685,12 +3725,6 @@
           <node concept="3bR9La" id="lSMa_VjP55" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" node="2yVjOHGmOYJ" resolve="org.campagnelab.docker.bash" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="lSMa_VjP56" role="3bR37C">
-          <node concept="3bR9La" id="lSMa_VjP57" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="90a9:4p3FRivDLPG" resolve="de.slisson.mps.editor.multiline" />
           </node>
         </node>
         <node concept="1SiIV0" id="lSMa_VjP58" role="3bR37C">
@@ -3734,6 +3768,21 @@
             <ref role="1Busuk" node="2yVjOHGmOYJ" resolve="org.campagnelab.docker.bash" />
           </node>
         </node>
+        <node concept="3rtmxn" id="7rUxCdAUJpG" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJpH" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJpI" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJpJ" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJpK" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJpL" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.cloud" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="3ZmttCia$EL" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -3773,6 +3822,21 @@
           <node concept="3bR9La" id="3PAwInyQHpd" role="1SiIV1">
             <property role="3bR36h" value="true" />
             <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
+          </node>
+        </node>
+        <node concept="3rtmxn" id="7rUxCdAUJqf" role="3bR31x">
+          <node concept="3LXTmp" id="7rUxCdAUJqg" role="3rtmxm">
+            <node concept="3qWCbU" id="7rUxCdAUJqh" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+            <node concept="55IIr" id="7rUxCdAUJqi" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7rUxCdAUJqj" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="7rUxCdAUJqk" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.campagnelab.cloud.preferences" />
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>
@@ -3819,32 +3883,8 @@
             </node>
           </node>
         </node>
-        <node concept="3LEDTy" id="7UcLk9c6_iZ" role="3LEDUa">
-          <ref role="3LEDTV" to="5f6q:2mFg1uCEf5K" resolve="org.campagnelab.gobyweb" />
-        </node>
-        <node concept="3LEDTy" id="7UcLk9c6_j0" role="3LEDUa">
-          <ref role="3LEDTV" to="5f6q:2mFg1uCEf5$" resolve="org.campagnelab.gobyweb.plugins" />
-        </node>
-        <node concept="3LEDTy" id="7UcLk9c6_j1" role="3LEDUa">
-          <ref role="3LEDTV" to="jve8:2mFg1uCEWeH" resolve="org.campagnelab.gobyweb.interactive" />
-        </node>
-        <node concept="3LEDTy" id="7UcLk9c6_j2" role="3LEDUa">
-          <ref role="3LEDTV" to="jve8:3puE8cAboZU" resolve="org.campagnelab.gobyweb.interactive.platforms" />
-        </node>
-        <node concept="3LEDTy" id="7UcLk9c6_j3" role="3LEDUa">
-          <ref role="3LEDTV" to="jve8:664r$yjrVvw" resolve="org.campagnelab.gobyweb.interactive.users" />
-        </node>
-        <node concept="3LEDTy" id="7UcLk9c6_j4" role="3LEDUa">
-          <ref role="3LEDTV" to="jve8:664r$yjQYZj" resolve="org.campagnelab.gobyweb.interactive.organisms" />
-        </node>
-        <node concept="3LEDTy" id="7UcLk9c6_j5" role="3LEDUa">
-          <ref role="3LEDTV" to="jve8:7ZDUr_Gwmdg" resolve="org.campagnelab.gobyweb.interactive.mappings" />
-        </node>
         <node concept="3LEDTy" id="7UcLk9c6_j6" role="3LEDUa">
           <ref role="3LEDTV" node="2yVjOHGmOYJ" resolve="org.campagnelab.docker.bash" />
-        </node>
-        <node concept="3LEDTy" id="7UcLk9c6_j7" role="3LEDUa">
-          <ref role="3LEDTV" to="90a9:1sO539bGQvB" resolve="de.slisson.mps.richtext" />
         </node>
         <node concept="3LEDTy" id="7UcLk9c6_j8" role="3LEDUa">
           <ref role="3LEDTV" node="1rhtiO0obS0" resolve="org.campagnelab.docker" />

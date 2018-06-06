@@ -2,9 +2,8 @@
 <model ref="r:3ec2d691-f828-4a01-a66f-599b0d5dd86c(org.campagnelab.workflow.nyosh.constraints)">
   <persistence version="9" />
   <languages>
-    <use id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints" version="0" />
     <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+    <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />
   </languages>
   <imports>
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
@@ -59,7 +58,7 @@
       </concept>
       <concept id="1147468365020" name="jetbrains.mps.lang.constraints.structure.ConstraintsFunctionParameter_node" flags="nn" index="EsrRn" />
       <concept id="1212096972063" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_PropertyValidator" flags="in" index="QB0g5" />
-      <concept id="5676632058862809931" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_ReferentSearchScope_Scope" flags="in" index="13QW63" />
+      <concept id="5676632058862809931" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_ReferentSearchScope_Scope" flags="ng" index="13QW63" />
       <concept id="1163200647017" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_referenceNode" flags="nn" index="3kakTB" />
       <concept id="1152959968041" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_PropertySetter" flags="in" index="1LLf8_" />
       <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
@@ -184,7 +183,7 @@
   <node concept="1M2fIO" id="4HNd3hiV6AN">
     <ref role="1M2myG" to="3jiv:4HNd3hiUKIF" resolve="ExplicitFileBagRef" />
     <node concept="1N5Pfh" id="4HNd3hiV6CC" role="1Mr941">
-      <ref role="1N5Vy1" to="3jiv:4HNd3hiUKXQ" />
+      <ref role="1N5Vy1" to="3jiv:4HNd3hiUKXQ" resolve="ExplicitFileBag" />
       <node concept="13QW63" id="4HNd3hiV6CE" role="1N6uqs">
         <node concept="3clFbS" id="4HNd3hiV6CF" role="2VODD2">
           <node concept="3cpWs6" id="4HNd3hiV7RS" role="3cqZAp">

@@ -2,9 +2,9 @@
 <model ref="r:28ea7b9c-cb3a-4bec-8a85-2ccbe0339d0d(org.campagnelab.docker.bash.behavior)">
   <persistence version="9" />
   <languages>
-    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="0" />
+    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="1" />
     <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
-    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="3" />
+    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="4" />
     <use id="25281c03-4a7c-4b57-9221-24a10fc36ef5" name="org.campagnelab.docker" version="0" />
     <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
@@ -233,8 +233,8 @@
       </concept>
       <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="2396822768958367367" name="jetbrains.mps.lang.smodel.structure.AbstractTypeCastExpression" flags="nn" index="$5XWr">
-        <reference id="6733348108486823428" name="concept" index="1m5ApE" />
         <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
+        <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
       </concept>
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
       <concept id="1145383075378" name="jetbrains.mps.lang.smodel.structure.SNodeListType" flags="in" index="2I9FWS">
@@ -549,7 +549,6 @@
               </node>
               <node concept="2OqwBi" id="29FFJBZKDCn" role="3clFbw">
                 <node concept="1PxgMI" id="29FFJBZKDvr" role="2Oq$k0">
-                  <ref role="1m5ApE" to="r9td:2h_fDmyfOuY" resolve="PathPart" />
                   <node concept="2OqwBi" id="29FFJBZKCDO" role="1m5AlR">
                     <node concept="2OqwBi" id="29FFJBZK_aW" role="2Oq$k0">
                       <node concept="2OqwBi" id="29FFJBZK$a6" role="2Oq$k0">
@@ -561,6 +560,9 @@
                       <node concept="1yVyf7" id="29FFJBZKBv5" role="2OqNvi" />
                     </node>
                     <node concept="YBYNd" id="29FFJBZKCQm" role="2OqNvi" />
+                  </node>
+                  <node concept="chp4Y" id="7rUxCdAUJbs" role="3oSUPX">
+                    <ref role="cht4Q" to="r9td:2h_fDmyfOuY" resolve="PathPart" />
                   </node>
                 </node>
                 <node concept="2qgKlT" id="29FFJBZKDX$" role="2OqNvi">
@@ -1490,12 +1492,14 @@
           <node concept="3K4zz7" id="29FFJC0pZek" role="3clFbG">
             <node concept="2OqwBi" id="29FFJC0pZel" role="3K4E3e">
               <node concept="1PxgMI" id="29FFJC0pZem" role="2Oq$k0">
-                <ref role="1m5ApE" to="6jv6:5U_2ytMywfJ" resolve="RunningContainer" />
                 <node concept="2OqwBi" id="29FFJC0pZen" role="1m5AlR">
                   <node concept="13iPFW" id="29FFJC0pZeo" role="2Oq$k0" />
                   <node concept="3TrEf2" id="29FFJC0pZep" role="2OqNvi">
                     <ref role="3Tt5mk" to="r9td:2h_fDmyfOv2" resolve="dockerContainer" />
                   </node>
+                </node>
+                <node concept="chp4Y" id="7rUxCdAUJbt" role="3oSUPX">
+                  <ref role="cht4Q" to="6jv6:5U_2ytMywfJ" resolve="RunningContainer" />
                 </node>
               </node>
               <node concept="3TrcHB" id="29FFJC0pZeq" role="2OqNvi">

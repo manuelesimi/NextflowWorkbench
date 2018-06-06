@@ -2,8 +2,7 @@
 <model ref="r:31200451-2369-49b7-9369-9102937223f3(org.campagnelab.docker.bash.textGen)">
   <persistence version="9" />
   <languages>
-    <use id="b83431fe-5c8f-40bc-8a36-65e25f4dd253" name="jetbrains.mps.lang.textGen" version="0" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+    <devkit ref="fa73d85a-ac7f-447b-846c-fcdc41caa600(jetbrains.mps.devkit.aspect.textgen)" />
   </languages>
   <imports>
     <import index="rzxe" ref="r:c8f01c5c-0641-4bdc-875e-539c2c78a0be(org.campagnelab.docker.behavior)" />
@@ -101,7 +100,7 @@
             <node concept="2OqwBi" id="2h_fDmymBxy" role="lb14g">
               <node concept="117lpO" id="2h_fDmymBbj" role="2Oq$k0" />
               <node concept="3TrEf2" id="2h_fDmymBFu" role="2OqNvi">
-                <ref role="3Tt5mk" to="r9td:1rhtiO0qoN4" />
+                <ref role="3Tt5mk" to="r9td:1rhtiO0qoN4" resolve="script" />
               </node>
             </node>
           </node>

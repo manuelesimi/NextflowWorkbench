@@ -2,8 +2,7 @@
 <model ref="r:1ebe7ccb-9cbc-4a7c-9512-7a57cf7279b5(org.campagnelab.cloud.configuration.textGen)">
   <persistence version="9" />
   <languages>
-    <use id="b83431fe-5c8f-40bc-8a36-65e25f4dd253" name="jetbrains.mps.lang.textGen" version="0" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+    <devkit ref="fa73d85a-ac7f-447b-846c-fcdc41caa600(jetbrains.mps.devkit.aspect.textgen)" />
   </languages>
   <imports>
     <import index="5lbf" ref="r:65d366f2-ae3b-4b81-85e6-342aa070f572(org.campagnelab.cloud.structure)" />
@@ -96,8 +95,8 @@
       <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="7453996997717780434" name="jetbrains.mps.lang.smodel.structure.Node_GetSConceptOperation" flags="nn" index="2yIwOk" />
       <concept id="2396822768958367367" name="jetbrains.mps.lang.smodel.structure.AbstractTypeCastExpression" flags="nn" index="$5XWr">
-        <reference id="6733348108486823428" name="concept" index="1m5ApE" />
         <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
+        <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
       </concept>
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
       <concept id="1176109685393" name="jetbrains.mps.lang.smodel.structure.Model_RootsIncludingImportedOperation" flags="nn" index="3lApI0">
@@ -670,7 +669,6 @@
               <ref role="ehGHo" to="45iu:4gEJt6_N$lk" resolve="Preemptibility" />
             </node>
             <node concept="1PxgMI" id="12yJ$zBLQ0J" role="33vP2m">
-              <ref role="1m5ApE" to="45iu:4gEJt6_N$lk" resolve="Preemptibility" />
               <node concept="2OqwBi" id="4gEJt6_NHwE" role="1m5AlR">
                 <node concept="2OqwBi" id="4gEJt6_NHwF" role="2Oq$k0">
                   <node concept="2OqwBi" id="4gEJt6_NHwG" role="2Oq$k0">
@@ -706,6 +704,9 @@
                   </node>
                 </node>
                 <node concept="1uHKPH" id="4gEJt6_NHwV" role="2OqNvi" />
+              </node>
+              <node concept="chp4Y" id="7rUxCdAUJbl" role="3oSUPX">
+                <ref role="cht4Q" to="45iu:4gEJt6_N$lk" resolve="Preemptibility" />
               </node>
             </node>
           </node>
