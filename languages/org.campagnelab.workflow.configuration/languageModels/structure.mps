@@ -6,15 +6,12 @@
   </languages>
   <imports>
     <import index="q2ta" ref="r:cbd6943f-6de3-44a2-ba40-40c257b794e1(org.campagnelab.util.files.structure)" />
+    <import index="iowz" ref="r:0583c0e9-dc14-4152-95a4-93036dce931b(org.campagnelab.workflow.structure)" />
+    <import index="87nw" ref="r:ca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3(de.slisson.mps.richtext.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="iowz" ref="r:0583c0e9-dc14-4152-95a4-93036dce931b(org.campagnelab.workflow.structure)" implicit="true" />
-    <import index="87nw" ref="r:ca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3(de.slisson.mps.richtext.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
-      <concept id="5177162104569058199" name="jetbrains.mps.lang.resources.structure.HelpURL" flags="ng" index="1sEMCm">
-        <property id="5177162104569058200" name="url" index="1sEMCp" />
-      </concept>
       <concept id="8974276187400029883" name="jetbrains.mps.lang.resources.structure.FileIcon" flags="ng" index="1QGGSu">
         <property id="2756621024541341363" name="file" index="1iqoE4" />
       </concept>
@@ -35,7 +32,6 @@
         <property id="4628067390765956807" name="final" index="R5$K2" />
         <property id="4628067390765956802" name="abstract" index="R5$K7" />
         <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
-        <child id="1780177113170204155" name="helpURL" index="bvy1s" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
@@ -295,9 +291,6 @@
     <property role="34LRSv" value="cirrus" />
     <property role="EcuMT" value="6643674795001609826" />
     <ref role="1TJDcQ" node="5KN4KqZinTA" resolve="Executor" />
-    <node concept="1sEMCm" id="7rUxCdAUHW5" role="bvy1s">
-      <property role="1sEMCp" value="http://www.nextflow.io/docs/latest/executor.html#clusterk-cirrus" />
-    </node>
   </node>
   <node concept="1TIwiD" id="5KN4KqZinTz">
     <property role="3GE5qa" value="executors" />
@@ -311,9 +304,6 @@
       <property role="IQ2nx" value="6643674795001609828" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
-    <node concept="1sEMCm" id="7rUxCdAUHW0" role="bvy1s">
-      <property role="1sEMCp" value="http://www.nextflow.io/docs/latest/executor.html#dnanexus" />
-    </node>
   </node>
   <node concept="1TIwiD" id="5KN4KqZinT_">
     <property role="3GE5qa" value="executors" />
@@ -322,9 +312,6 @@
     <property role="34LRSv" value="drmaa" />
     <property role="EcuMT" value="6643674795001609829" />
     <ref role="1TJDcQ" node="5KN4KqZinTA" resolve="Executor" />
-    <node concept="1sEMCm" id="7rUxCdAUHVZ" role="bvy1s">
-      <property role="1sEMCp" value="http://www.nextflow.io/docs/latest/executor.html#drmaa-executor" />
-    </node>
   </node>
   <node concept="1TIwiD" id="5KN4KqZinTA">
     <property role="R5$K7" value="true" />
@@ -341,9 +328,6 @@
     <property role="34LRSv" value="lsf" />
     <property role="EcuMT" value="6643674795001609831" />
     <ref role="1TJDcQ" node="5KN4KqZinTA" resolve="Executor" />
-    <node concept="1sEMCm" id="7rUxCdAUHW2" role="bvy1s">
-      <property role="1sEMCp" value="http://www.nextflow.io/docs/latest/executor.html#lsf-executor" />
-    </node>
   </node>
   <node concept="1TIwiD" id="5KN4KqZinTC">
     <property role="3GE5qa" value="executors" />
@@ -352,9 +336,6 @@
     <property role="R4oN_" value="Execute Workflows on the local, single machine" />
     <property role="EcuMT" value="6643674795001609832" />
     <ref role="1TJDcQ" node="5KN4KqZinTA" resolve="Executor" />
-    <node concept="1sEMCm" id="7rUxCdAUHW1" role="bvy1s">
-      <property role="1sEMCp" value="http://www.nextflow.io/docs/latest/executor.html#local-executor" />
-    </node>
   </node>
   <node concept="1TIwiD" id="5KN4KqZinTD">
     <property role="3GE5qa" value="executors" />
@@ -363,9 +344,6 @@
     <property role="34LRSv" value="pbs" />
     <property role="EcuMT" value="6643674795001609833" />
     <ref role="1TJDcQ" node="5KN4KqZinTA" resolve="Executor" />
-    <node concept="1sEMCm" id="7rUxCdAUHW4" role="bvy1s">
-      <property role="1sEMCp" value="http://www.nextflow.io/docs/latest/executor.html#pbs-torque-executor" />
-    </node>
   </node>
   <node concept="1TIwiD" id="5KN4KqZinTE">
     <property role="3GE5qa" value="executors" />
@@ -379,9 +357,6 @@
       <property role="IQ2nx" value="5955552969585028267" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
-    <node concept="1sEMCm" id="7rUxCdAUHW6" role="bvy1s">
-      <property role="1sEMCp" value="http://www.nextflow.io/docs/latest/executor.html#sge-executor" />
-    </node>
   </node>
   <node concept="1TIwiD" id="5KN4KqZinTF">
     <property role="3GE5qa" value="executors" />
@@ -390,9 +365,6 @@
     <property role="34LRSv" value="slurm" />
     <property role="EcuMT" value="6643674795001609835" />
     <ref role="1TJDcQ" node="5KN4KqZinTA" resolve="Executor" />
-    <node concept="1sEMCm" id="7rUxCdAUHW3" role="bvy1s">
-      <property role="1sEMCp" value="http://www.nextflow.io/docs/latest/executor.html#slurm-executor" />
-    </node>
   </node>
   <node concept="1TIwiD" id="5KN4KqZiCvz">
     <property role="TrG5h" value="WorkflowConfig" />
