@@ -50,6 +50,7 @@
     <import index="ao3" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.text(MPS.Core/)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" implicit="true" />
     <import index="cb06" ref="r:28ea7b9c-cb3a-4bec-8a85-2ccbe0339d0d(org.campagnelab.docker.bash.behavior)" implicit="true" />
+    <import index="tpce" ref="r:00000000-0000-4000-0000-011c89590292(jetbrains.mps.lang.structure.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -426,6 +427,7 @@
       <concept id="1180636770613" name="jetbrains.mps.lang.smodel.structure.SNodeCreator" flags="nn" index="3zrR0B">
         <child id="1180636770616" name="createdType" index="3zrR0E" />
       </concept>
+      <concept id="1172323065820" name="jetbrains.mps.lang.smodel.structure.Node_GetConceptOperation" flags="nn" index="3NT_Vc" />
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
       </concept>
@@ -8889,10 +8891,13 @@
             </node>
             <node concept="liA8E" id="1hjSjLb6m2L" role="2OqNvi">
               <ref role="37wK5l" to="wyt6:~String.startsWith(java.lang.String):boolean" resolve="startsWith" />
-              <node concept="2OqwBi" id="1BdDHvUBKWG" role="37wK5m">
-                <node concept="13iPFW" id="1BdDHvUBKUr" role="2Oq$k0" />
-                <node concept="3TrcHB" id="1BdDHvUBL8H" role="2OqNvi">
-                  <ref role="3TsBF5" to="tpck:gOOYy9I" resolve="alias" />
+              <node concept="2OqwBi" id="7N6u_AKqmEW" role="37wK5m">
+                <node concept="2OqwBi" id="1BdDHvUBKWG" role="2Oq$k0">
+                  <node concept="13iPFW" id="1BdDHvUBKUr" role="2Oq$k0" />
+                  <node concept="3NT_Vc" id="7N6u_AKqnuH" role="2OqNvi" />
+                </node>
+                <node concept="3TrcHB" id="7N6u_AKqnO4" role="2OqNvi">
+                  <ref role="3TsBF5" to="tpce:4qF2Hm2r7ja" resolve="conceptAlias" />
                 </node>
               </node>
             </node>
