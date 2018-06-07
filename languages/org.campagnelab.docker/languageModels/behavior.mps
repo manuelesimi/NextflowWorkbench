@@ -20,7 +20,6 @@
   </languages>
   <imports>
     <import index="6jv6" ref="r:ca9c89c0-011f-4597-8d3e-576d9add5d28(org.campagnelab.docker.structure)" />
-    <import index="yy4t" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.textGen(MPS.Core/)" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="eoo2" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.nio.file(JDK/)" />
     <import index="8oaq" ref="0202ed86-955d-4227-9c20-377dd6b1f9ff/java:org.apache.commons.io(org.campagnelab.nyosh.lib/)" />
@@ -45,7 +44,6 @@
     <import index="mak5" ref="r:977bf260-4884-422e-9656-9f0bb268fcb0(org.campagnelab.logger.behavior)" />
     <import index="mhbf" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.model(MPS.OpenAPI/)" />
     <import index="zn9m" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.util(MPS.IDEA/)" />
-    <import index="ujkv" ref="r:c4ccd0c8-ae0a-4ce1-b1b2-29dd8a943a6b(org.campagnelab.util.persistence)" />
     <import index="ends" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.extapi.persistence(MPS.Core/)" />
     <import index="3ju5" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.vfs(MPS.Core/)" />
     <import index="26gq" ref="25281c03-4a7c-4b57-9221-24a10fc36ef5/java:com.spotify.docker.client.exceptions(org.campagnelab.docker/)" />
@@ -5293,11 +5291,11 @@
                 </node>
               </node>
               <node concept="2OqwBi" id="6aaEnU993Dk" role="2GsD0m">
-                <node concept="2GrUjf" id="6aaEnU993Dl" role="2Oq$k0">
-                  <ref role="2Gs0qQ" node="6aaEnU993CV" resolve="project" />
-                </node>
                 <node concept="liA8E" id="6aaEnU993Dm" role="2OqNvi">
                   <ref role="37wK5l" to="z1c3:~Project.getModules():java.lang.Iterable" resolve="getModules" />
+                </node>
+                <node concept="2GrUjf" id="6aaEnU993Dl" role="2Oq$k0">
+                  <ref role="2Gs0qQ" node="6aaEnU993CV" resolve="project" />
                 </node>
               </node>
             </node>
@@ -5348,7 +5346,7 @@
               <ref role="1Pybhc" to="z1c3:~ProjectManager" resolve="ProjectManager" />
             </node>
             <node concept="liA8E" id="6aaEnU993DM" role="2OqNvi">
-              <ref role="37wK5l" to="z1c3:~ProjectManager.getOpenProjects():jetbrains.mps.project.Project[]" resolve="getOpenProjects" />
+              <ref role="37wK5l" to="z1c3:~ProjectManager.getOpenedProjects():java.util.List" resolve="getOpenedProjects" />
             </node>
           </node>
         </node>
