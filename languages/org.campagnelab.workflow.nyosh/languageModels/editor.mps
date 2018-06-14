@@ -8,6 +8,7 @@
   </languages>
   <imports>
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
+    <import index="1fmc" ref="r:4cec5b5b-0fcc-4674-abb9-27263d97025d(org.campagnelab.ui.code.Swing)" />
     <import index="3jiv" ref="r:36d353e8-689e-4297-b8ea-7712719668fa(org.campagnelab.workflow.nyosh.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="tpen" ref="r:00000000-0000-4000-0000-011c895902c3(jetbrains.mps.baseLanguage.editor)" implicit="true" />
@@ -132,19 +133,19 @@
       <node concept="3F0ifn" id="G5bxgNE4WO" role="3EZMnx">
         <property role="3F0ifm" value="]" />
       </node>
-      <node concept="ykhUs" id="G5bxgO231U" role="3EZMnx">
+      <node concept="ykhUs" id="2DNzzelpKw6" role="3EZMnx">
         <property role="ykhUg" value="Clear" />
-        <node concept="ykhUf" id="G5bxgO231V" role="ynkVX">
-          <node concept="3clFbS" id="G5bxgO231W" role="2VODD2">
-            <node concept="3clFbF" id="G5bxgO232d" role="3cqZAp">
-              <node concept="2OqwBi" id="G5bxgO23Zb" role="3clFbG">
-                <node concept="2OqwBi" id="G5bxgO233F" role="2Oq$k0">
-                  <node concept="1VaYGm" id="G5bxgO232c" role="2Oq$k0" />
-                  <node concept="3Tsc0h" id="4YJHQQrZko5" role="2OqNvi">
+        <node concept="ykhUf" id="2DNzzelpKw7" role="ynkVX">
+          <node concept="3clFbS" id="2DNzzelpKw8" role="2VODD2">
+            <node concept="3clFbF" id="2DNzzelpKxN" role="3cqZAp">
+              <node concept="2OqwBi" id="2DNzzelpMw5" role="3clFbG">
+                <node concept="2OqwBi" id="2DNzzelpKDx" role="2Oq$k0">
+                  <node concept="1VaYGm" id="2DNzzelpKxM" role="2Oq$k0" />
+                  <node concept="3Tsc0h" id="2DNzzelpL04" role="2OqNvi">
                     <ref role="3TtcxE" to="3jiv:G5bxgNBxbO" resolve="instructions" />
                   </node>
                 </node>
-                <node concept="liA8E" id="G5bxgO27$X" role="2OqNvi">
+                <node concept="liA8E" id="2DNzzelpPrK" role="2OqNvi">
                   <ref role="37wK5l" to="33ny:~List.clear():void" resolve="clear" />
                 </node>
               </node>
