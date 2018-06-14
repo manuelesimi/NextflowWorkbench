@@ -58,7 +58,7 @@
       </concept>
       <concept id="1147468365020" name="jetbrains.mps.lang.constraints.structure.ConstraintsFunctionParameter_node" flags="nn" index="EsrRn" />
       <concept id="1212096972063" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_PropertyValidator" flags="in" index="QB0g5" />
-      <concept id="5676632058862809931" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_ReferentSearchScope_Scope" flags="ng" index="13QW63" />
+      <concept id="5564765827938091039" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_ReferentSearchScope_Scope" flags="ig" index="3dgokm" />
       <concept id="1163200647017" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_referenceNode" flags="nn" index="3kakTB" />
       <concept id="1152959968041" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_PropertySetter" flags="in" index="1LLf8_" />
       <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
@@ -182,20 +182,20 @@
   </node>
   <node concept="1M2fIO" id="4HNd3hiV6AN">
     <ref role="1M2myG" to="3jiv:4HNd3hiUKIF" resolve="ExplicitFileBagRef" />
-    <node concept="1N5Pfh" id="4HNd3hiV6CC" role="1Mr941">
+    <node concept="1N5Pfh" id="2DNzzelpc08" role="1Mr941">
       <ref role="1N5Vy1" to="3jiv:4HNd3hiUKXQ" resolve="ExplicitFileBag" />
-      <node concept="13QW63" id="4HNd3hiV6CE" role="1N6uqs">
-        <node concept="3clFbS" id="4HNd3hiV6CF" role="2VODD2">
-          <node concept="3cpWs6" id="4HNd3hiV7RS" role="3cqZAp">
-            <node concept="2YIFZM" id="4HNd3hiVjUO" role="3cqZAk">
-              <ref role="37wK5l" to="o8zo:4IP40Bi3eAf" resolve="forNamedElements" />
+      <node concept="3dgokm" id="2DNzzelpc63" role="1N6uqs">
+        <node concept="3clFbS" id="2DNzzelpc64" role="2VODD2">
+          <node concept="3cpWs6" id="2DNzzelpc96" role="3cqZAp">
+            <node concept="2YIFZM" id="2DNzzelpc97" role="3cqZAk">
               <ref role="1Pybhc" to="o8zo:4IP40Bi3e_R" resolve="ListScope" />
-              <node concept="2OqwBi" id="4HNd3hiVuV3" role="37wK5m">
-                <node concept="2OqwBi" id="4HNd3hiVr4a" role="2Oq$k0">
-                  <node concept="3kakTB" id="4HNd3hiVlFO" role="2Oq$k0" />
-                  <node concept="I4A8Y" id="4HNd3hiVt2V" role="2OqNvi" />
+              <ref role="37wK5l" to="o8zo:4IP40Bi3eAf" resolve="forNamedElements" />
+              <node concept="2OqwBi" id="2DNzzelpc98" role="37wK5m">
+                <node concept="2OqwBi" id="2DNzzelpc99" role="2Oq$k0">
+                  <node concept="3kakTB" id="2DNzzelpc9a" role="2Oq$k0" />
+                  <node concept="I4A8Y" id="2DNzzelpc9b" role="2OqNvi" />
                 </node>
-                <node concept="2RRcyG" id="4HNd3hiVx5_" role="2OqNvi">
+                <node concept="2RRcyG" id="2DNzzelpc9c" role="2OqNvi">
                   <ref role="2RRcyH" to="440p:4PxeyvB$uiJ" resolve="ExplicitFileBag" />
                 </node>
               </node>
