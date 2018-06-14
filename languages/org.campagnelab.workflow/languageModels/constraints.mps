@@ -144,7 +144,6 @@
       <concept id="1147468365020" name="jetbrains.mps.lang.constraints.structure.ConstraintsFunctionParameter_node" flags="nn" index="EsrRn" />
       <concept id="6738154313879680265" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_childNode" flags="nn" index="2H4GUG" />
       <concept id="1212096972063" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_PropertyValidator" flags="in" index="QB0g5" />
-      <concept id="7855321458717464197" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_CanBeAnAncestor" flags="ng" index="Um2eU" />
       <concept id="5676632058862809931" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_ReferentSearchScope_Scope" flags="ng" index="13QW63" />
       <concept id="8401916545537438642" name="jetbrains.mps.lang.constraints.structure.InheritedNodeScopeFactory" flags="ng" index="1dDu$B">
         <reference id="8401916545537438643" name="kind" index="1dDu$A" />
@@ -154,7 +153,6 @@
       <concept id="1163202640154" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_newReferentNode" flags="nn" index="3khVwk" />
       <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
         <reference id="1213093996982" name="concept" index="1M2myG" />
-        <child id="7852712695066883424" name="canBeAncestor" index="1kkKnR" />
         <child id="1213098023997" name="property" index="1MhHOB" />
         <child id="1213100494875" name="referent" index="1Mr941" />
         <child id="1213106463729" name="canBeChild" index="1MLUbF" />
@@ -908,74 +906,6 @@
   <node concept="1M2fIO" id="2rkU84P5aSZ">
     <property role="3GE5qa" value="channelFunctions.collate" />
     <ref role="1M2myG" to="iowz:3m9W35nCwTL" resolve="Collate" />
-    <node concept="nKS2y" id="2rkU84P5aVI" role="1MLUbF">
-      <node concept="3clFbS" id="2rkU84P5aVJ" role="2VODD2">
-        <node concept="3cpWs8" id="2rkU84P5aVK" role="3cqZAp">
-          <node concept="3cpWsn" id="2rkU84P5aVL" role="3cpWs9">
-            <property role="TrG5h" value="previousFunction" />
-            <node concept="3Tqbb2" id="2rkU84P5aVM" role="1tU5fm">
-              <ref role="ehGHo" to="iowz:3m9W35nCwTK" resolve="ChannelFunction" />
-            </node>
-            <node concept="2OqwBi" id="2rkU84P5aVN" role="33vP2m">
-              <node concept="EsrRn" id="2rkU84P5aVO" role="2Oq$k0" />
-              <node concept="2qgKlT" id="2rkU84P5aVP" role="2OqNvi">
-                <ref role="37wK5l" to="mqvz:2rkU84P0$uf" resolve="getPreviousFunction" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbJ" id="2rkU84P5aVW" role="3cqZAp">
-          <node concept="3clFbS" id="2rkU84P5aVX" role="3clFbx">
-            <node concept="3cpWs6" id="2rkU84P5aVY" role="3cqZAp">
-              <node concept="3clFbT" id="2rkU84P5aVZ" role="3cqZAk">
-                <property role="3clFbU" value="false" />
-              </node>
-            </node>
-          </node>
-          <node concept="22lmx$" id="2rkU84P5aW0" role="3clFbw">
-            <node concept="3clFbC" id="2rkU84P5aW1" role="3uHU7w">
-              <node concept="35c_gC" id="2rkU84P5aW2" role="3uHU7w">
-                <ref role="35c_gD" to="iowz:3m9W35nCxgw" resolve="ToSortedList" />
-              </node>
-              <node concept="2OqwBi" id="2rkU84P5aW3" role="3uHU7B">
-                <node concept="37vLTw" id="2rkU84P5aW4" role="2Oq$k0">
-                  <ref role="3cqZAo" node="2rkU84P5aVL" resolve="previousFunction" />
-                </node>
-                <node concept="2yIwOk" id="2rkU84P5aW5" role="2OqNvi" />
-              </node>
-            </node>
-            <node concept="1Wc70l" id="2rkU84P5aW6" role="3uHU7B">
-              <node concept="2OqwBi" id="2rkU84P5aW7" role="3uHU7B">
-                <node concept="37vLTw" id="2rkU84P5aW8" role="2Oq$k0">
-                  <ref role="3cqZAo" node="2rkU84P5aVL" resolve="previousFunction" />
-                </node>
-                <node concept="3x8VRR" id="2rkU84P5aW9" role="2OqNvi" />
-              </node>
-              <node concept="3clFbC" id="2rkU84P5aWa" role="3uHU7w">
-                <node concept="2OqwBi" id="2rkU84P5aWb" role="3uHU7B">
-                  <node concept="37vLTw" id="2rkU84P5aWc" role="2Oq$k0">
-                    <ref role="3cqZAo" node="2rkU84P5aVL" resolve="previousFunction" />
-                  </node>
-                  <node concept="2yIwOk" id="2rkU84P5aWd" role="2OqNvi" />
-                </node>
-                <node concept="35c_gC" id="2rkU84P5aWe" role="3uHU7w">
-                  <ref role="35c_gD" to="iowz:3m9W35nCxaI" resolve="ToList" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="9aQIb" id="2rkU84P5aWy" role="9aQIa">
-            <node concept="3clFbS" id="2rkU84P5aWz" role="9aQI4">
-              <node concept="3cpWs6" id="2rkU84P5aW$" role="3cqZAp">
-                <node concept="3clFbT" id="2rkU84P5aW_" role="3cqZAk">
-                  <property role="3clFbU" value="true" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
   </node>
   <node concept="1M2fIO" id="nhsmU64ELr">
     <ref role="1M2myG" to="iowz:D$tkU1WQf_" resolve="NameInAChannelRef" />
@@ -1185,15 +1115,6 @@
   <node concept="1M2fIO" id="47MGIsNO_Wo">
     <property role="3GE5qa" value="processIO" />
     <ref role="1M2myG" to="iowz:7gAPJCERGEz" resolve="BooleanChannel" />
-    <node concept="nKS2y" id="47MGIsNOA0L" role="1MLUbF">
-      <node concept="3clFbS" id="47MGIsNOA0M" role="2VODD2">
-        <node concept="3clFbF" id="47MGIsNOA5J" role="3cqZAp">
-          <node concept="3clFbT" id="47MGIsNOA5I" role="3clFbG">
-            <property role="3clFbU" value="false" />
-          </node>
-        </node>
-      </node>
-    </node>
   </node>
   <node concept="1M2fIO" id="47MGIsNOAaU">
     <property role="3GE5qa" value="processIO" />
@@ -1603,23 +1524,6 @@
   <node concept="1M2fIO" id="3VDmkwCJ8g5">
     <property role="3GE5qa" value="scripts.conditionalScript" />
     <ref role="1M2myG" to="iowz:YNIIGPa1iv" resolve="BaseLanguageScriptAdapter" />
-    <node concept="Um2eU" id="3VDmkwCJ8oe" role="1kkKnR">
-      <node concept="3clFbS" id="3VDmkwCJ8of" role="2VODD2">
-        <node concept="3SKdUt" id="3VDmkwCJa1R" role="3cqZAp">
-          <node concept="3SKdUq" id="3VDmkwCJa9n" role="3SKWNk">
-            <property role="3SKdUp" value="script cannot refer to static fields" />
-          </node>
-        </node>
-        <node concept="3cpWs6" id="3VDmkwCJ8U8" role="3cqZAp">
-          <node concept="3y3z36" id="3VDmkwCJ8y2" role="3cqZAk">
-            <node concept="3B5_sB" id="3VDmkwCJ9iM" role="3uHU7w">
-              <ref role="3B5MYn" to="tpee:f_0M0x6" resolve="StaticFieldReference" />
-            </node>
-            <node concept="otxO1" id="3VDmkwCJ8tb" role="3uHU7B" />
-          </node>
-        </node>
-      </node>
-    </node>
   </node>
   <node concept="1M2fIO" id="4g1gOgyr5va">
     <property role="3GE5qa" value="processIO" />
@@ -1997,15 +1901,6 @@
   <node concept="1M2fIO" id="71ITBVySQS_">
     <property role="3GE5qa" value="channelFunctions.miscArgFunctions" />
     <ref role="1M2myG" to="iowz:1qs9CHFOmDW" resolve="ArgRegexQualifierPredicate" />
-    <node concept="nKS2y" id="71ITBVySQSS" role="1MLUbF">
-      <node concept="3clFbS" id="71ITBVySQST" role="2VODD2">
-        <node concept="3clFbF" id="71ITBVySQXQ" role="3cqZAp">
-          <node concept="3clFbT" id="71ITBVySQXP" role="3clFbG">
-            <property role="3clFbU" value="false" />
-          </node>
-        </node>
-      </node>
-    </node>
   </node>
   <node concept="1M2fIO" id="1fcQp_G2XV">
     <property role="3GE5qa" value="scripts.conditionalScript" />
@@ -2038,20 +1933,6 @@
   <node concept="1M2fIO" id="79W9gdU9U3E">
     <property role="3GE5qa" value="channelFunctions.miscArgFunctions" />
     <ref role="1M2myG" to="iowz:XaRILisNjl" resolve="ArgRegexLiteralQualifierPredicate" />
-    <node concept="nKS2y" id="79W9gdU9Ug3" role="1MLUbF">
-      <node concept="3clFbS" id="79W9gdU9Ug4" role="2VODD2">
-        <node concept="3SKdUt" id="79W9gdU9Uu1" role="3cqZAp">
-          <node concept="3SKdUq" id="79W9gdU9Uu2" role="3SKWNk">
-            <property role="3SKdUp" value="Functions with closures are disabled in 1.0." />
-          </node>
-        </node>
-        <node concept="3clFbF" id="79W9gdU9Uu3" role="3cqZAp">
-          <node concept="3clFbT" id="79W9gdU9Uu4" role="3clFbG">
-            <property role="3clFbU" value="false" />
-          </node>
-        </node>
-      </node>
-    </node>
   </node>
   <node concept="1M2fIO" id="4vNpgMrPKYD">
     <property role="3GE5qa" value="channelFunctions.closureFunctions" />
