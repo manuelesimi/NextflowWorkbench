@@ -4087,9 +4087,6 @@
         </node>
         <node concept="3F2HdR" id="7CUbWgsiueh" role="3EZMnx">
           <ref role="1NtTu8" to="iowz:7CUbWgsaciD" resolve="lines" />
-          <node concept="pj6Ft" id="7CUbWgsiuhS" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
           <node concept="ljvvj" id="7CUbWgsiujS" role="3F10Kt">
             <property role="VOm3f" value="true" />
           </node>
