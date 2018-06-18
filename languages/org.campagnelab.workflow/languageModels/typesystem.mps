@@ -361,9 +361,6 @@
       <concept id="1139867745658" name="jetbrains.mps.lang.smodel.structure.Node_ReplaceWithNewOperation" flags="nn" index="1_qnLN">
         <reference id="1139867957129" name="concept" index="1_rbq0" />
       </concept>
-      <concept id="1219352745532" name="jetbrains.mps.lang.smodel.structure.NodeRefExpression" flags="nn" index="3B5_sB">
-        <reference id="1219352800908" name="referentNode" index="3B5MYn" />
-      </concept>
       <concept id="1140131837776" name="jetbrains.mps.lang.smodel.structure.Node_ReplaceWithAnotherOperation" flags="nn" index="1P9Npp">
         <child id="1140131861877" name="replacementNode" index="1P9ThW" />
       </concept>
@@ -690,9 +687,9 @@
               </node>
               <node concept="2OqwBi" id="6YYJWE2F3Z0" role="33vP2m">
                 <node concept="2qgKlT" id="6YYJWE2F3Z7" role="2OqNvi">
-                  <ref role="37wK5l" to="tpcu:3fifI_xCJOQ" resolve="getScope" />
-                  <node concept="3B5_sB" id="6YYJWE2F3Z8" role="37wK5m">
-                    <ref role="3B5MYn" to="iowz:5AoFZCLt6Ly" resolve="GlobalChannel" />
+                  <ref role="37wK5l" to="tpcu:52_Geb4QDV$" resolve="getScope" />
+                  <node concept="35c_gC" id="3JFMtZ1hG40" role="37wK5m">
+                    <ref role="35c_gD" to="iowz:5AoFZCLt6Ly" resolve="GlobalChannel" />
                   </node>
                   <node concept="1YBJjd" id="6YYJWE2FhLf" role="37wK5m">
                     <ref role="1YBMHb" node="6YYJWE2EUf1" resolve="outChannels" />
@@ -712,9 +709,9 @@
               </node>
               <node concept="2OqwBi" id="6YYJWE2OQrL" role="33vP2m">
                 <node concept="2qgKlT" id="6YYJWE2OQOP" role="2OqNvi">
-                  <ref role="37wK5l" to="tpcu:3fifI_xCJOQ" resolve="getScope" />
-                  <node concept="3B5_sB" id="6YYJWE2OQWn" role="37wK5m">
-                    <ref role="3B5MYn" to="iowz:7gAPJCESTMU" resolve="OutputChannel" />
+                  <ref role="37wK5l" to="tpcu:52_Geb4QDV$" resolve="getScope" />
+                  <node concept="35c_gC" id="3JFMtZ1hHPt" role="37wK5m">
+                    <ref role="35c_gD" to="iowz:7gAPJCESTMU" resolve="OutputChannel" />
                   </node>
                   <node concept="1YBJjd" id="6YYJWE2ORbk" role="37wK5m">
                     <ref role="1YBMHb" node="6YYJWE2EUf1" resolve="outChannels" />
