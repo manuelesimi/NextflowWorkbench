@@ -6,6 +6,7 @@
     <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="6" />
     <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="6" />
+    <use id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging" version="0" />
     <devkit ref="fa73d85a-ac7f-447b-846c-fcdc41caa600(jetbrains.mps.devkit.aspect.textgen)" />
   </languages>
   <imports>
@@ -239,6 +240,11 @@
       </concept>
     </language>
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
+      <concept id="6332851714983831325" name="jetbrains.mps.baseLanguage.logging.structure.MsgStatement" flags="ng" index="2xdQw9">
+        <property id="6332851714983843871" name="severity" index="2xdLsb" />
+        <child id="5721587534047265374" name="message" index="9lYJi" />
+        <child id="5721587534047265375" name="throwable" index="9lYJj" />
+      </concept>
       <concept id="1167227138527" name="jetbrains.mps.baseLanguage.logging.structure.LogStatement" flags="nn" index="34ab3g">
         <property id="1167228628751" name="hasException" index="34fQS0" />
         <property id="1167245565795" name="severity" index="35gtTG" />
@@ -527,17 +533,17 @@
           </node>
           <node concept="l8MVK" id="PffOQTbJ7B" role="lcghm" />
         </node>
-        <node concept="34ab3g" id="7b1yRZVBjWJ" role="3cqZAp">
-          <property role="35gtTG" value="info" />
-          <node concept="3cpWs3" id="7b1yRZVBk8C" role="34bqiv">
-            <node concept="2OqwBi" id="7b1yRZVBkdw" role="3uHU7w">
-              <node concept="2qgKlT" id="4Orz$oyvNRw" role="2OqNvi">
+        <node concept="2xdQw9" id="3JFMtZ1nFCJ" role="3cqZAp">
+          <property role="2xdLsb" value="info" />
+          <node concept="3cpWs3" id="3JFMtZ1nGso" role="9lYJi">
+            <node concept="2OqwBi" id="3JFMtZ1nGLS" role="3uHU7w">
+              <node concept="117lpO" id="3JFMtZ1nGA5" role="2Oq$k0" />
+              <node concept="2qgKlT" id="3JFMtZ1nH8H" role="2OqNvi">
                 <ref role="37wK5l" to="mqvz:7LvyiX4mik0" resolve="getOutputFileName" />
               </node>
-              <node concept="117lpO" id="7b1yRZVBk93" role="2Oq$k0" />
             </node>
-            <node concept="Xl_RD" id="7b1yRZVBjWL" role="3uHU7B">
-              <property role="Xl_RC" value="name of node: " />
+            <node concept="Xl_RD" id="3JFMtZ1nFtU" role="3uHU7B">
+              <property role="Xl_RC" value="name of node:" />
             </node>
           </node>
         </node>
@@ -1597,13 +1603,10 @@
                   </node>
                   <node concept="TDmWw" id="34JZ5vs6IYU" role="TEbGg">
                     <node concept="3clFbS" id="34JZ5vs6IYW" role="TDEfX">
-                      <node concept="34ab3g" id="34JZ5vs6Kg6" role="3cqZAp">
-                        <property role="35gtTG" value="error" />
-                        <property role="34fQS0" value="true" />
-                        <node concept="37vLTw" id="7b1yRZVuDbV" role="34bMjA">
-                          <ref role="3cqZAo" node="34JZ5vs6IYY" resolve="e" />
-                        </node>
-                        <node concept="3cpWs3" id="34JZ5vs6Kxr" role="34bqiv">
+                      <node concept="3clFbH" id="3JFMtZ1o9Rc" role="3cqZAp" />
+                      <node concept="2xdQw9" id="3JFMtZ1o9VO" role="3cqZAp">
+                        <property role="2xdLsb" value="error" />
+                        <node concept="3cpWs3" id="34JZ5vs6Kxr" role="9lYJi">
                           <node concept="Xl_RD" id="34JZ5vs6Kg8" role="3uHU7B">
                             <property role="Xl_RC" value="Not enough output channels for process " />
                           </node>
@@ -1620,6 +1623,9 @@
                               <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                             </node>
                           </node>
+                        </node>
+                        <node concept="37vLTw" id="7b1yRZVuDbV" role="9lYJj">
+                          <ref role="3cqZAo" node="34JZ5vs6IYY" resolve="e" />
                         </node>
                       </node>
                       <node concept="1ZvZ2y" id="7b1yRZVuHyP" role="3cqZAp">
