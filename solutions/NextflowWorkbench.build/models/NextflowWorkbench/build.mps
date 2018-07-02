@@ -3369,15 +3369,16 @@
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="19TnOYHnvQ6" role="3bR37C">
-          <node concept="1Busua" id="19TnOYHnvQ7" role="1SiIV1">
-            <ref role="1Busuk" to="t9i9:kVrT783XXb" resolve="org.campagnelab.nyosh.interactive" />
+        <node concept="1SiIV0" id="5l62XeU_2La" role="3bR37C">
+          <node concept="3bR9La" id="5l62XeU_2Lb" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="t9i9:kVrT783XXb" resolve="org.campagnelab.nyosh.interactive" />
           </node>
         </node>
-        <node concept="1SiIV0" id="5RwsY0QXR6R" role="3bR37C">
-          <node concept="3bR9La" id="5RwsY0QXR6S" role="1SiIV1">
+        <node concept="1SiIV0" id="5l62XeU_2Lc" role="3bR37C">
+          <node concept="3bR9La" id="5l62XeU_2Ld" role="1SiIV1">
             <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ael0:5KK2jWpWo0k" resolve="org.campagnelab.ui.code" />
+            <ref role="3bR37D" to="ael0:5KK2jWpWo0e" resolve="org.campagnelab.ui" />
           </node>
         </node>
       </node>
