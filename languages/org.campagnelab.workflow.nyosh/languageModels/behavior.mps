@@ -135,6 +135,10 @@
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
     </language>
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
+      <concept id="2034914114981261497" name="jetbrains.mps.baseLanguage.logging.structure.LogLowLevelStatement" flags="ng" index="RRSsy">
+        <property id="2034914114981261751" name="severity" index="RRSoG" />
+        <child id="2034914114981261753" name="message" index="RRSoy" />
+      </concept>
       <concept id="1167227138527" name="jetbrains.mps.baseLanguage.logging.structure.LogStatement" flags="nn" index="34ab3g">
         <property id="1167245565795" name="severity" index="35gtTG" />
         <child id="1167227463056" name="logExpression" index="34bqiv" />
@@ -326,24 +330,24 @@
               </node>
               <node concept="9aQIb" id="G5bxgNJIJw" role="9aQIa">
                 <node concept="3clFbS" id="G5bxgNJIJx" role="9aQI4">
-                  <node concept="34ab3g" id="4YJHQQrU7N5" role="3cqZAp">
-                    <property role="35gtTG" value="info" />
-                    <node concept="3cpWs3" id="4YJHQQrU8kr" role="34bqiv">
-                      <node concept="Xl_RD" id="4YJHQQrU7N7" role="3uHU7B">
+                  <node concept="RRSsy" id="5l62XeUnnbQ" role="3cqZAp">
+                    <property role="RRSoG" value="info" />
+                    <node concept="3cpWs3" id="5l62XeUnnpw" role="RRSoy">
+                      <node concept="Xl_RD" id="5l62XeUnnpx" role="3uHU7B">
                         <property role="Xl_RC" value="else Import" />
                       </node>
-                      <node concept="2OqwBi" id="4YJHQQrTDPE" role="3uHU7w">
-                        <node concept="AH0OO" id="4YJHQQrTDEz" role="2Oq$k0">
-                          <node concept="3cmrfG" id="4YJHQQrTDHr" role="AHEQo">
+                      <node concept="2OqwBi" id="5l62XeUnnpy" role="3uHU7w">
+                        <node concept="AH0OO" id="5l62XeUnnpz" role="2Oq$k0">
+                          <node concept="3cmrfG" id="5l62XeUnnp$" role="AHEQo">
                             <property role="3cmrfH" value="0" />
                           </node>
-                          <node concept="37vLTw" id="4YJHQQrTDk2" role="AHHXb">
+                          <node concept="37vLTw" id="5l62XeUnnp_" role="AHHXb">
                             <ref role="3cqZAo" node="G5bxgNEf6P" resolve="tokens" />
                           </node>
                         </node>
-                        <node concept="liA8E" id="4YJHQQrTENY" role="2OqNvi">
+                        <node concept="liA8E" id="5l62XeUnnpA" role="2OqNvi">
                           <ref role="37wK5l" to="wyt6:~String.split(java.lang.String):java.lang.String[]" resolve="split" />
-                          <node concept="Xl_RD" id="4YJHQQrU8qz" role="37wK5m">
+                          <node concept="Xl_RD" id="5l62XeUnnpB" role="37wK5m">
                             <property role="Xl_RC" value="\\n" />
                           </node>
                         </node>
