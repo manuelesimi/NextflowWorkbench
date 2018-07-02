@@ -1535,7 +1535,7 @@
         </node>
       </node>
       <node concept="1E1JtA" id="6DdhZ$aRzWF" role="2G$12L">
-        <property role="BnDLt" value="true" />
+        <property role="BnDLt" value="false" />
         <property role="TrG5h" value="org.campagnelab.util.execution.ant" />
         <property role="3LESm3" value="a16c15b3-e423-4aad-81e7-18bb74e1f395" />
         <property role="2GAjPV" value="false" />
@@ -1564,7 +1564,7 @@
         </node>
         <node concept="1SiIV0" id="6DdhZ$aRzX4" role="3bR37C">
           <node concept="3bR9La" id="6DdhZ$aRzX5" role="1SiIV1">
-            <property role="3bR36h" value="false" />
+            <property role="3bR36h" value="true" />
             <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
           </node>
         </node>
@@ -1579,6 +1579,9 @@
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:5xa9wY2vhaQ" resolve="jetbrains.mps.baseLanguage.execution.util" />
           </node>
+        </node>
+        <node concept="3bR9La" id="5l62XeUBYZ5" role="3bR37C">
+          <ref role="3bR37D" to="ffeo:5xa9wY2vhaI" resolve="jetbrains.mps.ant.execution" />
         </node>
         <node concept="3rtmxn" id="7rUxCdAUJq1" role="3bR31x">
           <node concept="3LXTmp" id="7rUxCdAUJq2" role="3rtmxm">
