@@ -275,9 +275,6 @@
       <ref role="1l3spb" to="90a9:2Xjt3l56m0V" resolve="de.itemis.mps.extensions" />
       <node concept="398BVA" id="7N6u_AK7XQI" role="2JcizS">
         <ref role="398BVh" node="4eCE1SMNato" resolve="mps.extensions.home" />
-        <node concept="2Ry0Ak" id="4eCE1SMNaF8" role="iGT6I">
-          <property role="2Ry0Am" value="mps-richtext" />
-        </node>
       </node>
     </node>
     <node concept="2sgV4H" id="7XryNcl_pOV" role="1l3spa">
@@ -1338,6 +1335,9 @@
       </node>
       <node concept="m$_yC" id="5p7XGHaCDEq" role="m$_yJ">
         <ref role="m$_y1" to="90a9:1sO539bGQvt" resolve="de.slisson.mps.richtext" />
+      </node>
+      <node concept="m$_yC" id="5l62XeUFUsf" role="m$_yJ">
+        <ref role="m$_y1" to="90a9:6Y0V2RJk3uw" resolve="de.itemis.mps.selection" />
       </node>
       <node concept="3_J27D" id="4oJiZHqTePR" role="m_cZH">
         <node concept="3Mxwew" id="4oJiZHqTePS" role="3MwsjC">

@@ -12,7 +12,7 @@
   <property name="nextflow_version" value="0.21.2" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.mpsExecutionPlugin" location="${mps_home}" />
-  <property name="artifacts.de.itemis.mps.extensions" location="${mps.extensions.home}/mps-richtext" />
+  <property name="artifacts.de.itemis.mps.extensions" location="${mps.extensions.home}" />
   <property name="artifacts.org.campagnelab.mps.UI" location="${org.campagnelab.goby.workbench.home}/build/artifacts/org.campagnelab.mps.UI" />
   <property name="artifacts.org.campagnelab.Background" location="${org.campagnelab.goby.workbench.home}/build/artifacts/org.campagnelab.Background" />
   <property name="artifacts.org.campagnelab.GobyWeb" location="${org.campagnelab.goby.workbench.home}/build/artifacts/org.campagnelab.GobyWeb" />
@@ -91,6 +91,7 @@
         <depends>org.campagnelab.TextOutput</depends>
         <depends>XChart</depends>
         <depends>de.slisson.mps.richtext</depends>
+        <depends>de.itemis.mps.selection</depends>
         <idea-version until-build="182.0000" since-build="181.1254" />
         
         <extensions defaultExtensionNs="com.intellij">
