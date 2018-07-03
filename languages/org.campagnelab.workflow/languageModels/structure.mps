@@ -167,7 +167,7 @@
       <property role="20kJfa" value="processes" />
       <property role="20lbJX" value="0..n" />
       <property role="IQ2ns" value="6505336652526334573" />
-      <ref role="20lvS9" node="2zDNr6iMGQZ" resolve="AbstractProcessRef" />
+      <ref role="20lvS9" node="5D7AjvYaj9M" resolve="ProcessRef" />
     </node>
     <node concept="1TJgyj" id="5HJ0QzxBRcw" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
