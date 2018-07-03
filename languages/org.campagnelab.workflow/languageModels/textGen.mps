@@ -20,7 +20,6 @@
     <import index="rzxe" ref="r:c8f01c5c-0641-4bdc-875e-539c2c78a0be(org.campagnelab.docker.behavior)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
-    <import index="yy4t" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.textGen(MPS.Core/)" implicit="true" />
     <import index="tbr6" ref="r:6a005c26-87c0-43c4-8cf3-49ffba1099df(de.slisson.mps.richtext.behavior)" implicit="true" />
     <import index="tpfs" ref="r:00000000-0000-4000-0000-011c89590514(jetbrains.mps.baseLanguage.regexp.behavior)" implicit="true" />
   </imports>
@@ -72,10 +71,6 @@
         <child id="1164991057263" name="throwable" index="YScLw" />
       </concept>
       <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
-      <concept id="1070534934090" name="jetbrains.mps.baseLanguage.structure.CastExpression" flags="nn" index="10QFUN">
-        <child id="1070534934091" name="type" index="10QFUM" />
-        <child id="1070534934092" name="expression" index="10QFUP" />
-      </concept>
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <property id="1176718929932" name="isFinal" index="3TUv4t" />
         <child id="1068431790190" name="initializer" index="33vP2m" />
@@ -128,9 +123,6 @@
       <concept id="1206060495898" name="jetbrains.mps.baseLanguage.structure.ElsifClause" flags="ng" index="3eNFk2">
         <child id="1206060619838" name="condition" index="3eO9$A" />
         <child id="1206060644605" name="statementList" index="3eOfB_" />
-      </concept>
-      <concept id="1079359253375" name="jetbrains.mps.baseLanguage.structure.ParenthesizedExpression" flags="nn" index="1eOMI4">
-        <child id="1079359253376" name="expression" index="1eOMHV" />
       </concept>
       <concept id="1081516740877" name="jetbrains.mps.baseLanguage.structure.NotExpression" flags="nn" index="3fqX7Q">
         <child id="1081516765348" name="expression" index="3fr31v" />
@@ -212,7 +204,6 @@
       <concept id="1236188139846" name="jetbrains.mps.lang.textGen.structure.WithIndentOperation" flags="nn" index="3izx1p">
         <child id="1236188238861" name="list" index="3izTki" />
       </concept>
-      <concept id="1234351783410" name="jetbrains.mps.lang.textGen.structure.BufferParameter" flags="ng" index="1_6nNH" />
       <concept id="1234524838116" name="jetbrains.mps.lang.textGen.structure.UtilityMethodDeclaration" flags="ng" index="1JqxBV" />
       <concept id="1234529062040" name="jetbrains.mps.lang.textGen.structure.UtilityMethodCall" flags="nn" index="1JECQ7">
         <reference id="1234529163244" name="function" index="1JF1rN" />
@@ -682,25 +673,6 @@
         <node concept="3SKdUt" id="1keRm_BpQ5s" role="3cqZAp">
           <node concept="3SKdUq" id="1keRm_BpQah" role="3SKWNk">
             <property role="3SKdUp" value="put the workflow name in user objects so expression can find it" />
-          </node>
-        </node>
-        <node concept="3clFbF" id="1keRm_BpPCQ" role="3cqZAp">
-          <node concept="2OqwBi" id="1keRm_BpPEX" role="3clFbG">
-            <node concept="1_6nNH" id="1keRm_BpPCO" role="2Oq$k0" />
-            <node concept="liA8E" id="1keRm_BpPUv" role="2OqNvi">
-              <ref role="37wK5l" to="yy4t:~TextGenBuffer.putUserObject(java.lang.Object,java.lang.Object):void" resolve="putUserObject" />
-              <node concept="Xl_RD" id="1keRm_BpPUT" role="37wK5m">
-                <property role="Xl_RC" value="workflowName" />
-              </node>
-              <node concept="2OqwBi" id="1keRm_BpQhF" role="37wK5m">
-                <node concept="37vLTw" id="1keRm_BpPZq" role="2Oq$k0">
-                  <ref role="3cqZAo" node="34JZ5vrM0Ve" resolve="workflow" />
-                </node>
-                <node concept="3TrcHB" id="1keRm_BpQsM" role="2OqNvi">
-                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                </node>
-              </node>
-            </node>
           </node>
         </node>
         <node concept="3clFbJ" id="1B2iUhm80A4" role="3cqZAp">
@@ -3474,23 +3446,24 @@
       <node concept="3clFbS" id="2bVBkcPdmuW" role="2VODD2">
         <node concept="3clFbJ" id="5a$ayBj6x6d" role="3cqZAp">
           <node concept="3clFbS" id="5a$ayBj6x6f" role="3clFbx">
-            <node concept="3cpWs8" id="5a$ayBj6zOx" role="3cqZAp">
-              <node concept="3cpWsn" id="5a$ayBj6zOy" role="3cpWs9">
+            <node concept="3cpWs8" id="4H3rEed$LuQ" role="3cqZAp">
+              <node concept="3cpWsn" id="4H3rEed$LuT" role="3cpWs9">
                 <property role="TrG5h" value="workflowName" />
-                <node concept="17QB3L" id="5a$ayBj6zOz" role="1tU5fm" />
-                <node concept="10QFUN" id="5a$ayBj6zO$" role="33vP2m">
-                  <node concept="1eOMI4" id="5a$ayBj6zO_" role="10QFUP">
-                    <node concept="2OqwBi" id="5a$ayBj6zOA" role="1eOMHV">
-                      <node concept="1_6nNH" id="5a$ayBj6zOB" role="2Oq$k0" />
-                      <node concept="liA8E" id="5a$ayBj6zOC" role="2OqNvi">
-                        <ref role="37wK5l" to="yy4t:~TextGenBuffer.getUserObject(java.lang.Object):java.lang.Object" resolve="getUserObject" />
-                        <node concept="Xl_RD" id="5a$ayBj6zOD" role="37wK5m">
-                          <property role="Xl_RC" value="workflowName" />
+                <node concept="17QB3L" id="4H3rEed$LuO" role="1tU5fm" />
+                <node concept="2OqwBi" id="4H3rEed$MwO" role="33vP2m">
+                  <node concept="2OqwBi" id="4H3rEed$LGS" role="2Oq$k0">
+                    <node concept="117lpO" id="4H3rEed$LzA" role="2Oq$k0" />
+                    <node concept="2Xjw5R" id="4H3rEed$Mjw" role="2OqNvi">
+                      <node concept="1xMEDy" id="4H3rEed$Mjy" role="1xVPHs">
+                        <node concept="chp4Y" id="4H3rEed$Mm1" role="ri$Ld">
+                          <ref role="cht4Q" to="iowz:5D7AjvYabas" resolve="Workflow" />
                         </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="17QB3L" id="5a$ayBj6zOE" role="10QFUM" />
+                  <node concept="3TrcHB" id="4H3rEed$MTu" role="2OqNvi">
+                    <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                  </node>
                 </node>
               </node>
             </node>
@@ -3503,7 +3476,7 @@
               <node concept="1bDJIP" id="5a$ayBj6zOG" role="lcghm">
                 <ref role="1rvKf6" node="3VDmkwCINW5" resolve="expression" />
                 <node concept="37vLTw" id="5a$ayBj6zOH" role="1ryhcI">
-                  <ref role="3cqZAo" node="5a$ayBj6zOy" resolve="workflowName" />
+                  <ref role="3cqZAo" node="4H3rEed$LuT" resolve="workflowName" />
                 </node>
                 <node concept="117lpO" id="5a$ayBj6zOI" role="1ryhcI" />
               </node>
@@ -3908,23 +3881,24 @@
                 </node>
               </node>
               <node concept="3clFbS" id="3VDmkwCILLR" role="3clFbx">
-                <node concept="3cpWs8" id="1keRm_BpScj" role="3cqZAp">
-                  <node concept="3cpWsn" id="1keRm_BpScm" role="3cpWs9">
+                <node concept="3cpWs8" id="4H3rEed$NXe" role="3cqZAp">
+                  <node concept="3cpWsn" id="4H3rEed$NXf" role="3cpWs9">
                     <property role="TrG5h" value="workflowName" />
-                    <node concept="17QB3L" id="1keRm_BpSch" role="1tU5fm" />
-                    <node concept="10QFUN" id="1keRm_BpV3Y" role="33vP2m">
-                      <node concept="1eOMI4" id="1keRm_BpSiy" role="10QFUP">
-                        <node concept="2OqwBi" id="1keRm_BpSBz" role="1eOMHV">
-                          <node concept="1_6nNH" id="1keRm_BpVcD" role="2Oq$k0" />
-                          <node concept="liA8E" id="1keRm_BpSWe" role="2OqNvi">
-                            <ref role="37wK5l" to="yy4t:~TextGenBuffer.getUserObject(java.lang.Object):java.lang.Object" resolve="getUserObject" />
-                            <node concept="Xl_RD" id="1keRm_BpT4q" role="37wK5m">
-                              <property role="Xl_RC" value="workflowName" />
+                    <node concept="17QB3L" id="4H3rEed$NXg" role="1tU5fm" />
+                    <node concept="2OqwBi" id="4H3rEed$NXh" role="33vP2m">
+                      <node concept="2OqwBi" id="4H3rEed$NXi" role="2Oq$k0">
+                        <node concept="117lpO" id="4H3rEed$NXj" role="2Oq$k0" />
+                        <node concept="2Xjw5R" id="4H3rEed$NXk" role="2OqNvi">
+                          <node concept="1xMEDy" id="4H3rEed$NXl" role="1xVPHs">
+                            <node concept="chp4Y" id="4H3rEed$NXm" role="ri$Ld">
+                              <ref role="cht4Q" to="iowz:5D7AjvYabas" resolve="Workflow" />
                             </node>
                           </node>
                         </node>
                       </node>
-                      <node concept="17QB3L" id="1keRm_BpV3Z" role="10QFUM" />
+                      <node concept="3TrcHB" id="4H3rEed$NXn" role="2OqNvi">
+                        <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                      </node>
                     </node>
                   </node>
                 </node>
@@ -3932,7 +3906,7 @@
                   <node concept="1bDJIP" id="1keRm_BpS9E" role="lcghm">
                     <ref role="1rvKf6" node="3VDmkwCINW5" resolve="expression" />
                     <node concept="37vLTw" id="1keRm_BpVdE" role="1ryhcI">
-                      <ref role="3cqZAo" node="1keRm_BpScm" resolve="workflowName" />
+                      <ref role="3cqZAo" node="4H3rEed$NXf" resolve="workflowName" />
                     </node>
                     <node concept="117lpO" id="1keRm_BpSbc" role="1ryhcI" />
                   </node>
