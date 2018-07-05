@@ -1736,12 +1736,6 @@
             <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
           </node>
         </node>
-        <node concept="1SiIV0" id="1rhtiO0ocJA" role="3bR37C">
-          <node concept="3bR9La" id="1rhtiO0ocJB" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" node="1rhtiO0obS0" resolve="org.campagnelab.docker" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="3voMOJEmgqe" role="3bR37C">
           <node concept="3bR9La" id="3voMOJEmgqf" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -1772,6 +1766,11 @@
         <node concept="1SiIV0" id="7N6u_AK7Yjs" role="3bR37C">
           <node concept="1Busua" id="7N6u_AK7Yjt" role="1SiIV1">
             <ref role="1Busuk" to="90a9:1sO539bGQvB" resolve="de.slisson.mps.richtext" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="4H3rEee5u6F" role="3bR37C">
+          <node concept="1Busua" id="4H3rEee5u6G" role="1SiIV1">
+            <ref role="1Busuk" node="1rhtiO0obS0" resolve="org.campagnelab.docker" />
           </node>
         </node>
       </node>
