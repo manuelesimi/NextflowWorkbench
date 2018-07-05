@@ -167,7 +167,7 @@
       <property role="20kJfa" value="processes" />
       <property role="20lbJX" value="0..n" />
       <property role="IQ2ns" value="6505336652526334573" />
-      <ref role="20lvS9" node="5D7AjvYaj9M" resolve="ProcessRef" />
+      <ref role="20lvS9" node="2zDNr6iMGQZ" resolve="AbstractProcessRef" />
     </node>
     <node concept="1TJgyj" id="5HJ0QzxBRcw" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
@@ -199,13 +199,6 @@
     <property role="TrG5h" value="ProcessRef" />
     <property role="EcuMT" value="6505336652526334578" />
     <ref role="1TJDcQ" node="2zDNr6iMGQZ" resolve="AbstractProcessRef" />
-    <node concept="1TJgyj" id="5D7AjvYaj9N" role="1TKVEi">
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="process" />
-      <property role="20lbJX" value="1" />
-      <property role="IQ2ns" value="6505336652526334579" />
-      <ref role="20lvS9" node="6tX5nBTatyL" resolve="Process" />
-    </node>
     <node concept="1TJgyj" id="7gAPJCESMIn" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="inChannel" />
@@ -2347,6 +2340,13 @@
     <property role="R5$K2" value="false" />
     <property role="EcuMT" value="2948113593646370239" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="5D7AjvYaj9N" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="process" />
+      <property role="20lbJX" value="1" />
+      <property role="IQ2ns" value="6505336652526334579" />
+      <ref role="20lvS9" node="6tX5nBTatyL" resolve="Process" />
+    </node>
     <node concept="PrWs8" id="2zDNr6iMGR0" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
