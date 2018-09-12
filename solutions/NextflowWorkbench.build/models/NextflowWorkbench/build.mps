@@ -235,7 +235,7 @@
       <node concept="aVJcg" id="3gMg70bX6HN" role="aVJcv">
         <node concept="NbPM2" id="3gMg70bX6HM" role="aVJcq">
           <node concept="3Mxwew" id="3gMg70bX6HL" role="3MwsjC">
-            <property role="3MwjfP" value="1.7.0" />
+            <property role="3MwjfP" value="1.8.0" />
           </node>
         </node>
       </node>
@@ -1700,12 +1700,6 @@
             <ref role="3bR37D" to="ffeo:7Kfy9QB6L0h" resolve="jetbrains.mps.baseLanguage.collections" />
           </node>
         </node>
-        <node concept="1SiIV0" id="1d37CfpqS93" role="3bR37C">
-          <node concept="3bR9La" id="1d37CfpqS94" role="1SiIV1">
-            <property role="3bR36h" value="true" />
-            <ref role="3bR37D" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="7TupKkjrRbA" role="3bR37C">
           <node concept="3bR9La" id="7TupKkjrRbB" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -1771,6 +1765,12 @@
         <node concept="1SiIV0" id="4H3rEee5u6F" role="3bR37C">
           <node concept="1Busua" id="4H3rEee5u6G" role="1SiIV1">
             <ref role="1Busuk" node="1rhtiO0obS0" resolve="org.campagnelab.docker" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1emeo0dJ7ci" role="3bR37C">
+          <node concept="3bR9La" id="1emeo0dJ7cj" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="3voMOJEmfkq" resolve="org.campagnelab.icons" />
           </node>
         </node>
       </node>
