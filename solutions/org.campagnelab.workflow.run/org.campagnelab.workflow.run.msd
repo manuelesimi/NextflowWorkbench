@@ -84,7 +84,7 @@
     <module reference="43809d33-d5e3-4390-917e-3944cb211ee3(org.campagnelab.icons)" version="0" />
     <module reference="a16c15b3-e423-4aad-81e7-18bb74e1f395(org.campagnelab.util.execution.ant)" version="0" />
     <module reference="d4767029-894b-41e1-b76e-850baa598e5b(org.campagnelab.util.files)" version="0" />
-    <module reference="c6c823fb-a9da-46e7-9850-129b0f7a7aa5(org.campagnelab.workflow)" version="0" />
+    <module reference="c6c823fb-a9da-46e7-9850-129b0f7a7aa5(org.campagnelab.workflow)" version="1" />
     <module reference="f9b7dda6-7ab5-4936-ad1b-2d45c57833dc(org.campagnelab.workflow.configuration)" version="0" />
     <module reference="c039a1a6-4680-46fa-b571-a6a5f1e49ab6(org.campagnelab.workflow.run)" version="0" />
   </dependencyVersions>

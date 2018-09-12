@@ -10,8 +10,8 @@
   </languages>
   <imports>
     <import index="hg90" ref="r:fabfd97d-2a4e-4254-8652-f9c389bfe16e(processes)" />
-    <import index="fxg7" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.io(JDK/java.io@java_stub)" implicit="true" />
-    <import index="e2lb" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" implicit="true" />
+    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
+    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -135,9 +135,7 @@
       <concept id="6588488528864881603" name="org.campagnelab.workflow.structure.ReportParameter" flags="ng" index="2UPiyF" />
       <concept id="1980749076351268038" name="org.campagnelab.workflow.structure.String" flags="ng" index="16pbKc" />
       <concept id="1980749076351316170" name="org.campagnelab.workflow.structure.File" flags="ng" index="16pRw0" />
-      <concept id="6514615324151249770" name="org.campagnelab.workflow.structure.ClosureLiteralWorkFlow" flags="ng" index="1ecmHP">
-        <child id="7418584321830319674" name="closure" index="303AOo" />
-      </concept>
+      <concept id="6514615324151249770" name="org.campagnelab.workflow.structure.ClosureLiteralWorkFlow" flags="ng" index="1ecmHP" />
       <concept id="1101938165436086453" name="org.campagnelab.workflow.structure.Reduce" flags="ng" index="1s2qpp">
         <child id="1689603821067410811" name="initialValue" index="UFN32" />
       </concept>
@@ -155,6 +153,9 @@
       </concept>
       <concept id="248997709146700114" name="org.campagnelab.workflow.structure.Header" flags="ng" index="3wTUta" />
       <concept id="3857878650533843630" name="org.campagnelab.workflow.structure.ToList" flags="ng" index="1yaYav" />
+      <concept id="8807404540608924540" name="org.campagnelab.workflow.structure.ClosureWorkflow" flags="ng" index="1A4AiS">
+        <child id="7845810446419553438" name="" index="1l0Kum" />
+      </concept>
       <concept id="6456103554942004322" name="org.campagnelab.workflow.structure.GlobalChannel" flags="ng" index="1CVceo">
         <child id="3855674281011084282" name="value" index="2$L62I" />
       </concept>
@@ -218,7 +219,7 @@
             </node>
           </node>
           <node concept="1ecmHP" id="5kDh3zA$1mA" role="1Xju2$">
-            <node concept="1bVj0M" id="5kDh3zA$1mB" role="303AOo">
+            <node concept="1bVj0M" id="5kDh3zA$1mB" role="1l0Kum">
               <property role="3yWfEV" value="true" />
               <node concept="3clFbS" id="5kDh3zA$1mC" role="1bW5cS">
                 <node concept="3clFbF" id="7pq1c5Mi8ID" role="3cqZAp">
@@ -352,11 +353,11 @@
           <node concept="3clFbF" id="1PVBxDepKLt" role="3cqZAp">
             <node concept="2OqwBi" id="1PVBxDepKLq" role="3clFbG">
               <node concept="10M0yZ" id="1PVBxDepKLr" role="2Oq$k0">
-                <ref role="1PxDUh" to="e2lb:~System" resolve="System" />
-                <ref role="3cqZAo" to="e2lb:~System.out" resolve="out" />
+                <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
+                <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
               </node>
               <node concept="liA8E" id="1PVBxDepKLs" role="2OqNvi">
-                <ref role="37wK5l" to="fxg7:~PrintStream.println(java.lang.String):void" resolve="println" />
+                <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
                 <node concept="2UPiyF" id="79AYUVoBQKa" role="37wK5m" />
               </node>
             </node>
@@ -371,7 +372,7 @@
       </node>
       <node concept="1s2qpp" id="3ynbr3KJ1gR" role="1fSQVV">
         <node concept="1ecmHP" id="3ynbr3KJ1i$" role="1Xju2$">
-          <node concept="1bVj0M" id="3ynbr3KJ1i_" role="303AOo">
+          <node concept="1bVj0M" id="3ynbr3KJ1i_" role="1l0Kum">
             <node concept="3clFbS" id="3ynbr3KJ1iA" role="1bW5cS">
               <node concept="3cpWs6" id="3ynbr3KJkig" role="3cqZAp">
                 <node concept="3EllGN" id="3ynbr3KJ622" role="3cqZAk">
@@ -427,11 +428,11 @@
           <node concept="3clFbF" id="5oiwyauV3$d" role="3cqZAp">
             <node concept="2OqwBi" id="5oiwyauV3$a" role="3clFbG">
               <node concept="10M0yZ" id="5oiwyauV3$b" role="2Oq$k0">
-                <ref role="1PxDUh" to="e2lb:~System" resolve="System" />
-                <ref role="3cqZAo" to="e2lb:~System.out" resolve="out" />
+                <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
+                <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
               </node>
               <node concept="liA8E" id="5oiwyauV3$c" role="2OqNvi">
-                <ref role="37wK5l" to="fxg7:~PrintStream.println(java.lang.Object):void" resolve="println" />
+                <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.Object):void" resolve="println" />
                 <node concept="2UPiyF" id="5oiwyauV3C4" role="37wK5m" />
               </node>
             </node>
@@ -446,7 +447,7 @@
       </node>
       <node concept="1s2qpp" id="1tMFr$HYxmp" role="1fSQVV">
         <node concept="1ecmHP" id="1tMFr$HYxo1" role="1Xju2$">
-          <node concept="1bVj0M" id="1tMFr$HYxo2" role="303AOo">
+          <node concept="1bVj0M" id="1tMFr$HYxo2" role="1l0Kum">
             <node concept="3clFbS" id="1tMFr$HYxo3" role="1bW5cS">
               <node concept="3clFbF" id="6MWjaHTpvcZ" role="3cqZAp">
                 <node concept="37vLTw" id="6MWjaHTpvcY" role="3clFbG">

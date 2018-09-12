@@ -14,6 +14,7 @@
     <import index="1c09" ref="r:ceab30bb-72b2-4b22-9ea6-3ea754d0b737(kallisto)" />
     <import index="pmhg" ref="r:2a81c50e-f78d-4a61-a46c-82e6c99b659d(sra)" />
     <import index="ass7" ref="r:d7f2e001-f82c-4379-aa69-f5a37b97ebec(fastQC)" />
+    <import index="hg90" ref="r:fabfd97d-2a4e-4254-8652-f9c389bfe16e(processes)" />
     <import index="bd2x" ref="r:aa9c91aa-8100-4e98-88e5-b9737f1d54b8(model.organisms)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
@@ -367,6 +368,9 @@
       <concept id="3653684473245054700" name="org.campagnelab.workflow.structure.NewListLiteral" flags="ng" index="2J_sx7">
         <child id="3653684473245054701" name="elementType" index="2J_sx6" />
       </concept>
+      <concept id="2948113593646370239" name="org.campagnelab.workflow.structure.AbstractProcessRef" flags="ng" index="2U8K0e">
+        <reference id="6505336652526334579" name="process" index="2$rEH5" />
+      </concept>
       <concept id="6588488528863172354" name="org.campagnelab.workflow.structure.Report" flags="ng" index="2UNLhE">
         <reference id="6588488528863172372" name="channel" index="2UNLhW" />
         <child id="6588488528863172374" name="function" index="2UNLhY" />
@@ -375,9 +379,7 @@
       <concept id="6588488528864881603" name="org.campagnelab.workflow.structure.ReportParameter" flags="ng" index="2UPiyF" />
       <concept id="1980749076351268038" name="org.campagnelab.workflow.structure.String" flags="ng" index="16pbKc" />
       <concept id="1980749076351316170" name="org.campagnelab.workflow.structure.File" flags="ng" index="16pRw0" />
-      <concept id="6514615324151249770" name="org.campagnelab.workflow.structure.ClosureLiteralWorkFlow" flags="ng" index="1ecmHP">
-        <child id="7418584321830319674" name="closure" index="303AOo" />
-      </concept>
+      <concept id="6514615324151249770" name="org.campagnelab.workflow.structure.ClosureLiteralWorkFlow" flags="ng" index="1ecmHP" />
       <concept id="1101938165422446122" name="org.campagnelab.workflow.structure.MapFunction" flags="ng" index="1teoz6" />
       <concept id="1101938165422228846" name="org.campagnelab.workflow.structure.FunctionWithClosure" flags="ng" index="1teHI2">
         <child id="1629219545452496431" name="closure" index="1Xju2$" />
@@ -395,6 +397,9 @@
       <concept id="5937854873902684864" name="org.campagnelab.workflow.structure.DuplicateGlobalChannel" flags="ng" index="1$Fulc" />
       <concept id="5937854873901406088" name="org.campagnelab.workflow.structure.DuplicateGlobalChannelList" flags="ng" index="1$O6w4">
         <child id="5937854873901406089" name="channels" index="1$O6w5" />
+      </concept>
+      <concept id="8807404540608924540" name="org.campagnelab.workflow.structure.ClosureWorkflow" flags="ng" index="1A4AiS">
+        <child id="7845810446419553438" name="closure" index="1l0Kum" />
       </concept>
       <concept id="6456103554942004322" name="org.campagnelab.workflow.structure.GlobalChannel" flags="ng" index="1CVceo">
         <child id="3855674281011084282" name="value" index="2$L62I" />
@@ -916,7 +921,7 @@
         <ref role="1uK_4X" node="1CWHgioTEO4" resolve="reads" />
         <node concept="1teoz6" id="4do6Q577Fe" role="1ylr64">
           <node concept="1ecmHP" id="4do6Q577FU" role="1Xju2$">
-            <node concept="1bVj0M" id="4do6Q577FV" role="303AOo">
+            <node concept="1bVj0M" id="4do6Q577FV" role="1l0Kum">
               <node concept="3clFbS" id="4do6Q577FW" role="1bW5cS">
                 <node concept="3clFbF" id="4do6Q577MF" role="3cqZAp">
                   <node concept="vO3mO" id="4do6Q577ME" role="3clFbG">
@@ -9522,6 +9527,7 @@
     <property role="TrG5h" value="FastqKallistoCounts" />
     <node concept="2$rEH5" id="3a_Ie33Onib" role="2$rEHq">
       <ref role="2$rEH4" to="pmhg:3a_Ie33Oni_" resolve="Download_Reads" />
+      <ref role="2$rEH5" to="pmhg:3a_Ie33Oni_" resolve="Download_Reads" />
       <node concept="2tD$Xd" id="59BvSKQZ7BC" role="1uLvPA">
         <property role="TrG5h" value="reads" />
         <node concept="1$0uN4" id="59BvSKQZ7KI" role="2tD$Xc">

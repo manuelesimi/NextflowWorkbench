@@ -7,7 +7,7 @@
     <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="1" />
     <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="6" />
     <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
-    <use id="c6c823fb-a9da-46e7-9850-129b0f7a7aa5" name="org.campagnelab.workflow" version="6" />
+    <use id="c6c823fb-a9da-46e7-9850-129b0f7a7aa5" name="org.campagnelab.workflow" version="7" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -3553,7 +3553,7 @@
                                     </node>
                                   </node>
                                   <node concept="3TrEf2" id="1mGDKBD$1gF" role="2OqNvi">
-                                    <ref role="3Tt5mk" to="iowz:6rO6MaAYBoU" resolve="closure" />
+                                    <ref role="3Tt5mk" to="iowz:6NxUKwTSIMu" resolve="closure" />
                                   </node>
                                 </node>
                               </node>
@@ -5763,7 +5763,7 @@
                 </node>
               </node>
               <node concept="3TrEf2" id="1z1zDaaGHv3" role="2OqNvi">
-                <ref role="3Tt5mk" to="iowz:6rO6MaAYBoU" resolve="closure" />
+                <ref role="3Tt5mk" to="iowz:6NxUKwTSIMu" resolve="closure" />
               </node>
             </node>
           </node>
@@ -6134,7 +6134,7 @@
             <ref role="1YBMHb" node="1uJsI1tfT4r" resolve="closureLiteralWorkFlow" />
           </node>
           <node concept="3TrEf2" id="53yaZUNjUni" role="2OqNvi">
-            <ref role="3Tt5mk" to="iowz:6rO6MaAYBoU" resolve="closure" />
+            <ref role="3Tt5mk" to="iowz:6NxUKwTSIMu" resolve="closure" />
           </node>
         </node>
         <node concept="3clFbS" id="7$L3$Ar8XfK" role="nvhr_">
@@ -6368,7 +6368,7 @@
                 <ref role="1M0zk5" node="7CUbWgsshCT" resolve="closure" />
               </node>
               <node concept="3TrEf2" id="7CUbWgssjWJ" role="2OqNvi">
-                <ref role="3Tt5mk" to="iowz:6rO6MaAYBoU" resolve="closure" />
+                <ref role="3Tt5mk" to="iowz:6NxUKwTSIMu" resolve="closure" />
               </node>
             </node>
           </node>
@@ -6885,7 +6885,7 @@
             </node>
           </node>
           <node concept="3TrEf2" id="5a5iMQx8v56" role="2OqNvi">
-            <ref role="3Tt5mk" to="iowz:6rO6MaAYBoU" resolve="closure" />
+            <ref role="3Tt5mk" to="iowz:6NxUKwTSIMu" resolve="closure" />
           </node>
         </node>
       </node>
@@ -7152,7 +7152,7 @@
             </node>
           </node>
           <node concept="3TrEf2" id="59BvSKQoWk8" role="2OqNvi">
-            <ref role="3Tt5mk" to="iowz:6rO6MaAYBoU" resolve="closure" />
+            <ref role="3Tt5mk" to="iowz:6NxUKwTSIMu" resolve="closure" />
           </node>
         </node>
       </node>
@@ -7204,7 +7204,7 @@
                     </node>
                   </node>
                   <node concept="3TrEf2" id="59BvSKQrihn" role="2OqNvi">
-                    <ref role="3Tt5mk" to="iowz:6rO6MaAYBoU" resolve="closure" />
+                    <ref role="3Tt5mk" to="iowz:6NxUKwTSIMu" resolve="closure" />
                   </node>
                 </node>
               </node>

@@ -19,7 +19,8 @@
     <language slang="l:a247e09e-2435-45ba-b8d2-07e93feba96a:jetbrains.mps.baseLanguage.tuples" version="0" />
     <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="1" />
     <language slang="l:9ded098b-ad6a-4657-bfd9-48636cfe8bc3:jetbrains.mps.lang.traceable" version="0" />
-    <language slang="l:c6c823fb-a9da-46e7-9850-129b0f7a7aa5:org.campagnelab.workflow" version="6" />
+    <language slang="l:25281c03-4a7c-4b57-9221-24a10fc36ef5:org.campagnelab.docker" version="0" />
+    <language slang="l:c6c823fb-a9da-46e7-9850-129b0f7a7aa5:org.campagnelab.workflow" version="7" />
     <language slang="l:f9b7dda6-7ab5-4936-ad1b-2d45c57833dc:org.campagnelab.workflow.configuration" version="0" />
   </languageVersions>
   <dependencyVersions>

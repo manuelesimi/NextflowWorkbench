@@ -26,7 +26,7 @@
     <language slang="l:57af9408-ffae-472e-9367-5cb44434e8b3:org.campagnelab.gobyweb.interactive.users" version="0" />
     <language slang="l:0b7d8bbd-896e-495e-be60-01a0d738a649:org.campagnelab.gobyweb.plugins" version="0" />
     <language slang="l:66f96b90-b2af-4ce4-92ca-dc0e9d7e2b43:org.campagnelab.nyosh.interactive" version="0" />
-    <language slang="l:c6c823fb-a9da-46e7-9850-129b0f7a7aa5:org.campagnelab.workflow" version="6" />
+    <language slang="l:c6c823fb-a9da-46e7-9850-129b0f7a7aa5:org.campagnelab.workflow" version="7" />
     <language slang="l:f9b7dda6-7ab5-4936-ad1b-2d45c57833dc:org.campagnelab.workflow.configuration" version="0" />
     <language slang="l:5cf93bc1-d0da-4893-b739-63b17fe296b1:org.campagnelab.workflow.nyosh" version="0" />
   </languageVersions>

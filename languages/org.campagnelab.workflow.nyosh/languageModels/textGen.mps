@@ -3,11 +3,12 @@
   <persistence version="9" />
   <languages>
     <use id="d4767029-894b-41e1-b76e-850baa598e5b" name="org.campagnelab.util.files" version="0" />
+    <use id="66f96b90-b2af-4ce4-92ca-dc0e9d7e2b43" name="org.campagnelab.nyosh.interactive" version="0" />
     <devkit ref="fa73d85a-ac7f-447b-846c-fcdc41caa600(jetbrains.mps.devkit.aspect.textgen)" />
   </languages>
   <imports>
     <import index="q2ta" ref="r:cbd6943f-6de3-44a2-ba40-40c257b794e1(org.campagnelab.util.files.structure)" />
-    <import index="440p" ref="r:a6c7903c-0b83-4bcf-8e49-8f150f2412bf(org.campagnelab.nyosh.interactive.structure)" implicit="true" />
+    <import index="440p" ref="r:a6c7903c-0b83-4bcf-8e49-8f150f2412bf(org.campagnelab.nyosh.interactive.structure)" />
     <import index="3jiv" ref="r:36d353e8-689e-4297-b8ea-7712719668fa(org.campagnelab.workflow.nyosh.structure)" implicit="true" />
   </imports>
   <registry>
@@ -92,12 +93,6 @@
   <node concept="1bsvg0" id="5OmLCqMDtU2">
     <property role="TrG5h" value="languageTextGen" />
   </node>
-  <node concept="WtQ9Q" id="5OmLCqMHhVg">
-    <ref role="WuzLi" to="440p:4PxeyvB$uiJ" resolve="ExplicitFileBag" />
-    <node concept="11bSqf" id="5OmLCqMHhVh" role="11c4hB">
-      <node concept="3clFbS" id="5OmLCqMHhVi" role="2VODD2" />
-    </node>
-  </node>
   <node concept="WtQ9Q" id="6z79Ypl$hC7">
     <ref role="WuzLi" to="3jiv:4HNd3hiUKIF" resolve="ExplicitFileBagRef" />
     <node concept="11bSqf" id="6z79Ypl$hC8" role="11c4hB">
@@ -109,11 +104,11 @@
                 <node concept="2OqwBi" id="4yLR7SAqKFs" role="2Oq$k0">
                   <node concept="2OqwBi" id="4yLR7SAqtKm" role="2Oq$k0">
                     <node concept="117lpO" id="4yLR7SAqqqH" role="2Oq$k0" />
-                    <node concept="3TrEf2" id="4yLR7SAqKwj" role="2OqNvi">
+                    <node concept="3TrEf2" id="1emeo0dBoYo" role="2OqNvi">
                       <ref role="3Tt5mk" to="3jiv:4HNd3hiUKXQ" resolve="ExplicitFileBag" />
                     </node>
                   </node>
-                  <node concept="3Tsc0h" id="4yLR7SAqM6S" role="2OqNvi">
+                  <node concept="3Tsc0h" id="1emeo0dBpoL" role="2OqNvi">
                     <ref role="3TtcxE" to="440p:4PxeyvB$vgA" resolve="files" />
                   </node>
                 </node>

@@ -3557,7 +3557,7 @@
     <property role="3GE5qa" value="channelFunctions.closureFunctions" />
     <ref role="1XX52x" to="iowz:5DC$1WkmvHE" resolve="ClosureLiteralWorkFlow" />
     <node concept="3F1sOY" id="6rO6MaAYStr" role="2wV5jI">
-      <ref role="1NtTu8" to="iowz:6rO6MaAYBoU" resolve="closure" />
+      <ref role="1NtTu8" to="iowz:6NxUKwTSIMu" resolve="closure" />
     </node>
   </node>
   <node concept="24kQdi" id="7VH0Nfrp_SL">

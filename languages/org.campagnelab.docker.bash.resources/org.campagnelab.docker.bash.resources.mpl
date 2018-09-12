@@ -39,7 +39,7 @@
         <language slang="l:3b74e3b7-7336-414d-8899-64a293a44a07:org.campagnelab.docker.bash" version="0" />
         <language slang="l:a8fb88b0-7e9f-478c-aab4-a1b076131192:org.campagnelab.gobyweb.interactive" version="0" />
         <language slang="l:57af9408-ffae-472e-9367-5cb44434e8b3:org.campagnelab.gobyweb.interactive.users" version="0" />
-        <language slang="l:c6c823fb-a9da-46e7-9850-129b0f7a7aa5:org.campagnelab.workflow" version="6" />
+        <language slang="l:c6c823fb-a9da-46e7-9850-129b0f7a7aa5:org.campagnelab.workflow" version="7" />
       </languageVersions>
       <dependencyVersions>
         <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
@@ -80,7 +80,7 @@
         <module reference="c1ba4037-e4db-47d8-8b61-b3c805b648f2(org.campagnelab.ui)" version="0" />
         <module reference="2b3d76b7-a9ea-44f6-8a30-283c3ffb5f0a(org.campagnelab.ui.code)" version="0" />
         <module reference="d4767029-894b-41e1-b76e-850baa598e5b(org.campagnelab.util.files)" version="0" />
-        <module reference="c6c823fb-a9da-46e7-9850-129b0f7a7aa5(org.campagnelab.workflow)" version="0" />
+        <module reference="c6c823fb-a9da-46e7-9850-129b0f7a7aa5(org.campagnelab.workflow)" version="1" />
         <module reference="f9b7dda6-7ab5-4936-ad1b-2d45c57833dc(org.campagnelab.workflow.configuration)" version="0" />
       </dependencyVersions>
       <mapping-priorities>
@@ -196,7 +196,7 @@
     <module reference="c1ba4037-e4db-47d8-8b61-b3c805b648f2(org.campagnelab.ui)" version="0" />
     <module reference="2b3d76b7-a9ea-44f6-8a30-283c3ffb5f0a(org.campagnelab.ui.code)" version="0" />
     <module reference="d4767029-894b-41e1-b76e-850baa598e5b(org.campagnelab.util.files)" version="0" />
-    <module reference="c6c823fb-a9da-46e7-9850-129b0f7a7aa5(org.campagnelab.workflow)" version="0" />
+    <module reference="c6c823fb-a9da-46e7-9850-129b0f7a7aa5(org.campagnelab.workflow)" version="1" />
     <module reference="f9b7dda6-7ab5-4936-ad1b-2d45c57833dc(org.campagnelab.workflow.configuration)" version="0" />
   </dependencyVersions>
   <extendedLanguages>

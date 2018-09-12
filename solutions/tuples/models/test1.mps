@@ -99,9 +99,7 @@
       <concept id="3653684473245054700" name="org.campagnelab.workflow.structure.NewListLiteral" flags="ng" index="2J_sx7">
         <child id="3653684473245054701" name="elementType" index="2J_sx6" />
       </concept>
-      <concept id="6514615324151249770" name="org.campagnelab.workflow.structure.ClosureLiteralWorkFlow" flags="ng" index="1ecmHP">
-        <child id="7418584321830319674" name="closure" index="303AOo" />
-      </concept>
+      <concept id="6514615324151249770" name="org.campagnelab.workflow.structure.ClosureLiteralWorkFlow" flags="ng" index="1ecmHP" />
       <concept id="1101938165422228846" name="org.campagnelab.workflow.structure.FunctionWithClosure" flags="ng" index="1teHI2">
         <child id="1629219545452496431" name="closure" index="1Xju2$" />
       </concept>
@@ -112,6 +110,9 @@
       <concept id="8369613327464009594" name="org.campagnelab.workflow.structure.InputChannel" flags="ng" index="1uYdA0">
         <reference id="8369613327464433607" name="connectedTo" index="1uK_4X" />
         <child id="3857878650537656757" name="functions" index="1ylr64" />
+      </concept>
+      <concept id="8807404540608924540" name="org.campagnelab.workflow.structure.ClosureWorkflow" flags="ng" index="1A4AiS">
+        <child id="7845810446419553438" name="" index="1l0Kum" />
       </concept>
       <concept id="6456103554942004322" name="org.campagnelab.workflow.structure.GlobalChannel" flags="ng" index="1CVceo">
         <child id="3855674281011084282" name="value" index="2$L62I" />
@@ -187,7 +188,7 @@
         <ref role="1uK_4X" node="1$nyghydnxE" resolve="t1" />
         <node concept="2pgWx" id="1$nyghydnTy" role="1ylr64">
           <node concept="1ecmHP" id="1$nyghydosK" role="1Xju2$">
-            <node concept="1bVj0M" id="1$nyghydosL" role="303AOo">
+            <node concept="1bVj0M" id="1$nyghydosL" role="1l0Kum">
               <node concept="3clFbS" id="1$nyghydosM" role="1bW5cS">
                 <node concept="3clFbF" id="1$nyghyhQEf" role="3cqZAp">
                   <node concept="3cpWs3" id="1$nyghyQUND" role="3clFbG">

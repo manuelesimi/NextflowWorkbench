@@ -41,7 +41,7 @@
     <language slang="l:901f5cf3-dc77-4c1e-bc5a-6382baee28b4:org.campagnelab.textoutput" version="0" />
     <language slang="l:c1ba4037-e4db-47d8-8b61-b3c805b648f2:org.campagnelab.ui" version="0" />
     <language slang="l:d4767029-894b-41e1-b76e-850baa598e5b:org.campagnelab.util.files" version="0" />
-    <language slang="l:c6c823fb-a9da-46e7-9850-129b0f7a7aa5:org.campagnelab.workflow" version="6" />
+    <language slang="l:c6c823fb-a9da-46e7-9850-129b0f7a7aa5:org.campagnelab.workflow" version="7" />
     <language slang="l:f9b7dda6-7ab5-4936-ad1b-2d45c57833dc:org.campagnelab.workflow.configuration" version="0" />
     <language slang="l:316e8289-cb69-4927-8bfe-edde5cd32037:org.campagnelab.workflow.languages" version="0" />
   </languageVersions>

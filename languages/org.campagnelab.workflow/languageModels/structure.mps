@@ -2,15 +2,17 @@
 <model ref="r:0583c0e9-dc14-4152-95a4-93036dce931b(org.campagnelab.workflow.structure)">
   <persistence version="9" />
   <languages>
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="6" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="6" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
     <import index="87nw" ref="r:ca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3(de.slisson.mps.richtext.structure)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="6jv6" ref="r:ca9c89c0-011f-4597-8d3e-576d9add5d28(org.campagnelab.docker.structure)" />
+    <import index="tp2c" ref="r:00000000-0000-4000-0000-011c89590338(jetbrains.mps.baseLanguage.closures.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="dlwq" ref="r:c01755fa-81b5-42b4-9022-2ba8b33ff6cc(org.campagnelab.workflow.configuration.structure)" implicit="true" />
-    <import index="tp2c" ref="r:00000000-0000-4000-0000-011c89590338(jetbrains.mps.baseLanguage.closures.structure)" implicit="true" />
     <import index="tpfo" ref="r:00000000-0000-4000-0000-011c89590518(jetbrains.mps.baseLanguage.regexp.structure)" implicit="true" />
   </imports>
   <registry>
@@ -1988,10 +1990,13 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="6rO6MaAYBoU" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="closure" />
-      <property role="20lbJX" value="1" />
+      <property role="20kJfa" value="closure_old" />
+      <property role="20lbJX" value="0..1" />
       <property role="IQ2ns" value="7418584321830319674" />
       <ref role="20lvS9" to="tp2c:htbVj4_" resolve="ClosureLiteral" />
+      <node concept="asaX9" id="6NxUKwTSIMD" role="lGtFl">
+        <property role="YLQ7P" value="The link was moved to concept &quot;org.campagnelab.workflow.structure.ClosureWorkflow&quot;" />
+      </node>
     </node>
     <node concept="1TJgyj" id="10nk9FBT7En" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
@@ -2305,6 +2310,13 @@
     <property role="3GE5qa" value="channelFunctions.closureFunctions" />
     <property role="TrG5h" value="ClosureWorkflow" />
     <property role="EcuMT" value="8807404540608924540" />
+    <node concept="1TJgyj" id="6NxUKwTSIMu" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="closure" />
+      <property role="20lbJX" value="1" />
+      <property role="IQ2ns" value="7845810446419553438" />
+      <ref role="20lvS9" to="tp2c:htbVj4_" resolve="ClosureLiteral" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7CUbWgsac4M">
     <property role="3GE5qa" value="channelFunctions.closureFunctions" />

@@ -26,7 +26,7 @@
     <language slang="l:3b74e3b7-7336-414d-8899-64a293a44a07:org.campagnelab.docker.bash" version="0" />
     <language slang="l:43809d33-d5e3-4390-917e-3944cb211ee3:org.campagnelab.icons" version="0" />
     <language slang="l:d4767029-894b-41e1-b76e-850baa598e5b:org.campagnelab.util.files" version="0" />
-    <language slang="l:c6c823fb-a9da-46e7-9850-129b0f7a7aa5:org.campagnelab.workflow" version="6" />
+    <language slang="l:c6c823fb-a9da-46e7-9850-129b0f7a7aa5:org.campagnelab.workflow" version="7" />
     <language slang="l:f9b7dda6-7ab5-4936-ad1b-2d45c57833dc:org.campagnelab.workflow.configuration" version="0" />
     <language slang="l:316e8289-cb69-4927-8bfe-edde5cd32037:org.campagnelab.workflow.languages" version="0" />
   </languageVersions>
