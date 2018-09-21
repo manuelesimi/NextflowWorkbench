@@ -11,6 +11,7 @@
     <dependency reexport="false">f1fb7b1c-ce0d-423c-9369-4a661d600029(de.itemis.mps.extensions.build)</dependency>
     <dependency reexport="false">db7b3503-2b94-491e-9afb-40ef2d987a04(NYoSh.build-plugins)</dependency>
     <dependency reexport="false">458e7a44-300a-4712-95cd-255c2e0c289d(XChart.newBuild)</dependency>
+    <dependency reexport="false">3b3d39a8-ff6e-47f3-9c9e-1888a27699ed(org.campagnelab.util)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:798100da-4f0a-421a-b991-71f8c50ce5d2:jetbrains.mps.build" version="0" />
@@ -25,6 +26,7 @@
     <module reference="458e7a44-300a-4712-95cd-255c2e0c289d(XChart.newBuild)" version="0" />
     <module reference="f1fb7b1c-ce0d-423c-9369-4a661d600029(de.itemis.mps.extensions.build)" version="0" />
     <module reference="422c2909-59d6-41a9-b318-40e6256b250f(jetbrains.mps.ide.build)" version="0" />
+    <module reference="3b3d39a8-ff6e-47f3-9c9e-1888a27699ed(org.campagnelab.util)" version="0" />
   </dependencyVersions>
 </solution>
 
