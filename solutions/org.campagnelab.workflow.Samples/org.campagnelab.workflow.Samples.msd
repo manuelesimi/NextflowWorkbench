@@ -38,6 +38,7 @@
     <language slang="l:57af9408-ffae-472e-9367-5cb44434e8b3:org.campagnelab.gobyweb.interactive.users" version="0" />
     <language slang="l:0b7d8bbd-896e-495e-be60-01a0d738a649:org.campagnelab.gobyweb.plugins" version="0" />
     <language slang="l:43809d33-d5e3-4390-917e-3944cb211ee3:org.campagnelab.icons" version="0" />
+    <language slang="l:82ffebe3-3685-4fd9-b560-0c1d348d295c:org.campagnelab.logger" version="0" />
     <language slang="l:66f96b90-b2af-4ce4-92ca-dc0e9d7e2b43:org.campagnelab.nyosh.interactive" version="0" />
     <language slang="l:d4767029-894b-41e1-b76e-850baa598e5b:org.campagnelab.util.files" version="0" />
     <language slang="l:c6c823fb-a9da-46e7-9850-129b0f7a7aa5:org.campagnelab.workflow" version="7" />
@@ -77,6 +78,7 @@
     <module reference="a8fb88b0-7e9f-478c-aab4-a1b076131192(org.campagnelab.gobyweb.interactive)" version="0" />
     <module reference="57af9408-ffae-472e-9367-5cb44434e8b3(org.campagnelab.gobyweb.interactive.users)" version="0" />
     <module reference="0b7d8bbd-896e-495e-be60-01a0d738a649(org.campagnelab.gobyweb.plugins)" version="0" />
+    <module reference="82ffebe3-3685-4fd9-b560-0c1d348d295c(org.campagnelab.logger)" version="0" />
     <module reference="0202ed86-955d-4227-9c20-377dd6b1f9ff(org.campagnelab.nyosh.lib)" version="0" />
     <module reference="c1ba4037-e4db-47d8-8b61-b3c805b648f2(org.campagnelab.ui)" version="0" />
     <module reference="2b3d76b7-a9ea-44f6-8a30-283c3ffb5f0a(org.campagnelab.ui.code)" version="0" />
