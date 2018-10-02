@@ -366,6 +366,11 @@
       <concept id="7596805840595310791" name="org.campagnelab.nyosh.functions.structure.ConceptFunctionParameter_outputReader" flags="ng" index="3X9DTI" />
     </language>
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
+      <concept id="6332851714983831325" name="jetbrains.mps.baseLanguage.logging.structure.MsgStatement" flags="ng" index="2xdQw9">
+        <property id="6332851714983843871" name="severity" index="2xdLsb" />
+        <child id="5721587534047265374" name="message" index="9lYJi" />
+        <child id="5721587534047265375" name="throwable" index="9lYJj" />
+      </concept>
       <concept id="1167227138527" name="jetbrains.mps.baseLanguage.logging.structure.LogStatement" flags="nn" index="34ab3g">
         <property id="1167228628751" name="hasException" index="34fQS0" />
         <property id="1167245565795" name="severity" index="35gtTG" />
@@ -5101,9 +5106,9 @@
             </node>
           </node>
         </node>
-        <node concept="34ab3g" id="2uoXx0vo1Su" role="3cqZAp">
-          <property role="35gtTG" value="info" />
-          <node concept="3cpWs3" id="2uoXx0vo1Y8" role="34bqiv">
+        <node concept="2xdQw9" id="5SFbgoIAJ8J" role="3cqZAp">
+          <property role="2xdLsb" value="info" />
+          <node concept="3cpWs3" id="2uoXx0vo1Y8" role="9lYJi">
             <node concept="37vLTw" id="2uoXx0vo22G" role="3uHU7w">
               <ref role="3cqZAo" node="7MTH03melI6" resolve="line" />
             </node>
@@ -6459,13 +6464,12 @@
               </node>
             </node>
             <node concept="3clFbS" id="6hgQMA_NidO" role="TDEfX">
-              <node concept="34ab3g" id="2F3Qlw97tWD" role="3cqZAp">
-                <property role="35gtTG" value="info" />
-                <property role="34fQS0" value="true" />
-                <node concept="Xl_RD" id="2F3Qlw97tWF" role="34bqiv">
+              <node concept="2xdQw9" id="5SFbgoIAYFE" role="3cqZAp">
+                <property role="2xdLsb" value="error" />
+                <node concept="Xl_RD" id="2F3Qlw97tWF" role="9lYJi">
                   <property role="Xl_RC" value="error in executeLocateCommand " />
                 </node>
-                <node concept="37vLTw" id="2F3Qlw97tWH" role="34bMjA">
+                <node concept="37vLTw" id="2F3Qlw97tWH" role="9lYJj">
                   <ref role="3cqZAo" node="6hgQMA_NidM" resolve="e" />
                 </node>
               </node>

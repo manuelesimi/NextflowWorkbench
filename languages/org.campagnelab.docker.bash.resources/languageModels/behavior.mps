@@ -230,6 +230,10 @@
       </concept>
     </language>
     <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
+      <concept id="6332851714983831325" name="jetbrains.mps.baseLanguage.logging.structure.MsgStatement" flags="ng" index="2xdQw9">
+        <property id="6332851714983843871" name="severity" index="2xdLsb" />
+        <child id="5721587534047265374" name="message" index="9lYJi" />
+      </concept>
       <concept id="1167227138527" name="jetbrains.mps.baseLanguage.logging.structure.LogStatement" flags="nn" index="34ab3g">
         <property id="1167245565795" name="severity" index="35gtTG" />
         <child id="1167227463056" name="logExpression" index="34bqiv" />
@@ -355,6 +359,7 @@
       <concept id="1160600644654" name="jetbrains.mps.baseLanguage.collections.structure.ListCreatorWithInit" flags="nn" index="Tc6Ow" />
       <concept id="1160612413312" name="jetbrains.mps.baseLanguage.collections.structure.AddElementOperation" flags="nn" index="TSZUe" />
       <concept id="1160666733551" name="jetbrains.mps.baseLanguage.collections.structure.AddAllElementsOperation" flags="nn" index="X8dFx" />
+      <concept id="1162935959151" name="jetbrains.mps.baseLanguage.collections.structure.GetSizeOperation" flags="nn" index="34oBXx" />
       <concept id="1167380149909" name="jetbrains.mps.baseLanguage.collections.structure.RemoveElementOperation" flags="nn" index="3dhRuq" />
       <concept id="1201792049884" name="jetbrains.mps.baseLanguage.collections.structure.TranslateOperation" flags="nn" index="3goQfb" />
       <concept id="1165525191778" name="jetbrains.mps.baseLanguage.collections.structure.GetFirstOperation" flags="nn" index="1uHKPH" />
@@ -1135,8 +1140,127 @@
                 </node>
               </node>
             </node>
+            <node concept="2xdQw9" id="5SFbgoIC1W0" role="3cqZAp">
+              <property role="2xdLsb" value="info" />
+              <node concept="Xl_RD" id="5SFbgoIC1W2" role="9lYJi">
+                <property role="Xl_RC" value="Load requested resource's range" />
+              </node>
+            </node>
+            <node concept="3clFbJ" id="5SFbgoIE8AU" role="3cqZAp">
+              <node concept="3clFbS" id="5SFbgoIE8AW" role="3clFbx">
+                <node concept="2xdQw9" id="5SFbgoIE9Kc" role="3cqZAp">
+                  <property role="2xdLsb" value="warn" />
+                  <node concept="Xl_RD" id="5SFbgoIE9Ke" role="9lYJi">
+                    <property role="Xl_RC" value="Environment is null" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="5SFbgoIE9nY" role="3clFbw">
+                <node concept="37vLTw" id="5SFbgoIE9cC" role="2Oq$k0">
+                  <ref role="3cqZAo" node="49WUL$puIh$" resolve="environment" />
+                </node>
+                <node concept="3w_OXm" id="5SFbgoIE9GL" role="2OqNvi" />
+              </node>
+            </node>
+            <node concept="3clFbJ" id="5SFbgoIEay4" role="3cqZAp">
+              <node concept="3clFbS" id="5SFbgoIEay6" role="3clFbx">
+                <node concept="2xdQw9" id="5SFbgoIEbpn" role="3cqZAp">
+                  <property role="2xdLsb" value="warn" />
+                  <node concept="Xl_RD" id="5SFbgoIEbpo" role="9lYJi">
+                    <property role="Xl_RC" value="Plugin repo is null" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="5SFbgoIEb8_" role="3clFbw">
+                <node concept="2OqwBi" id="5SFbgoIEb8A" role="2Oq$k0">
+                  <node concept="37vLTw" id="5SFbgoIEb8B" role="2Oq$k0">
+                    <ref role="3cqZAo" node="49WUL$puIh$" resolve="environment" />
+                  </node>
+                  <node concept="3TrEf2" id="5SFbgoIEb8C" role="2OqNvi">
+                    <ref role="3Tt5mk" to="bs99:1ISEu8LMo3d" resolve="pluginRepository" />
+                  </node>
+                </node>
+                <node concept="3w_OXm" id="5SFbgoIEbmm" role="2OqNvi" />
+              </node>
+            </node>
             <node concept="3clFbJ" id="49WUL$puIhD" role="3cqZAp">
               <node concept="3clFbS" id="49WUL$puIhE" role="3clFbx">
+                <node concept="2xdQw9" id="5SFbgoIEWJO" role="3cqZAp">
+                  <property role="2xdLsb" value="info" />
+                  <node concept="Xl_RD" id="5SFbgoIEWJQ" role="9lYJi">
+                    <property role="Xl_RC" value="Compose the scope" />
+                  </node>
+                </node>
+                <node concept="3cpWs8" id="5SFbgoIDh1s" role="3cqZAp">
+                  <node concept="3cpWsn" id="5SFbgoIDh1v" role="3cpWs9">
+                    <property role="TrG5h" value="rr" />
+                    <node concept="2OqwBi" id="5SFbgoIDhu8" role="33vP2m">
+                      <node concept="2OqwBi" id="5SFbgoIDhu9" role="2Oq$k0">
+                        <node concept="37vLTw" id="5SFbgoIDhua" role="2Oq$k0">
+                          <ref role="3cqZAo" node="49WUL$puIh$" resolve="environment" />
+                        </node>
+                        <node concept="3TrEf2" id="5SFbgoIDhub" role="2OqNvi">
+                          <ref role="3Tt5mk" to="bs99:1ISEu8LMo3d" resolve="pluginRepository" />
+                        </node>
+                      </node>
+                      <node concept="2qgKlT" id="5SFbgoIDhuc" role="2OqNvi">
+                        <ref role="37wK5l" to="lcm8:NHi1GaJIcK" resolve="getResourcesGroupedByVersion" />
+                      </node>
+                    </node>
+                    <node concept="A3Dl8" id="5SFbgoIDi2n" role="1tU5fm">
+                      <node concept="3Tqbb2" id="5SFbgoIDi2q" role="A3Ik2">
+                        <ref role="ehGHo" to="bs99:1msVhua4SB8" resolve="ResourceRange" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="2xdQw9" id="5SFbgoIFJ02" role="3cqZAp">
+                  <property role="2xdLsb" value="info" />
+                  <node concept="3cpWs3" id="5SFbgoIFKbN" role="9lYJi">
+                    <node concept="2OqwBi" id="5SFbgoIFKub" role="3uHU7w">
+                      <node concept="37vLTw" id="5SFbgoIFKdr" role="2Oq$k0">
+                        <ref role="3cqZAo" node="5SFbgoIDh1v" resolve="rr" />
+                      </node>
+                      <node concept="34oBXx" id="5SFbgoIFMte" role="2OqNvi" />
+                    </node>
+                    <node concept="Xl_RD" id="5SFbgoIFJ04" role="3uHU7B">
+                      <property role="Xl_RC" value="Num of plugins: " />
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="5SFbgoIDiyn" role="3cqZAp">
+                  <node concept="2OqwBi" id="5SFbgoIDiTo" role="3clFbG">
+                    <node concept="37vLTw" id="5SFbgoIDiyl" role="2Oq$k0">
+                      <ref role="3cqZAo" node="5SFbgoIDh1v" resolve="rr" />
+                    </node>
+                    <node concept="2es0OD" id="5SFbgoIDl6Z" role="2OqNvi">
+                      <node concept="1bVj0M" id="5SFbgoIDl71" role="23t8la">
+                        <node concept="3clFbS" id="5SFbgoIDl72" role="1bW5cS">
+                          <node concept="2xdQw9" id="5SFbgoIDlbk" role="3cqZAp">
+                            <property role="2xdLsb" value="info" />
+                            <node concept="3cpWs3" id="5SFbgoIDmMj" role="9lYJi">
+                              <node concept="2OqwBi" id="5SFbgoIDn4j" role="3uHU7w">
+                                <node concept="37vLTw" id="5SFbgoIDmPu" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="5SFbgoIDl73" resolve="it" />
+                                </node>
+                                <node concept="3TrcHB" id="5SFbgoIDnoE" role="2OqNvi">
+                                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                                </node>
+                              </node>
+                              <node concept="Xl_RD" id="5SFbgoIDlbm" role="3uHU7B">
+                                <property role="Xl_RC" value="RR: " />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="Rh6nW" id="5SFbgoIDl73" role="1bW2Oz">
+                          <property role="TrG5h" value="it" />
+                          <node concept="2jxLKc" id="5SFbgoIDl74" role="1tU5fm" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
                 <node concept="3cpWs6" id="49WUL$puIhF" role="3cqZAp">
                   <node concept="2YIFZM" id="49WUL$puIhG" role="3cqZAk">
                     <ref role="1Pybhc" to="o8zo:7ipADkTevLt" resolve="CompositeScope" />
@@ -1185,6 +1309,13 @@
               </node>
               <node concept="9aQIb" id="49WUL$puIhX" role="9aQIa">
                 <node concept="3clFbS" id="49WUL$puIhY" role="9aQI4">
+                  <node concept="2xdQw9" id="5SFbgoIEYDC" role="3cqZAp">
+                    <property role="2xdLsb" value="info" />
+                    <node concept="Xl_RD" id="5SFbgoIEYDD" role="9lYJi">
+                      <property role="Xl_RC" value="Using resource scope" />
+                    </node>
+                  </node>
+                  <node concept="3clFbH" id="5SFbgoIEY9U" role="3cqZAp" />
                   <node concept="3cpWs6" id="49WUL$puIhZ" role="3cqZAp">
                     <node concept="37vLTw" id="49WUL$puIi0" role="3cqZAk">
                       <ref role="3cqZAo" node="49WUL$puIhq" resolve="resourceScope" />
