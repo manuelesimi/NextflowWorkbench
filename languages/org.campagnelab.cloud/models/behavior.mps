@@ -28,6 +28,7 @@
     <import index="alof" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.ide.project(MPS.Platform/)" />
     <import index="ivm0" ref="r:f7c3f04b-0d46-4016-bf5e-37ab9a5f8c7e(org.campagnelab.cloud.preferences.plugin)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
+    <import index="4nm9" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.project(MPS.IDEA/)" />
     <import index="5lbf" ref="r:65d366f2-ae3b-4b81-85e6-342aa070f572(org.campagnelab.cloud.structure)" implicit="true" />
     <import index="3229" ref="r:a82c5084-a1df-4f27-8e96-c1c3c407b051(org.campagnelab.cloud.configuration.behavior)" implicit="true" />
     <import index="45iu" ref="r:e59beccc-d8f0-42c7-8989-c96c06e46e91(org.campagnelab.cloud.configuration.structure)" implicit="true" />
@@ -348,12 +349,6 @@
     </node>
     <node concept="13i0hz" id="7vFwTqSSjib" role="13h7CS">
       <property role="TrG5h" value="refreshPreferences" />
-      <node concept="37vLTG" id="7vFwTqSSm2y" role="3clF46">
-        <property role="TrG5h" value="mpsProject" />
-        <node concept="3uibUv" id="7vFwTqSSm2z" role="1tU5fm">
-          <ref role="3uigEE" to="z1c3:~Project" resolve="Project" />
-        </node>
-      </node>
       <node concept="3Tm6S6" id="5Pg96r0QR$0" role="1B3o_S" />
       <node concept="3clFbS" id="7vFwTqSSjid" role="3clF47">
         <node concept="3cpWs8" id="65yh485pEcd" role="3cqZAp">
@@ -362,6 +357,18 @@
             <node concept="17QB3L" id="65yh485pEcb" role="1tU5fm" />
             <node concept="Xl_RD" id="65yh485pEpE" role="33vP2m">
               <property role="Xl_RC" value="" />
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs8" id="4NpkXz55n01" role="3cqZAp">
+          <node concept="3cpWsn" id="4NpkXz55n02" role="3cpWs9">
+            <property role="TrG5h" value="project" />
+            <node concept="3uibUv" id="4NpkXz55n03" role="1tU5fm">
+              <ref role="3uigEE" to="4nm9:~Project" resolve="Project" />
+            </node>
+            <node concept="2YIFZM" id="4NpkXz55n3N" role="33vP2m">
+              <ref role="37wK5l" to="ujkv:3OwSMscpsZu" resolve="getCurrentOpenAPIProject" />
+              <ref role="1Pybhc" to="ujkv:3OwSMscp5aQ" resolve="MPSProjectAPI" />
             </node>
           </node>
         </node>
@@ -374,8 +381,8 @@
               <node concept="Xl_RD" id="65yh485pLEC" role="3uHU7B">
                 <property role="Xl_RC" value=" MPS project: " />
               </node>
-              <node concept="37vLTw" id="65yh485pLYP" role="3uHU7w">
-                <ref role="3cqZAo" node="7vFwTqSSm2y" resolve="mpsProject" />
+              <node concept="37vLTw" id="4NpkXz55qXy" role="3uHU7w">
+                <ref role="3cqZAo" node="4NpkXz55n02" resolve="project" />
               </node>
             </node>
           </node>
@@ -389,12 +396,8 @@
               <node concept="Xl_RD" id="65yh485pFq8" role="3uHU7B">
                 <property role="Xl_RC" value=" IDEA project: " />
               </node>
-              <node concept="2YIFZM" id="65yh485pFq9" role="3uHU7w">
-                <ref role="1Pybhc" to="alof:~ProjectHelper" resolve="ProjectHelper" />
-                <ref role="37wK5l" to="alof:~ProjectHelper.toIdeaProject(jetbrains.mps.project.Project):com.intellij.openapi.project.Project" resolve="toIdeaProject" />
-                <node concept="37vLTw" id="65yh485pFqa" role="37wK5m">
-                  <ref role="3cqZAo" node="7vFwTqSSm2y" resolve="mpsProject" />
-                </node>
+              <node concept="37vLTw" id="4NpkXz55rm7" role="3uHU7w">
+                <ref role="3cqZAo" node="4NpkXz55n02" resolve="project" />
               </node>
             </node>
           </node>
@@ -409,15 +412,11 @@
                 <property role="Xl_RC" value=" PrefComponent: " />
               </node>
               <node concept="2OqwBi" id="lSMa_VtN9G" role="3uHU7w">
-                <node concept="2YIFZM" id="65yh485pG8Y" role="2Oq$k0">
-                  <ref role="37wK5l" to="alof:~ProjectHelper.toIdeaProject(jetbrains.mps.project.Project):com.intellij.openapi.project.Project" resolve="toIdeaProject" />
-                  <ref role="1Pybhc" to="alof:~ProjectHelper" resolve="ProjectHelper" />
-                  <node concept="37vLTw" id="65yh485pG8Z" role="37wK5m">
-                    <ref role="3cqZAo" node="7vFwTqSSm2y" resolve="mpsProject" />
-                  </node>
-                </node>
                 <node concept="LR4Ub" id="65yh485pG90" role="2OqNvi">
                   <ref role="LR4Ua" to="ivm0:2rIRh_WVGqi" resolve="GridEngineCluster" />
+                </node>
+                <node concept="37vLTw" id="4NpkXz55rUz" role="2Oq$k0">
+                  <ref role="3cqZAo" node="4NpkXz55n02" resolve="project" />
                 </node>
               </node>
             </node>
@@ -434,15 +433,11 @@
               </node>
               <node concept="2OqwBi" id="lSMa_VtNO$" role="3uHU7w">
                 <node concept="2OqwBi" id="lSMa_VtNl7" role="2Oq$k0">
-                  <node concept="2YIFZM" id="65yh485pGV1" role="2Oq$k0">
-                    <ref role="1Pybhc" to="alof:~ProjectHelper" resolve="ProjectHelper" />
-                    <ref role="37wK5l" to="alof:~ProjectHelper.toIdeaProject(jetbrains.mps.project.Project):com.intellij.openapi.project.Project" resolve="toIdeaProject" />
-                    <node concept="37vLTw" id="65yh485pGV2" role="37wK5m">
-                      <ref role="3cqZAo" node="7vFwTqSSm2y" resolve="mpsProject" />
-                    </node>
-                  </node>
                   <node concept="LR4Ub" id="65yh485pGV3" role="2OqNvi">
                     <ref role="LR4Ua" to="ivm0:2rIRh_WVGqi" resolve="GridEngineCluster" />
+                  </node>
+                  <node concept="37vLTw" id="4NpkXz55s9O" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4NpkXz55n02" resolve="project" />
                   </node>
                 </node>
                 <node concept="34pFcN" id="65yh485pGV4" role="2OqNvi">
@@ -463,12 +458,8 @@
               </node>
               <node concept="2OqwBi" id="lSMa_VtOa8" role="3uHU7w">
                 <node concept="2OqwBi" id="lSMa_VtNwW" role="2Oq$k0">
-                  <node concept="2YIFZM" id="3traV2Bprek" role="2Oq$k0">
-                    <ref role="1Pybhc" to="alof:~ProjectHelper" resolve="ProjectHelper" />
-                    <ref role="37wK5l" to="alof:~ProjectHelper.toIdeaProject(jetbrains.mps.project.Project):com.intellij.openapi.project.Project" resolve="toIdeaProject" />
-                    <node concept="37vLTw" id="3traV2Bprel" role="37wK5m">
-                      <ref role="3cqZAo" node="7vFwTqSSm2y" resolve="mpsProject" />
-                    </node>
+                  <node concept="37vLTw" id="4NpkXz55sp0" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4NpkXz55n02" resolve="project" />
                   </node>
                   <node concept="LR4Ub" id="3traV2Bprem" role="2OqNvi">
                     <ref role="LR4Ua" to="ivm0:2rIRh_WVGqi" resolve="GridEngineCluster" />
@@ -492,12 +483,8 @@
               </node>
               <node concept="2OqwBi" id="lSMa_VtOvG" role="3uHU7w">
                 <node concept="2OqwBi" id="lSMa_VtNCJ" role="2Oq$k0">
-                  <node concept="2YIFZM" id="3traV2Bprn3" role="2Oq$k0">
-                    <ref role="37wK5l" to="alof:~ProjectHelper.toIdeaProject(jetbrains.mps.project.Project):com.intellij.openapi.project.Project" resolve="toIdeaProject" />
-                    <ref role="1Pybhc" to="alof:~ProjectHelper" resolve="ProjectHelper" />
-                    <node concept="37vLTw" id="3traV2Bprn4" role="37wK5m">
-                      <ref role="3cqZAo" node="7vFwTqSSm2y" resolve="mpsProject" />
-                    </node>
+                  <node concept="37vLTw" id="4NpkXz55sEL" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4NpkXz55n02" resolve="project" />
                   </node>
                   <node concept="LR4Ub" id="3traV2Bprn5" role="2OqNvi">
                     <ref role="LR4Ua" to="ivm0:2rIRh_WVGqi" resolve="GridEngineCluster" />
@@ -531,12 +518,8 @@
               <ref role="37wK5l" node="7vFwTqSSm$l" resolve="setClientID" />
               <node concept="2OqwBi" id="lSMa_Vtr25" role="37wK5m">
                 <node concept="2OqwBi" id="lSMa_Vtrji" role="2Oq$k0">
-                  <node concept="2YIFZM" id="7vFwTqSSoTI" role="2Oq$k0">
-                    <ref role="1Pybhc" to="alof:~ProjectHelper" resolve="ProjectHelper" />
-                    <ref role="37wK5l" to="alof:~ProjectHelper.toIdeaProject(jetbrains.mps.project.Project):com.intellij.openapi.project.Project" resolve="toIdeaProject" />
-                    <node concept="37vLTw" id="7vFwTqSSoTJ" role="37wK5m">
-                      <ref role="3cqZAo" node="7vFwTqSSm2y" resolve="mpsProject" />
-                    </node>
+                  <node concept="37vLTw" id="4NpkXz55sSI" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4NpkXz55n02" resolve="project" />
                   </node>
                   <node concept="LR4Ub" id="7vFwTqSSoTK" role="2OqNvi">
                     <ref role="LR4Ua" to="ivm0:2rIRh_WVGqi" resolve="GridEngineCluster" />
@@ -556,12 +539,8 @@
               <ref role="37wK5l" node="7vFwTqSSnp0" resolve="setProjectID" />
               <node concept="2OqwBi" id="lSMa_Vtrsv" role="37wK5m">
                 <node concept="2OqwBi" id="lSMa_VtrHG" role="2Oq$k0">
-                  <node concept="2YIFZM" id="7vFwTqSSp0O" role="2Oq$k0">
-                    <ref role="1Pybhc" to="alof:~ProjectHelper" resolve="ProjectHelper" />
-                    <ref role="37wK5l" to="alof:~ProjectHelper.toIdeaProject(jetbrains.mps.project.Project):com.intellij.openapi.project.Project" resolve="toIdeaProject" />
-                    <node concept="37vLTw" id="7vFwTqSSp0P" role="37wK5m">
-                      <ref role="3cqZAo" node="7vFwTqSSm2y" resolve="mpsProject" />
-                    </node>
+                  <node concept="37vLTw" id="4NpkXz55t4c" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4NpkXz55n02" resolve="project" />
                   </node>
                   <node concept="LR4Ub" id="7vFwTqSSp0Q" role="2OqNvi">
                     <ref role="LR4Ua" to="ivm0:2rIRh_WVGqi" resolve="GridEngineCluster" />
@@ -581,12 +560,8 @@
               <ref role="37wK5l" node="65yh485oA$U" resolve="setSecrets" />
               <node concept="2OqwBi" id="lSMa_VtrXu" role="37wK5m">
                 <node concept="2OqwBi" id="lSMa_VtrP_" role="2Oq$k0">
-                  <node concept="2YIFZM" id="65yh485oYZA" role="2Oq$k0">
-                    <ref role="1Pybhc" to="alof:~ProjectHelper" resolve="ProjectHelper" />
-                    <ref role="37wK5l" to="alof:~ProjectHelper.toIdeaProject(jetbrains.mps.project.Project):com.intellij.openapi.project.Project" resolve="toIdeaProject" />
-                    <node concept="37vLTw" id="65yh485oZ3d" role="37wK5m">
-                      <ref role="3cqZAo" node="7vFwTqSSm2y" resolve="mpsProject" />
-                    </node>
+                  <node concept="37vLTw" id="4NpkXz55tfE" role="2Oq$k0">
+                    <ref role="3cqZAo" node="4NpkXz55n02" resolve="project" />
                   </node>
                   <node concept="LR4Ub" id="65yh485oZfy" role="2OqNvi">
                     <ref role="LR4Ua" to="ivm0:2rIRh_WVGqi" resolve="GridEngineCluster" />
@@ -627,9 +602,6 @@
             <node concept="13iPFW" id="4iZtcSrbfFR" role="2Oq$k0" />
             <node concept="2qgKlT" id="4iZtcSrbfFS" role="2OqNvi">
               <ref role="37wK5l" node="7vFwTqSSjib" resolve="refreshPreferences" />
-              <node concept="37vLTw" id="4iZtcSrbfFT" role="37wK5m">
-                <ref role="3cqZAo" node="4iZtcSrbewG" resolve="mpsProject" />
-              </node>
             </node>
           </node>
         </node>
