@@ -91,7 +91,6 @@
         <child id="7457140171610928302" name="inputs" index="2ulM7n" />
       </concept>
       <concept id="6505336652526334578" name="org.campagnelab.workflow.structure.ProcessRef" flags="ng" index="2$rEH5">
-        <reference id="6505336652526334579" name="process" index="2$rEH4" />
         <child id="8369613327464344476" name="outChannel" index="1uLvPA" />
         <child id="8369613327464344471" name="inChannel" index="1uLvPH" />
       </concept>
@@ -104,6 +103,9 @@
       </concept>
       <concept id="3653684473245054700" name="org.campagnelab.workflow.structure.NewListLiteral" flags="ng" index="2J_sx7">
         <child id="3653684473245054701" name="elementType" index="2J_sx6" />
+      </concept>
+      <concept id="2948113593646370239" name="org.campagnelab.workflow.structure.AbstractProcessRef" flags="ng" index="2U8K0e">
+        <reference id="6505336652526334579" name="process" index="2$rEH4" />
       </concept>
       <concept id="1980749076351268038" name="org.campagnelab.workflow.structure.String" flags="ng" index="16pbKc" />
       <concept id="8369613327464373434" name="org.campagnelab.workflow.structure.OutputChannel" flags="ng" index="1uLkD0" />
@@ -561,12 +563,12 @@
         </node>
       </node>
     </node>
-    <node concept="2$rEH5" id="6xlRqabyDAC" role="2$rEHq">
+    <node concept="2$rEH5" id="4NpkXz55yOJ" role="2$rEHq">
       <ref role="2$rEH4" node="6xlRqabyCgU" resolve="EchoStringToStandardOut" />
-      <node concept="1uYdA0" id="6xlRqabyDSA" role="1uLvPH">
+      <node concept="1uYdA0" id="4NpkXz55yOL" role="1uLvPH">
         <ref role="1uK_4X" node="6xlRqabyDRU" resolve="stringToEcho" />
       </node>
-      <node concept="1uLkD0" id="6xlRqabyDSQ" role="1uLvPA">
+      <node concept="1uLkD0" id="4NpkXz55yOM" role="1uLvPA">
         <property role="TrG5h" value="echo" />
       </node>
     </node>
@@ -592,20 +594,15 @@
         <property role="3yU_OX" value="${user.home}/.ssh/id_rsa" />
       </node>
       <node concept="3yU_OC" id="635ahSvecDP" role="3yU_ON">
-        <property role="3yU_OX" value="104.196.120.189" />
+        <property role="3yU_OX" value="35.231.80.254" />
       </node>
     </node>
   </node>
-  <node concept="2EEQw1" id="2qF0d00Ta0f">
-    <property role="TrG5h" value="docker.config" />
-    <property role="2EEQw2" value="/usr/local/bin/docker" />
-    <property role="2E$TAj" value="--tlsverify --tlscacert=&quot;/Users/mas2182/.docker/machine/certs/ca.pem&quot; --tlscert=&quot;/Users/mas2182/.docker/machine/certs/cert.pem&quot; --tlskey=&quot;/Users/mas2182/.docker/machine/certs/key.pem&quot; -H=tcp://192.168.99.100:2376" />
-  </node>
   <node concept="3zOPYP" id="1LKL2LEuSFG">
     <property role="TrG5h" value="ManageCloudCluster" />
-    <property role="1$193f" value=" MPS project: MPS Project [NextflowWorkbench:36 modules] IDEA project: Project '/Users/mas2182/Lab/Projects/MPS/3.3/NextflowWorkbench' NextflowWorkbench PrefComponent: org.campagnelab.cloud.preferences.plugin.GridEngineCluster_PreferencesComponent@21f72a4f secret: rLBmNJiCSEfji5XbArdVnDxf project nextflow-workbench-test1 client 223877930626-4gt9mt9abcharqoaicnd05mq65bm8ne0.apps.googleusercontent.com" />
+    <property role="1$193f" value=" MPS project: Project '/Users/mas2182/Lab/Projects/MPS/2018.1/NextflowWorkbench' NextflowWorkbench IDEA project: Project '/Users/mas2182/Lab/Projects/MPS/2018.1/NextflowWorkbench' NextflowWorkbench PrefComponent: org.campagnelab.cloud.preferences.plugin.GridEngineCluster_PreferencesComponent@4c58941c secret:  IWzUVOx02_-4Gqa1gbC7TO4G project nextflow-workbench-test1 client  223877930626-pkli83edb6t9hq3vcfu1qisunb9713f1.apps.googleusercontent.com" />
     <property role="1OHsCo" value="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC07+Yg5a2EoSdcuZ47pTq1nxro8PRGkjrJ/A45ZCMpbcrzEG2WWy7oJc50okcc0dX3ikf788tNpt0eeIziMboNZnYnHLbkYcbs2aKA8k/0Q9Xum8yZnGFm8rdmzEyZq+O8h769aWJ693eIWGhXJNiQ+IQ0YLp8eEsq3ZYka69LeVHkdpXmEmU+dGL3cz3RsmtZefjDQB75x6jPwi1PB+GjF0+vadTU/+u8t543ArPX6odm336ErPfvZ/RQi3uAQk2pKsT1by1GReoQ+HJbZ4wfD9ytyZ9iYIPq7MUYxzm3+AWfe61ZSzaTr2UhcXLUrlsAFy3SLfNDJA5cO4PSkSmR mas2182@mac162547.med.cornell.edu" />
-    <ref role="1QJbqN" node="2qF0d00Ta0f" resolve="docker.config" />
+    <ref role="1QJbqN" node="2c6zN2OaRHT" resolve="docker.config" />
     <node concept="VtuK3" id="1LKL2LEuSFH" role="234boB">
       <property role="VuL0s" value="1.5.3" />
       <property role="VuL0v" value="artifacts" />
@@ -616,7 +613,7 @@
       <property role="TrG5h" value="cluster.config" />
       <node concept="1Q0NwO" id="1LKL2LEuSFJ" role="2KSRPJ">
         <property role="TrG5h" value="Cluster name" />
-        <property role="Zm4_2" value="AnsibleFromMPS17" />
+        <property role="Zm4_2" value="KallistoTest6" />
       </node>
       <node concept="1Q2HBG" id="1LKL2LEuSFK" role="2KSRPJ">
         <property role="TrG5h" value="Zone for cluster resources" />
@@ -636,7 +633,7 @@
       </node>
       <node concept="3zO_zJ" id="1LKL2LEuSFO" role="2KSRPJ">
         <property role="TrG5h" value="Number of worker nodes" />
-        <property role="3zO_zz" value="10" />
+        <property role="3zO_zz" value="3" />
       </node>
       <node concept="1rOJCK" id="1LKL2LEuSFP" role="2KSRPJ">
         <property role="TrG5h" value="Compute node type" />
@@ -655,6 +652,11 @@
         <property role="2tz3XC" value="/Users/mas2182/.ssh" />
       </node>
     </node>
+  </node>
+  <node concept="2EEQw1" id="2c6zN2OaRHT">
+    <property role="TrG5h" value="docker.config" />
+    <property role="2EEQw2" value="/usr/local/bin/docker" />
+    <property role="2E$TAj" value="" />
   </node>
 </model>
 
