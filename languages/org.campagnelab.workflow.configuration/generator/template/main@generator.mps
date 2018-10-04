@@ -1392,7 +1392,7 @@
           <node concept="2pNUuL" id="5OPtsPp_2R" role="2pNNFR">
             <property role="2pNUuO" value="name" />
             <node concept="2pMdtt" id="5OPtsPp_49" role="2pMdts">
-              <property role="2pMdty" value="grant-permissions" />
+              <property role="2pMdty" value="submit" />
             </node>
           </node>
           <node concept="2pNUuL" id="5OPtsPp_4f" role="2pNNFR">
@@ -1431,97 +1431,46 @@
             <node concept="2pNUuL" id="5OPtsPp_dw" role="2pNNFR">
               <property role="2pNUuO" value="command" />
               <node concept="2pMdtt" id="5OPtsPp_fa" role="2pMdts">
-                <property role="2pMdty" value="chmod a+x ${remote.job.dir}/runNextflow" />
+                <property role="2pMdty" value="chmod a+x ${remote.job.dir}/*Nextflow" />
               </node>
             </node>
           </node>
-          <node concept="2pNNFK" id="GxL7x1SKJf" role="3o6s8t">
+          <node concept="2pNNFK" id="4YUh$K6HI9x" role="3o6s8t">
             <property role="2pNNFO" value="sshexec" />
             <property role="qg3DV" value="true" />
-            <node concept="2pNUuL" id="GxL7x1SKJg" role="2pNNFR">
+            <node concept="2pNUuL" id="4YUh$K6HI9y" role="2pNNFR">
               <property role="2pNUuO" value="host" />
-              <node concept="2pMdtt" id="GxL7x1SKJh" role="2pMdts">
+              <node concept="2pMdtt" id="4YUh$K6HI9z" role="2pMdts">
                 <property role="2pMdty" value="${submission.machine}" />
               </node>
             </node>
-            <node concept="2pNUuL" id="GxL7x1SKJi" role="2pNNFR">
+            <node concept="2pNUuL" id="4YUh$K6HI9$" role="2pNNFR">
               <property role="2pNUuO" value="username" />
-              <node concept="2pMdtt" id="GxL7x1SKJj" role="2pMdts">
+              <node concept="2pMdtt" id="4YUh$K6HI9_" role="2pMdts">
                 <property role="2pMdty" value="${remote.username}" />
               </node>
             </node>
-            <node concept="2pNUuL" id="GxL7x1SKJk" role="2pNNFR">
+            <node concept="2pNUuL" id="4YUh$K6HI9A" role="2pNNFR">
               <property role="2pNUuO" value="trust" />
-              <node concept="2pMdtt" id="GxL7x1SKJl" role="2pMdts">
+              <node concept="2pMdtt" id="4YUh$K6HI9B" role="2pMdts">
                 <property role="2pMdty" value="yes" />
               </node>
             </node>
-            <node concept="2pNUuL" id="GxL7x1SKJm" role="2pNNFR">
+            <node concept="2pNUuL" id="4YUh$K6HI9C" role="2pNNFR">
               <property role="2pNUuO" value="keyfile" />
-              <node concept="2pMdtt" id="GxL7x1SKJn" role="2pMdts">
+              <node concept="2pMdtt" id="4YUh$K6HI9D" role="2pMdts">
                 <property role="2pMdty" value="${keyfile}" />
               </node>
             </node>
-            <node concept="2pNUuL" id="GxL7x1SKJo" role="2pNNFR">
+            <node concept="2pNUuL" id="4YUh$K6HI9E" role="2pNNFR">
               <property role="2pNUuO" value="command" />
-              <node concept="2pMdtt" id="GxL7x1SKJp" role="2pMdts">
-                <property role="2pMdty" value="chmod a+x ${remote.job.dir}/resumeNextflow" />
-              </node>
-            </node>
-          </node>
-          <node concept="3o6iSG" id="GxL7x1SKIu" role="3o6s8t" />
-        </node>
-        <node concept="3o6iSG" id="5OPtsPp_70" role="3o6s8t" />
-        <node concept="2pNNFK" id="5OPtsPp_he" role="3o6s8t">
-          <property role="2pNNFO" value="target" />
-          <node concept="2pNUuL" id="5OPtsPp_ji" role="2pNNFR">
-            <property role="2pNUuO" value="name" />
-            <node concept="2pMdtt" id="5OPtsPp_kN" role="2pMdts">
-              <property role="2pMdty" value="submit" />
-            </node>
-          </node>
-          <node concept="2pNUuL" id="5OPtsPp_kT" role="2pNNFR">
-            <property role="2pNUuO" value="depends" />
-            <node concept="2pMdtt" id="5OPtsPp_mx" role="2pMdts">
-              <property role="2pMdty" value="copy-files, grant-permissions" />
-            </node>
-          </node>
-          <node concept="2pNNFK" id="5OPtsPp_m_" role="3o6s8t">
-            <property role="2pNNFO" value="sshexec" />
-            <property role="qg3DV" value="true" />
-            <node concept="2pNUuL" id="5OPtsPp_mG" role="2pNNFR">
-              <property role="2pNUuO" value="host" />
-              <node concept="2pMdtt" id="5OPtsPp_oi" role="2pMdts">
-                <property role="2pMdty" value="${submission.machine}" />
-              </node>
-            </node>
-            <node concept="2pNUuL" id="5OPtsPp_oF" role="2pNNFR">
-              <property role="2pNUuO" value="username" />
-              <node concept="2pMdtt" id="5OPtsPp_oG" role="2pMdts">
-                <property role="2pMdty" value="${remote.username}" />
-              </node>
-            </node>
-            <node concept="2pNUuL" id="6HdklEvkSLM" role="2pNNFR">
-              <property role="2pNUuO" value="trust" />
-              <node concept="2pMdtt" id="6HdklEvkSMe" role="2pMdts">
-                <property role="2pMdty" value="yes" />
-              </node>
-            </node>
-            <node concept="2pNUuL" id="5OPtsPp_oH" role="2pNNFR">
-              <property role="2pNUuO" value="keyfile" />
-              <node concept="2pMdtt" id="5OPtsPp_oI" role="2pMdts">
-                <property role="2pMdty" value="${keyfile}" />
-              </node>
-            </node>
-            <node concept="2pNUuL" id="5OPtsPp_p0" role="2pNNFR">
-              <property role="2pNUuO" value="command" />
-              <node concept="2pMdtt" id="5OPtsPp_sx" role="2pMdts">
+              <node concept="2pMdtt" id="4YUh$K6HI9F" role="2pMdts">
                 <property role="2pMdty" value="cd ${remote.job.dir}; export SCRIPT_DIR=${remote.job.dir}; ./runNextflow ${remote.job.dir}/${workflow.script} ${jars} ${nextflow.options}" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="3o6iSG" id="5OPtsPp_s_" role="3o6s8t" />
+        <node concept="3o6iSG" id="4YUh$K6HIQ7" role="3o6s8t" />
         <node concept="2pNNFK" id="5OPtsPp_xx" role="3o6s8t">
           <property role="2pNNFO" value="target" />
           <node concept="2pNUuL" id="5OPtsPp_$3" role="2pNNFR">
