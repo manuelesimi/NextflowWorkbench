@@ -34,10 +34,10 @@
       <modulePath path="$PROJECT_DIR$/solutions/org.campagnelab.workflow.Samples/org.campagnelab.workflow.Samples.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/org.campagnelab.workflow.rna-seq/org.campagnelab.workflow.rna-seq.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/org.campagnelab.workflow.run/org.campagnelab.workflow.run.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/playground/playground.msd" folder="models" />
       <modulePath path="$PROJECT_DIR$/solutions/testWorkflow/testWorkflow.msd" folder="models" />
       <modulePath path="$PROJECT_DIR$/solutions/tuples/tuples.msd" folder="models" />
       <modulePath path="$PROJECT_DIR$/solutions/workflow/workflow.msd" folder="models" />
+      <modulePath path="$PROJECT_DIR$/solutions/playground/playground.msd" folder="" />
       <modulePath path="$APPLICATION_PLUGINS_DIR$/NextflowWorkbench/languages/NextflowWorkbench/org.campagnelab.NextflowWorkbench.devkit" folder="" />
       <modulePath path="$APPLICATION_PLUGINS_DIR$/NextflowWorkbench/languages/NextflowWorkbench/org.campagnelab.bash.nyosh.jar!/META-INF/module.xml" folder="" />
       <modulePath path="$APPLICATION_PLUGINS_DIR$/NextflowWorkbench/languages/NextflowWorkbench/org.campagnelab.cloud.configuration.jar!/META-INF/module.xml" folder="" />
