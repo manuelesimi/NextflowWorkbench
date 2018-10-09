@@ -157,7 +157,13 @@
       <concept id="7630370243519798795" name="org.campagnelab.bash.nyosh.structure.DockerArtifactPath" flags="ng" index="1OktH4" />
     </language>
     <language id="82ffebe3-3685-4fd9-b560-0c1d348d295c" name="org.campagnelab.logger">
-      <concept id="1925991773566712428" name="org.campagnelab.logger.structure.Logger" flags="ng" index="1lvGkW" />
+      <concept id="1925991773568778810" name="org.campagnelab.logger.structure.Message" flags="ng" index="1lnzPE">
+        <property id="681402515497888013" name="detailedPresentation" index="1ceZFR" />
+        <property id="1925991773568778812" name="message" index="1lnzPG" />
+      </concept>
+      <concept id="1925991773566712428" name="org.campagnelab.logger.structure.Logger" flags="ng" index="1lvGkW">
+        <child id="1925991773566712429" name="messages" index="1lvGkX" />
+      </concept>
     </language>
     <language id="5cf93bc1-d0da-4893-b739-63b17fe296b1" name="org.campagnelab.workflow.nyosh">
       <concept id="5436746574500400043" name="org.campagnelab.workflow.nyosh.structure.ExplicitFileBagRef" flags="ng" index="pA3Yv">
@@ -226,11 +232,26 @@
     </language>
     <language id="f9b7dda6-7ab5-4936-ad1b-2d45c57833dc" name="org.campagnelab.workflow.configuration">
       <concept id="1572763280063619218" name="org.campagnelab.workflow.configuration.structure.WithDocker" flags="ng" index="3qaZdc" />
+      <concept id="6643674794994257454" name="org.campagnelab.workflow.configuration.structure.Hostname" flags="ng" index="3yU_OC" />
+      <concept id="6643674794994257455" name="org.campagnelab.workflow.configuration.structure.JobArea" flags="ng" index="3yU_OD" />
+      <concept id="6643674794994257459" name="org.campagnelab.workflow.configuration.structure.RemoteSubmissionConfig" flags="ng" index="3yU_OP">
+        <property id="2800180507600185766" name="disabled" index="38DPjN" />
+        <child id="6643674794994257462" name="username" index="3yU_OK" />
+        <child id="6643674794994257463" name="jobArea" index="3yU_OL" />
+        <child id="6643674794994257461" name="hostname" index="3yU_ON" />
+        <child id="6643674794994257464" name="keyfile" index="3yU_OY" />
+      </concept>
+      <concept id="6643674794994257456" name="org.campagnelab.workflow.configuration.structure.KeyFile" flags="ng" index="3yU_OQ" />
+      <concept id="6643674794994257469" name="org.campagnelab.workflow.configuration.structure.Username" flags="ng" index="3yU_OV" />
+      <concept id="6643674794994257466" name="org.campagnelab.workflow.configuration.structure.SubmissionOption" flags="ng" index="3yU_OW">
+        <property id="6643674794994257467" name="value" index="3yU_OX" />
+      </concept>
       <concept id="6643674795001677795" name="org.campagnelab.workflow.configuration.structure.WorkflowConfig" flags="ng" index="3zupj_">
         <child id="1572763280063618524" name="containerOptions" index="3qaWS2" />
+        <child id="6643674795001677798" name="remoteSubmission" index="3zupjw" />
         <child id="6643674795001677796" name="executor" index="3zupjy" />
       </concept>
-      <concept id="6643674795001609832" name="org.campagnelab.workflow.configuration.structure.Local" flags="ng" index="3zuAPI" />
+      <concept id="6643674795001609834" name="org.campagnelab.workflow.configuration.structure.SGE" flags="ng" index="3zuAPG" />
     </language>
     <language id="25281c03-4a7c-4b57-9221-24a10fc36ef5" name="org.campagnelab.docker">
       <concept id="8987412447079095297" name="org.campagnelab.docker.structure.Config" flags="ng" index="2EEQw1">
@@ -932,8 +953,24 @@
   </node>
   <node concept="3zupj_" id="4yLR7SApS2m">
     <property role="TrG5h" value="workflow.config" />
-    <node concept="3zuAPI" id="4yLR7SApS2n" role="3zupjy" />
+    <node concept="3zuAPG" id="2c6zN2OaRcL" role="3zupjy" />
     <node concept="3qaZdc" id="29U0K5dky$n" role="3qaWS2" />
+    <node concept="3yU_OP" id="2c6zN2OaRcT" role="3zupjw">
+      <property role="TrG5h" value="remote.config" />
+      <property role="38DPjN" value="false" />
+      <node concept="3yU_OC" id="2c6zN2OaRcU" role="3yU_ON">
+        <property role="3yU_OX" value="35.231.80.254" />
+      </node>
+      <node concept="3yU_OV" id="2c6zN2OaRcV" role="3yU_OK">
+        <property role="3yU_OX" value="ubuntu" />
+      </node>
+      <node concept="3yU_OD" id="2c6zN2OaRcW" role="3yU_OL">
+        <property role="3yU_OX" value="/home/ubuntu" />
+      </node>
+      <node concept="3yU_OQ" id="2c6zN2OaRcX" role="3yU_OY">
+        <property role="3yU_OX" value="${user.home}/.ssh/id_rsa" />
+      </node>
+    </node>
   </node>
   <node concept="2EEQw1" id="1LKL2LEoIBl">
     <property role="TrG5h" value="docker.config" />
@@ -1050,7 +1087,3760 @@
       <property role="TrG5h" value="owner" />
     </node>
   </node>
-  <node concept="1lvGkW" id="c0MImRLfY_" />
+  <node concept="1lvGkW" id="c0MImRLfY_">
+    <node concept="1lnzPE" id="4NpkXz539D8" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ALIGNER_OPTIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Da" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: AMBIGUITY_THRESHOLD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Dc" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: STRANDNESS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Dg" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: SPLICED_ALIGNMENT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Dk" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: NON_MATCHING" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Dm" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GENOME_REFERENCE_ID" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Do" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CHUNK_SIZE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539DP" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ALIGNER_OPTIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539DR" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: AMBIGUITY_THRESHOLD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539DT" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: STRANDNESS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539DX" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: SPLICED_ALIGNMENT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539E1" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: NON_MATCHING" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539E3" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GENOME_REFERENCE_ID" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539E5" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CHUNK_SIZE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ez" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ALIGNER_OPTIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539E_" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: D" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539EB" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: E" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ED" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: S" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539EF" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GENOME_REFERENCE_ID" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539EH" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CHUNK_SIZE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Fa" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ALIGNER_OPTIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Fc" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: D" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Fe" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: E" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Fg" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: S" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Fi" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ALIGN_PART_CHUNK_SIZE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Fk" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GENOME_REFERENCE_ID" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Fm" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CHUNK_SIZE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539FO" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ALIGNER_OPTIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539FQ" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: D" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539FS" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: E" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539FU" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: S" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539FW" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: I" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539FY" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ALIGN_PART_CHUNK_SIZE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539G0" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GENOME_REFERENCE_ID" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539G2" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CHUNK_SIZE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Gv" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: AMBIGUITY_THRESHOLD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Gx" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ALIGNER_OPTIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Gz" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GENOME_REFERENCE_ID" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539G_" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CHUNK_SIZE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539He" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ASSEMBLER" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Hi" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ALIGNER" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Hm" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: SEARCH_REFERENCE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Hr" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: EVALUE_THRESHOLD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ht" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: KMER_LENGTH" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Hv" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: IDENTITY_THRESHOLD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Hx" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: TRIM_ADAPTERS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Hz" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: MERGE_GROUPS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539H_" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539HB" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539I4" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: REMOVE_SHARED_SEGMENTS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539I5" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: NUM_TOP_HITS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539I7" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: Q_VALUE_THRESHOLD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539I9" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: WEIGHT_ADJUSTMENT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ie" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: BIAS_ADJUSTMENT_FORMULA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Il" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: NORMALIZATION_FACTORS_METHOD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Iq" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: DISPERSION_METHOD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Iu" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: FILTERING" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Iw" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ANNOTATION_SOURCE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539I$" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ESTIMATE_COUNTS_GENE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539IA" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ESTIMATE_COUNTS_EXON" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539IC" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ESTIMATE_COUNTS_OTHER" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539IE" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539IG" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539J6" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: NORMALIZATION_METHOD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ja" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: REMOVE_SHARED_SEGMENTS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Jb" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: NUM_TOP_HITS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Jd" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: Q_VALUE_THRESHOLD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Jf" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: WEIGHT_ADJUSTMENT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Jk" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: BIAS_ADJUSTMENT_FORMULA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Jr" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ANNOTATION_SOURCE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Jv" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ESTIMATE_COUNTS_GENE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Jx" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ESTIMATE_COUNTS_EXON" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Jz" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ESTIMATE_COUNTS_OTHER" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539J_" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539JB" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539JS" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: OUTPUT_FORMAT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539JV" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: REALIGN_AROUND_INDELS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539JX" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: MINIMUM_VARIATION_SUPPORT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539JZ" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: THRESHOLD_DISTINCT_READ_INDICES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539K1" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539K3" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Kk" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Km" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539KE" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COVARIATE_INFO_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539KG" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539KI" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539L7" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: OUTPUT_FORMAT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ld" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GENOTYPE_DL_MODEL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Lh" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: REALIGN_AROUND_INDELS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Lj" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: MAX_COVERAGE_PER_SITE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ll" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CALL_INDELS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ln" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: FORCE_DIPLOID" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Lp" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ANNOTATE_VARIATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Lr" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: Q_VALUE_THRESHOLD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Lt" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: NUM_TOP_HITS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Lv" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: MINIMUM_VARIATION_SUPPORT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Lx" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: THRESHOLD_DISTINCT_READ_INDICES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Lz" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ANNOTATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539LA" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COVARIATE_INFO_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539LC" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539LE" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ml" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: OUTPUT_FORMAT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Mo" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: Q_VALUE_THRESHOLD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Mq" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: NUM_TOP_HITS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ms" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: MINIMUM_VARIATION_SUPPORT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Mu" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: THRESHOLD_DISTINCT_READ_INDICES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Mw" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: FORCE_DIPLOID" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539My" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CALL_INDELS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539M$" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ANNOTATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539MB" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ESTIMATE_INTRA_GROUP_DIFFERENCE_DENSITY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539MD" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: PVALUE_COMBINATOR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539MJ" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: WINDOW_LENGTH" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ML" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: SIGNIFICANCE_THRESHOLD_FOR_WINDOW" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539MN" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539MP" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Na" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: OUTPUT_FORMAT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Nd" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: Q_VALUE_THRESHOLD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Nf" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: NUM_TOP_HITS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Nh" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: MINIMUM_VARIATION_SUPPORT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Nj" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: THRESHOLD_DISTINCT_READ_INDICES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Nl" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CALL_INDELS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Nn" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: FORCE_DIPLOID" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Np" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ANNOTATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539NB" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: INDEL_RATE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ND" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: WRITE_COUNTS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539NF" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ESTIMATE_INTRA_GROUP_DIFFERENCE_DENSITY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539NH" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: PVALUE_COMBINATOR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539NN" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CONTEXTS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539NP" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539NR" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Oe" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: OUTPUT_FORMAT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Oh" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: Q_VALUE_THRESHOLD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Oj" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: NUM_TOP_HITS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ol" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: MINIMUM_VARIATION_SUPPORT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539On" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: THRESHOLD_DISTINCT_READ_INDICES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Op" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CALL_INDELS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Or" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: FORCE_DIPLOID" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ot" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ANNOTATION_TYPE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539OC" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: INDEL_RATE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539OE" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: WRITE_COUNTS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539OG" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ESTIMATE_INTRA_GROUP_DIFFERENCE_DENSITY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539OI" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: PVALUE_COMBINATOR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539OO" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CONTEXTS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539OQ" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539OS" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ph" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: OUTPUT_FORMAT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Pn" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: REALIGN_AROUND_INDELS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Pp" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CALL_INDELS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Pr" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: FORCE_DIPLOID" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Pt" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ANNOTATE_VARIATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Pv" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: Q_VALUE_THRESHOLD" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Px" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: NUM_TOP_HITS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Pz" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: MINIMUM_VARIATION_SUPPORT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539P_" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: THRESHOLD_DISTINCT_READ_INDICES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539PB" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ANNOTATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539PE" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COVARIATE_INFO_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539PG" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539PI" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539PU" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: OUTPUT_FORMAT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539PY" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ANNOTATE_VARIATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Q0" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: NUM_TOP_HITS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Q2" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Q4" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Qn" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: OUTPUT_FORMAT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Qq" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: REALIGN_AROUND_INDELS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Qs" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: CALL_INDELS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Qu" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: FORCE_DIPLOID" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Qw" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: MINIMUM_VARIATION_SUPPORT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Qy" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: THRESHOLD_DISTINCT_READ_INDICES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Q$" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: RECORDS_PER_BUCKET" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539QA" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: RANDOM_SEED" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539QC" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: SAMPLING_RATE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539QE" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: STRATEGY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539QJ" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ANNOTATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539QL" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ANNOTATION_FILE_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539QN" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ANNOTATION_SAMPLING_RATE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539QP" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GERMLINE_VARMAP" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539QR" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: VARMAP_FILE_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539QT" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: VARMAP_SAMPLING_RATE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539QV" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539QX" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539R9" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: GROUP_DEFINITION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Rb" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COMPARISON_PAIR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539T6" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: ONLY_NON_SYNONYMOUS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Uu" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: TEST_NAMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Uw" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: COPY_BACK_LOCATION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539UR" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: SAMPLE_NAME" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539UT" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: TAG" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539UV" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: READS_COLOR_SPACE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539UX" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: READS_PLATFORM" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539V3" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: QUALITY_ENCODING" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Vs" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: SAMPLE_NAME" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Vu" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: TAG" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Vw" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: READS_COLOR_SPACE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Vy" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: READS_PLATFORM" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539VC" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: QUALITY_ENCODING" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539W_" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: PAIR_INDICATOR_1" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WB" role="1lvGkX">
+      <property role="1lnzPG" value="Adding options: PAIR_INDICATOR_2" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.populateOptions" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WD" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WE" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4ee53b34" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WF" role="1lvGkX">
+      <property role="1lnzPG" value="resource=VARIANT_EFFECT_PREDICTOR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WG" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@8bc6ad" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WH" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_ANNOTATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WI" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4ce43bb3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WJ" role="1lvGkX">
+      <property role="1lnzPG" value="resource=TABIX" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WK" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2955dcb2" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WL" role="1lvGkX">
+      <property role="1lnzPG" value="resource=VCF_TOOLS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WM" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WN" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WO" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WP" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@48527413" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WQ" role="1lvGkX">
+      <property role="1lnzPG" value="resource=BOWTIE2_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WR" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3f076d9a" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WS" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FAI_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WT" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WU" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5cc68a0" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WV" role="1lvGkX">
+      <property role="1lnzPG" value="resource=BOWTIE2" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WW" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WX" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WY" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539WZ" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539X0" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@91473f1" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539X1" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FAI_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539X2" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1ce4676f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539X3" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539X4" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539X5" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539X6" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539X7" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539X8" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2be7ffb4" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539X9" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY_CPP_API" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xa" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7cd10f2d" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xb" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FAI_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xc" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xd" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@59a3cd57" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xe" role="1lvGkX">
+      <property role="1lnzPG" value="resource=JAVA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xf" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6e24e3d1" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xg" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xh" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xi" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@29df2a84" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xj" role="1lvGkX">
+      <property role="1lnzPG" value="resource=R" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xk" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xl" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4ca0f106" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xm" role="1lvGkX">
+      <property role="1lnzPG" value="resource=R" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xn" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xo" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@18e93f19" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xp" role="1lvGkX">
+      <property role="1lnzPG" value="resource=R" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xq" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xr" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@45e2fbbe" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xs" role="1lvGkX">
+      <property role="1lnzPG" value="resource=R" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xt" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xu" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@261330b1" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xv" role="1lvGkX">
+      <property role="1lnzPG" value="resource=EDGER" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xw" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xx" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@a40aa81" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xy" role="1lvGkX">
+      <property role="1lnzPG" value="resource=EDGER" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Xz" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539X$" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@69367f51" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539X_" role="1lvGkX">
+      <property role="1lnzPG" value="resource=EDGER" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XA" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XB" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4e2b6471" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XC" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XD" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@40d5e4e1" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XE" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GROOVY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XF" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@275f9fdd" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XG" role="1lvGkX">
+      <property role="1lnzPG" value="resource=TABIX" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XH" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@39891d17" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XI" role="1lvGkX">
+      <property role="1lnzPG" value="resource=SAM_JDK" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XJ" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2df9146" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XK" role="1lvGkX">
+      <property role="1lnzPG" value="resource=VARIANT_EFFECT_PREDICTOR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XL" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XM" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6c63b0ce" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XN" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XO" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@19ac39d1" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XP" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GROOVY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XQ" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3f9cbfed" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XR" role="1lvGkX">
+      <property role="1lnzPG" value="resource=TABIX" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XS" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2256021f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XT" role="1lvGkX">
+      <property role="1lnzPG" value="resource=SAM_JDK" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XU" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2c567997" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XV" role="1lvGkX">
+      <property role="1lnzPG" value="resource=VARIANT_EFFECT_PREDICTOR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XW" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XX" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1fdfe47b" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XY" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539XZ" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Y0" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@620fecc2" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Y1" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Y2" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Y3" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3b1ee398" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Y4" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Y5" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Y6" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@280656d1" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Y7" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Y8" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Y9" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@637d3ade" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ya" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yb" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yc" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3d99f8d1" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yd" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ye" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yf" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@510ca002" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yg" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yh" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yi" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4acec2ae" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yj" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yk" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7e840490" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yl" role="1lvGkX">
+      <property role="1lnzPG" value="resource=SAMTOOLS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ym" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yn" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@d6c7a61" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yo" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yp" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@69864dcf" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yq" role="1lvGkX">
+      <property role="1lnzPG" value="resource=SAMTOOLS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yr" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ys" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yt" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yu" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7c93c28e" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yv" role="1lvGkX">
+      <property role="1lnzPG" value="resource=BASH_LIBRARY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yw" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yx" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@50947615" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yy" role="1lvGkX">
+      <property role="1lnzPG" value="resource=BASH_LIBRARY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Yz" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Y$" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@67369a02" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Y_" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YA" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YB" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5c25cc5c" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YC" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YD" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YE" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2fd2b6cb" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YF" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_ANNOTATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YG" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YH" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YI" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YJ" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@245ecafb" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YK" role="1lvGkX">
+      <property role="1lnzPG" value="resource=JAVA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YL" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@bda5a65" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YM" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YN" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YO" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@60d7b6cc" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YP" role="1lvGkX">
+      <property role="1lnzPG" value="resource=JAVA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YQ" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1610aded" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YR" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YS" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YT" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@53c5b1cc" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YU" role="1lvGkX">
+      <property role="1lnzPG" value="resource=JAVA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YV" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@53fb3bb7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YW" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YX" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YY" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@37ec40ec" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539YZ" role="1lvGkX">
+      <property role="1lnzPG" value="resource=JAVA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Z0" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@40d296bf" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Z1" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Z2" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Z3" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2f43ad56" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Z4" role="1lvGkX">
+      <property role="1lnzPG" value="resource=JAVA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Z5" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@270f525b" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Z6" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Z7" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Z8" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Z9" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Za" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zb" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zc" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zd" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Ze" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zf" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zg" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zh" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@54141df3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zi" role="1lvGkX">
+      <property role="1lnzPG" value="resource=JAVA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zj" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zk" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3387d1b1" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zl" role="1lvGkX">
+      <property role="1lnzPG" value="resource=PROTOBUF_CPP" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zm" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zn" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@fd3dc10" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zo" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zp" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7c200948" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zq" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zr" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zs" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3fbdeed7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zt" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GROOVY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zu" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@b7e7f32" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zv" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zw" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4fdff84f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zx" role="1lvGkX">
+      <property role="1lnzPG" value="resource=BASH_LIBRARY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zy" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Zz" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@b600293" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Z$" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GROOVY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539Z_" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@57ce60e2" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZA" role="1lvGkX">
+      <property role="1lnzPG" value="resource=JAVA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZB" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@f66eaf4" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZC" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZD" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@9646dba" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZE" role="1lvGkX">
+      <property role="1lnzPG" value="resource=BASH_LIBRARY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZF" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@697763da" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZG" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZH" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZI" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@105d0371" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZJ" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GROOVY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZK" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@51a5f0f9" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZL" role="1lvGkX">
+      <property role="1lnzPG" value="resource=JAVA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZM" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4c31c45c" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZN" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZO" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@c46fc51" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZP" role="1lvGkX">
+      <property role="1lnzPG" value="resource=BASH_LIBRARY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZQ" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2b7f4fc6" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZR" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZS" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZT" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZU" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZV" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZW" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZX" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZY" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2c8f62b5" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz539ZZ" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY_CPP_API" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a00" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2685c0e5" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a01" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FAI_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a02" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a03" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a04" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a05" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7ebb4767" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a06" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a07" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a08" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@37e72883" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a09" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0a" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0b" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5bff3b92" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0c" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0d" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0e" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@470efb69" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0f" role="1lvGkX">
+      <property role="1lnzPG" value="resource=KALLISTO" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0g" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2e7145ab" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0h" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_TRANSCRIPTS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0i" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0j" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@e03e653" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0k" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0l" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0m" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0n" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0o" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0p" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0q" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0r" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0s" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0t" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4c658900" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0u" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0v" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@cec7bd2" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0w" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FAI_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0x" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1f592ea8" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0y" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0z" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0$" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@416e0e78" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0_" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0A" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3b7ea6fe" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0B" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FAI_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0C" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@930f545" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0D" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0E" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0F" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2cc621b4" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0G" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0H" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@502dbe7b" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0I" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FAI_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0J" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2a6fcfcd" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0K" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0L" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0M" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7b2ec6a6" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0N" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0O" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@40245fa4" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0P" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FAI_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0Q" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@73b1c933" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0R" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0S" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0T" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5ecc802d" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0U" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0V" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6667f35" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0W" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FAI_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0X" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6efc3d89" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0Y" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a0Z" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a10" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@31fe9a33" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a11" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a12" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@11628b2" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a13" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FAI_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a14" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@34cef9d9" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a15" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a16" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a17" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5bb2d33b" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a18" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a19" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@46c432fb" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1a" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FAI_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1b" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7399f21" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1c" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1d" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1e" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@32e6b52c" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1f" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1g" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1h" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1i" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1j" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@50335524" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1k" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1l" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1m" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@482ccf62" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1n" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1o" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2ea4347e" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1p" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MAVEN_ARTIFACTS_DOWNLOADER" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1q" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1r" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1b20edbe" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1s" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1t" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4f502452" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1u" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MAVEN_ARTIFACTS_DOWNLOADER" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1v" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1w" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1x" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1y" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1z" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5059a8b3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1$" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1_" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3927eef0" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1A" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1B" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1C" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@25c4afa9" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1D" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GROOVY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1E" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6be440e6" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1F" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1G" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1H" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4584cd06" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1I" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GROOVY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1J" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2a752ac1" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1K" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1L" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@121be490" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1M" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1N" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3ce9cdb7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1O" role="1lvGkX">
+      <property role="1lnzPG" value="resource=JAVA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1P" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1Q" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1R" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1S" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1T" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1U" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7b242296" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1V" role="1lvGkX">
+      <property role="1lnzPG" value="resource=R" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1W" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1X" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1Y" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5cadb2bb" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a1Z" role="1lvGkX">
+      <property role="1lnzPG" value="resource=SALMON" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a20" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@51d7476d" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a21" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_TRANSCRIPTS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a22" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a23" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a24" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@74ed9ca4" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a25" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a26" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@825966" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a27" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MPS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a28" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a29" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2a" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2b" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2c" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@16656d3e" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2d" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2e" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2f" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@64fd7a3c" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2g" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2h" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2i" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2j" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2k" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2l" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@532d40f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2m" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FAI_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2n" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3bd23b67" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2o" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_GTF" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2p" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2q" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2r" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2s" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@8fc91e3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2t" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FETCH_URL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2u" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6565a2cf" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2v" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2w" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2x" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1c3e9a6e" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2y" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_API" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2z" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2$" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5fb43627" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2_" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_API" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2A" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2B" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2C" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@74a291d6" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2D" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2E" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@26a0ed7e" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2F" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2G" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4e52650a" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2H" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GSNAP_WITH_GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2I" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@667b9dde" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2J" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ILLUMINA_ADAPTERS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2K" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@609526af" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2L" role="1lvGkX">
+      <property role="1lnzPG" value="resource=EXTRACT_NONMATCHED" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2M" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2N" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@74322e6" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2O" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2P" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@46b07fc7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2Q" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2R" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@45d7a2a7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2S" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GSNAP_WITH_GOBY_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2T" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1654859c" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2U" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ILLUMINA_ADAPTERS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2V" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@9b9c7c" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2W" role="1lvGkX">
+      <property role="1lnzPG" value="resource=EXTRACT_NONMATCHED" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2X" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2Y" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@23ad42a3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a2Z" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a30" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6287d918" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a31" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a32" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1ae08e30" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a33" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a34" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@27b2ba58" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a35" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a36" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2c1ff122" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a37" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_BISULFITE_INDEX" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a38" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4286a732" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a39" role="1lvGkX">
+      <property role="1lnzPG" value="resource=PLAST" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3a" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3b" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3a29ea0a" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3c" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3d" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4b4632e4" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3e" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3f" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@64b5f4b7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3g" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3h" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@63079702" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3i" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3j" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@514087b3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3k" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_INDEX" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3l" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3m" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4e00ee63" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3n" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3o" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2c6bd9a6" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3p" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3q" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4028d137" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3r" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3s" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@b5ce0c9" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3t" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3u" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7b643904" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3v" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_INDEX" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3w" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@c550279" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3x" role="1lvGkX">
+      <property role="1lnzPG" value="resource=PLAST" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3y" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3z" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@25083396" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3$" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3_" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6f01fd4f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3A" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3B" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5925f15a" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3C" role="1lvGkX">
+      <property role="1lnzPG" value="resource=STAR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3D" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3b9da652" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3E" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3F" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@e2ab776" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3G" role="1lvGkX">
+      <property role="1lnzPG" value="resource=SAMTOOLS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3H" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3I" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7f9221e9" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3J" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3K" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@64ce67dc" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3L" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3M" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3ddfcb8d" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3N" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3O" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@747e2ee8" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3P" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MINIA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3Q" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7edbe8c4" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3R" role="1lvGkX">
+      <property role="1lnzPG" value="resource=TRINITY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3S" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@71635851" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3T" role="1lvGkX">
+      <property role="1lnzPG" value="resource=LAST_ARTIFACT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3U" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4867884b" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3V" role="1lvGkX">
+      <property role="1lnzPG" value="resource=EXTRACT_NONMATCHED" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3W" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@40d4ae40" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3X" role="1lvGkX">
+      <property role="1lnzPG" value="resource=BWA_WITH_GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3Y" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7afb4961" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a3Z" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ILLUMINA_ADAPTERS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a40" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@68440b4b" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a41" role="1lvGkX">
+      <property role="1lnzPG" value="resource=PATHOGEN_DATA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a42" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7cfe5987" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a43" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GNU_PARALLEL" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a44" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a45" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7b0eb99d" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a46" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a47" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7223c311" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a48" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a49" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1b7243ff" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4a" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_ANNOTATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4b" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6e7c8770" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4c" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4d" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@9f40e94" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4e" role="1lvGkX">
+      <property role="1lnzPG" value="resource=R" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4f" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@374a5be1" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4g" role="1lvGkX">
+      <property role="1lnzPG" value="resource=EDGE_R_SCRIPT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4h" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6817c3a0" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4i" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_ANNOTATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4j" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4k" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@61929750" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4l" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4m" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@599edeb7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4n" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4o" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7b0f3aa9" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4p" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4q" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@134e0a8d" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4r" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_ANNOTATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4s" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4t" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7620bdce" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4u" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4v" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@13e8ab25" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4w" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4x" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5745d0f7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4y" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4z" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4$" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5ec54573" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4_" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4A" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@144b655a" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4B" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4C" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@251185b9" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4D" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4E" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4F" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@201d9cb3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4G" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4H" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@46945ffa" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4I" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4J" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@56778731" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4K" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MUTECT" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4L" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@31f4e360" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4M" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MUTECT_HOMO_SAPIENS_DATA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4N" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4d79247a" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4O" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4P" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@62e0714" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4Q" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4R" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@360c16dd" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4S" role="1lvGkX">
+      <property role="1lnzPG" value="resource=FAI_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4T" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1a3aee02" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4U" role="1lvGkX">
+      <property role="1lnzPG" value="resource=SAMTOOLS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4V" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4W" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6d985359" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4X" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4Y" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@360a9a97" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a4Z" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a50" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3ccf32e6" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a51" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a52" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5ec72c79" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a53" role="1lvGkX">
+      <property role="1lnzPG" value="resource=VCF_TOOLS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a54" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6fabade8" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a55" role="1lvGkX">
+      <property role="1lnzPG" value="resource=VARIANT_EFFECT_PREDICTOR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a56" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2581da50" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a57" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ANNOTATE_VCF" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a58" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1820ba00" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a59" role="1lvGkX">
+      <property role="1lnzPG" value="resource=RJAVA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5a" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@64d80ce2" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5b" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5c" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5177a7de" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5d" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GENOTYPE_DL_MODELS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5e" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5f" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1f5e4231" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5g" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5h" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6401c8f6" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5i" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5j" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@59cf5606" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5k" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5l" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4da79b7b" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5m" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_ANNOTATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5n" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1d3264ad" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5o" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ANNOTATE_VCF" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5p" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5q" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7e28f9e3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5r" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5s" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@11c62b30" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5t" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5u" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7d6af486" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5v" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5w" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@542df0e4" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5x" role="1lvGkX">
+      <property role="1lnzPG" value="resource=IGVTOOLS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5y" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5f47bdeb" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5z" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ANNOTATE_VCF" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5$" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5_" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2e2edce4" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5A" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5B" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3a867c4a" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5C" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5D" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5b315ea1" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5E" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5F" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@36718142" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5G" role="1lvGkX">
+      <property role="1lnzPG" value="resource=IGVTOOLS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5H" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@42e62f27" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5I" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ANNOTATE_VCF" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5J" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@57496c69" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5K" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ENSEMBL_ANNOTATIONS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5L" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@23c79e5e" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5M" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5N" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5O" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6a0722" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5P" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5Q" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4b0c00f7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5R" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5S" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@57fcb4c2" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5T" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5U" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7396d96f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5V" role="1lvGkX">
+      <property role="1lnzPG" value="resource=VCF_TOOLS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5W" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3d423a43" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5X" role="1lvGkX">
+      <property role="1lnzPG" value="resource=VARIANT_EFFECT_PREDICTOR" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5Y" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3da2d8c7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a5Z" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ANNOTATE_VCF" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a60" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@b5df29f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a61" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a62" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a63" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3c2de46" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a64" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a65" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5e92cbcd" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a66" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a67" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@c8b5f26" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a68" role="1lvGkX">
+      <property role="1lnzPG" value="resource=SAMTOOLS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a69" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@5578a02f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6a" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ANNOTATE_VCF" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6b" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6c" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6f9c370b" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6d" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6e" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6252578c" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6f" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6g" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@72d11cf3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6h" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6i" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1d5e0c52" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6j" role="1lvGkX">
+      <property role="1lnzPG" value="resource=DLVARIATION" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6k" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@448f39dd" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6l" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY_INDEXED_GENOMES" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6m" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6n" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@366ef81e" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6o" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6p" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3d030e80" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6q" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6r" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6s" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@f7058df" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6t" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6u" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1fe07e31" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6v" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6w" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@dd896f4" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6x" role="1lvGkX">
+      <property role="1lnzPG" value="resource=ANNOTATE_VCF" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6y" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6z" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@f1af391" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6$" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6_" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1a931afd" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6A" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6B" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@7c10ec9" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6C" role="1lvGkX">
+      <property role="1lnzPG" value="resource=BWA_WITH_GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6D" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@97fede2" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6E" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6F" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3e242a9f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6G" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MPS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6H" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6I" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1fee800b" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6J" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6K" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@358ec548" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6L" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6M" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@b70f73" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6N" role="1lvGkX">
+      <property role="1lnzPG" value="resource=BWA_WITH_GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6O" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@75d9d3ee" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6P" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MPS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6Q" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6R" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6f151aff" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6S" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6T" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4cb7eb0" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6U" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6V" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6W" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@68600fb1" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6X" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6Y" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@22ae47e7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a6Z" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a70" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@fd4416d" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a71" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a72" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@208ee7f7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a73" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MPS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a74" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a75" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@513e4701" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a76" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a77" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@592165d7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a78" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a79" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@42e5262f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7a" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7b" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2a66d315" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7c" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MPS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7d" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7e" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@15b2dfa4" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7f" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7g" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2e31fe6e" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7h" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7i" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@34eeace2" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7j" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MAVEN" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7k" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7l" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@d63b9ec" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7m" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7n" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@716417ea" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7o" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7p" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@42f53fda" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7q" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7r" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@e60002a" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7s" role="1lvGkX">
+      <property role="1lnzPG" value="resource=PROCESS_PAIRED_READS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7t" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@2d9e277b" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7u" role="1lvGkX">
+      <property role="1lnzPG" value="resource=BASH_LIBRARY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7v" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7w" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@57a3ce77" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7x" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7y" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@c7cd72f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7z" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7$" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@64dc7622" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7_" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY3" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7A" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@733b0a7f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7B" role="1lvGkX">
+      <property role="1lnzPG" value="resource=JAVA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7C" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@6e0dea26" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7D" role="1lvGkX">
+      <property role="1lnzPG" value="resource=PROCESS_READS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7E" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@763a49f7" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7F" role="1lvGkX">
+      <property role="1lnzPG" value="resource=BASH_LIBRARY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7G" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7H" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@11436e2c" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7I" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7J" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@1d9fd220" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7K" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7L" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@35711a8e" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7M" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7N" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@3e861119" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7O" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MPS" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7P" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7Q" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@34edc8af" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7R" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7S" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@88c7dc" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7T" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7U" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7V" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4562092a" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7W" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7X" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@78f33856" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7Y" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a7Z" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@467f273f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a80" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a81" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@11d5af17" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a82" role="1lvGkX">
+      <property role="1lnzPG" value="resource=RJAVA" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a83" role="1lvGkX">
+      <property role="1lnzPG" value="" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a84" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4ceab74c" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a85" role="1lvGkX">
+      <property role="1lnzPG" value="resource=MERCURY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a86" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@10fa7be2" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a87" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBYWEB_SERVER_SIDE" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a88" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@55001086" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a89" role="1lvGkX">
+      <property role="1lnzPG" value="resource=TRIMMOMATIC" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a8a" role="1lvGkX">
+      <property role="1lnzPG" value="Resolving resource: org.campagnelab.gobyweb.plugins.xml.resources.Resource@4287870f" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53a8b" role="1lvGkX">
+      <property role="1lnzPG" value="resource=GOBY" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.resolveResourceRefs" />
+    </node>
+    <node concept="1lnzPE" id="4NpkXz53abe" role="1lvGkX">
+      <property role="1lnzPG" value="Executed success method" />
+      <property role="1ceZFR" value="org.campagnelab.gobyweb.interactive.behavior.reload" />
+    </node>
+  </node>
   <node concept="2ulcR8" id="5SFbgoI$ZRz">
     <property role="3G9_ro" value="false" />
     <property role="TrG5h" value="TestPlugin" />
