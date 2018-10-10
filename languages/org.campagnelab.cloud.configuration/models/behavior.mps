@@ -694,7 +694,7 @@
       <node concept="3clFbS" id="3pj0Oa6Gsq9" role="3clF47">
         <node concept="3clFbF" id="3pj0Oa6GsH_" role="3cqZAp">
           <node concept="Xl_RD" id="3pj0Oa6GsH$" role="3clFbG">
-            <property role="Xl_RC" value="/root/.elasticluster" />
+            <property role="Xl_RC" value="/home/.elasticluster" />
           </node>
         </node>
       </node>
@@ -831,7 +831,7 @@
         <node concept="3clFbF" id="6UP81EX8c_8" role="3cqZAp">
           <node concept="3cpWs3" id="6a8xgfVkH5F" role="3clFbG">
             <node concept="Xl_RD" id="6a8xgfVkHdm" role="3uHU7w">
-              <property role="Xl_RC" value="/root/.ssh" />
+              <property role="Xl_RC" value="/home/.ssh" />
             </node>
             <node concept="3cpWs3" id="6a8xgfVkGLr" role="3uHU7B">
               <node concept="3cpWs3" id="6a8xgfVkzqP" role="3uHU7B">

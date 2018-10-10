@@ -379,7 +379,7 @@
         </node>
         <node concept="lc7rE" id="5EXCMiTrXT3" role="3cqZAp">
           <node concept="la8eA" id="5EXCMiTrXT4" role="lcghm">
-            <property role="lacIc" value="image_user=ubuntu" />
+            <property role="lacIc" value="image_user=root" />
           </node>
           <node concept="l8MVK" id="5EXCMiTrXT5" role="lcghm" />
         </node>
@@ -403,13 +403,13 @@
         </node>
         <node concept="lc7rE" id="5EXCMiTrXXR" role="3cqZAp">
           <node concept="la8eA" id="5EXCMiTrXXS" role="lcghm">
-            <property role="lacIc" value="user_key_private=~/.ssh/id_rsa" />
+            <property role="lacIc" value="user_key_private=/home/.ssh/id_rsa" />
           </node>
           <node concept="l8MVK" id="5EXCMiTrXXT" role="lcghm" />
         </node>
         <node concept="lc7rE" id="5EXCMiTrXZj" role="3cqZAp">
           <node concept="la8eA" id="5EXCMiTrXZk" role="lcghm">
-            <property role="lacIc" value="user_key_public=~/.ssh/id_rsa.pub" />
+            <property role="lacIc" value="user_key_public=/home/.ssh/id_rsa.pub" />
           </node>
           <node concept="l8MVK" id="6_LFt8Zwf3r" role="lcghm" />
           <node concept="l8MVK" id="5EXCMiTrXZl" role="lcghm" />
@@ -441,7 +441,7 @@
         </node>
         <node concept="lc7rE" id="5EXCMiTrY9T" role="3cqZAp">
           <node concept="la8eA" id="5EXCMiTrY9U" role="lcghm">
-            <property role="lacIc" value="compute_groups=gridengine_clients,workflow_nodes" />
+            <property role="lacIc" value="compute_groups=gridengine_worker,workflow_nodes" />
           </node>
           <node concept="l8MVK" id="5EXCMiTrY9V" role="lcghm" />
           <node concept="l8MVK" id="6_LFt8Zwf4g" role="lcghm" />
@@ -473,7 +473,7 @@
         </node>
         <node concept="lc7rE" id="5EXCMiTrYqv" role="3cqZAp">
           <node concept="la8eA" id="5EXCMiTrYqw" role="lcghm">
-            <property role="lacIc" value="setup_provider=ansible-gridengine" />
+            <property role="lacIc" value="setup=ansible-gridengine" />
           </node>
           <node concept="l8MVK" id="5EXCMiTrYqx" role="lcghm" />
         </node>
