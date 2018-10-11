@@ -379,7 +379,7 @@
         </node>
         <node concept="lc7rE" id="5EXCMiTrXT3" role="3cqZAp">
           <node concept="la8eA" id="5EXCMiTrXT4" role="lcghm">
-            <property role="lacIc" value="image_user=root" />
+            <property role="lacIc" value="image_user=manuele_simi_campagnelab_org" />
           </node>
           <node concept="l8MVK" id="5EXCMiTrXT5" role="lcghm" />
         </node>
@@ -403,13 +403,13 @@
         </node>
         <node concept="lc7rE" id="5EXCMiTrXXR" role="3cqZAp">
           <node concept="la8eA" id="5EXCMiTrXXS" role="lcghm">
-            <property role="lacIc" value="user_key_private=/home/.ssh/id_rsa" />
+            <property role="lacIc" value="user_key_private=/home/.ssh/google_compute_engine" />
           </node>
           <node concept="l8MVK" id="5EXCMiTrXXT" role="lcghm" />
         </node>
         <node concept="lc7rE" id="5EXCMiTrXZj" role="3cqZAp">
           <node concept="la8eA" id="5EXCMiTrXZk" role="lcghm">
-            <property role="lacIc" value="user_key_public=/home/.ssh/id_rsa.pub" />
+            <property role="lacIc" value="user_key_public=/home/.ssh/google_compute_engine.pub" />
           </node>
           <node concept="l8MVK" id="6_LFt8Zwf3r" role="lcghm" />
           <node concept="l8MVK" id="5EXCMiTrXZl" role="lcghm" />
@@ -485,7 +485,7 @@
         </node>
         <node concept="lc7rE" id="5EXCMiTrYvD" role="3cqZAp">
           <node concept="la8eA" id="5EXCMiTrYvE" role="lcghm">
-            <property role="lacIc" value="image_id=ubuntu-1204-precise-v20160114" />
+            <property role="lacIc" value="image_id=debian-9-stretch-v20181009" />
           </node>
           <node concept="l8MVK" id="5EXCMiTrYvF" role="lcghm" />
         </node>
