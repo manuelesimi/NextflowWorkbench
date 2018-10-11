@@ -25,7 +25,6 @@
     <language id="f7196c5e-3839-47b2-a69a-cc57b10442a1" name="org.campagnelab.cloud">
       <concept id="6538561612137036945" name="org.campagnelab.cloud.structure.ContainerWithEC" flags="ng" index="3zOPYP">
         <property id="7017246219745809549" name="notes" index="1$193f" />
-        <property id="9054962551105550959" name="credentials" index="1OHsCo" />
         <reference id="147628039490030680" name="dockerConfig" index="1QJbqN" />
         <child id="331977639697571264" name="container" index="234boB" />
         <child id="9054962551105352198" name="clusterConfig" index="1OGc9L" />
@@ -600,20 +599,19 @@
   </node>
   <node concept="3zOPYP" id="1LKL2LEuSFG">
     <property role="TrG5h" value="ManageCloudCluster" />
-    <property role="1$193f" value=" MPS project: Project '/Users/mas2182/Lab/Projects/MPS/2018.1/NextflowWorkbench' NextflowWorkbench IDEA project: Project '/Users/mas2182/Lab/Projects/MPS/2018.1/NextflowWorkbench' NextflowWorkbench PrefComponent: org.campagnelab.cloud.preferences.plugin.GridEngineCluster_PreferencesComponent@4c58941c secret:  IWzUVOx02_-4Gqa1gbC7TO4G project nextflow-workbench-test1 client  223877930626-pkli83edb6t9hq3vcfu1qisunb9713f1.apps.googleusercontent.com" />
-    <property role="1OHsCo" value="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC07+Yg5a2EoSdcuZ47pTq1nxro8PRGkjrJ/A45ZCMpbcrzEG2WWy7oJc50okcc0dX3ikf788tNpt0eeIziMboNZnYnHLbkYcbs2aKA8k/0Q9Xum8yZnGFm8rdmzEyZq+O8h769aWJ693eIWGhXJNiQ+IQ0YLp8eEsq3ZYka69LeVHkdpXmEmU+dGL3cz3RsmtZefjDQB75x6jPwi1PB+GjF0+vadTU/+u8t543ArPX6odm336ErPfvZ/RQi3uAQk2pKsT1by1GReoQ+HJbZ4wfD9ytyZ9iYIPq7MUYxzm3+AWfe61ZSzaTr2UhcXLUrlsAFy3SLfNDJA5cO4PSkSmR mas2182@mac162547.med.cornell.edu" />
+    <property role="1$193f" value=" MPS project: Project '/Users/mas2182/Lab/Projects/MPS/2018.1/NextflowWorkbench' NextflowWorkbench IDEA project: Project '/Users/mas2182/Lab/Projects/MPS/2018.1/NextflowWorkbench' NextflowWorkbench PrefComponent: org.campagnelab.cloud.preferences.plugin.GridEngineCluster_PreferencesComponent@4722ba5 secret:  IWzUVOx02_-4Gqa1gbC7TO4G project nextflow-workbench-test1 client  223877930626-pkli83edb6t9hq3vcfu1qisunb9713f1.apps.googleusercontent.com" />
     <ref role="1QJbqN" node="2c6zN2OaRHT" resolve="docker.config" />
     <node concept="VtuK3" id="1LKL2LEuSFH" role="234boB">
-      <property role="VuL0s" value="1.5.3" />
+      <property role="VuL0s" value="1.6.0" />
       <property role="VuL0v" value="artifacts" />
-      <property role="GbyUj" value="elasticluster" />
+      <property role="GbyUj" value="elasticluster-config-tools" />
       <property role="3zaeVo" value="true" />
     </node>
     <node concept="3zOwDe" id="1LKL2LEuSFI" role="1OGc9L">
       <property role="TrG5h" value="cluster.config" />
       <node concept="1Q0NwO" id="1LKL2LEuSFJ" role="2KSRPJ">
         <property role="TrG5h" value="Cluster name" />
-        <property role="Zm4_2" value="KallistoTest6" />
+        <property role="Zm4_2" value="KallistoTest20186" />
       </node>
       <node concept="1Q2HBG" id="1LKL2LEuSFK" role="2KSRPJ">
         <property role="TrG5h" value="Zone for cluster resources" />
@@ -629,11 +627,11 @@
       </node>
       <node concept="ZmVQ0" id="1LKL2LEuSFN" role="2KSRPJ">
         <property role="TrG5h" value="Shared file system size" />
-        <property role="ZmVUY" value="10" />
+        <property role="ZmVUY" value="50" />
       </node>
       <node concept="3zO_zJ" id="1LKL2LEuSFO" role="2KSRPJ">
         <property role="TrG5h" value="Number of worker nodes" />
-        <property role="3zO_zz" value="3" />
+        <property role="3zO_zz" value="5" />
       </node>
       <node concept="1rOJCK" id="1LKL2LEuSFP" role="2KSRPJ">
         <property role="TrG5h" value="Compute node type" />
@@ -641,7 +639,7 @@
       </node>
       <node concept="1mWehH" id="1LKL2LEuSFQ" role="2KSRPJ">
         <property role="TrG5h" value="Disk size local to each worker nodes" />
-        <property role="ZmVUY" value="20" />
+        <property role="ZmVUY" value="50" />
       </node>
       <node concept="3xTfy5" id="1LKL2LEuSFS" role="2KSRPJ">
         <property role="TrG5h" value="Preemptibility" />

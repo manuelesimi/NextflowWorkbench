@@ -298,6 +298,7 @@
         <child id="7457140171610928304" name="outputs" index="2ulM79" />
         <child id="7457140171610928307" name="script" index="2ulM7a" />
         <child id="7457140171610928302" name="inputs" index="2ulM7n" />
+        <child id="6682645635666851934" name="comment" index="3P0jUi" />
       </concept>
       <concept id="3708199456158916214" name="org.campagnelab.workflow.structure.TupleLiteralExpression" flags="ng" index="vO3mO">
         <child id="3708199456158917961" name="expressions" index="vO0Ub" />
@@ -840,6 +841,9 @@
           </node>
         </node>
       </node>
+    </node>
+    <node concept="19SGf9" id="4YUh$K6ISPd" role="3P0jUi">
+      <node concept="19SUe$" id="4YUh$K6ISPe" role="19SJt6" />
     </node>
   </node>
   <node concept="2$rMIF" id="4yLR7SApRY_">

@@ -479,7 +479,7 @@
         </node>
         <node concept="lc7rE" id="5EXCMiTrYt1" role="3cqZAp">
           <node concept="la8eA" id="5EXCMiTrYt2" role="lcghm">
-            <property role="lacIc" value="security_group=default" />
+            <property role="lacIc" value="security_group=ssh-group" />
           </node>
           <node concept="l8MVK" id="5EXCMiTrYt3" role="lcghm" />
         </node>
