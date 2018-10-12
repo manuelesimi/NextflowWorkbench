@@ -108,7 +108,6 @@
     </language>
     <language id="c6c823fb-a9da-46e7-9850-129b0f7a7aa5" name="org.campagnelab.workflow">
       <concept id="6505336652526334578" name="org.campagnelab.workflow.structure.ProcessRef" flags="ng" index="2$rEH5">
-        <reference id="6505336652526334579" name="process" index="2$rEH4" />
         <child id="8369613327464344476" name="outChannel" index="1uLvPA" />
         <child id="8369613327464344471" name="inChannel" index="1uLvPH" />
       </concept>
@@ -128,7 +127,7 @@
         <child id="3653684473245054701" name="elementType" index="2J_sx6" />
       </concept>
       <concept id="2948113593646370239" name="org.campagnelab.workflow.structure.AbstractProcessRef" flags="ng" index="2U8K0e">
-        <reference id="6505336652526334579" name="process" index="2$rEH5" />
+        <reference id="6505336652526334579" name="process" index="2$rEH4" />
       </concept>
       <concept id="6588488528863172354" name="org.campagnelab.workflow.structure.Report" flags="ng" index="2UNLhE">
         <reference id="6588488528863172372" name="channel" index="2UNLhW" />
@@ -188,7 +187,7 @@
       </node>
     </node>
     <node concept="2$rEH5" id="2EhCxNvOSjF" role="2$rEHq">
-      <ref role="2$rEH5" to="hg90:1WG1fjcFlGX" resolve="GenerateRandomSequences" />
+      <ref role="2$rEH4" to="hg90:1WG1fjcFlGX" resolve="GenerateRandomSequences" />
       <node concept="1uYdA0" id="2EhCxNvOSjH" role="1uLvPH">
         <ref role="1uK_4X" node="1WG1fjcFRAL" resolve="bytesForTheSequencesToGenerate" />
       </node>
@@ -197,7 +196,7 @@
       </node>
     </node>
     <node concept="2$rEH5" id="2EhCxNvOStK" role="2$rEHq">
-      <ref role="2$rEH5" to="hg90:1WG1fjcFtiY" resolve="SelectSequencesByLength" />
+      <ref role="2$rEH4" to="hg90:1WG1fjcFtiY" resolve="SelectSequencesByLength" />
       <node concept="1uYdA0" id="2EhCxNvOStM" role="1uLvPH">
         <ref role="1uK_4X" node="2EhCxNvOSjI" resolve="seqs" />
       </node>
@@ -209,7 +208,7 @@
       </node>
     </node>
     <node concept="2$rEH5" id="2EhCxNvOUiU" role="2$rEHq">
-      <ref role="2$rEH5" to="hg90:1WG1fjcG2d4" resolve="CountSequences" />
+      <ref role="2$rEH4" to="hg90:1WG1fjcG2d4" resolve="CountSequences" />
       <node concept="1uYdA0" id="2EhCxNvOUiW" role="1uLvPH">
         <ref role="1uK_4X" node="2EhCxNvOStO" resolve="seqsWithExactLength" />
       </node>
@@ -226,7 +225,7 @@
   <node concept="2$rMIF" id="1WG1fjcG2jH">
     <property role="TrG5h" value="FileWithSequencesMatchingAPattern" />
     <node concept="2UNLhE" id="1WG1fjcG2jI" role="2UW718">
-      <ref role="2UNLhW" node="1WG1fjcGr_5" resolve="outputFile" />
+      <ref role="2UNLhW" node="2EhCxNvOWpc" resolve="outFile" />
       <node concept="2UPiyC" id="1WG1fjcG2jJ" role="2UNLhY">
         <node concept="3clFbS" id="1WG1fjcG2jK" role="2VODD2">
           <node concept="3clFbF" id="1WG1fjcGuSP" role="3cqZAp">
@@ -383,43 +382,43 @@
         </node>
       </node>
     </node>
-    <node concept="2$rEH5" id="1WG1fjcG2k1" role="2$rEHq">
+    <node concept="2$rEH5" id="2EhCxNvOW1J" role="2$rEHq">
       <ref role="2$rEH4" to="hg90:1WG1fjcFlGX" resolve="GenerateRandomSequences" />
-      <node concept="1uYdA0" id="1WG1fjcG2k2" role="1uLvPH">
+      <node concept="1uYdA0" id="2EhCxNvOW1L" role="1uLvPH">
         <ref role="1uK_4X" node="1WG1fjcG2jV" resolve="bytesForTheSequencesToGenerate" />
       </node>
-      <node concept="1uLkD0" id="1WG1fjcG2k3" role="1uLvPA">
-        <property role="TrG5h" value="sequences" />
+      <node concept="1uLkD0" id="2EhCxNvOW1M" role="1uLvPA">
+        <property role="TrG5h" value="seqs" />
       </node>
     </node>
-    <node concept="2$rEH5" id="1WG1fjcG2k4" role="2$rEHq">
+    <node concept="2$rEH5" id="2EhCxNvOWaw" role="2$rEHq">
       <ref role="2$rEH4" to="hg90:1WG1fjcFXUQ" resolve="SelectSequencesByPattern" />
-      <node concept="1uYdA0" id="1WG1fjcG2k5" role="1uLvPH">
-        <ref role="1uK_4X" node="1WG1fjcG2k3" resolve="sequences" />
+      <node concept="1uYdA0" id="2EhCxNvOWay" role="1uLvPH">
+        <ref role="1uK_4X" node="2EhCxNvOW1M" resolve="seqs" />
       </node>
-      <node concept="1uYdA0" id="1WG1fjcG2k6" role="1uLvPH">
+      <node concept="1uYdA0" id="2EhCxNvOWaz" role="1uLvPH">
         <ref role="1uK_4X" node="1WG1fjcG2uR" resolve="patternToMatch" />
       </node>
-      <node concept="1uLkD0" id="1WG1fjcG2k7" role="1uLvPA">
-        <property role="TrG5h" value="sequencesWithPattern" />
+      <node concept="1uLkD0" id="2EhCxNvOWa$" role="1uLvPA">
+        <property role="TrG5h" value="seqsWithPattern" />
       </node>
     </node>
-    <node concept="2$rEH5" id="1WG1fjcG53S" role="2$rEHq">
+    <node concept="2$rEH5" id="2EhCxNvOWgP" role="2$rEHq">
       <ref role="2$rEH4" to="hg90:1WG1fjcGqMw" resolve="Sort" />
-      <node concept="1uYdA0" id="1WG1fjcG55t" role="1uLvPH">
-        <ref role="1uK_4X" node="1WG1fjcG2k7" resolve="sequencesWithPattern" />
+      <node concept="1uYdA0" id="2EhCxNvOWgR" role="1uLvPH">
+        <ref role="1uK_4X" node="2EhCxNvOWa$" resolve="seqsWithPattern" />
       </node>
-      <node concept="1uLkD0" id="1WG1fjcG57$" role="1uLvPA">
-        <property role="TrG5h" value="sortedSequences" />
+      <node concept="1uLkD0" id="2EhCxNvOWgS" role="1uLvPA">
+        <property role="TrG5h" value="sortedSeqs" />
       </node>
     </node>
-    <node concept="2$rEH5" id="1WG1fjcGrtS" role="2$rEHq">
+    <node concept="2$rEH5" id="2EhCxNvOWp9" role="2$rEHq">
       <ref role="2$rEH4" to="hg90:1WG1fjcG2cq" resolve="AsFastaFile" />
-      <node concept="1uYdA0" id="1WG1fjcGr_4" role="1uLvPH">
-        <ref role="1uK_4X" node="1WG1fjcG57$" resolve="sortedSequences" />
+      <node concept="1uYdA0" id="2EhCxNvOWpb" role="1uLvPH">
+        <ref role="1uK_4X" node="2EhCxNvOWgS" resolve="sortedSeqs" />
       </node>
-      <node concept="1uLkD0" id="1WG1fjcGr_5" role="1uLvPA">
-        <property role="TrG5h" value="outputFile" />
+      <node concept="1uLkD0" id="2EhCxNvOWpc" role="1uLvPA">
+        <property role="TrG5h" value="outFile" />
       </node>
     </node>
     <node concept="19SGf9" id="1WG1fjcGjWj" role="GZ$AB">
@@ -472,7 +471,7 @@
       </node>
     </node>
     <node concept="2$rEH5" id="2EhCxNvOQ$y" role="2$rEHq">
-      <ref role="2$rEH5" to="hg90:1WG1fjcFXUQ" resolve="SelectSequencesByPattern" />
+      <ref role="2$rEH4" to="hg90:1WG1fjcFXUQ" resolve="SelectSequencesByPattern" />
       <node concept="1uYdA0" id="2EhCxNvOQ$$" role="1uLvPH">
         <ref role="1uK_4X" node="6kZ7DevSyOQ" resolve="inputSequences" />
       </node>
@@ -484,7 +483,7 @@
       </node>
     </node>
     <node concept="2$rEH5" id="2EhCxNvOQSz" role="2$rEHq">
-      <ref role="2$rEH5" to="hg90:1WG1fjcGqMw" resolve="Sort" />
+      <ref role="2$rEH4" to="hg90:1WG1fjcGqMw" resolve="Sort" />
       <node concept="1uYdA0" id="2EhCxNvOQS_" role="1uLvPH">
         <ref role="1uK_4X" node="2EhCxNvOQ$A" resolve="matchingSequences" />
       </node>
@@ -501,7 +500,7 @@
   <node concept="2$rMIF" id="2lC2okgHrrN">
     <property role="TrG5h" value="StringsToFasta" />
     <node concept="2$rEH5" id="2EhCxNvONJT" role="2$rEHq">
-      <ref role="2$rEH5" to="hg90:2qcvB08TdBW" resolve="AddRandom" />
+      <ref role="2$rEH4" to="hg90:2qcvB08TdBW" resolve="AddRandom" />
       <node concept="1uYdA0" id="2EhCxNvONJV" role="1uLvPH">
         <ref role="1uK_4X" node="2lC2okgHwJs" resolve="strings" />
       </node>
@@ -513,7 +512,7 @@
       </node>
     </node>
     <node concept="2$rEH5" id="2EhCxNvOOfb" role="2$rEHq">
-      <ref role="2$rEH5" to="hg90:3OzmMkAr5Oo" resolve="ToFastaFile" />
+      <ref role="2$rEH4" to="hg90:3OzmMkAr5Oo" resolve="ToFastaFile" />
       <node concept="1uYdA0" id="2EhCxNvOOfd" role="1uLvPH">
         <ref role="1uK_4X" node="2EhCxNvONJX" resolve="rand" />
       </node>
