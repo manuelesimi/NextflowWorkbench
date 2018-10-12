@@ -127,6 +127,9 @@
       <concept id="3653684473245054700" name="org.campagnelab.workflow.structure.NewListLiteral" flags="ng" index="2J_sx7">
         <child id="3653684473245054701" name="elementType" index="2J_sx6" />
       </concept>
+      <concept id="2948113593646370239" name="org.campagnelab.workflow.structure.AbstractProcessRef" flags="ng" index="2U8K0e">
+        <reference id="6505336652526334579" name="process" index="2$rEH5" />
+      </concept>
       <concept id="6588488528863172354" name="org.campagnelab.workflow.structure.Report" flags="ng" index="2UNLhE">
         <reference id="6588488528863172372" name="channel" index="2UNLhW" />
         <child id="6588488528863172374" name="function" index="2UNLhY" />
@@ -136,9 +139,7 @@
       <concept id="8369613327464373434" name="org.campagnelab.workflow.structure.OutputChannel" flags="ng" index="1uLkD0" />
       <concept id="8369613327464009594" name="org.campagnelab.workflow.structure.InputChannel" flags="ng" index="1uYdA0">
         <reference id="8369613327464433607" name="connectedTo" index="1uK_4X" />
-        <child id="3857878650537656757" name="functions" index="1ylr64" />
       </concept>
-      <concept id="3857878650533843630" name="org.campagnelab.workflow.structure.ToList" flags="ng" index="1yaYav" />
       <concept id="6456103554942004322" name="org.campagnelab.workflow.structure.GlobalChannel" flags="ng" index="1CVceo">
         <child id="3855674281011084282" name="value" index="2$L62I" />
       </concept>
@@ -147,7 +148,7 @@
   <node concept="2$rMIF" id="1WG1fjcFR_F">
     <property role="TrG5h" value="NumberOfSequencesWithFixedLength" />
     <node concept="2UNLhE" id="1WG1fjcFUaI" role="2UW718">
-      <ref role="2UNLhW" node="1WG1fjcGkV0" resolve="counter" />
+      <ref role="2UNLhW" node="2EhCxNvOUiX" resolve="counter" />
       <node concept="2UPiyC" id="1WG1fjcFUaJ" role="2UNLhY">
         <node concept="3clFbS" id="1WG1fjcFUaK" role="2VODD2">
           <node concept="3clFbF" id="1WG1fjcFUdu" role="3cqZAp">
@@ -186,33 +187,33 @@
         </node>
       </node>
     </node>
-    <node concept="2$rEH5" id="1WG1fjcFR_I" role="2$rEHq">
-      <ref role="2$rEH4" to="hg90:1WG1fjcFlGX" resolve="GenerateRandomSequences" />
-      <node concept="1uYdA0" id="1WG1fjcFRAk" role="1uLvPH">
+    <node concept="2$rEH5" id="2EhCxNvOSjF" role="2$rEHq">
+      <ref role="2$rEH5" to="hg90:1WG1fjcFlGX" resolve="GenerateRandomSequences" />
+      <node concept="1uYdA0" id="2EhCxNvOSjH" role="1uLvPH">
         <ref role="1uK_4X" node="1WG1fjcFRAL" resolve="bytesForTheSequencesToGenerate" />
       </node>
-      <node concept="1uLkD0" id="1WG1fjcFRMh" role="1uLvPA">
-        <property role="TrG5h" value="sequences" />
+      <node concept="1uLkD0" id="2EhCxNvOSjI" role="1uLvPA">
+        <property role="TrG5h" value="seqs" />
       </node>
     </node>
-    <node concept="2$rEH5" id="1WG1fjcFRY$" role="2$rEHq">
-      <ref role="2$rEH4" to="hg90:1WG1fjcFtiY" resolve="SelectSequencesByLength" />
-      <node concept="1uYdA0" id="1WG1fjcFRYX" role="1uLvPH">
-        <ref role="1uK_4X" node="1WG1fjcFRMh" resolve="sequences" />
+    <node concept="2$rEH5" id="2EhCxNvOStK" role="2$rEHq">
+      <ref role="2$rEH5" to="hg90:1WG1fjcFtiY" resolve="SelectSequencesByLength" />
+      <node concept="1uYdA0" id="2EhCxNvOStM" role="1uLvPH">
+        <ref role="1uK_4X" node="2EhCxNvOSjI" resolve="seqs" />
       </node>
-      <node concept="1uYdA0" id="1WG1fjcFRYY" role="1uLvPH">
+      <node concept="1uYdA0" id="2EhCxNvOStN" role="1uLvPH">
         <ref role="1uK_4X" node="1WG1fjcFRZM" resolve="sequenceLength" />
       </node>
-      <node concept="1uLkD0" id="1WG1fjcFTht" role="1uLvPA">
-        <property role="TrG5h" value="sequencesWithExactLength" />
+      <node concept="1uLkD0" id="2EhCxNvOStO" role="1uLvPA">
+        <property role="TrG5h" value="seqsWithExactLength" />
       </node>
     </node>
-    <node concept="2$rEH5" id="1WG1fjcGkOH" role="2$rEHq">
-      <ref role="2$rEH4" to="hg90:1WG1fjcG2d4" resolve="CountSequences" />
-      <node concept="1uYdA0" id="1WG1fjcGkQi" role="1uLvPH">
-        <ref role="1uK_4X" node="1WG1fjcFTht" resolve="sequencesWithExactLength" />
+    <node concept="2$rEH5" id="2EhCxNvOUiU" role="2$rEHq">
+      <ref role="2$rEH5" to="hg90:1WG1fjcG2d4" resolve="CountSequences" />
+      <node concept="1uYdA0" id="2EhCxNvOUiW" role="1uLvPH">
+        <ref role="1uK_4X" node="2EhCxNvOStO" resolve="seqsWithExactLength" />
       </node>
-      <node concept="1uLkD0" id="1WG1fjcGkV0" role="1uLvPA">
+      <node concept="1uLkD0" id="2EhCxNvOUiX" role="1uLvPA">
         <property role="TrG5h" value="counter" />
       </node>
     </node>
@@ -442,7 +443,7 @@
       </node>
     </node>
     <node concept="2UNLhE" id="6kZ7DevQVMD" role="2UW718">
-      <ref role="2UNLhW" node="6kZ7DevS$$k" resolve="sortedSequences" />
+      <ref role="2UNLhW" node="2EhCxNvOQSA" resolve="sortedSequences" />
       <node concept="2UPiyC" id="6kZ7DevQVME" role="2UNLhY">
         <node concept="3clFbS" id="6kZ7DevQVMF" role="2VODD2">
           <node concept="3clFbF" id="6kZ7DevQX_Y" role="3cqZAp">
@@ -454,20 +455,8 @@
               <node concept="liA8E" id="6kZ7DevQXVo" role="2OqNvi">
                 <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
                 <node concept="Xl_RD" id="6kZ7DevQYbW" role="37wK5m">
-                  <property role="Xl_RC" value="Matches found: " />
+                  <property role="Xl_RC" value="Matches found" />
                 </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3clFbF" id="6kZ7DevSD$F" role="3cqZAp">
-            <node concept="2OqwBi" id="6kZ7DevSDKK" role="3clFbG">
-              <node concept="10M0yZ" id="6kZ7DevSD$E" role="2Oq$k0">
-                <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-                <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
-              </node>
-              <node concept="liA8E" id="6kZ7DevSE49" role="2OqNvi">
-                <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
-                <node concept="2UPiyF" id="6kZ7DevSEaA" role="37wK5m" />
               </node>
             </node>
           </node>
@@ -482,24 +471,24 @@
         </node>
       </node>
     </node>
-    <node concept="2$rEH5" id="6kZ7DevQGN$" role="2$rEHq">
-      <ref role="2$rEH4" to="hg90:1WG1fjcFXUQ" resolve="SelectSequencesByPattern" />
-      <node concept="1uYdA0" id="6kZ7DevQSja" role="1uLvPH">
+    <node concept="2$rEH5" id="2EhCxNvOQ$y" role="2$rEHq">
+      <ref role="2$rEH5" to="hg90:1WG1fjcFXUQ" resolve="SelectSequencesByPattern" />
+      <node concept="1uYdA0" id="2EhCxNvOQ$$" role="1uLvPH">
         <ref role="1uK_4X" node="6kZ7DevSyOQ" resolve="inputSequences" />
       </node>
-      <node concept="1uYdA0" id="6kZ7DevQSjb" role="1uLvPH">
+      <node concept="1uYdA0" id="2EhCxNvOQ$_" role="1uLvPH">
         <ref role="1uK_4X" node="6kZ7DevQRRC" resolve="searchFor" />
       </node>
-      <node concept="1uLkD0" id="6kZ7DevQSo6" role="1uLvPA">
+      <node concept="1uLkD0" id="2EhCxNvOQ$A" role="1uLvPA">
         <property role="TrG5h" value="matchingSequences" />
       </node>
     </node>
-    <node concept="2$rEH5" id="6kZ7DevS$x9" role="2$rEHq">
-      <ref role="2$rEH4" to="hg90:1WG1fjcGqMw" resolve="Sort" />
-      <node concept="1uYdA0" id="6kZ7DevS$$j" role="1uLvPH">
-        <ref role="1uK_4X" node="6kZ7DevQSo6" resolve="matchingSequences" />
+    <node concept="2$rEH5" id="2EhCxNvOQSz" role="2$rEHq">
+      <ref role="2$rEH5" to="hg90:1WG1fjcGqMw" resolve="Sort" />
+      <node concept="1uYdA0" id="2EhCxNvOQS_" role="1uLvPH">
+        <ref role="1uK_4X" node="2EhCxNvOQ$A" resolve="matchingSequences" />
       </node>
-      <node concept="1uLkD0" id="6kZ7DevS$$k" role="1uLvPA">
+      <node concept="1uLkD0" id="2EhCxNvOQSA" role="1uLvPA">
         <property role="TrG5h" value="sortedSequences" />
       </node>
     </node>
@@ -511,62 +500,34 @@
   </node>
   <node concept="2$rMIF" id="2lC2okgHrrN">
     <property role="TrG5h" value="StringsToFasta" />
-    <node concept="2UNLhE" id="2qcvB08SRD0" role="2UW718">
-      <ref role="2UNLhW" node="2qcvB08SRqJ" resolve="oneFile" />
-      <node concept="2UPiyC" id="2qcvB08SRD1" role="2UNLhY">
-        <node concept="3clFbS" id="2qcvB08SRD2" role="2VODD2">
-          <node concept="3clFbF" id="2qcvB08SRFd" role="3cqZAp">
-            <node concept="2OqwBi" id="2qcvB08SRFa" role="3clFbG">
-              <node concept="10M0yZ" id="2qcvB08SRFb" role="2Oq$k0">
-                <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-                <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
-              </node>
-              <node concept="liA8E" id="2qcvB08SRFc" role="2OqNvi">
-                <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
-                <node concept="2OqwBi" id="2qcvB08T9wY" role="37wK5m">
-                  <node concept="2UPiyF" id="71ITBVyKHVp" role="2Oq$k0" />
-                  <node concept="liA8E" id="2qcvB08T9Mv" role="2OqNvi">
-                    <ref role="37wK5l" to="guwi:~File.getAbsolutePath():java.lang.String" resolve="getAbsolutePath" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="2$rEH5" id="2qcvB08TdOv" role="2$rEHq">
-      <ref role="2$rEH4" to="hg90:2qcvB08TdBW" resolve="AddRandom" />
-      <node concept="1uYdA0" id="2qcvB08TdPA" role="1uLvPH">
+    <node concept="2$rEH5" id="2EhCxNvONJT" role="2$rEHq">
+      <ref role="2$rEH5" to="hg90:2qcvB08TdBW" resolve="AddRandom" />
+      <node concept="1uYdA0" id="2EhCxNvONJV" role="1uLvPH">
         <ref role="1uK_4X" node="2lC2okgHwJs" resolve="strings" />
       </node>
-      <node concept="1uLkD0" id="2qcvB08TdPB" role="1uLvPA">
-        <property role="TrG5h" value="sequence" />
+      <node concept="1uLkD0" id="2EhCxNvONJW" role="1uLvPA">
+        <property role="TrG5h" value="seq" />
       </node>
-      <node concept="1uLkD0" id="2qcvB08TdPC" role="1uLvPA">
-        <property role="TrG5h" value="random" />
-      </node>
-    </node>
-    <node concept="2$rEH5" id="2lC2okgH_64" role="2$rEHq">
-      <ref role="2$rEH4" to="hg90:3OzmMkAr5Oo" resolve="ToFastaFile" />
-      <node concept="1uYdA0" id="2lC2okgII9h" role="1uLvPH">
-        <ref role="1uK_4X" node="2qcvB08TdPC" resolve="random" />
-      </node>
-      <node concept="1uYdA0" id="2qcvB08TeIF" role="1uLvPH">
-        <ref role="1uK_4X" node="2qcvB08TdPB" resolve="sequence" />
-      </node>
-      <node concept="1uLkD0" id="2lC2okgII9i" role="1uLvPA">
-        <property role="TrG5h" value="out" />
+      <node concept="1uLkD0" id="2EhCxNvONJX" role="1uLvPA">
+        <property role="TrG5h" value="rand" />
       </node>
     </node>
-    <node concept="2$rEH5" id="2qcvB08SRn4" role="2$rEHq">
-      <ref role="2$rEH4" to="hg90:2qcvB08SRn_" resolve="Concatenate" />
-      <node concept="1uYdA0" id="2qcvB08SRqI" role="1uLvPH">
-        <ref role="1uK_4X" node="2lC2okgII9i" resolve="out" />
-        <node concept="1yaYav" id="2qcvB08SRut" role="1ylr64" />
+    <node concept="2$rEH5" id="2EhCxNvOOfb" role="2$rEHq">
+      <ref role="2$rEH5" to="hg90:3OzmMkAr5Oo" resolve="ToFastaFile" />
+      <node concept="1uYdA0" id="2EhCxNvOOfd" role="1uLvPH">
+        <ref role="1uK_4X" node="2EhCxNvONJX" resolve="rand" />
       </node>
-      <node concept="1uLkD0" id="2qcvB08SRqJ" role="1uLvPA">
-        <property role="TrG5h" value="oneFile" />
+      <node concept="1uLkD0" id="2EhCxNvOOfe" role="1uLvPA">
+        <property role="TrG5h" value="outFile" />
+      </node>
+      <node concept="1uYdA0" id="2EhCxNvOOk1" role="1uLvPH">
+        <ref role="1uK_4X" node="2EhCxNvONJW" resolve="seq" />
+      </node>
+    </node>
+    <node concept="2UNLhE" id="2qcvB08SRD0" role="2UW718">
+      <ref role="2UNLhW" node="2EhCxNvOOfe" resolve="outFile" />
+      <node concept="2UPiyC" id="2qcvB08SRD1" role="2UNLhY">
+        <node concept="3clFbS" id="2qcvB08SRD2" role="2VODD2" />
       </node>
     </node>
     <node concept="1CVceo" id="2lC2okgHwJs" role="2$L6iY">
