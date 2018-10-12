@@ -54,6 +54,9 @@
       </concept>
     </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1219920932475" name="jetbrains.mps.baseLanguage.structure.VariableArityType" flags="in" index="8X2XB">
+        <child id="1219921048460" name="componentType" index="8Xvag" />
+      </concept>
       <concept id="1082485599095" name="jetbrains.mps.baseLanguage.structure.BlockStatement" flags="nn" index="9aQIb">
         <child id="1082485599096" name="statements" index="9aQI4" />
       </concept>
@@ -64,6 +67,10 @@
       <concept id="1215695189714" name="jetbrains.mps.baseLanguage.structure.PlusAssignmentExpression" flags="nn" index="d57v9" />
       <concept id="4836112446988635817" name="jetbrains.mps.baseLanguage.structure.UndefinedType" flags="in" index="2jxLKc" />
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
+      <concept id="1173175405605" name="jetbrains.mps.baseLanguage.structure.ArrayAccessExpression" flags="nn" index="AH0OO">
+        <child id="1173175577737" name="index" index="AHEQo" />
+        <child id="1173175590490" name="array" index="AHHXb" />
+      </concept>
       <concept id="1153952380246" name="jetbrains.mps.baseLanguage.structure.TryStatement" flags="nn" index="2GUZhq">
         <child id="1153952416686" name="body" index="2GV8ay" />
         <child id="1153952429843" name="finallyBody" index="2GVbov" />
@@ -162,6 +169,10 @@
         <child id="1206060619838" name="condition" index="3eO9$A" />
         <child id="1206060644605" name="statementList" index="3eOfB_" />
       </concept>
+      <concept id="1079359253375" name="jetbrains.mps.baseLanguage.structure.ParenthesizedExpression" flags="nn" index="1eOMI4">
+        <child id="1079359253376" name="expression" index="1eOMHV" />
+      </concept>
+      <concept id="1081506762703" name="jetbrains.mps.baseLanguage.structure.GreaterThanExpression" flags="nn" index="3eOSWO" />
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
@@ -192,6 +203,7 @@
         <child id="1163668922816" name="ifTrue" index="3K4E3e" />
         <child id="1163668934364" name="ifFalse" index="3K4GZi" />
       </concept>
+      <concept id="1208890769693" name="jetbrains.mps.baseLanguage.structure.ArrayLengthOperation" flags="nn" index="1Rwk04" />
       <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
         <property id="6329021646629104958" name="text" index="3SKdUp" />
       </concept>
@@ -200,6 +212,7 @@
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
+      <concept id="1080120340718" name="jetbrains.mps.baseLanguage.structure.AndExpression" flags="nn" index="1Wc70l" />
     </language>
     <language id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures">
       <concept id="1199569711397" name="jetbrains.mps.baseLanguage.closures.structure.ClosureLiteral" flags="nn" index="1bVj0M">
@@ -595,6 +608,13 @@
         <property role="3TUv4t" value="true" />
         <node concept="17QB3L" id="5Pg96r0QNbn" role="1tU5fm" />
       </node>
+      <node concept="37vLTG" id="2EhCxNvLEhi" role="3clF46">
+        <property role="TrG5h" value="entrypoint" />
+        <property role="3TUv4t" value="true" />
+        <node concept="8X2XB" id="2EhCxNvLFaj" role="1tU5fm">
+          <node concept="17QB3L" id="2EhCxNvLF1Z" role="8Xvag" />
+        </node>
+      </node>
       <node concept="3Tm6S6" id="5Pg96r0QLtE" role="1B3o_S" />
       <node concept="3clFbS" id="5wsmBEGRnsT" role="3clF47">
         <node concept="3clFbF" id="4iZtcSrbfFP" role="3cqZAp">
@@ -835,6 +855,51 @@
                         </node>
                       </node>
                     </node>
+                    <node concept="3cpWs8" id="2EhCxNvLGJO" role="3cqZAp">
+                      <node concept="3cpWsn" id="2EhCxNvLGJR" role="3cpWs9">
+                        <property role="TrG5h" value="ep" />
+                        <node concept="17QB3L" id="2EhCxNvLGJM" role="1tU5fm" />
+                        <node concept="3K4zz7" id="2EhCxNvLZz$" role="33vP2m">
+                          <node concept="3cpWs3" id="2EhCxNvM1Rv" role="3K4E3e">
+                            <node concept="AH0OO" id="2EhCxNvM2qI" role="3uHU7w">
+                              <node concept="3cmrfG" id="2EhCxNvM2FH" role="AHEQo">
+                                <property role="3cmrfH" value="0" />
+                              </node>
+                              <node concept="37vLTw" id="2EhCxNvM28d" role="AHHXb">
+                                <ref role="3cqZAo" node="2EhCxNvLEhi" resolve="entrypoint" />
+                              </node>
+                            </node>
+                            <node concept="Xl_RD" id="2EhCxNvLZMV" role="3uHU7B">
+                              <property role="Xl_RC" value=" --entrypoint " />
+                            </node>
+                          </node>
+                          <node concept="Xl_RD" id="2EhCxNvM02T" role="3K4GZi">
+                            <property role="Xl_RC" value="" />
+                          </node>
+                          <node concept="1eOMI4" id="2EhCxNvLV0g" role="3K4Cdx">
+                            <node concept="1Wc70l" id="2EhCxNvLK$c" role="1eOMHV">
+                              <node concept="3eOSWO" id="2EhCxNvLSeD" role="3uHU7w">
+                                <node concept="3cmrfG" id="2EhCxNvLSlH" role="3uHU7w">
+                                  <property role="3cmrfH" value="0" />
+                                </node>
+                                <node concept="2OqwBi" id="2EhCxNvLL0e" role="3uHU7B">
+                                  <node concept="37vLTw" id="2EhCxNvLKEZ" role="2Oq$k0">
+                                    <ref role="3cqZAo" node="2EhCxNvLEhi" resolve="entrypoint" />
+                                  </node>
+                                  <node concept="1Rwk04" id="2EhCxNvLNSm" role="2OqNvi" />
+                                </node>
+                              </node>
+                              <node concept="3y3z36" id="2EhCxNvLKl0" role="3uHU7B">
+                                <node concept="37vLTw" id="2EhCxNvLH7z" role="3uHU7B">
+                                  <ref role="3cqZAo" node="2EhCxNvLEhi" resolve="entrypoint" />
+                                </node>
+                                <node concept="10Nm6u" id="2EhCxNvLKri" role="3uHU7w" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
                     <node concept="3clFbF" id="3pj0Oa6F_$z" role="3cqZAp">
                       <node concept="2OqwBi" id="3pj0Oa6F_$$" role="3clFbG">
                         <node concept="37vLTw" id="3pj0Oa6F_$_" role="2Oq$k0">
@@ -852,32 +917,37 @@
                                     <property role="Xl_RC" value=" " />
                                   </node>
                                   <node concept="3cpWs3" id="rQ5OKPiUKR" role="3uHU7B">
-                                    <node concept="3cpWs3" id="3pj0Oa6GPC2" role="3uHU7B">
-                                      <node concept="3cpWs3" id="3pj0Oa6F_$E" role="3uHU7B">
-                                        <node concept="3cpWs3" id="3pj0Oa6F_$F" role="3uHU7B">
-                                          <node concept="3cpWs3" id="3pj0Oa6F_$G" role="3uHU7B">
-                                            <node concept="3cpWs3" id="3pj0Oa6F_$H" role="3uHU7B">
-                                              <node concept="37vLTw" id="3pj0Oa6F_$I" role="3uHU7B">
-                                                <ref role="3cqZAo" node="3pj0Oa6F_zm" resolve="docker" />
-                                              </node>
-                                              <node concept="Xl_RD" id="3pj0Oa6F_$J" role="3uHU7w">
-                                                <property role="Xl_RC" value=" " />
-                                              </node>
-                                            </node>
-                                            <node concept="37vLTw" id="3pj0Oa6F_$K" role="3uHU7w">
-                                              <ref role="3cqZAo" node="3pj0Oa6F_zu" resolve="options" />
-                                            </node>
-                                          </node>
-                                          <node concept="Xl_RD" id="3pj0Oa6F_$L" role="3uHU7w">
-                                            <property role="Xl_RC" value=" " />
-                                          </node>
-                                        </node>
-                                        <node concept="Xl_RD" id="3pj0Oa6F_$M" role="3uHU7w">
-                                          <property role="Xl_RC" value=" run -it " />
-                                        </node>
+                                    <node concept="3cpWs3" id="2EhCxNvLWeJ" role="3uHU7B">
+                                      <node concept="37vLTw" id="2EhCxNvLWvn" role="3uHU7w">
+                                        <ref role="3cqZAo" node="2EhCxNvLGJR" resolve="ep" />
                                       </node>
-                                      <node concept="37vLTw" id="rQ5OKPj3N5" role="3uHU7w">
-                                        <ref role="3cqZAo" node="rQ5OKPj32R" resolve="additionalOptions" />
+                                      <node concept="3cpWs3" id="3pj0Oa6GPC2" role="3uHU7B">
+                                        <node concept="3cpWs3" id="3pj0Oa6F_$E" role="3uHU7B">
+                                          <node concept="3cpWs3" id="3pj0Oa6F_$F" role="3uHU7B">
+                                            <node concept="3cpWs3" id="3pj0Oa6F_$G" role="3uHU7B">
+                                              <node concept="3cpWs3" id="3pj0Oa6F_$H" role="3uHU7B">
+                                                <node concept="37vLTw" id="3pj0Oa6F_$I" role="3uHU7B">
+                                                  <ref role="3cqZAo" node="3pj0Oa6F_zm" resolve="docker" />
+                                                </node>
+                                                <node concept="Xl_RD" id="3pj0Oa6F_$J" role="3uHU7w">
+                                                  <property role="Xl_RC" value=" " />
+                                                </node>
+                                              </node>
+                                              <node concept="37vLTw" id="3pj0Oa6F_$K" role="3uHU7w">
+                                                <ref role="3cqZAo" node="3pj0Oa6F_zu" resolve="options" />
+                                              </node>
+                                            </node>
+                                            <node concept="Xl_RD" id="3pj0Oa6F_$L" role="3uHU7w">
+                                              <property role="Xl_RC" value=" " />
+                                            </node>
+                                          </node>
+                                          <node concept="Xl_RD" id="3pj0Oa6F_$M" role="3uHU7w">
+                                            <property role="Xl_RC" value=" run -it " />
+                                          </node>
+                                        </node>
+                                        <node concept="37vLTw" id="rQ5OKPj3N5" role="3uHU7w">
+                                          <ref role="3cqZAo" node="rQ5OKPj32R" resolve="additionalOptions" />
+                                        </node>
                                       </node>
                                     </node>
                                     <node concept="37vLTw" id="6hZyplrBEP4" role="3uHU7w">
@@ -1447,8 +1517,9 @@
               <node concept="Xl_RD" id="5Pg96r0QRR8" role="37wK5m">
                 <property role="Xl_RC" value="docker-terminal.sh" />
               </node>
-              <node concept="Xl_RD" id="5Pg96r0QSfh" role="37wK5m">
-                <property role="Xl_RC" value="bash" />
+              <node concept="Xl_RD" id="5Pg96r0QSfh" role="37wK5m" />
+              <node concept="Xl_RD" id="2EhCxNvM47I" role="37wK5m">
+                <property role="Xl_RC" value="/bin/bash" />
               </node>
             </node>
           </node>
