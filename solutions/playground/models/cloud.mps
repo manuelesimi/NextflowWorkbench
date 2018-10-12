@@ -40,6 +40,7 @@
       <concept id="6643674794994257454" name="org.campagnelab.workflow.configuration.structure.Hostname" flags="ng" index="3yU_OC" />
       <concept id="6643674794994257455" name="org.campagnelab.workflow.configuration.structure.JobArea" flags="ng" index="3yU_OD" />
       <concept id="6643674794994257459" name="org.campagnelab.workflow.configuration.structure.RemoteSubmissionConfig" flags="ng" index="3yU_OP">
+        <property id="2800180507600185766" name="disabled" index="38DPjN" />
         <child id="6643674794994257462" name="username" index="3yU_OK" />
         <child id="6643674794994257463" name="jobArea" index="3yU_OL" />
         <child id="6643674794994257461" name="hostname" index="3yU_ON" />
@@ -59,7 +60,7 @@
         <child id="6643674795001677796" name="executor" index="3zupjy" />
         <child id="6643674795001677797" name="processOptions" index="3zupjz" />
       </concept>
-      <concept id="6643674795001609834" name="org.campagnelab.workflow.configuration.structure.SGE" flags="ng" index="3zuAPG" />
+      <concept id="6643674795001609832" name="org.campagnelab.workflow.configuration.structure.Local" flags="ng" index="3zuAPI" />
       <concept id="6643674795006467852" name="org.campagnelab.workflow.configuration.structure.QueueElement" flags="ng" index="3zC8Ka">
         <property id="6643674795006468239" name="queue" index="3zCbe9" />
       </concept>
@@ -579,10 +580,10 @@
         <property role="3zCbe9" value="all.q" />
       </node>
     </node>
-    <node concept="3zuAPG" id="5EXCMiTrF$B" role="3zupjy" />
     <node concept="3qaZdc" id="5EXCMiTrFD3" role="3qaWS2" />
     <node concept="3yU_OP" id="635ahSvecDL" role="3zupjw">
       <property role="TrG5h" value="remote.config" />
+      <property role="38DPjN" value="true" />
       <node concept="3yU_OV" id="635ahSvecDM" role="3yU_OK">
         <property role="3yU_OX" value="ubuntu" />
       </node>
@@ -596,6 +597,7 @@
         <property role="3yU_OX" value="35.231.80.254" />
       </node>
     </node>
+    <node concept="3zuAPI" id="2EhCxNvMkQ4" role="3zupjy" />
   </node>
   <node concept="3zOPYP" id="1LKL2LEuSFG">
     <property role="TrG5h" value="ManageCloudCluster" />
