@@ -3894,12 +3894,6 @@
             <ref role="3bR37D" node="2yVjOHGmOYJ" resolve="org.campagnelab.docker.bash" />
           </node>
         </node>
-        <node concept="1SiIV0" id="lSMa_VjP58" role="3bR37C">
-          <node concept="3bR9La" id="lSMa_VjP59" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ffeo:7Kfy9QB6L2l" resolve="jetbrains.mps.baseLanguage.logging" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="lSMa_VjP5a" role="3bR37C">
           <node concept="3bR9La" id="lSMa_VjP5b" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -3918,21 +3912,10 @@
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
           </node>
         </node>
-        <node concept="1SiIV0" id="lSMa_VjP5g" role="3bR37C">
-          <node concept="3bR9La" id="lSMa_VjP5h" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ffeo:2eDSGe9d1pJ" resolve="jetbrains.mps.lang.plugin.standalone" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="lSMa_VjP5i" role="3bR37C">
           <node concept="3bR9La" id="lSMa_VjP5j" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:2eDSGe9d1q1" resolve="MPS.Workbench" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="lSMa_VjP5k" role="3bR37C">
-          <node concept="1Busua" id="lSMa_VjP5l" role="1SiIV1">
-            <ref role="1Busuk" node="2yVjOHGmOYJ" resolve="org.campagnelab.docker.bash" />
           </node>
         </node>
         <node concept="3rtmxn" id="7rUxCdAUJpG" role="3bR31x">
@@ -3956,10 +3939,10 @@
             <ref role="3bR37D" to="65bo:3OwSMscq8aw" resolve="org.campagnelab.util" />
           </node>
         </node>
-        <node concept="1SiIV0" id="7N6u_AK7Ype" role="3bR37C">
-          <node concept="3bR9La" id="7N6u_AK7Ypf" role="1SiIV1">
+        <node concept="1SiIV0" id="2EhCxNvNZ2Y" role="3bR37C">
+          <node concept="3bR9La" id="2EhCxNvNZ2Z" role="1SiIV1">
             <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="90a9:4p3FRivDLPG" resolve="de.slisson.mps.editor.multiline" />
+            <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
           </node>
         </node>
       </node>
