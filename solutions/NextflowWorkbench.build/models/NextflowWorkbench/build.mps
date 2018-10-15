@@ -38,7 +38,6 @@
     <language id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build">
       <concept id="5481553824944787378" name="jetbrains.mps.build.structure.BuildSourceProjectRelativePath" flags="ng" index="55IIr" />
       <concept id="9126048691955220717" name="jetbrains.mps.build.structure.BuildLayout_File" flags="ng" index="28jJK3">
-        <property id="9126048691955221291" name="filemode" index="28jJZ5" />
         <child id="9126048691955220762" name="path" index="28jJRO" />
       </concept>
       <concept id="2755237150521975431" name="jetbrains.mps.build.structure.BuildVariableMacroInitWithString" flags="ng" index="aVJcg">
@@ -53,6 +52,9 @@
       <concept id="4993211115183325728" name="jetbrains.mps.build.structure.BuildProjectDependency" flags="ng" index="2sgV4H">
         <reference id="5617550519002745380" name="script" index="1l3spb" />
         <child id="4129895186893471026" name="artifacts" index="2JcizS" />
+      </concept>
+      <concept id="7801138212747054656" name="jetbrains.mps.build.structure.BuildLayout_Filemode" flags="ng" index="yKbIv">
+        <property id="7801138212747054660" name="filemode" index="yKbIr" />
       </concept>
       <concept id="927724900262033858" name="jetbrains.mps.build.structure.BuildSource_JavaOptions" flags="ng" index="2_Ic$z">
         <property id="927724900262033861" name="generateDebugInfo" index="2_Ic$$" />
@@ -1270,15 +1272,17 @@
               </node>
             </node>
           </node>
-          <node concept="28jJK3" id="OitqZoEcq" role="39821P">
-            <property role="28jJZ5" value="744" />
-            <node concept="55IIr" id="OitqZoEcr" role="28jJRO">
-              <node concept="2Ry0Ak" id="OitqZoEcs" role="iGT6I">
-                <property role="2Ry0Am" value="solutions" />
-                <node concept="2Ry0Ak" id="OitqZoEct" role="2Ry0An">
-                  <property role="2Ry0Am" value="org.campagnelab.workflow.run" />
-                  <node concept="2Ry0Ak" id="OitqZoEcu" role="2Ry0An">
-                    <property role="2Ry0Am" value="nextflow" />
+          <node concept="yKbIv" id="2LcosIuYvS2" role="39821P">
+            <property role="yKbIr" value="744" />
+            <node concept="28jJK3" id="2LcosIuYwhJ" role="39821P">
+              <node concept="55IIr" id="2LcosIuYwhK" role="28jJRO">
+                <node concept="2Ry0Ak" id="2LcosIuYwo6" role="iGT6I">
+                  <property role="2Ry0Am" value="solutions" />
+                  <node concept="2Ry0Ak" id="2LcosIuYwoh" role="2Ry0An">
+                    <property role="2Ry0Am" value="org.campagnelab.workflow.run" />
+                    <node concept="2Ry0Ak" id="2LcosIuYwos" role="2Ry0An">
+                      <property role="2Ry0Am" value="nextflow" />
+                    </node>
                   </node>
                 </node>
               </node>
