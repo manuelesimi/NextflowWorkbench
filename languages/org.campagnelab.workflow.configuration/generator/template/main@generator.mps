@@ -565,6 +565,21 @@
         </node>
         <node concept="2pNNFK" id="6qWs7gtKwVS" role="3o6s8t">
           <property role="2pNNFO" value="target" />
+          <node concept="2pNNFK" id="2LcosIuZnDj" role="3o6s8t">
+            <property role="2pNNFO" value="chmod" />
+            <node concept="2pNUuL" id="2LcosIuZoc_" role="2pNNFR">
+              <property role="2pNUuO" value="file" />
+              <node concept="2pMdtt" id="2LcosIuZocA" role="2pMdts">
+                <property role="2pMdty" value="${nextflow.home}/nextflow" />
+              </node>
+            </node>
+            <node concept="2pNUuL" id="2LcosIuZocW" role="2pNNFR">
+              <property role="2pNUuO" value="perm" />
+              <node concept="2pMdtt" id="2LcosIuZocX" role="2pMdts">
+                <property role="2pMdty" value="755" />
+              </node>
+            </node>
+          </node>
           <node concept="2pNNFK" id="6qWs7gtKy5n" role="3o6s8t">
             <property role="2pNNFO" value="exec" />
             <node concept="2pNUuL" id="6qWs7gtKwW4" role="2pNNFR">
