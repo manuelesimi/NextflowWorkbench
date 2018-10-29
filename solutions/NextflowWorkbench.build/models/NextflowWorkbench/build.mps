@@ -194,7 +194,7 @@
     </language>
   </registry>
   <node concept="1l3spW" id="4oJiZHqTePn">
-    <property role="TrG5h" value="NextflowWorkbench" />
+    <property role="TrG5h" value=" NextflowWorkbench" />
     <property role="2DA0ip" value="../../" />
     <node concept="10PD9b" id="4oJiZHqTePo" role="10PD9s" />
     <node concept="3b7kt6" id="4oJiZHqTePp" role="10PD9s" />
@@ -1431,12 +1431,6 @@
             <ref role="3bR37D" to="ffeo:5xa9wY2vh9z" resolve="jetbrains.mps.execution.library" />
           </node>
         </node>
-        <node concept="1SiIV0" id="4oJiZHqTeQ0" role="3bR37C">
-          <node concept="3bR9La" id="4oJiZHqTeQ1" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ffeo:7Kfy9QB6LfQ" resolve="jetbrains.mps.kernel" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="4oJiZHqTeQ2" role="3bR37C">
           <node concept="3bR9La" id="4oJiZHqTeQ3" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -1477,12 +1471,6 @@
           <node concept="3bR9La" id="4oJiZHqTeQf" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:5xa9wY2vh9N" resolve="jetbrains.mps.execution.configurations.pluginSolution" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="4oJiZHqTeQg" role="3bR37C">
-          <node concept="3bR9La" id="4oJiZHqTeQh" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ffeo:2eDSGe9d1qo" resolve="jetbrains.mps.execution.api" />
           </node>
         </node>
         <node concept="1SiIV0" id="4oJiZHqTeQi" role="3bR37C">
