@@ -424,7 +424,7 @@
           <property role="2Ry0Am" value="build" />
           <node concept="2Ry0Ak" id="5SFbgoI$aP8" role="2Ry0An">
             <property role="2Ry0Am" value="artifacts" />
-            <node concept="2Ry0Ak" id="5SFbgoI$aP9" role="2Ry0An">
+            <node concept="2Ry0Ak" id="1EhcD7EUdA7" role="2Ry0An">
               <property role="2Ry0Am" value="org.campagnelab.Util" />
             </node>
           </node>
@@ -1351,8 +1351,8 @@
       <node concept="m$_yC" id="3A$s7Pqiz5G" role="m$_yJ">
         <ref role="m$_y1" to="nr1s:2mFg1uCEgGJ" resolve="org.campagnelab.TextOutput" />
       </node>
-      <node concept="m$_yC" id="5SFbgoI$b2H" role="m$_yJ">
-        <ref role="m$_y1" to="65bo:5KK2jWpWo0m" resolve="org.campagnelab.util" />
+      <node concept="m$_yC" id="1EhcD7EUdG9" role="m$_yJ">
+        <ref role="m$_y1" to="65bo:5KK2jWpWo0m" resolve="org.campagnelab.Util" />
       </node>
       <node concept="m$_yC" id="6gpGvoF0zIo" role="m$_yJ">
         <ref role="m$_y1" to="vh2l:7XxitGzkyrN" resolve="XChart" />
