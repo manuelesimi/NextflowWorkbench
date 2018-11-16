@@ -25,12 +25,6 @@
         <child id="1557380256519915977" name="versions" index="2vzQju" />
       </concept>
     </language>
-    <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
-      <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
-        <child id="1137022507850" name="body" index="2VODD2" />
-      </concept>
-      <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS" />
-    </language>
     <language id="92d2ea16-5a42-4fdf-a676-c7604efe3504" name="de.slisson.mps.richtext">
       <concept id="2557074442922380897" name="de.slisson.mps.richtext.structure.Text" flags="ng" index="19SGf9">
         <child id="2557074442922392302" name="words" index="19SJt6" />
@@ -235,7 +229,6 @@
         <child id="6505336652526334573" name="processes" index="2$rEHq" />
         <child id="3855674281011085290" name="globalChannels" index="2$L6iY" />
         <child id="6344724376800375955" name="description" index="GZ$AB" />
-        <child id="6588488528863130400" name="reports" index="2UW718" />
       </concept>
       <concept id="3653684473245040478" name="org.campagnelab.workflow.structure.NewStringLiteral" flags="ng" index="2J_g7P">
         <property id="3653684473245041443" name="value" index="2J_vQ8" />
@@ -252,11 +245,6 @@
       <concept id="2948113593646370239" name="org.campagnelab.workflow.structure.AbstractProcessRef" flags="ng" index="2U8K0e">
         <reference id="6505336652526334579" name="process" index="2$rEH4" />
       </concept>
-      <concept id="6588488528863172354" name="org.campagnelab.workflow.structure.Report" flags="ng" index="2UNLhE">
-        <reference id="6588488528863172372" name="channel" index="2UNLhW" />
-        <child id="6588488528863172374" name="function" index="2UNLhY" />
-      </concept>
-      <concept id="6588488528864881600" name="org.campagnelab.workflow.structure.ReportFunction" flags="ig" index="2UPiyC" />
       <concept id="1980749076351268038" name="org.campagnelab.workflow.structure.String" flags="ng" index="16pbKc" />
       <concept id="1980749076351316170" name="org.campagnelab.workflow.structure.File" flags="ng" index="16pRw0" />
       <concept id="8369613327464373434" name="org.campagnelab.workflow.structure.OutputChannel" flags="ng" index="1uLkD0" />
@@ -291,12 +279,6 @@
   </node>
   <node concept="2$rMIF" id="4xTPTl95X83">
     <property role="TrG5h" value="Take_1M_sequences" />
-    <node concept="2UNLhE" id="7ejpSqGJV0V" role="2UW718">
-      <ref role="2UNLhW" node="1mmSOgKGX6T" resolve="out" />
-      <node concept="2UPiyC" id="7ejpSqGJV0W" role="2UNLhY">
-        <node concept="3clFbS" id="7ejpSqGJV0X" role="2VODD2" />
-      </node>
-    </node>
     <node concept="1CVceo" id="4xTPTl95XMn" role="2$L6iY">
       <property role="TrG5h" value="fastq_Files" />
       <node concept="2J_sx7" id="4xTPTl95XMo" role="2$L62I">
@@ -305,53 +287,20 @@
         </node>
       </node>
     </node>
-    <node concept="2$rEH5" id="1mmSOgKGX6Q" role="2$rEHq">
+    <node concept="2$rEH5" id="1EhcD7EVtts" role="2$rEHq">
       <ref role="2$rEH4" node="7ejpSqGJDQd" resolve="Sample_FirstOneMillionSequences" />
-      <node concept="1uYdA0" id="1mmSOgKGX6S" role="1uLvPH">
+      <node concept="1uYdA0" id="1EhcD7EVttu" role="1uLvPH">
         <ref role="1uK_4X" node="4xTPTl95XMn" resolve="fastq_Files" />
       </node>
-      <node concept="1uLkD0" id="1mmSOgKGX6T" role="1uLvPA">
-        <property role="TrG5h" value="out" />
+      <node concept="1uLkD0" id="1EhcD7EVttv" role="1uLvPA">
+        <property role="TrG5h" value="out2" />
       </node>
     </node>
   </node>
   <node concept="2EWdU8" id="4xTPTl969LW">
     <property role="TrG5h" value="Fastq files" />
-    <node concept="2EWdhe" id="7ejpSqGJwYo" role="2EWcS1">
-      <property role="2EWcDP" value="/Users/fac2003/courses/SRA/SRR1514132_1.fastq" />
-    </node>
-    <node concept="2EWdhe" id="7ejpSqGJwYp" role="2EWcS1">
-      <property role="2EWcDP" value="/Users/fac2003/courses/SRA/SRR1514132_2.fastq" />
-    </node>
-    <node concept="2EWdhe" id="7ejpSqGJwYq" role="2EWcS1">
-      <property role="2EWcDP" value="/Users/fac2003/courses/SRA/SRR1514133_1.fastq" />
-    </node>
-    <node concept="2EWdhe" id="7ejpSqGJwYr" role="2EWcS1">
-      <property role="2EWcDP" value="/Users/fac2003/courses/SRA/SRR1514133_2.fastq" />
-    </node>
-    <node concept="2EWdhe" id="7ejpSqGJwYs" role="2EWcS1">
-      <property role="2EWcDP" value="/Users/fac2003/courses/SRA/SRR1514134_1.fastq" />
-    </node>
-    <node concept="2EWdhe" id="7ejpSqGJwYt" role="2EWcS1">
-      <property role="2EWcDP" value="/Users/fac2003/courses/SRA/SRR1514134_2.fastq" />
-    </node>
-    <node concept="2EWdhe" id="7ejpSqGJwYu" role="2EWcS1">
-      <property role="2EWcDP" value="/Users/fac2003/courses/SRA/SRR1514135_1.fastq" />
-    </node>
-    <node concept="2EWdhe" id="7ejpSqGJwYv" role="2EWcS1">
-      <property role="2EWcDP" value="/Users/fac2003/courses/SRA/SRR1514135_2.fastq" />
-    </node>
-    <node concept="2EWdhe" id="7ejpSqGJwYw" role="2EWcS1">
-      <property role="2EWcDP" value="/Users/fac2003/courses/SRA/SRR1514136_1.fastq" />
-    </node>
-    <node concept="2EWdhe" id="7ejpSqGJwYx" role="2EWcS1">
-      <property role="2EWcDP" value="/Users/fac2003/courses/SRA/SRR1514136_2.fastq" />
-    </node>
-    <node concept="2EWdhe" id="7ejpSqGJwYy" role="2EWcS1">
-      <property role="2EWcDP" value="/Users/fac2003/courses/SRA/SRR1514137_1.fastq" />
-    </node>
-    <node concept="2EWdhe" id="7ejpSqGJwYz" role="2EWcS1">
-      <property role="2EWcDP" value="/Users/fac2003/courses/SRA/SRR1514137_2.fastq" />
+    <node concept="2EWdhe" id="1EhcD7EVqAo" role="2EWcS1">
+      <property role="2EWcDP" value="/Users/mas2182/Lab/Projects/MPS/2018.1/nextflowworkbench/data/sample1.fasta" />
     </node>
   </node>
   <node concept="2ulcR8" id="7ejpSqGJDQd">
